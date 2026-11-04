@@ -1,0 +1,15 @@
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Xcode (projekt generujemy XcodeGenem z wrist-arena/project.yml)
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# Osobiste ustawienia podpisu
+wrist-arena/Config/Signing.xcconfig
+
+.DS_Store
+build/

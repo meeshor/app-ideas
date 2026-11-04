@@ -1,0 +1,30 @@
+name: WristKit
+
+on:
+  push:
+    branches: [wrist-arena, main]
+    paths:
+      - "WristKit/**"
+      - ".github/workflows/wristkit.yml"
+  pull_request:
+    paths:
+      - "WristKit/**"
+      - ".github/workflows/wristkit.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: wristkit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: swift test (macOS)
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: xcodebuild -version && swift --version
+      - name: Test WristKit
+        working-directory: WristKit
+        run: swift test --parallel

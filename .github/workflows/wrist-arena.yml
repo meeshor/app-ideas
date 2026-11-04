@@ -1,0 +1,65 @@
+name: Wrist Arena
+
+on:
+  push:
+    branches: [wrist-arena, main]
+    paths:
+      - "wrist-arena/**"
+      - "WristKit/Sources/**"
+      - "WristKit/Package.swift"
+      - ".github/workflows/wrist-arena.yml"
+  pull_request:
+    paths:
+      - "wrist-arena/**"
+      - "WristKit/Sources/**"
+      - "WristKit/Package.swift"
+      - ".github/workflows/wrist-arena.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: wrist-arena-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: ArenaCore tests + iOS/watchOS build
+    runs-on: macos-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: xcodebuild -version && swift --version && xcodebuild -showsdks
+      - name: Test ArenaCore
+        working-directory: wrist-arena/ArenaCore
+        run: swift test --parallel
+      - name: Install XcodeGen
+        if: success() || failure()
+        run: brew install xcodegen
+      - name: Generate Xcode project
+        if: success() || failure()
+        working-directory: wrist-arena
+        run: xcodegen generate
+      - name: Build iOS app (with embedded watch app)
+        if: success() || failure()
+        working-directory: wrist-arena
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project WristArena.xcodeproj \
+            -scheme WristArena \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet
+      - name: Build watchOS app
+        if: success() || failure()
+        working-directory: wrist-arena
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project WristArena.xcodeproj \
+            -scheme WristArenaWatch \
+            -destination 'generic/platform=watchOS Simulator' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet

@@ -1,0 +1,30 @@
+name: SwiftLint
+
+on:
+  push:
+    branches: [wrist-arena, main]
+    paths:
+      - "**/*.swift"
+      - ".swiftlint.yml"
+      - ".github/workflows/lint.yml"
+  pull_request:
+    paths:
+      - "**/*.swift"
+      - ".swiftlint.yml"
+      - ".github/workflows/lint.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  swiftlint:
+    # Linux zamiast macOS: tańszy i szybszy runner.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    container: ghcr.io/realm/swiftlint:0.57.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: SwiftLint
+        run: swiftlint lint --reporter github-actions-logging
