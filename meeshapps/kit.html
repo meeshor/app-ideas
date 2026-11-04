@@ -1,0 +1,342 @@
+<title>meeshApps Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="site/assets/style.css">
+<style>
+/* Kit: jedna długa kolumna sekcji; tokeny kolorów i fontów pochodzą z site/assets/style.css,
+   tu dochodzą tylko tokeny „kafli” logo, niezależne od motywu strony (logo pokazujemy zawsze na jasnym i ciemnym tle). */
+:root {
+  --tl-bg: #FFFFFF; --tl-fg: #16192B; --tl-brand: #E8492A; --tl-brand2: #1B2A4A; --tl-ink: #FFFFFF; --tl-line: #E3E4EC;
+  --td-bg: #121729; --td-fg: #F3F4FA; --td-brand: #FF6B4A; --td-brand2: #9DB4E8; --td-ink: #1A0B06; --td-line: #262E47;
+}
+:root[data-palette="lagoon"] {
+  --tl-fg: #0F2224; --tl-brand: #0F8F7E; --tl-brand2: #4338CA; --tl-ink: #FFFFFF; --tl-line: #DCE8E8;
+  --td-bg: #0D1F21; --td-fg: #E6F4F2; --td-brand: #2DD4BF; --td-brand2: #A5B4FC; --td-ink: #032421; --td-line: #1E3A3C;
+}
+:root[data-palette="grape"] {
+  --tl-fg: #1C1433; --tl-brand: #6D3BD9; --tl-brand2: #C98F00; --tl-ink: #FFFFFF; --tl-line: #E7E2F3;
+  --td-bg: #17132F; --td-fg: #EFEAFB; --td-brand: #A98BFF; --td-brand2: #FFD24A; --td-ink: #160B33; --td-line: #2C2650;
+}
+
+.kit-top { padding-block: clamp(36px, 7vw, 72px) 8px; }
+.kit-top h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin-bottom: .2em; }
+.kit-top h1 b { color: var(--brand); font-weight: 700; }
+.kit-top p { max-width: 62ch; color: var(--muted); font-size: 1.1rem; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px 18px; font-weight: 600; font-size: .95rem; }
+
+.kit-section { padding-block: clamp(36px, 6vw, 60px); border-top: 1px solid var(--line); }
+.kit-section > .wrap > h2 { margin-top: 0; }
+.kit-section .intro { max-width: 66ch; color: var(--muted); }
+
+/* checklista */
+.req-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.req-grid h3 { margin-top: 0; display: flex; gap: 10px; align-items: baseline; }
+.req-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.req-grid li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; font-size: .97rem; line-height: 1.5; }
+.req-grid li::before { content: ""; width: 14px; height: 14px; margin-top: 5px; border: 2px solid var(--brand); border-radius: 4px; }
+.req-grid li.opt::before { border-style: dashed; border-color: var(--muted); }
+.req-grid li small { display: block; }
+.tag { font: 600 .7rem var(--font-body); letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--brand-soft); color: var(--fg); white-space: nowrap; }
+
+/* mapa strony */
+.sitemap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.page-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; gap: 6px; align-content: start; text-decoration: none; color: var(--fg); }
+.page-card:hover { border-color: var(--brand); }
+.page-card code { font: 500 .85rem var(--font-mono); color: var(--muted); }
+.page-card strong { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; }
+.page-card span { font-size: .93rem; color: var(--muted); }
+.page-card .tag { justify-self: start; margin-top: 4px; }
+.page-card.root { grid-column: 1 / -1; border-width: 2px; border-color: var(--brand); }
+
+/* palety */
+.palettes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.pal { border: 2px solid var(--line); border-radius: var(--radius); background: var(--surface); padding: 16px; display: grid; gap: 12px; text-align: left; cursor: pointer; font: inherit; color: var(--fg); }
+.pal[aria-pressed="true"] { border-color: var(--fg); }
+.pal strong { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; }
+.pal p { margin: 0; font-size: .92rem; color: var(--muted); }
+.sw { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; height: 56px; border-radius: 10px; overflow: hidden; }
+.sw i { display: block; }
+.sw-codes { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; font: 500 .7rem var(--font-mono); color: var(--muted); margin-top: -6px; }
+
+/* kafle logo i ikon */
+.logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.logo-item { display: grid; gap: 8px; }
+.logo-item header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.logo-item header strong { font-family: var(--font-display); font-weight: 600; }
+.logo-item header span { color: var(--muted); font-size: .9rem; }
+.tiles { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.tile { display: grid; place-items: center; padding: 26px 18px; min-height: 150px; }
+.tile svg { width: 100%; max-width: 250px; height: auto; display: block; }
+.tile-l { background: var(--tl-bg); --lg-fg: var(--tl-fg); --lg-brand: var(--tl-brand); --lg-brand2: var(--tl-brand2); --lg-ink: var(--tl-ink); --lg-line: var(--tl-line); --lg-bg: var(--tl-bg); }
+.tile-d { background: var(--td-bg); --lg-fg: var(--td-fg); --lg-brand: var(--td-brand); --lg-brand2: var(--td-brand2); --lg-ink: var(--td-ink); --lg-line: var(--td-line); --lg-bg: var(--td-bg); }
+.wm { font-family: var(--font-display); font-weight: 700; }
+
+.icons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.icon-row { display: flex; align-items: flex-end; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.icon-row svg { display: block; flex: none; }
+.icon-row .s128 { width: 96px; height: 96px; }
+.icon-row .s64 { width: 48px; height: 48px; }
+.icon-row .s32 { width: 32px; height: 32px; }
+.icon-row .s16 { width: 16px; height: 16px; }
+.icon-tile { flex-direction: column; gap: 14px; }
+.fake-tab { display: inline-flex; align-items: center; gap: 8px; background: var(--lg-bg); border: 1px solid var(--lg-line); border-radius: 8px 8px 0 0; padding: 6px 12px; font-size: .8rem; color: var(--lg-fg); }
+
+.note { font-size: .9rem; color: var(--muted); max-width: 70ch; margin-top: 18px; }
+
+@media (max-width: 820px) {
+  .req-grid, .logos, .palettes, .icons { grid-template-columns: minmax(0, 1fr); }
+  .sitemap { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .sitemap, .tiles { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+
+<div class="kit-top"><div class="wrap">
+  <div class="eyebrow">Projekt · listopad 2026</div>
+  <h1>meesh<b>Apps</b> Kit</h1>
+  <p>Co trzeba mieć, żeby sprzedawać gry w App Store, jak ułożyć stronę studia, trzy palety kolorów, sześć wersji logo i trzy ikonki. Wybór palety poniżej przełącza cały kit i podgląd strony.</p>
+  <nav class="toc" aria-label="Spis treści">
+    <a href="#wymagania">Wymagania</a><a href="#uklad">Układ strony</a><a href="#palety">Palety</a><a href="#loga">Loga</a><a href="#ikonki">Ikonki</a>
+  </nav>
+</div></div>
+
+<section class="kit-section" id="wymagania"><div class="wrap">
+  <h2>Co będzie potrzebne</h2>
+  <p class="intro">Pełne pole <span class="tag">wymagane</span> to rzecz, bez której Apple nie przyjmie aplikacji albo której wymaga prawo. Przerywane pole to rzecz opcjonalna lub zależna od funkcji gry. Szczegóły i linki są w pliku <code>meeshapps/WYMAGANIA.md</code>.</p>
+  <div class="req-grid">
+    <div>
+      <h3>Strona www <span class="tag">App Store Connect</span></h3>
+      <ul>
+        <li><span><b>Polityka prywatności (URL)</b><small class="muted">Wymagana dla każdej aplikacji, także bez zbierania danych. Musi mówić, co zbierasz, po co, komu przekazujesz i jak usunąć dane.</small></span></li>
+        <li><span><b>Strona wsparcia (URL)</b><small class="muted">Wymagana. Musi zawierać realny kontakt (e-mail), nie tylko FAQ.</small></span></li>
+        <li class="opt"><span><b>Strona marketingowa (URL)</b><small class="muted">Opcjonalna, ale przydaje się: osobna podstrona dla każdej gry.</small></span></li>
+        <li class="opt"><span><b>Warunki korzystania / EULA</b><small class="muted">Domyślnie działa standardowa EULA Apple. Własne warunki są obowiązkowe dopiero przy subskrypcjach (link w aplikacji i w opisie).</small></span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Prawo UE i PL</h3>
+      <ul>
+        <li><span><b>Status przedsiębiorcy (DSA)</b><small class="muted">Deklarujesz w App Store Connect. Sprzedając płatne gry, jesteś przedsiębiorcą: Apple pokaże w UE Twój adres, telefon i e-mail. Rozważ adres firmowy lub wirtualne biuro.</small></span></li>
+        <li><span><b>RODO w polityce prywatności</b><small class="muted">Administrator, cele, podstawy prawne, odbiorcy (Apple), okres przechowywania, prawa, skarga do UODO.</small></span></li>
+        <li><span><b>Forma działalności i podatki</b><small class="muted">Przychody z App Store trzeba rozliczyć w PL. Porozmawiaj z księgową, zanim ruszy sprzedaż.</small></span></li>
+        <li class="opt"><span><b>Regulamin usług elektronicznych</b><small class="muted">Potrzebny dopiero, gdy sam świadczysz usługi online (konta, serwery). Gry offline z Game Center go nie wymagają.</small></span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Konto Apple Developer</h3>
+      <ul>
+        <li><span><b>Apple Developer Program, 99 USD rocznie</b><small class="muted">Jako osoba fizyczna (także JDG) w sklepie widnieje Twoje imię i nazwisko. Nazwa „meeshApps” jako sprzedawca wymaga osoby prawnej (np. sp. z o.o.) i numeru D-U-N-S.</small></span></li>
+        <li><span><b>Umowa Paid Apps, konto bankowe, formularz podatkowy W-8BEN</b><small class="muted">Bez tego nie wystawisz płatnej gry ani zakupów w aplikacji.</small></span></li>
+        <li class="opt"><span><b>App Store Small Business Program</b><small class="muted">Prowizja 15% zamiast 30% przy przychodach do 1 mln USD rocznie. Trzeba się zgłosić.</small></span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>W samej aplikacji</h3>
+      <ul>
+        <li><span><b>Etykiety prywatności w App Store</b><small class="muted">Ankieta „App Privacy”. Przy grach offline: „Data Not Collected”, o ile nie dodasz analityki.</small></span></li>
+        <li><span><b>Kategoria wiekowa</b><small class="muted">Nowa ankieta Apple (progi 4+, 9+, 13+, 16+, 18+).</small></span></li>
+        <li><span><b>Opisy uprawnień i Privacy Manifest</b><small class="muted">Tekst przy dostępie do ruchu (Motion), kamery w AR; plik PrivacyInfo.xcprivacy.</small></span></li>
+        <li><span><b>Ostrzeżenie o bezpieczeństwie</b><small class="muted">Przy grach ruchowych: ekran startowy o wolnej przestrzeni i zapiętym pasku. Jest też w warunkach.</small></span></li>
+        <li class="opt"><span><b>Usuwanie konta w aplikacji</b><small class="muted">Obowiązkowe, jeśli kiedyś dodasz konta użytkowników.</small></span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="kit-section" id="uklad"><div class="wrap">
+  <h2>Układ strony</h2>
+  <p class="intro">Sześć podstron, wszystkie po polsku i angielsku. Kliknij kafel, żeby otworzyć gotową stronę. Pola z ramką <mark class="todo">tak</mark> to dane do uzupełnienia.</p>
+  <div class="sitemap">
+    <a class="page-card root" href="site/index.html"><code>/</code><strong>Strona główna</strong><span>Hasło studia, kafle gier, krótko o studiu, kontakt.</span><span class="tag">Marketing URL studia</span></a>
+    <a class="page-card" href="site/apps/cieciwa.html"><code>/apps/cieciwa</code><strong>Strona gry</strong><span>Ikona, opis, trzy cechy, linki do dokumentów. Jedna na grę.</span><span class="tag">Marketing URL</span></a>
+    <a class="page-card" href="site/privacy.html"><code>/privacy</code><strong>Polityka prywatności</strong><span>Tabela danych, podstawy RODO, prawa, UODO.</span><span class="tag">Privacy Policy URL</span></a>
+    <a class="page-card" href="site/support.html"><code>/support</code><strong>Wsparcie</strong><span>E-mail, FAQ: zegarek, tryb bez zegarka, zwroty przez Apple.</span><span class="tag">Support URL</span></a>
+    <a class="page-card" href="site/terms.html"><code>/terms</code><strong>Warunki korzystania</strong><span>Odesłanie do EULA Apple plus zasady bezpieczeństwa gier ruchowych.</span><span class="tag">EULA / ToU</span></a>
+    <a class="page-card" href="site/legal.html"><code>/legal</code><strong>Dane sprzedawcy</strong><span>Te same dane, które deklarujesz w DSA.</span><span class="tag">DSA</span></a>
+  </div>
+  <p class="note">Hosting: najprościej GitHub Pages (za darmo) z własną domeną, np. meeshapps.com albo meeshapps.app. Adresy support@ i privacy@ ustawisz jako przekierowania u rejestratora domeny. Pasek „Podgląd palety” na górze strony usuń po wyborze kolorów.</p>
+</div></section>
+
+<section class="kit-section" id="palety"><div class="wrap">
+  <h2>Trzy palety</h2>
+  <p class="intro">Każda paleta ma wersję jasną i ciemną. Kliknij, żeby przełączyć kit i podstrony.</p>
+  <div class="palettes" role="group" aria-label="Paleta">
+    <button type="button" class="pal" data-set-palette="ember" aria-pressed="true">
+      <div class="sw"><i style="background:#E8492A"></i><i style="background:#1B2A4A"></i><i style="background:#F7F7FA"></i><i style="background:#0F1424"></i></div>
+      <div class="sw-codes"><span>#E8492A</span><span>#1B2A4A</span><span>#F7F7FA</span><span>#0F1424</span></div>
+      <strong>Ember</strong>
+      <p>Koral i granat. Energia strzału, tarcza łucznicza. Najbardziej „sportowa”.</p>
+    </button>
+    <button type="button" class="pal" data-set-palette="lagoon" aria-pressed="false">
+      <div class="sw"><i style="background:#0F8F7E"></i><i style="background:#4338CA"></i><i style="background:#F3F8F8"></i><i style="background:#0B1A1C"></i></div>
+      <div class="sw-codes"><span>#0F8F7E</span><span>#4338CA</span><span>#F3F8F8</span><span>#0B1A1C</span></div>
+      <strong>Lagoon</strong>
+      <p>Morska zieleń i indygo. Spokojna, „techniczna”, dobrze wygląda obok watchOS.</p>
+    </button>
+    <button type="button" class="pal" data-set-palette="grape" aria-pressed="false">
+      <div class="sw"><i style="background:#6D3BD9"></i><i style="background:#FFD24A"></i><i style="background:#F8F6FD"></i><i style="background:#13102A"></i></div>
+      <div class="sw-codes"><span>#6D3BD9</span><span>#FFD24A</span><span>#F8F6FD</span><span>#13102A</span></div>
+      <strong>Grape</strong>
+      <p>Fiolet i żółć. Najbardziej imprezowa, pasuje do Wrist Arena.</p>
+    </button>
+  </div>
+</div></section>
+
+<section class="kit-section" id="loga"><div class="wrap">
+  <h2>Sześć wersji logo</h2>
+  <p class="intro">Każde na jasnym i ciemnym tle, w wybranej palecie. Pliki SVG wszystkich wersji, we wszystkich paletach, są w <code>meeshapps/brand/</code>.</p>
+  <div class="logos">
+
+    <div class="logo-item">
+      <header><strong>1 · Wordmark</strong><span>Sam napis. Najprostszy, do stopek i dokumentów.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l" data-export="logo-1-wordmark" data-variant="light"><svg viewBox="0 0 340 90" role="img" aria-label="meeshApps"><text class="wm" x="4" y="60" font-size="48" textLength="330" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
+        <div class="tile tile-d" data-export="logo-1-wordmark" data-variant="dark"><svg viewBox="0 0 340 90" role="img" aria-label="meeshApps"><text class="wm" x="4" y="60" font-size="48" textLength="330" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>2 · Łuk „m” + napis</strong><span>Litera m z dwóch łuków. Główna propozycja.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l" data-export="logo-2-luk" data-variant="light"><svg viewBox="0 0 360 84" role="img" aria-label="meeshApps"><rect x="2" y="2" width="80" height="80" rx="22" fill="var(--lg-brand)"/><path d="M22 58V38a10 10 0 0 1 20 0v20M42 38a10 10 0 0 1 20 0v20" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><text class="wm" x="100" y="56" font-size="36" textLength="252" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
+        <div class="tile tile-d" data-export="logo-2-luk" data-variant="dark"><svg viewBox="0 0 360 84" role="img" aria-label="meeshApps"><rect x="2" y="2" width="80" height="80" rx="22" fill="var(--lg-brand)"/><path d="M22 58V38a10 10 0 0 1 20 0v20M42 38a10 10 0 0 1 20 0v20" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><text class="wm" x="100" y="56" font-size="36" textLength="252" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>3 · Mesh</strong><span>„M” z węzłów sieci. Gra słów meesh / mesh, zegarek + telefon połączone.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l" data-export="logo-3-mesh" data-variant="light"><svg viewBox="0 0 360 84" role="img" aria-label="meeshApps"><g stroke="var(--lg-fg)" stroke-linecap="round"><path d="M10 74V12L42 46 74 12V74" fill="none" stroke-width="5" stroke-linejoin="round"/><path d="M10 74 42 46 74 74" fill="none" stroke-width="2.5" opacity=".45"/></g><g fill="var(--lg-brand)"><circle cx="10" cy="12" r="8"/><circle cx="74" cy="12" r="8"/><circle cx="42" cy="46" r="8"/><circle cx="10" cy="74" r="6"/><circle cx="74" cy="74" r="6"/></g><text class="wm" x="100" y="56" font-size="36" textLength="252" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">apps</tspan></text></svg></div>
+        <div class="tile tile-d" data-export="logo-3-mesh" data-variant="dark"><svg viewBox="0 0 360 84" role="img" aria-label="meeshApps"><g stroke="var(--lg-fg)" stroke-linecap="round"><path d="M10 74V12L42 46 74 12V74" fill="none" stroke-width="5" stroke-linejoin="round"/><path d="M10 74 42 46 74 74" fill="none" stroke-width="2.5" opacity=".45"/></g><g fill="var(--lg-brand)"><circle cx="10" cy="12" r="8"/><circle cx="74" cy="12" r="8"/><circle cx="42" cy="46" r="8"/><circle cx="10" cy="74" r="6"/><circle cx="74" cy="74" r="6"/></g><text class="wm" x="100" y="56" font-size="36" textLength="252" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">apps</tspan></text></svg></div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>4 · Tarcze zamiast „ee”</strong><span>Dwie tarcze łucznicze jak oczy. Najbardziej zabawne.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l" data-export="logo-4-tarcze" data-variant="light"><svg viewBox="0 0 404 90" role="img" aria-label="meeshApps"><text class="wm" x="2" y="68" font-size="56" fill="var(--lg-fg)" textLength="48" lengthAdjust="spacingAndGlyphs">m</text><g fill="none" stroke="var(--lg-fg)" stroke-width="5"><circle cx="72" cy="52" r="15"/><circle cx="110" cy="52" r="15"/></g><g fill="var(--lg-brand)"><circle cx="72" cy="52" r="6.5"/><circle cx="110" cy="52" r="6.5"/></g><text class="wm" x="136" y="68" font-size="56" textLength="262" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">sh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
+        <div class="tile tile-d" data-export="logo-4-tarcze" data-variant="dark"><svg viewBox="0 0 404 90" role="img" aria-label="meeshApps"><text class="wm" x="2" y="68" font-size="56" fill="var(--lg-fg)" textLength="48" lengthAdjust="spacingAndGlyphs">m</text><g fill="none" stroke="var(--lg-fg)" stroke-width="5"><circle cx="72" cy="52" r="15"/><circle cx="110" cy="52" r="15"/></g><g fill="var(--lg-brand)"><circle cx="72" cy="52" r="6.5"/><circle cx="110" cy="52" r="6.5"/></g><text class="wm" x="136" y="68" font-size="56" textLength="262" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">sh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>5 · Plakietka</strong><span>Napis w pigułce, „APPS” pod spodem. Na naklejki, ekran startowy, avatar.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l" data-export="logo-5-plakietka" data-variant="light"><svg viewBox="0 0 230 120" role="img" aria-label="meeshApps"><rect x="2" y="2" width="226" height="116" rx="30" fill="var(--lg-brand)"/><text class="wm" x="28" y="66" font-size="40" fill="var(--lg-ink)" textLength="174" lengthAdjust="spacing">meesh</text><text x="30" y="96" font-family="Figtree, system-ui, sans-serif" font-weight="700" font-size="17" fill="var(--lg-ink)" textLength="80" lengthAdjust="spacing" opacity=".85">APPS</text><circle cx="196" cy="90" r="8" fill="var(--lg-ink)"/></svg></div>
+        <div class="tile tile-d" data-export="logo-5-plakietka" data-variant="dark"><svg viewBox="0 0 230 120" role="img" aria-label="meeshApps"><rect x="2" y="2" width="226" height="116" rx="30" fill="var(--lg-brand)"/><text class="wm" x="28" y="66" font-size="40" fill="var(--lg-ink)" textLength="174" lengthAdjust="spacing">meesh</text><text x="30" y="96" font-family="Figtree, system-ui, sans-serif" font-weight="700" font-size="17" fill="var(--lg-ink)" textLength="80" lengthAdjust="spacing" opacity=".85">APPS</text><circle cx="196" cy="90" r="8" fill="var(--lg-ink)"/></svg></div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>6 · Ruch</strong><span>Fale za napisem jak zamach ręką. Dobre do animacji na ekranie startowym.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l" data-export="logo-6-ruch" data-variant="light"><svg viewBox="0 0 320 104" role="img" aria-label="meeshApps"><text class="wm" x="2" y="62" font-size="52" fill="var(--lg-fg)" textLength="226" lengthAdjust="spacing">meesh</text><g fill="none" stroke="var(--lg-brand)" stroke-width="6" stroke-linecap="round"><path d="M246 30a16 16 0 0 1 0 26"/><path d="M262 18a32 32 0 0 1 0 50" opacity=".65"/><path d="M278 6a48 48 0 0 1 0 74" opacity=".35"/></g><text x="4" y="96" font-family="Figtree, system-ui, sans-serif" font-weight="700" font-size="16" fill="var(--lg-brand)" textLength="88" lengthAdjust="spacing">APPS</text></svg></div>
+        <div class="tile tile-d" data-export="logo-6-ruch" data-variant="dark"><svg viewBox="0 0 320 104" role="img" aria-label="meeshApps"><text class="wm" x="2" y="62" font-size="52" fill="var(--lg-fg)" textLength="226" lengthAdjust="spacing">meesh</text><g fill="none" stroke="var(--lg-brand)" stroke-width="6" stroke-linecap="round"><path d="M246 30a16 16 0 0 1 0 26"/><path d="M262 18a32 32 0 0 1 0 50" opacity=".65"/><path d="M278 6a48 48 0 0 1 0 74" opacity=".35"/></g><text x="4" y="96" font-family="Figtree, system-ui, sans-serif" font-weight="700" font-size="16" fill="var(--lg-brand)" textLength="88" lengthAdjust="spacing">APPS</text></svg></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="note">Przed drukiem albo wysłaniem do grafika zamień tekst w SVG na krzywe (Figma: Outline stroke / Flatten, Inkscape: Ścieżka → Obiekt w ścieżkę). Pliki w <code>brand/</code> używają fontu Unbounded z Google Fonts; bez niego przeglądarka podstawi inny krój.</p>
+</div></section>
+
+<section class="kit-section" id="ikonki"><div class="wrap">
+  <h2>Trzy ikonki</h2>
+  <p class="intro">Mały znak na favicon, avatar w social media, stopkę ekranu startowego gry. Pokazane w 96, 48, 32 i 16 px, bo przy 16 px widać, czy znak się broni.</p>
+  <div class="icons">
+
+    <div class="logo-item">
+      <header><strong>A · Łuk „m”</strong><span>Para do logo 2.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l icon-tile" data-export="icon-a-luk" data-variant="light">
+          <div class="icon-row">
+            <svg class="s128" viewBox="0 0 64 64" role="img" aria-label="Ikona A"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="s64" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="s32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="s16" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="fake-tab"><svg class="s16" viewBox="0 0 64 64" aria-hidden="true" style="width:16px;height:16px"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>meeshApps</span>
+        </div>
+        <div class="tile tile-d icon-tile">
+          <div class="icon-row">
+            <svg class="s128" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="s32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="s16" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand)"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>B · Węzły</strong><span>Para do logo 3.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l icon-tile" data-export="icon-b-wezly" data-variant="light">
+          <div class="icon-row">
+            <svg class="s128" viewBox="0 0 64 64" role="img" aria-label="Ikona B"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)" stroke="var(--lg-brand2)" stroke-width="2"><circle cx="16" cy="17" r="6.5"/><circle cx="48" cy="17" r="6.5"/><circle cx="32" cy="34" r="6.5"/></g></svg>
+            <svg class="s64" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)" stroke="var(--lg-brand2)" stroke-width="2"><circle cx="16" cy="17" r="6.5"/><circle cx="48" cy="17" r="6.5"/><circle cx="32" cy="34" r="6.5"/></g></svg>
+            <svg class="s32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)"><circle cx="16" cy="17" r="7"/><circle cx="48" cy="17" r="7"/><circle cx="32" cy="34" r="7"/></g></svg>
+            <svg class="s16" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)"><circle cx="16" cy="17" r="8"/><circle cx="48" cy="17" r="8"/><circle cx="32" cy="34" r="8"/></g></svg>
+          </div>
+          <span class="fake-tab"><svg viewBox="0 0 64 64" aria-hidden="true" style="width:16px;height:16px"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)"><circle cx="16" cy="17" r="8"/><circle cx="48" cy="17" r="8"/><circle cx="32" cy="34" r="8"/></g></svg>meeshApps</span>
+        </div>
+        <div class="tile tile-d icon-tile">
+          <div class="icon-row">
+            <svg class="s128" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)" stroke="var(--lg-brand2)" stroke-width="2"><circle cx="16" cy="17" r="6.5"/><circle cx="48" cy="17" r="6.5"/><circle cx="32" cy="34" r="6.5"/></g></svg>
+            <svg class="s32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)"><circle cx="16" cy="17" r="7"/><circle cx="48" cy="17" r="7"/><circle cx="32" cy="34" r="7"/></g></svg>
+            <svg class="s16" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-brand2)"/><path d="M16 47V17l16 17 16-17v30" fill="none" stroke="var(--lg-bg)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--lg-brand)"><circle cx="16" cy="17" r="8"/><circle cx="48" cy="17" r="8"/><circle cx="32" cy="34" r="8"/></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-item">
+      <header><strong>C · Oczy-tarcze</strong><span>Para do logo 4.</span></header>
+      <div class="tiles">
+        <div class="tile tile-l icon-tile" data-export="icon-c-tarcze" data-variant="light">
+          <div class="icon-row">
+            <svg class="s128" viewBox="0 0 64 64" role="img" aria-label="Ikona C"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="4.5"><circle cx="20.5" cy="32" r="10.5"/><circle cx="43.5" cy="32" r="10.5"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="4.5"/><circle cx="43.5" cy="32" r="4.5"/></g></svg>
+            <svg class="s64" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="4.5"><circle cx="20.5" cy="32" r="10.5"/><circle cx="43.5" cy="32" r="10.5"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="4.5"/><circle cx="43.5" cy="32" r="4.5"/></g></svg>
+            <svg class="s32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="5.5"><circle cx="20.5" cy="32" r="10.5"/><circle cx="43.5" cy="32" r="10.5"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="5"/><circle cx="43.5" cy="32" r="5"/></g></svg>
+            <svg class="s16" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="6"><circle cx="20.5" cy="32" r="10"/><circle cx="43.5" cy="32" r="10"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="6"/><circle cx="43.5" cy="32" r="6"/></g></svg>
+          </div>
+          <span class="fake-tab"><svg viewBox="0 0 64 64" aria-hidden="true" style="width:16px;height:16px"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="6"><circle cx="20.5" cy="32" r="10"/><circle cx="43.5" cy="32" r="10"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="6"/><circle cx="43.5" cy="32" r="6"/></g></svg>meeshApps</span>
+        </div>
+        <div class="tile tile-d icon-tile">
+          <div class="icon-row">
+            <svg class="s128" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="4.5"><circle cx="20.5" cy="32" r="10.5"/><circle cx="43.5" cy="32" r="10.5"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="4.5"/><circle cx="43.5" cy="32" r="4.5"/></g></svg>
+            <svg class="s32" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="5.5"><circle cx="20.5" cy="32" r="10.5"/><circle cx="43.5" cy="32" r="10.5"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="5"/><circle cx="43.5" cy="32" r="5"/></g></svg>
+            <svg class="s16" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="var(--lg-fg)"/><g fill="none" stroke="var(--lg-bg)" stroke-width="6"><circle cx="20.5" cy="32" r="10"/><circle cx="43.5" cy="32" r="10"/></g><g fill="var(--lg-brand)"><circle cx="20.5" cy="32" r="6"/><circle cx="43.5" cy="32" r="6"/></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="note">Ikona aplikacji w App Store to osobna rzecz: każda gra dostaje własną (1024 × 1024 px, bez przezroczystości, Apple sam zaokrągla rogi). Znak studia warto dać tylko w rogu ekranu startowego gry i na stronie.</p>
+</div></section>
+
+<footer class="site-footer"><div class="wrap">
+  <div>meeshApps Kit · szablony dokumentów nie są poradą prawną</div>
+  <nav aria-label="Kit"><a href="site/index.html">Podgląd strony</a><a href="#wymagania">Wymagania</a></nav>
+</div></footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  function save(v) { try { localStorage.setItem("meesh-palette", v); } catch (e) {} }
+  function load() { try { return localStorage.getItem("meesh-palette"); } catch (e) { return null; } }
+  function set(p) {
+    root.setAttribute("data-palette", p);
+    save(p);
+    document.querySelectorAll("[data-set-palette]").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-set-palette") === p));
+    });
+  }
+  set(load() || "ember");
+  document.querySelectorAll("[data-set-palette]").forEach(function (b) {
+    b.addEventListener("click", function () { set(b.getAttribute("data-set-palette")); });
+  });
+})();
+</script>
