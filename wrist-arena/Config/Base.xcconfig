@@ -1,0 +1,7 @@
+// Wspólne ustawienia. Wartości osobiste (Team ID, prefiks bundle ID) w Signing.xcconfig,
+// który NIE trafia do repo. Skopiuj Signing.xcconfig.example → Signing.xcconfig.
+
+BUNDLE_ID_PREFIX = com.meeshor
+DEVELOPMENT_TEAM =
+
+#include? "Signing.xcconfig"

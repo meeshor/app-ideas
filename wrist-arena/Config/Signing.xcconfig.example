@@ -1,0 +1,7 @@
+// Skopiuj jako Signing.xcconfig (jest w .gitignore) i wpisz swój Team ID
+// (Xcode → Settings → Accounts albo developer.apple.com → Membership).
+
+DEVELOPMENT_TEAM = ABCDE12345
+
+// Opcjonalnie inny prefiks, jeśli com.meeshor.* jest zajęty na Twoim koncie:
+// BUNDLE_ID_PREFIX = com.example
