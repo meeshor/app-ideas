@@ -25,6 +25,6 @@ jobs:
     timeout-minutes: 10
     container: ghcr.io/realm/swiftlint:0.57.0
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: SwiftLint
         run: swiftlint lint --reporter github-actions-logging

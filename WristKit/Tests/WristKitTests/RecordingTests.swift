@@ -80,7 +80,8 @@ struct RecordingTests {
         }
         #expect(recorder.samples.count == 6) // 0.00 … 0.05
         #expect(recorder.isFull)
-        #expect(!recorder.append(MotionSample(t: 0)))
+        let acceptedOutOfOrder = recorder.append(MotionSample(t: 0))
+        #expect(!acceptedOutOfOrder)
 
         let recording = recorder.finish(metadata: .init(label: "limit"))
         #expect(recording.samples.count == 6)
