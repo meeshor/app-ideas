@@ -8,6 +8,8 @@ skąd wzięła się każda liczba. Każdą liczbę da się poprawić i zapamięt
 - PWA: działa offline, da się zainstalować na telefonie.
 - Wartości są **orientacyjne** (szacunek opisu słownego to typowo ±20–30%). To nie jest porada medyczna.
 
+![Ekran „Dziś” na telefonie](docs/screenshot-dzis.png)
+
 Dokumentacja: [plan](docs/plan.md) · [postęp i stan](docs/postep.md) · [parser: co rozumie, czego nie](docs/parser.md).
 
 ## Uruchomienie lokalnie
@@ -24,6 +26,7 @@ npm run preview    # podgląd buildu, http://localhost:4173
 npm run e2e        # scenariusze Playwright (uruchamia preview sam)
 npm run lint       # ESLint
 npm run data       # przebudowa data/*.json z data-src/*.ts (formy odmiany)
+node scripts/screenshot.mjs   # zrzut ekranu „Dziś” (przy działającym npm run preview)
 ```
 
 Playwright używa Chromium; jeśli nie masz go lokalnie: `npx playwright install chromium`.

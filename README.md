@@ -14,3 +14,4 @@ Pomysły na aplikacje: oceny i prompty startowe.
 
 - [`analiza-tracker-jedzenia.md`](analiza-tracker-jedzenia.md): ocena pomysłu (wykonalność, konkurencja, wyróżnik).
 - [`prompty/04-tracker-jedzenia.md`](prompty/04-tracker-jedzenia.md): prompt startowy na PWA „Zjadłem” (opis posiłku zwykłym zdaniem, przejrzyste i konfigurowalne wyliczenia).
+- [`tracker-jedzenia/`](tracker-jedzenia/): prototyp MVP (PWA „Zjadłem”) — [README](tracker-jedzenia/README.md), [stan i wyniki testów](tracker-jedzenia/docs/postep.md).
