@@ -94,6 +94,15 @@ export class RuleParser implements Parser {
         pos++;
         continue;
       }
+      if (t.type === 'word' && this.lex.negations.has(t.key)) {
+        // „bez cukru” bez poprzedniej pozycji — nie ma czego zmienić; pokazujemy jako niezrozumiane
+        const name = this.matchName(tokens, pos + 1, true);
+        const end = pos + 1 + (name?.len ?? 0);
+        flushUnknown();
+        unknown.push(tokensText(tokens.slice(pos, end)));
+        pos = end;
+        continue;
+      }
       const draft = this.parseItem(tokens, pos);
       if (!draft) {
         // nic nie rozpoznano od tej pozycji — słowo nieznane albo wypełniacz
@@ -208,7 +217,7 @@ export class RuleParser implements Parser {
     return !!m && m.len > 1;
   }
 
-  private exactName(tokens: Token[], pos: number, foodsOnly = false): NameMatch | null {
+  private exactName(tokens: Token[], pos: number, foodsOnly = false, maxLen = Infinity): NameMatch | null {
     const t = tokens[pos];
     if (!t || t.type !== 'word') return null;
     const list = this.lex.names.get(t.key);
@@ -217,6 +226,7 @@ export class RuleParser implements Parser {
     let bestScore = -1;
     for (const e of list) {
       if (foodsOnly && e.kind !== 'food') continue;
+      if (e.keys.length > maxLen) continue;
       if (best && e.keys.length < best.len) break; // posortowane malejąco wg długości
       if (!e.keys.every((k, i) => tokens[pos + i]?.type === 'word' && tokens[pos + i]!.key === k)) continue;
       const exactDiacritics = e.raw.every((r, i) => tokens[pos + i]!.raw === r);
@@ -233,7 +243,7 @@ export class RuleParser implements Parser {
     return best;
   }
 
-  private fuzzyName(tokens: Token[], pos: number, foodsOnly = false, minN = 1): NameMatch | null {
+  private fuzzyName(tokens: Token[], pos: number, foodsOnly = false, minN = 1, longerThanId: string | null = null): NameMatch | null {
     const first = tokens[pos];
     if (!first || first.type !== 'word') return null;
     if (first.key.length < CONFIG.parser.fuzzyMinLength || this.lex.functionWords.has(first.key)) return null;
@@ -247,7 +257,8 @@ export class RuleParser implements Parser {
         if (foodsOnly && e.kind !== 'food') continue;
         const k0 = e.keys[0]!;
         const w0 = words[0]!.key;
-        if (k0[0] !== w0[0] && k0[1] !== w0[1]) continue; // szybki filtr: literówka rzadko psuje oba pierwsze znaki
+        // dłuższe dopasowanie zamiast dokładnego: pierwsze słowo musi się zgadzać albo to ta sama pozycja
+        if (longerThanId !== null ? k0 !== w0 && e.id !== longerThanId : k0[0] !== w0[0] && k0[1] !== w0[1]) continue; // szybki filtr: literówka rzadko psuje oba pierwsze znaki
         let total = 0;
         let ok = true;
         for (let i = 0; i < n; i++) {
@@ -279,7 +290,7 @@ export class RuleParser implements Parser {
   private matchName(tokens: Token[], pos: number, foodsOnly = false): NameMatch | null {
     const exact = this.exactName(tokens, pos, foodsOnly);
     // literówka w dłuższej nazwie („bułka żytna”, „spagetti bolonese”) — dłuższe dopasowanie przybliżone wygrywa
-    const fuzzy = this.fuzzyName(tokens, pos, foodsOnly, exact ? exact.len + 1 : 1);
+    const fuzzy = this.fuzzyName(tokens, pos, foodsOnly, exact ? exact.len + 1 : 1, exact?.entry.id ?? null);
     if (exact && (!fuzzy || fuzzy.len <= exact.len)) return exact;
     return fuzzy ?? exact;
   }
@@ -309,6 +320,16 @@ export class RuleParser implements Parser {
     if (q.size) draft.labels.push(this.sizeLabel(q.size));
     if (q.factorLabel) draft.labels.push(q.factorLabel);
     this.parsePost(tokens, draft);
+    // Alias dania typu „bułka z szynką” mógł uciąć dalszy opis („… drobiową”, „… i ogórkiem”).
+    // Próbujemy rozbioru „produkt + dodatki”; jeśli pochłania więcej tekstu, wygrywa (sygnatura znajdzie danie).
+    if (name.entry.kind === 'dish' && name.entry.keys.some((k) => k === 'z' || k === 'ze') && name.len > 1) {
+      const head = this.exactName(tokens, q.end, true, name.len - 1);
+      if (head) {
+        const alt: Draft = { ...draft, main: head, labels: [...draft.labels].slice(0, Number(!!q.size) + Number(!!q.factorLabel)), attachments: [], removals: [], unknown: [], end: q.end + head.len };
+        this.parsePost(tokens, alt);
+        if (alt.end > draft.end && alt.unknown.length <= draft.unknown.length) return alt;
+      }
+    }
     return draft;
   }
 
@@ -337,8 +358,14 @@ export class RuleParser implements Parser {
             p = att.end;
             continue;
           }
-          p++; // „na” bez produktu (np. „na śniadanie”) — pomijamy
-          continue;
+          // marker bez produktu: „na śniadanie”, „z grilla” — pomijamy razem z wypełniaczem;
+          // w przeciwnym razie kończymy pozycję (dalsze słowa trafią do niezrozumianych)
+          const nx = tokens[p + 1];
+          if (nx?.type === 'word' && this.lex.fillers.has(nx.key) && !this.lex.markers.has(nx.key)) {
+            p += 2;
+            continue;
+          }
+          break;
         }
         if (this.lex.negations.has(t.key)) {
           const name = this.matchName(tokens, p + 1, true);
@@ -440,7 +467,18 @@ export class RuleParser implements Parser {
     if (!sep || !this.isSeparator(sep)) return null;
     const p = pos + 1;
     const t = tokens[p];
-    if (!t || t.type !== 'word') return null;
+    if (!t) return null;
+    // „bułki z szynką, 2 sztuki” — sama ilość po przecinku dotyczy poprzedniej pozycji
+    if (this.numberAt(t) !== null && d.qty === null) {
+      const q = this.parseQuantity(tokens, p);
+      const after = tokens[q.end];
+      if (q.end > p && q.qty !== null && (!after || this.isSeparator(after)) && !this.matchName(tokens, q.end)) {
+        d.qty = q.qty;
+        if (q.unit && q.unit !== 'sztuka' && q.unit !== 'porcja') d.unit = q.unit;
+        return q.end;
+      }
+    }
+    if (t.type !== 'word') return null;
     // „, bez masła”
     if (this.lex.negations.has(t.key)) {
       const name = this.matchName(tokens, p + 1, true);

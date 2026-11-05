@@ -31,6 +31,7 @@ export const MODIFIERS: ModifiersData = {
     'na', 'w', 'we', 'ze', 'z', 'po', 'przed', 'dziś', 'dzisiaj', 'rano', 'wieczorem', 'wczoraj', 'potem', 'jeszcze', 'też', 'także', 'oraz', 'się',
     'śniadanie', 'śniadania', 'drugie', 'obiad', 'obiadu', 'kolacja', 'kolację', 'kolacji', 'przekąska', 'przekąskę', 'deser', 'lunch', 'podwieczorek',
     'mój', 'moja', 'moje', 'moją', 'domowy', 'domowa', 'domowe', 'domową', 'świeży', 'świeża', 'świeże', 'świeżą', 'ciepły', 'ciepła', 'zimny', 'zimna',
+    'grilla', 'grillu', 'piekarnika', 'patelni', 'pieca', 'mikrofali', 'sklepu', 'restauracji', 'stołówki',
     'ugotowany', 'ugotowana', 'ugotowane', 'gotowany', 'gotowana', 'gotowane',
   ],
   numberWords: {

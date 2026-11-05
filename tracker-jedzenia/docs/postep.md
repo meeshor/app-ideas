@@ -20,3 +20,11 @@ Podsumowania kamieni milowych (sesja autonomiczna). Stan końcowy i uczciwa ocen
 - Cele: Mifflin-St Jeor × aktywność × korekta celu, podział makro, ręczne nadpisanie.
 - Testy: 44 (text, inflect, dane, kalkulator, cele, historia, kopia zapasowa).
 - Nie sprawdzone: realna trafność liczb względem tabel — brak dostępu do źródeł w tej sesji.
+
+## M2 — Parser ✅
+
+- `RuleParser` (słownik + reguły, bez AI) za interfejsem `Parser` (gotowym na przyszły parser LLM zwracający tylko strukturę).
+- Najdłuższe dopasowanie aliasu przed podziałem na pozycje, sygnatury dań (produkt/wariant + dodatki → danie), dodatki „z/ze/na”, „bez X”, „dużo X”, ilości przed i po nazwie, dopasowanie bez polskich znaków i z literówkami (OSA), podpowiedź posiłku.
+- **116 przypadków w tabeli** + 6 testów własności (determinizm, rozbicie jak w specyfikacji, „bez masła”, pierwszeństwo definicji użytkownika, nowe danie użytkownika, wydajność). Razem w projekcie: 167 testów, wszystkie zielone.
+- Raport: [`parser.md`](parser.md) — 11 znanych braków (m.in. „i sałata” bez ogonków, liczebniki złożone).
+- Wydajność: budowa słownika ~70 ms przy starcie, parsowanie typowego wpisu 0–5 ms (pierwsze wywołania wolniejsze).

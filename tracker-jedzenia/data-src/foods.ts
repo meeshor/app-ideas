@@ -201,6 +201,7 @@ f('rzodkiewka', 'rzodkiewka', [16, 3.4, 0.7, 0.1], { aliases: ['rzodkiewki'], po
 f('burak', 'buraki', [44, 10, 1.7, 0.2], { source: SRC + '; gotowane', aliases: ['burak', 'buraczki', 'ćwikła'], forms: ['buraczkami', 'buraczków', 'ćwikłą'], portions: { porcja: 100, sztuka: 100 }, def: 'porcja', addon: [100, 'g'] });
 f('cukinia', 'cukinia', [17, 3.1, 1.2, 0.3], { aliases: ['bakłażan', 'kabaczek'], portions: { sztuka: 250, plaster: 15 }, def: 'sztuka', addon: [50, 'g'] });
 f('szczypiorek', 'szczypiorek', [30, 4, 3, 0.5], { aliases: ['koperek', 'natka pietruszki', 'pietruszka', 'koper'], forms: ['koperkiem', 'koperku', 'szczypiorkiem', 'szczypiorku', 'natką'], portions: { lyzka: 5, garsc: 10 }, def: 'lyzka', addon: [1, 'lyzka'] });
+f('warzywa', 'warzywa gotowane', [40, 7, 2, 0.5], { aliases: ['warzywa', 'mieszanka warzyw', 'warzywa na patelnię', 'warzywa z wody', 'warzywa na parze', 'bukiet warzyw', 'jarzyny'], forms: ['warzywami', 'warzyw', 'jarzynami', 'jarzyn'], portions: { porcja: 150, garsc: 50 }, def: 'porcja', addon: [100, 'g'] });
 f('oliwki', 'oliwki', [145, 4, 1, 15], { aliases: ['oliwka'], portions: { sztuka: 4, garsc: 30, lyzka: 15 }, def: 'sztuka', addon: [5, 'sztuka'] });
 
 // ---------------- Owoce i orzechy ----------------

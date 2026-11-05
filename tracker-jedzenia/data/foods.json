@@ -1469,6 +1469,19 @@
     "verified": false
   },
   {
+    "id": "warzywa",
+    "name": "warzywa gotowane",
+    "per100": {"kcal": 40, "carbs": 7, "protein": 2, "fat": 0.5},
+    "portions": {"porcja": 150, "garsc": 50},
+    "defaultPortion": "porcja",
+    "addon": {"qty": 100, "unit": "g"},
+    "aliases": ["warzywa","mieszanka warzyw","warzywa na patelnię","warzywa z wody","warzywa na parze","bukiet warzyw","jarzyny"],
+    "forms": ["bukiecie warzyw","bukieta warzyw","bukietach warzyw","bukietami warzyw","bukietem warzyw","bukietów warzyw","bukietu warzyw","bukiety warzyw","gotowana warzywa","gotowaną warzywą","gotowaną warzywę","gotowane warzywy","gotowanej warzywie","gotowanej warzywy","gotowanych warzyw","gotowanych warzywach","gotowanymi warzywami","jarzyn","jarzyna","jarzynach","jarzynami","jarzyną","jarzyne","jarzynego","jarzynem","jarzynę","jarzynie","jarzynów","jarzynu","jarzynych","jarzynym","jarzynymi","mieszance warzyw","mieszanek warzyw","mieszankach warzyw","mieszankami warzyw","mieszanką warzyw","mieszankę warzyw","mieszanki warzyw","warzyw","warzyw gotowanych","warzyw na parze","warzyw na patelnię","warzyw z wody","warzywa gotowana","warzywach","warzywach gotowanych","warzywach na parze","warzywach na patelnię","warzywach z wody","warzywami","warzywami gotowanymi","warzywami na parze","warzywami na patelnię","warzywami z wody","warzywą","warzywą gotowaną","warzywą na parze","warzywą na patelnię","warzywą z wody","warzywe","warzywej","warzywę","warzywę gotowaną","warzywę na parze","warzywę na patelnię","warzywę z wody","warzywie","warzywie gotowanej","warzywie na parze","warzywie na patelnię","warzywie z wody","warzywy","warzywy gotowane","warzywy gotowanej","warzywy na parze","warzywy na patelnię","warzywy z wody","warzywych","warzywymi"],
+    "category": "warzywa",
+    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
+    "verified": false
+  },
+  {
     "id": "oliwki",
     "name": "oliwki",
     "per100": {"kcal": 145, "carbs": 4, "protein": 1, "fat": 15},
