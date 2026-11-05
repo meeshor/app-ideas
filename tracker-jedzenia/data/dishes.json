@@ -1,0 +1,677 @@
+[
+  {
+    "id": "bulka-z-szynka",
+    "name": "bułka z szynką",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "szynka", "qty": 2, "unit": "plaster"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["bułce z szynką","bułek z szynką","bułkach z szynką","bułkami z szynką","bułką z szynką","bułkę z szynką","bułki z szynką"]
+  },
+  {
+    "id": "bulka-z-serem",
+    "name": "bułka z serem",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "ser-zolty", "qty": 2, "unit": "plaster"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["bułce z serem","bułek z serem","bułkach z serem","bułkami z serem","bułką z serem","bułkę z serem","bułki z serem"]
+  },
+  {
+    "id": "bulka-z-szynka-i-serem",
+    "name": "bułka z szynką i serem",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "szynka", "qty": 2, "unit": "plaster"},
+      {"foodId": "ser-zolty", "qty": 1, "unit": "plaster"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["bułce z szynką i serem","bułek z szynką i serem","bułkach z szynką i serem","bułkami z szynką i serem","bułką z szynką i serem","bułkę z szynką i serem","bułki z szynką i serem"]
+  },
+  {
+    "id": "bulka-z-maslem",
+    "name": "bułka z masłem",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "maslo", "qty": 7, "unit": "g"}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["bułce z masłem","bułek z masłem","bułkach z masłem","bułkami z masłem","bułką z masłem","bułkę z masłem","bułki z masłem"]
+  },
+  {
+    "id": "bulka-z-dzemem",
+    "name": "bułka z dżemem",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "dzem", "qty": 20, "unit": "g"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["bułce z dżemem","bułek z dżemem","bułkach z dżemem","bułkami z dżemem","bułką z dżemem","bułkę z dżemem","bułki z dżemem"]
+  },
+  {
+    "id": "bulka-z-twarogiem",
+    "name": "bułka z twarożkiem",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "twarog", "qty": 50, "unit": "g"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["bułce z twarożkiem","bułek z twarożkiem","bułkach z twarożkiem","bułkami z twarożkiem","bułką z twarożkiem","bułkę z twarożkiem","bułki z twarożkiem"]
+  },
+  {
+    "id": "kanapka",
+    "name": "kanapka",
+    "ingredients": [
+      {"foodId": "chleb", "qty": 1, "unit": "kromka"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": ["kanapeczka","kromka z masłem","chleb z masłem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["chleba z masłem","chlebach z masłem","chlebami z masłem","chlebem z masłem","chlebie z masłem","chlebów z masłem","chlebu z masłem","chleby z masłem","kanapce","kanapeczce","kanapeczek","kanapeczkach","kanapeczkami","kanapeczką","kanapeczkę","kanapeczki","kanapeczkich","kanapeczkie","kanapeczkiej","kanapeczkimi","kanapek","kanapkach","kanapkami","kanapką","kanapkę","kanapki","kanapkich","kanapkie","kanapkiej","kanapkimi","kromce z masłem","kromek z masłem","kromkach z masłem","kromkami z masłem","kromką z masłem","kromkę z masłem","kromki z masłem"]
+  },
+  {
+    "id": "kanapka-z-szynka",
+    "name": "kanapka z szynką",
+    "ingredients": [
+      {"foodId": "chleb", "qty": 1, "unit": "kromka"},
+      {"foodId": "szynka", "qty": 1, "unit": "plaster"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "signature": false,
+    "forms": ["kanapce z szynką","kanapek z szynką","kanapkach z szynką","kanapkami z szynką","kanapką z szynką","kanapkę z szynką","kanapki z szynką"]
+  },
+  {
+    "id": "tost",
+    "name": "tost z szynką i serem",
+    "ingredients": [
+      {"foodId": "chleb-tostowy", "qty": 2, "unit": "kromka"},
+      {"foodId": "szynka", "qty": 1, "unit": "plaster"},
+      {"foodId": "ser-zolty", "qty": 1, "unit": "plaster"}
+    ],
+    "aliases": ["tost","tosty","tost z serem","tosty z szynką i serem","tost z serem i szynką"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["tosta","tosta z serem","tosta z serem i szynką","tosta z szynką i serem","tostach","tostach z serem","tostach z serem i szynką","tostach z szynką i serem","tostami","tostami z serem","tostami z serem i szynką","tostami z szynką i serem","tostą","tostą z szynką i serem","toste","tostego","tostem","tostem z serem","tostem z serem i szynką","tostem z szynką i serem","tostę","tostę z szynką i serem","tostów","tostów z serem","tostów z serem i szynką","tostów z szynką i serem","tostu","tostu z serem","tostu z serem i szynką","tostu z szynką i serem","tosty z serem","tosty z serem i szynką","tostych","tostym","tostymi","toście","toście z serem","toście z serem i szynką","toście z szynką i serem"],
+    "signature": false
+  },
+  {
+    "id": "hot-dog",
+    "name": "hot dog",
+    "ingredients": [
+      {"foodId": "bulka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "parowka", "qty": 1, "unit": "sztuka"},
+      {"foodId": "keczup", "qty": 15, "unit": "g", "optional": true}
+    ],
+    "aliases": ["hotdog","hot doga","hot dogi"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["dogi hot","dogich hot","dogie hot","dogiego hot","dogim hot","dogimi hot","hot dogich","hot dogie","hot dogiego","hot dogim","hot dogimi","hotdoga","hotdogach","hotdogami","hotdogi","hotdogiem","hotdogów","hotdogu"]
+  },
+  {
+    "id": "wrap",
+    "name": "wrap z kurczakiem",
+    "ingredients": [
+      {"foodId": "tortilla", "qty": 1, "unit": "sztuka"},
+      {"foodId": "kurczak", "qty": 80, "unit": "g"},
+      {"foodId": "salata", "qty": 20, "unit": "g"},
+      {"foodId": "pomidor", "qty": 50, "unit": "g"},
+      {"foodId": "sos-czosnkowy", "qty": 15, "unit": "g", "optional": true}
+    ],
+    "aliases": ["wrap","tortilla z kurczakiem","tortilla z kurczakiem i warzywami"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["wrapa","wrapem","wrapy"]
+  },
+  {
+    "id": "jajecznica",
+    "name": "jajecznica",
+    "ingredients": [
+      {"foodId": "jajko", "qty": 3, "unit": "sztuka"},
+      {"foodId": "maslo", "qty": 10, "unit": "g", "optional": true}
+    ],
+    "aliases": ["jajeczniczka","jajecznica z 3 jajek","jajecznica na maśle"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["jajecznic","jajecznic na maśle","jajecznic z 3 jajek","jajecznicach","jajecznicach na maśle","jajecznicach z 3 jajek","jajecznicami","jajecznicami na maśle","jajecznicami z 3 jajek","jajecznicą","jajecznicą na maśle","jajecznicą z 3 jajek","jajecznicę","jajecznicę na maśle","jajecznicę z 3 jajek","jajecznicy","jajecznicy na maśle","jajecznicy z 3 jajek","jajeczniczce","jajeczniczek","jajeczniczkach","jajeczniczkami","jajeczniczką","jajeczniczkę","jajeczniczki","jajeczniczkich","jajeczniczkie","jajeczniczkiej","jajeczniczkimi"]
+  },
+  {
+    "id": "jajecznica-na-boczku",
+    "name": "jajecznica na boczku",
+    "ingredients": [
+      {"foodId": "jajko", "qty": 3, "unit": "sztuka"},
+      {"foodId": "boczek", "qty": 30, "unit": "g"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "signature": false,
+    "forms": ["jajecznic na boczku","jajecznicach na boczku","jajecznicami na boczku","jajecznicą na boczku","jajecznicę na boczku","jajecznicy na boczku"]
+  },
+  {
+    "id": "jajko-sadzone",
+    "name": "jajko sadzone",
+    "ingredients": [
+      {"foodId": "jajko", "qty": 1, "unit": "sztuka"},
+      {"foodId": "olej", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": ["jajka sadzone","sadzone","jajo sadzone"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["jaj sadzonych","jaja sadzone","jaja sadzonego","jajach sadzonych","jajami sadzonymi","jajce sadzonej","jajek sadzonych","jajem sadzonym","jajka sadzona","jajka sadzonego","jajkach sadzonych","jajkami sadzonymi","jajką sadzoną","jajkę sadzoną","jajki sadzone","jajki sadzonej","jajkiem sadzonym","jajko sadzonego","jajku sadzonym","jajo sadzonego","jaju sadzonym","sadzon","sadzona","sadzona jajka","sadzonach","sadzonami","sadzoną","sadzoną jajką","sadzoną jajkę","sadzone jaja","sadzone jajka","sadzone jajki","sadzone jajko","sadzone jajo","sadzonego","sadzonego jaja","sadzonego jajka","sadzonego jajko","sadzonego jajo","sadzonej","sadzonej jajce","sadzonej jajki","sadzonem","sadzonu","sadzony","sadzonych","sadzonych jaj","sadzonych jajach","sadzonych jajek","sadzonych jajkach","sadzonym","sadzonym jajem","sadzonym jajkiem","sadzonym jajku","sadzonym jaju","sadzonymi","sadzonymi jajami","sadzonymi jajkami"]
+  },
+  {
+    "id": "omlet",
+    "name": "omlet",
+    "ingredients": [
+      {"foodId": "jajko", "qty": 3, "unit": "sztuka"},
+      {"foodId": "mleko", "qty": 30, "unit": "ml"},
+      {"foodId": "maslo", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": ["omlecik","frittata"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["frittacie","frittat","frittatach","frittatami","frittatą","frittate","frittatej","frittatę","frittaty","frittatych","frittatymi","omlecie","omlecika","omlecikach","omlecikami","omleciki","omlecikiem","omlecików","omleciku","omleta","omletach","omletami","omletem","omletów","omletu","omlety"]
+  },
+  {
+    "id": "owsianka",
+    "name": "owsianka",
+    "ingredients": [
+      {"foodId": "platki-owsiane", "qty": 50, "unit": "g"},
+      {"foodId": "mleko", "qty": 200, "unit": "ml"}
+    ],
+    "aliases": ["owsianka na mleku","porridge","owsianeczka"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["owsiance","owsiance na mleku","owsianeczce","owsianeczek","owsianeczkach","owsianeczkami","owsianeczką","owsianeczkę","owsianeczki","owsianeczkich","owsianeczkie","owsianeczkiej","owsianeczkimi","owsianek","owsianek na mleku","owsiankach","owsiankach na mleku","owsiankami","owsiankami na mleku","owsianką","owsianką na mleku","owsiankę","owsiankę na mleku","owsianki","owsianki na mleku","owsiankich","owsiankie","owsiankiej","owsiankimi","porridg","porridga","porridgach","porridgami","porridgem","porridgu"]
+  },
+  {
+    "id": "owsianka-na-wodzie",
+    "name": "owsianka na wodzie",
+    "ingredients": [
+      {"foodId": "platki-owsiane", "qty": 50, "unit": "g"},
+      {"foodId": "woda", "qty": 200, "unit": "ml"}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "signature": false,
+    "forms": ["owsiance na wodzie","owsianek na wodzie","owsiankach na wodzie","owsiankami na wodzie","owsianką na wodzie","owsiankę na wodzie","owsianki na wodzie"]
+  },
+  {
+    "id": "platki-z-mlekiem",
+    "name": "płatki z mlekiem",
+    "ingredients": [
+      {"foodId": "platki-kukurydziane", "qty": 40, "unit": "g"},
+      {"foodId": "mleko", "qty": 200, "unit": "ml"}
+    ],
+    "aliases": ["płatki śniadaniowe z mlekiem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["płatce śniadaniowej z mlekiem","płatce śniadaniowym z mlekiem","płatce z mlekiem","płatek śniadaniowa z mlekiem","płatek śniadaniową z mlekiem","płatek śniadaniowego z mlekiem","płatek śniadaniowy z mlekiem","płatek śniadaniowych z mlekiem","płatek z mlekiem","płatka śniadaniowa z mlekiem","płatka śniadaniową z mlekiem","płatka śniadaniowego z mlekiem","płatka śniadaniowej z mlekiem","płatka śniadaniowy z mlekiem","płatka z mlekiem","płatkach śniadaniowych z mlekiem","płatkach z mlekiem","płatkami śniadaniowymi z mlekiem","płatkami z mlekiem","płatką śniadaniową z mlekiem","płatką śniadaniowym z mlekiem","płatką z mlekiem","płatkę śniadaniową z mlekiem","płatkę śniadaniowego z mlekiem","płatkę śniadaniowy z mlekiem","płatkę z mlekiem","płatki śniadaniową z mlekiem","płatki śniadaniowego z mlekiem","płatki śniadaniowej z mlekiem","płatki śniadaniowy z mlekiem","płatkiem śniadaniową z mlekiem","płatkiem śniadaniowym z mlekiem","płatkiem z mlekiem","płatków śniadaniowych z mlekiem","płatków z mlekiem","płatku śniadaniowego z mlekiem","płatku śniadaniowej z mlekiem","płatku śniadaniowym z mlekiem","płatku z mlekiem"]
+  },
+  {
+    "id": "jogurt-z-musli",
+    "name": "jogurt z musli",
+    "ingredients": [
+      {"foodId": "jogurt-naturalny", "qty": 150, "unit": "g"},
+      {"foodId": "musli", "qty": 40, "unit": "g"}
+    ],
+    "aliases": ["jogurt z granolą","jogurt z płatkami"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["jogurcie z granolą","jogurcie z musli","jogurcie z płatkami","jogurta z granolą","jogurta z musli","jogurta z płatkami","jogurtach z granolą","jogurtach z musli","jogurtach z płatkami","jogurtami z granolą","jogurtami z musli","jogurtami z płatkami","jogurtem z granolą","jogurtem z musli","jogurtem z płatkami","jogurtów z granolą","jogurtów z musli","jogurtów z płatkami","jogurtu z granolą","jogurtu z musli","jogurtu z płatkami","jogurty z granolą","jogurty z musli","jogurty z płatkami"]
+  },
+  {
+    "id": "twarozek-ze-szczypiorkiem",
+    "name": "twarożek ze szczypiorkiem",
+    "ingredients": [
+      {"foodId": "twarog", "qty": 100, "unit": "g"},
+      {"foodId": "szczypiorek", "qty": 5, "unit": "g"},
+      {"foodId": "smietana", "qty": 15, "unit": "g", "optional": true}
+    ],
+    "aliases": ["twarożek z rzodkiewką","gzik"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["gzika","gzikach","gzikami","gziki","gzikiem","gzików","gziku","twarożka z rzodkiewką","twarożka ze szczypiorkiem","twarożkach z rzodkiewką","twarożkach ze szczypiorkiem","twarożkami z rzodkiewką","twarożkami ze szczypiorkiem","twarożki z rzodkiewką","twarożki ze szczypiorkiem","twarożkiem z rzodkiewką","twarożkiem ze szczypiorkiem","twarożków z rzodkiewką","twarożków ze szczypiorkiem","twarożku z rzodkiewką","twarożku ze szczypiorkiem"]
+  },
+  {
+    "id": "nalesniki-z-serem",
+    "name": "naleśniki z serem",
+    "ingredients": [
+      {"foodId": "nalesnik", "qty": 2, "unit": "sztuka"},
+      {"foodId": "twarog", "qty": 80, "unit": "g"},
+      {"foodId": "cukier", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": ["naleśniki z twarogiem","naleśnik z serem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["naleśnice z serem","naleśnice z twarogiem","naleśnik z twarogiem","naleśnika z serem","naleśnika z twarogiem","naleśnikach z serem","naleśnikach z twarogiem","naleśnikami z serem","naleśnikami z twarogiem","naleśniką z serem","naleśniką z twarogiem","naleśnikę z serem","naleśnikę z twarogiem","naleśnikiem z serem","naleśnikiem z twarogiem","naleśników z serem","naleśników z twarogiem","naleśniku z serem","naleśniku z twarogiem"]
+  },
+  {
+    "id": "nalesniki-z-dzemem",
+    "name": "naleśniki z dżemem",
+    "ingredients": [
+      {"foodId": "nalesnik", "qty": 2, "unit": "sztuka"},
+      {"foodId": "dzem", "qty": 40, "unit": "g"}
+    ],
+    "aliases": ["naleśnik z dżemem","naleśniki z konfiturą"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["naleśnice z dżemem","naleśnice z konfiturą","naleśnik z konfiturą","naleśnika z dżemem","naleśnika z konfiturą","naleśnikach z dżemem","naleśnikach z konfiturą","naleśnikami z dżemem","naleśnikami z konfiturą","naleśniką z dżemem","naleśniką z konfiturą","naleśnikę z dżemem","naleśnikę z konfiturą","naleśnikiem z dżemem","naleśnikiem z konfiturą","naleśników z dżemem","naleśników z konfiturą","naleśniku z dżemem","naleśniku z konfiturą"]
+  },
+  {
+    "id": "nalesniki-z-nutella",
+    "name": "naleśniki z nutellą",
+    "ingredients": [
+      {"foodId": "nalesnik", "qty": 2, "unit": "sztuka"},
+      {"foodId": "krem-czekoladowy", "qty": 30, "unit": "g"}
+    ],
+    "aliases": ["naleśnik z nutellą","naleśniki z kremem czekoladowym"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["naleśnice z kremem czekoladowym","naleśnice z nutellą","naleśnik z kremem czekoladowym","naleśnika z kremem czekoladowym","naleśnika z nutellą","naleśnikach z kremem czekoladowym","naleśnikach z nutellą","naleśnikami z kremem czekoladowym","naleśnikami z nutellą","naleśniką z kremem czekoladowym","naleśniką z nutellą","naleśnikę z kremem czekoladowym","naleśnikę z nutellą","naleśnikiem z kremem czekoladowym","naleśnikiem z nutellą","naleśników z kremem czekoladowym","naleśników z nutellą","naleśniku z kremem czekoladowym","naleśniku z nutellą"]
+  },
+  {
+    "id": "placki-ze-smietana",
+    "name": "placki ziemniaczane ze śmietaną",
+    "ingredients": [
+      {"foodId": "placki-ziemniaczane", "qty": 3, "unit": "sztuka"},
+      {"foodId": "smietana", "qty": 30, "unit": "g"}
+    ],
+    "aliases": ["placki ze śmietaną"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["placce ze śmietaną","placce ziemniaczanej ze śmietaną","placce ziemniaczanym ze śmietaną","placek ze śmietaną","placek ziemniaczana ze śmietaną","placek ziemniaczaną ze śmietaną","placek ziemniaczanego ze śmietaną","placek ziemniaczany ze śmietaną","placek ziemniaczanych ze śmietaną","placka ze śmietaną","placka ziemniaczana ze śmietaną","placka ziemniaczaną ze śmietaną","placka ziemniaczanego ze śmietaną","placka ziemniaczanej ze śmietaną","placka ziemniaczany ze śmietaną","plackach ze śmietaną","plackach ziemniaczanych ze śmietaną","plackami ze śmietaną","plackami ziemniaczanymi ze śmietaną","placką ze śmietaną","placką ziemniaczaną ze śmietaną","placką ziemniaczanym ze śmietaną","plackę ze śmietaną","plackę ziemniaczaną ze śmietaną","plackę ziemniaczanego ze śmietaną","plackę ziemniaczany ze śmietaną","placki ziemniaczaną ze śmietaną","placki ziemniaczanego ze śmietaną","placki ziemniaczanej ze śmietaną","placki ziemniaczany ze śmietaną","plackiem ze śmietaną","plackiem ziemniaczaną ze śmietaną","plackiem ziemniaczanym ze śmietaną","placków ze śmietaną","placków ziemniaczanych ze śmietaną","placku ze śmietaną","placku ziemniaczanego ze śmietaną","placku ziemniaczanej ze śmietaną","placku ziemniaczanym ze śmietaną"]
+  },
+  {
+    "id": "kawa-z-mlekiem",
+    "name": "kawa z mlekiem",
+    "ingredients": [
+      {"foodId": "kawa", "qty": 220, "unit": "ml"},
+      {"foodId": "mleko", "qty": 30, "unit": "ml"}
+    ],
+    "aliases": ["biała kawa","kawa biała"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["biale kawej","biał kawych","białach kawych","białami kawymi","białą kawą","białą kawę","białe kawy","białej kawie","białej kawy","białę kawą","biały kawe","biały kawej","białych kaw","białych kawach","białymi kawami","kaw białych","kaw z mlekiem","kawach białych","kawach z mlekiem","kawami białymi","kawami z mlekiem","kawą białą","kawą białę","kawą z mlekiem","kawe biały","kawej biale","kawej biały","kawę białą","kawę z mlekiem","kawie białej","kawie z mlekiem","kawy białe","kawy białej","kawy z mlekiem","kawych biał","kawych białach","kawymi białami"],
+    "sizeMode": "all"
+  },
+  {
+    "id": "kawa-z-mlekiem-i-cukrem",
+    "name": "kawa z mlekiem i cukrem",
+    "ingredients": [
+      {"foodId": "kawa", "qty": 220, "unit": "ml"},
+      {"foodId": "mleko", "qty": 30, "unit": "ml"},
+      {"foodId": "cukier", "qty": 5, "unit": "g"}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["kaw z mlekiem i cukrem","kawach z mlekiem i cukrem","kawami z mlekiem i cukrem","kawą z mlekiem i cukrem","kawę z mlekiem i cukrem","kawie z mlekiem i cukrem","kawy z mlekiem i cukrem"]
+  },
+  {
+    "id": "herbata-z-cukrem",
+    "name": "herbata z cukrem",
+    "ingredients": [
+      {"foodId": "herbata", "qty": 250, "unit": "ml"},
+      {"foodId": "cukier", "qty": 5, "unit": "g"}
+    ],
+    "aliases": ["herbata słodzona"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["herbacie słodzonej","herbacie z cukrem","herbat słodzonych","herbat z cukrem","herbatach słodzonych","herbatach z cukrem","herbatami słodzonymi","herbatami z cukrem","herbatą słodzoną","herbatą z cukrem","herbatę słodzoną","herbatę z cukrem","herbaty słodzone","herbaty słodzonej","herbaty z cukrem","słodzona herbata","słodzoną herbatą","słodzoną herbatę","słodzone herbaty","słodzonej herbacie","słodzonej herbaty","słodzonych herbat","słodzonych herbatach","słodzonymi herbatami"]
+  },
+  {
+    "id": "herbata-z-cytryna",
+    "name": "herbata z cytryną",
+    "ingredients": [
+      {"foodId": "herbata", "qty": 250, "unit": "ml"},
+      {"foodId": "cytryna", "qty": 1, "unit": "plaster"}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["herbacie z cytryną","herbat z cytryną","herbatach z cytryną","herbatami z cytryną","herbatą z cytryną","herbatę z cytryną","herbaty z cytryną"]
+  },
+  {
+    "id": "kakao",
+    "name": "kakao domowe",
+    "ingredients": [
+      {"foodId": "mleko", "qty": 250, "unit": "ml"},
+      {"foodId": "kakao-proszek", "qty": 5, "unit": "g"},
+      {"foodId": "cukier", "qty": 10, "unit": "g", "optional": true}
+    ],
+    "aliases": ["kakao z cukrem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "signature": false,
+    "forms": ["domowe kakaa","domowe kakao","domowego kakaa","domowego kakao","domowych kaka","domowych kakaach","domowym kakaem","domowym kakau","domowymi kakaami","kaka domowych","kaka z cukrem","kakaa domowe","kakaa domowego","kakaa z cukrem","kakaach domowych","kakaach z cukrem","kakaami domowymi","kakaami z cukrem","kakaem domowym","kakaem z cukrem","kakao domowego","kakau domowym","kakau z cukrem"]
+  },
+  {
+    "id": "schabowy-z-ziemniakami",
+    "name": "schabowy z ziemniakami",
+    "ingredients": [
+      {"foodId": "kotlet-schabowy", "qty": 1, "unit": "sztuka"},
+      {"foodId": "ziemniaki", "qty": 200, "unit": "g"}
+    ],
+    "aliases": ["kotlet z ziemniakami","obiad schabowy"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "main",
+    "forms": ["kotlecie z ziemniakami","kotleta z ziemniakami","kotletach z ziemniakami","kotletami z ziemniakami","kotletem z ziemniakami","kotletów z ziemniakami","kotletu z ziemniakami","kotlety z ziemniakami","obiad schabowego","obiada schabowego","obiada schabowy","obiadach schabowych","obiadami schabowymi","obiadem schabowym","obiadów schabowych","obiadu schabowego","obiadu schabowym","obiady schabowe","obiadzie schabowym","schabow z ziemniakami","schabowa z ziemniakami","schabowach z ziemniakami","schabowami z ziemniakami","schabową z ziemniakami","schabowe obiady","schabowego obiad","schabowego obiada","schabowego obiadu","schabowem z ziemniakami","schabowę z ziemniakami","schabowie z ziemniakami","schabowów z ziemniakami","schabowu z ziemniakami","schabowy obiad","schabowy obiada","schabowych obiadach","schabowych obiadów","schabowym obiadem","schabowym obiadu","schabowym obiadzie","schabowymi obiadami"]
+  },
+  {
+    "id": "schabowy-z-ziemniakami-i-kapusta",
+    "name": "schabowy z ziemniakami i kapustą",
+    "ingredients": [
+      {"foodId": "kotlet-schabowy", "qty": 1, "unit": "sztuka"},
+      {"foodId": "ziemniaki", "qty": 200, "unit": "g"},
+      {"foodId": "kapusta", "qty": 150, "unit": "g"}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["schabow z ziemniakami i kapustą","schabowa z ziemniakami i kapustą","schabowach z ziemniakami i kapustą","schabowami z ziemniakami i kapustą","schabową z ziemniakami i kapustą","schabowem z ziemniakami i kapustą","schabowę z ziemniakami i kapustą","schabowie z ziemniakami i kapustą","schabowów z ziemniakami i kapustą","schabowu z ziemniakami i kapustą"]
+  },
+  {
+    "id": "mielony-z-ziemniakami",
+    "name": "mielony z ziemniakami",
+    "ingredients": [
+      {"foodId": "kotlet-mielony", "qty": 1, "unit": "sztuka"},
+      {"foodId": "ziemniaki", "qty": 200, "unit": "g"}
+    ],
+    "aliases": ["kotlet mielony z ziemniakami i mizerią"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["kotlecie mielonym z ziemniakami i mizerią","kotlet mielonego z ziemniakami i mizerią","kotleta mielonego z ziemniakami i mizerią","kotleta mielony z ziemniakami i mizerią","kotletach mielonych z ziemniakami i mizerią","kotletami mielonymi z ziemniakami i mizerią","kotletem mielonym z ziemniakami i mizerią","kotletów mielonych z ziemniakami i mizerią","kotletu mielonego z ziemniakami i mizerią","kotletu mielonym z ziemniakami i mizerią","kotlety mielone z ziemniakami i mizerią","mielon z ziemniakami","mielona z ziemniakami","mielonach z ziemniakami","mielonami z ziemniakami","mieloną z ziemniakami","mielonem z ziemniakami","mielonę z ziemniakami","mielonie z ziemniakami","mielonów z ziemniakami","mielonu z ziemniakami"]
+  },
+  {
+    "id": "kurczak-z-ryzem",
+    "name": "kurczak z ryżem",
+    "ingredients": [
+      {"foodId": "kurczak", "qty": 150, "unit": "g"},
+      {"foodId": "ryz", "qty": 150, "unit": "g"}
+    ],
+    "aliases": ["pierś z kurczaka z ryżem","ryż z kurczakiem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["kurczaka z ryżem","kurczakach z ryżem","kurczakami z ryżem","kurczaki z ryżem","kurczakiem z ryżem","kurczaków z ryżem","kurczaku z ryżem","pierśa z kurczaka z ryżem","pierśach z kurczaka z ryżem","pierśami z kurczaka z ryżem","pierśe z kurczaka z ryżem","pierśem z kurczaka z ryżem","pierśi z kurczaka z ryżem","pierśów z kurczaka z ryżem","pierśu z kurczaka z ryżem","pierśy z kurczaka z ryżem","ryża z kurczakiem","ryżach z kurczakiem","ryżami z kurczakiem","ryże z kurczakiem","ryżem z kurczakiem","ryżi z kurczakiem","ryżów z kurczakiem","ryżu z kurczakiem","ryży z kurczakiem"]
+  },
+  {
+    "id": "kurczak-z-ryzem-i-brokulami",
+    "name": "kurczak z ryżem i brokułami",
+    "ingredients": [
+      {"foodId": "kurczak", "qty": 150, "unit": "g"},
+      {"foodId": "ryz", "qty": 150, "unit": "g"},
+      {"foodId": "brokul", "qty": 100, "unit": "g"}
+    ],
+    "aliases": ["kurczak z ryżem i warzywami"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["kurczaka z ryżem i brokułami","kurczaka z ryżem i warzywami","kurczakach z ryżem i brokułami","kurczakach z ryżem i warzywami","kurczakami z ryżem i brokułami","kurczakami z ryżem i warzywami","kurczaki z ryżem i brokułami","kurczaki z ryżem i warzywami","kurczakiem z ryżem i brokułami","kurczakiem z ryżem i warzywami","kurczaków z ryżem i brokułami","kurczaków z ryżem i warzywami","kurczaku z ryżem i brokułami","kurczaku z ryżem i warzywami"]
+  },
+  {
+    "id": "kurczak-z-frytkami",
+    "name": "kurczak z frytkami",
+    "ingredients": [
+      {"foodId": "kurczak", "qty": 150, "unit": "g"},
+      {"foodId": "frytki", "qty": 115, "unit": "g"},
+      {"foodId": "surowka", "qty": 100, "unit": "g", "optional": true}
+    ],
+    "aliases": ["kotlet z frytkami"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["kotlecie z frytkami","kotleta z frytkami","kotletach z frytkami","kotletami z frytkami","kotletem z frytkami","kotletów z frytkami","kotletu z frytkami","kotlety z frytkami","kurczaka z frytkami","kurczakach z frytkami","kurczakami z frytkami","kurczaki z frytkami","kurczakiem z frytkami","kurczaków z frytkami","kurczaku z frytkami"]
+  },
+  {
+    "id": "spaghetti-bolognese",
+    "name": "spaghetti bolognese",
+    "ingredients": [
+      {"foodId": "makaron", "qty": 200, "unit": "g"},
+      {"foodId": "sos-bolognese", "qty": 150, "unit": "g"},
+      {"foodId": "parmezan", "qty": 5, "unit": "g", "optional": true}
+    ],
+    "aliases": ["spaghetti z sosem bolognese","spagetti","makaron z sosem mięsnym","makaron bolognese","spaghetti bolońskie"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "signature": false,
+    "forms": ["boloński spaghetti","bolońskich spaghetti","bolońskie spaghetti","bolońskiego spaghetti","bolońskim spaghetti","bolońskimi spaghetti","makarona bolognese","makarona z sosem mięsnym","makaronach bolognese","makaronach z sosem mięsnym","makaronami bolognese","makaronami z sosem mięsnym","makaronem bolognese","makaronem z sosem mięsnym","makaronie bolognese","makaronie z sosem mięsnym","makaronów bolognese","makaronów z sosem mięsnym","makaronu bolognese","makaronu z sosem mięsnym","makarony bolognese","makarony z sosem mięsnym","spaghetti boloński","spaghetti bolońskich","spaghetti bolońskiego","spaghetti bolońskim","spaghetti bolońskimi"]
+  },
+  {
+    "id": "makaron-z-serem",
+    "name": "makaron z serem",
+    "ingredients": [
+      {"foodId": "makaron", "qty": 200, "unit": "g"},
+      {"foodId": "twarog", "qty": 80, "unit": "g"},
+      {"foodId": "cukier", "qty": 10, "unit": "g", "optional": true}
+    ],
+    "aliases": ["makaron z twarogiem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["makarona z serem","makarona z twarogiem","makaronach z serem","makaronach z twarogiem","makaronami z serem","makaronami z twarogiem","makaronem z serem","makaronem z twarogiem","makaronie z serem","makaronie z twarogiem","makaronów z serem","makaronów z twarogiem","makaronu z serem","makaronu z twarogiem","makarony z serem","makarony z twarogiem"]
+  },
+  {
+    "id": "pierogi-ze-skwarkami",
+    "name": "pierogi ze skwarkami",
+    "ingredients": [
+      {"foodId": "pierogi", "qty": 6, "unit": "sztuka"},
+      {"foodId": "boczek", "qty": 20, "unit": "g"}
+    ],
+    "aliases": ["pierogi z cebulką","pierogi okraszone"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["okraszona pierog","okraszona pieroga","okraszoną pierog","okraszoną pieroga","okraszoną pierogą","okraszoną pierogę","okraszoną pierogi","okraszoną pierogiem","okraszone pierogi","okraszonego pierog","okraszonego pieroga","okraszonego pierogę","okraszonego pierogi","okraszonego pierogu","okraszonej pierodze","okraszonej pieroga","okraszonej pierogi","okraszonej pierogu","okraszony pierog","okraszony pieroga","okraszony pierogę","okraszony pierogi","okraszonych pierog","okraszonych pierogach","okraszonych pierogów","okraszonym pierodze","okraszonym pierogą","okraszonym pierogiem","okraszonym pierogu","okraszonymi pierogami","pierodze okraszonej","pierodze okraszonym","pierodze z cebulką","pierodze ze skwarkami","pierog okraszona","pierog okraszoną","pierog okraszonego","pierog okraszony","pierog okraszonych","pierog z cebulką","pierog ze skwarkami","pieroga okraszona","pieroga okraszoną","pieroga okraszonego","pieroga okraszonej","pieroga okraszony","pieroga z cebulką","pieroga ze skwarkami","pierogach okraszonych","pierogach z cebulką","pierogach ze skwarkami","pierogami okraszonymi","pierogami z cebulką","pierogami ze skwarkami","pierogą okraszoną","pierogą okraszonym","pierogą z cebulką","pierogą ze skwarkami","pierogę okraszoną","pierogę okraszonego","pierogę okraszony","pierogę z cebulką","pierogę ze skwarkami","pierogi okraszoną","pierogi okraszonego","pierogi okraszonej","pierogi okraszony","pierogiem okraszoną","pierogiem okraszonym","pierogiem z cebulką","pierogiem ze skwarkami","pierogów okraszonych","pierogów z cebulką","pierogów ze skwarkami","pierogu okraszonego","pierogu okraszonej","pierogu okraszonym","pierogu z cebulką","pierogu ze skwarkami"]
+  },
+  {
+    "id": "mizeria",
+    "name": "mizeria",
+    "ingredients": [
+      {"foodId": "ogorek", "qty": 150, "unit": "g"},
+      {"foodId": "smietana", "qty": 30, "unit": "g"}
+    ],
+    "aliases": ["ogórki ze śmietaną"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["mizer","mizeri","mizeriach","mizeriami","mizerią","mizerię","mizerii","ogórce ze śmietaną","ogórek ze śmietaną","ogórka ze śmietaną","ogórkach ze śmietaną","ogórkami ze śmietaną","ogórką ze śmietaną","ogórkę ze śmietaną","ogórkiem ze śmietaną","ogórków ze śmietaną","ogórku ze śmietaną"],
+    "signature": false
+  },
+  {
+    "id": "salatka",
+    "name": "sałatka",
+    "ingredients": [
+      {"foodId": "salata", "qty": 60, "unit": "g"},
+      {"foodId": "pomidor", "qty": 80, "unit": "g"},
+      {"foodId": "ogorek", "qty": 60, "unit": "g"},
+      {"foodId": "oliwa", "qty": 10, "unit": "g", "optional": true}
+    ],
+    "aliases": ["sałatka warzywna","sałatka z warzyw","miska sałatki"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["misce sałatkiej","misek sałatkich","miska sałatka","miskach sałatkich","miskami sałatkimi","miską sałatką","miskę sałatką","miski sałatkie","miski sałatkiej","sałatce","sałatce warzywnej","sałatce z warzyw","sałatek","sałatek warzywnych","sałatek z warzyw","sałatka miska","sałatkach","sałatkach warzywnych","sałatkach z warzyw","sałatkami","sałatkami warzywnymi","sałatkami z warzyw","sałatką","sałatką miską","sałatką miskę","sałatką warzywną","sałatką z warzyw","sałatkę","sałatkę warzywną","sałatkę z warzyw","sałatki","sałatki warzywne","sałatki warzywnej","sałatki z warzyw","sałatkich","sałatkich misek","sałatkich miskach","sałatkie","sałatkie miski","sałatkiej","sałatkiej misce","sałatkiej miski","sałatkimi","sałatkimi miskami","warzywna sałatka","warzywną sałatką","warzywną sałatkę","warzywne sałatki","warzywnej sałatce","warzywnej sałatki","warzywnych sałatek","warzywnych sałatkach","warzywnymi sałatkami"],
+    "sizeMode": "all",
+    "signature": false
+  },
+  {
+    "id": "ryz-z-jablkami",
+    "name": "ryż z jabłkami",
+    "ingredients": [
+      {"foodId": "ryz", "qty": 200, "unit": "g"},
+      {"foodId": "jablko", "qty": 1, "unit": "sztuka"},
+      {"foodId": "cukier", "qty": 10, "unit": "g", "optional": true}
+    ],
+    "aliases": [],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["ryża z jabłkami","ryżach z jabłkami","ryżami z jabłkami","ryże z jabłkami","ryżem z jabłkami","ryżi z jabłkami","ryżów z jabłkami","ryżu z jabłkami","ryży z jabłkami"]
+  },
+  {
+    "id": "kasza-z-sosem",
+    "name": "kasza z gulaszem",
+    "ingredients": [
+      {"foodId": "kasza-gryczana", "qty": 150, "unit": "g"},
+      {"foodId": "gulasz", "qty": 200, "unit": "g"}
+    ],
+    "aliases": ["gulasz z kaszą","kasza z sosem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["gulasza z kaszą","gulaszach z kaszą","gulaszami z kaszą","gulasze z kaszą","gulaszem z kaszą","gulaszi z kaszą","gulaszów z kaszą","gulaszu z kaszą","gulaszy z kaszą","kasz z gulaszem","kasz z sosem","kaszach z gulaszem","kaszach z sosem","kaszami z gulaszem","kaszami z sosem","kaszą z gulaszem","kaszą z sosem","kaszę z gulaszem","kaszę z sosem","kaszy z gulaszem","kaszy z sosem"]
+  },
+  {
+    "id": "pomidorowa-z-makaronem",
+    "name": "pomidorowa z makaronem",
+    "ingredients": [
+      {"foodId": "zupa-pomidorowa", "qty": 300, "unit": "g"},
+      {"foodId": "makaron", "qty": 60, "unit": "g"}
+    ],
+    "aliases": ["zupa pomidorowa z makaronem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["pomidorow z makaronem","pomidorowach z makaronem","pomidorowami z makaronem","pomidorową z makaronem","pomidorowę z makaronem","pomidorowie z makaronem","pomidorowy z makaronem","zup pomidorowych z makaronem","zupach pomidorowych z makaronem","zupami pomidorowymi z makaronem","zupą pomidorową z makaronem","zupę pomidorową z makaronem","zupie pomidorowej z makaronem","zupy pomidorowe z makaronem","zupy pomidorowej z makaronem"]
+  },
+  {
+    "id": "pomidorowa-z-ryzem",
+    "name": "pomidorowa z ryżem",
+    "ingredients": [
+      {"foodId": "zupa-pomidorowa", "qty": 300, "unit": "g"},
+      {"foodId": "ryz", "qty": 60, "unit": "g"}
+    ],
+    "aliases": ["zupa pomidorowa z ryżem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["pomidorow z ryżem","pomidorowach z ryżem","pomidorowami z ryżem","pomidorową z ryżem","pomidorowę z ryżem","pomidorowie z ryżem","pomidorowy z ryżem","zup pomidorowych z ryżem","zupach pomidorowych z ryżem","zupami pomidorowymi z ryżem","zupą pomidorową z ryżem","zupę pomidorową z ryżem","zupie pomidorowej z ryżem","zupy pomidorowe z ryżem","zupy pomidorowej z ryżem"]
+  },
+  {
+    "id": "rosol-z-makaronem",
+    "name": "rosół z makaronem",
+    "ingredients": [
+      {"foodId": "rosol", "qty": 300, "unit": "g"},
+      {"foodId": "makaron", "qty": 60, "unit": "g"}
+    ],
+    "aliases": ["rosół z makaronem nitki"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["rosole z makaronem","rosole z makaronem nitki","rosoła z makaronem","rosoła z makaronem nitki","rosołach z makaronem","rosołach z makaronem nitki","rosołami z makaronem","rosołami z makaronem nitki","rosołem z makaronem","rosołem z makaronem nitki","rosołów z makaronem","rosołów z makaronem nitki","rosołu z makaronem","rosołu z makaronem nitki","rosoły z makaronem","rosoły z makaronem nitki"]
+  },
+  {
+    "id": "zurek-z-jajkiem",
+    "name": "żurek z jajkiem",
+    "ingredients": [
+      {"foodId": "zurek", "qty": 300, "unit": "g"},
+      {"foodId": "jajko", "qty": 1, "unit": "sztuka"},
+      {"foodId": "kielbasa", "qty": 40, "unit": "g", "optional": true}
+    ],
+    "aliases": ["żurek z jajkiem i kiełbasą","żur z jajkiem"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["żura z jajkiem","żurach z jajkiem","żurami z jajkiem","żurem z jajkiem","żurka z jajkiem","żurka z jajkiem i kiełbasą","żurkach z jajkiem","żurkach z jajkiem i kiełbasą","żurkami z jajkiem","żurkami z jajkiem i kiełbasą","żurki z jajkiem","żurki z jajkiem i kiełbasą","żurkiem z jajkiem","żurkiem z jajkiem i kiełbasą","żurków z jajkiem","żurków z jajkiem i kiełbasą","żurku z jajkiem","żurku z jajkiem i kiełbasą","żurów z jajkiem","żuru z jajkiem","żury z jajkiem","żurze z jajkiem"]
+  },
+  {
+    "id": "barszcz-z-uszkami",
+    "name": "barszcz z uszkami",
+    "ingredients": [
+      {"foodId": "barszcz", "qty": 250, "unit": "g"},
+      {"foodId": "uszka", "qty": 80, "unit": "g"}
+    ],
+    "aliases": ["barszcz czerwony z uszkami"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "sizeMode": "all",
+    "forms": ["barszcz czerwonego z uszkami","barszcza czerwonego z uszkami","barszcza czerwony z uszkami","barszcza z uszkami","barszczach czerwonych z uszkami","barszczach z uszkami","barszczami czerwonymi z uszkami","barszczami z uszkami","barszcze czerwone z uszkami","barszcze z uszkami","barszczem czerwonym z uszkami","barszczem z uszkami","barszczi czerwonych z uszkami","barszczi z uszkami","barszczów czerwonych z uszkami","barszczów z uszkami","barszczu czerwonego z uszkami","barszczu czerwonym z uszkami","barszczu z uszkami","barszczy czerwonych z uszkami","barszczy z uszkami"]
+  },
+  {
+    "id": "barszcz-z-krokietem",
+    "name": "barszcz z krokietem",
+    "ingredients": [
+      {"foodId": "barszcz", "qty": 250, "unit": "g"},
+      {"foodId": "nalesnik", "qty": 1, "unit": "sztuka"},
+      {"foodId": "kapusta-kiszona", "qty": 40, "unit": "g"},
+      {"foodId": "olej", "qty": 10, "unit": "g"}
+    ],
+    "aliases": ["krokiet z barszczem","krokiet"],
+    "category": "danie",
+    "source": "typowy skład domowy (szacunek, do strojenia)",
+    "verified": false,
+    "forms": ["barszcza z krokietem","barszczach z krokietem","barszczami z krokietem","barszcze z krokietem","barszczem z krokietem","barszczi z krokietem","barszczów z krokietem","barszczu z krokietem","barszczy z krokietem","krokiecie","krokiecie z barszczem","krokieta","krokieta z barszczem","krokietach","krokietach z barszczem","krokietami","krokietami z barszczem","krokietem","krokietem z barszczem","krokietów","krokietów z barszczem","krokietu","krokietu z barszczem","krokiety","krokiety z barszczem"],
+    "signature": false
+  }
+]
