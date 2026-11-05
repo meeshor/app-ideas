@@ -2,10 +2,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import { readFileSync } from 'node:fs';
+
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as { version: string };
 
 export default defineConfig({
   // względne ścieżki: build działa też z podkatalogu (np. GitHub Pages)
   base: './',
+  define: { __APP_VERSION__: JSON.stringify(pkg.version) },
+  // baza produktów (~330 kB JSON, ~45 kB gzip) jest w głównym pakiecie celowo — działa offline od pierwszego uruchomienia
+  build: { chunkSizeWarningLimit: 900 },
   plugins: [
     react(),
     VitePWA({

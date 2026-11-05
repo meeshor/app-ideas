@@ -155,6 +155,10 @@ export interface ParsedItem {
   changes: IngredientChange[];
   /** Jawna lista składników po ręcznej edycji (zastępuje skład dania). */
   ingredients?: DishIngredient[];
+  /** Nazwa wyświetlana (dla składu edytowanego ręcznie). */
+  label?: string;
+  /** Czy użytkownik zmieniał pozycję w podglądzie. */
+  edited?: boolean;
 }
 
 export interface ParseResult {

@@ -28,3 +28,11 @@ Podsumowania kamieni milowych (sesja autonomiczna). Stan końcowy i uczciwa ocen
 - **116 przypadków w tabeli** + 6 testów własności (determinizm, rozbicie jak w specyfikacji, „bez masła”, pierwszeństwo definicji użytkownika, nowe danie użytkownika, wydajność). Razem w projekcie: 167 testów, wszystkie zielone.
 - Raport: [`parser.md`](parser.md) — 11 znanych braków (m.in. „i sałata” bez ogonków, liczebniki złożone).
 - Wydajność: budowa słownika ~70 ms przy starcie, parsowanie typowego wpisu 0–5 ms (pierwsze wywołania wolniejsze).
+
+## M3 — Grywalny prototyp ✅
+
+- Ekran „Dziś”: pole „Co zjadłeś?”, podgląd na żywo (rozbicie każdej pozycji na składniki z gramami i kcal), sumy i paski kcal/B/W/T względem celu, wpisy pogrupowane po posiłkach, nawigacja po dniach.
+- Edycja pozycji w podglądzie: ilość, jednostka (porcje produktu + g/ml), rozmiar, zamiana produktu z listy podpowiedzi, edycja składu (ilość/jednostka/usuń/dodaj składnik).
+- Zapis do IndexedDB (`idb`): wpis przechowuje oryginalny tekst, pozycje po poprawkach i wyliczenie z chwili zapisu; „Przelicz ponownie” liczy według aktualnej bazy.
+- Niezrozumiane fragmenty podświetlone z przyciskiem „+ dodaj produkt”.
+- E2E (Playwright, Chromium, Pixel 7): scenariusz z promptu „duża bułka żytnia z szynką” → zapis → widoczna suma (+ trwałość po przeładowaniu), edycja ilości, dodanie nieznanego produktu — 3/3 zielone.

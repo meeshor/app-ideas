@@ -78,8 +78,8 @@ export function expandItem(db: FoodDb, item: ParsedItem, opts: CalcOptions = {})
     }
   }
 
-  // Zmiany z parsera (nie stosujemy ich ponownie, gdy użytkownik zapisał jawny skład)
-  const changes = item.kind === 'dish' && item.ingredients ? item.changes.filter((c) => c.op === 'add') : item.changes;
+  // Zmiany z parsera nie są stosowane, gdy użytkownik ustalił jawny skład (są już w nim zawarte)
+  const changes = item.kind === 'dish' && item.ingredients ? [] : item.changes;
   const findComp = (foodId: string, preferMain: boolean) => {
     if (preferMain && comps[mainIdx] && sameFamily(db, comps[mainIdx]!.foodId, foodId)) return comps[mainIdx];
     return comps.find((c) => sameFamily(db, c.foodId, foodId));
@@ -250,6 +250,7 @@ export function computeItem(db: FoodDb, item: ParsedItem, opts: CalcOptions = {}
 }
 
 export function itemLabel(db: FoodDb, item: ParsedItem): string {
+  if (item.label) return item.label;
   const base = item.kind === 'food' ? db.foods.get(item.matchedId)?.name : db.dishes.get(item.matchedId)?.name;
   const variants = item.changes.filter((c) => c.op === 'variant').map((c) => db.foods.get(c.foodId)?.name ?? c.foodId);
   let label = base ?? item.matchedId;
