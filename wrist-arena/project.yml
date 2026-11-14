@@ -73,6 +73,10 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: Wrist Arena
         INFOPLIST_KEY_WKCompanionAppBundleIdentifier: $(BUNDLE_ID_PREFIX).wristarena
         INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp: NO
+        INFOPLIST_FILE: Config/Watch-Info.plist
+        INFOPLIST_KEY_NSHealthShareUsageDescription: Wrist Arena uruchamia sesję treningu, żeby czytać ruch ręki przy opuszczonym nadgarstku. Nie odczytuje danych zdrowotnych.
+        INFOPLIST_KEY_NSHealthUpdateUsageDescription: Sesja treningu pozwala grze działać przy wygaszonym ekranie. Trening nie jest zapisywany w Zdrowiu.
+        CODE_SIGN_ENTITLEMENTS: Config/WristArenaWatch.entitlements
         SKIP_INSTALL: YES
 
 schemes:

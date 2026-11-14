@@ -4,14 +4,19 @@ import WristKit
 
 @main
 struct WristArenaApp: App {
+    @State private var sensorLab = SensorLabModel()
+
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView(sensorLab: sensorLab)
+                .task { sensorLab.activate() }
         }
     }
 }
 
 struct HomeView: View {
+    let sensorLab: SensorLabModel
+
     var body: some View {
         NavigationStack {
             List {
@@ -25,6 +30,13 @@ struct HomeView: View {
                         }
                     }
                 }
+                Section("Narzędzia") {
+                    NavigationLink {
+                        SensorLabView(model: sensorLab)
+                    } label: {
+                        Label("Czujniki (debug)", systemImage: "waveform.path.ecg")
+                    }
+                }
                 Section("Wersje") {
                     LabeledContent("WristKit", value: WristKitInfo.version)
                     LabeledContent("ArenaCore", value: ArenaCoreInfo.version)
@@ -36,5 +48,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(sensorLab: SensorLabModel())
 }

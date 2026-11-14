@@ -41,6 +41,9 @@ wrist-arena/
 4. Zegarek bezpośrednio: schemat **WristArenaWatch**, urządzenie = Twój Watch → Run (szybsze iteracje
    i logi z zegarka). Pierwsze połączenie z zegarkiem w Xcode potrafi trwać kilka minut.
 
+Przy pierwszym nagrywaniu zegarek poprosi o zgodę na sesję treningu (HealthKit). Sesja pozwala
+czytać ruch przy opuszczonym nadgarstku, a trening nie jest zapisywany w Zdrowiu.
+
 Bundle ID: `com.meeshor.wristarena` i `com.meeshor.wristarena.watchkitapp`. Inny prefiks ustawisz
 przez `BUNDLE_ID_PREFIX` w `Signing.xcconfig`.
 
@@ -57,7 +60,7 @@ i puszcza SwiftLint (na Linuksie). Workflowy mają filtry `paths`.
 ## Kamienie milowe
 
 - [x] **M0:** szkielet, pakiety, CI, SwiftLint
-- [ ] **M1:** nagrywanie i podgląd ruchu, wykresy, pomiar opóźnienia, eksport nagrań
+- [x] **M1:** nagrywanie i podgląd ruchu, wykresy, pomiar opóźnienia, eksport nagrań (ekran „Czujniki (debug)”, [`docs/latency.md`](docs/latency.md), [`docs/recording-protocol.md`](docs/recording-protocol.md))
 - [ ] **M2:** `FlickThrowRecognizer`, tarcza, 501, pass & play, kalibracja
 - [ ] **M3:** Cricket, Around the Clock, ekran TV, statystyki, tryb dotykowy
 - [ ] M4: ręczna (po akceptacji)
