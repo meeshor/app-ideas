@@ -10,7 +10,7 @@ public enum WristSide: String, Sendable, Codable, CaseIterable {
 }
 
 /// Ogólny poziom trudności: skaluje bazowy rozrzut w grach.
-public enum Difficulty: String, Sendable, Codable, CaseIterable {
+public enum Difficulty: String, Sendable, Codable, CaseIterable, CodingKeyRepresentable {
     case easy
     case normal
     case hard
