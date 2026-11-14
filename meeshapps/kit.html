@@ -7,6 +7,41 @@
 <style>
 /* Kit: jedna długa kolumna sekcji; tokeny kolorów i fontów pochodzą z site/assets/style.css,
    tu dochodzą tylko tokeny „kafli” logo, niezależne od motywu strony (logo pokazujemy zawsze na jasnym i ciemnym tle). */
+/* Palety Lagoon i Grape zostały tylko w kicie (strona używa Ember). */
+:root[data-palette="lagoon"] {
+  --bg: #F3F8F8; --surface: #FFFFFF; --fg: #0F2224; --muted: #4F6567; --line: #DCE8E8;
+  --brand: #0F8F7E; --brand-ink: #FFFFFF; --brand-2: #4338CA; --brand-soft: #D9F3EF;
+}
+:root[data-palette="grape"] {
+  --bg: #F8F6FD; --surface: #FFFFFF; --fg: #1C1433; --muted: #615877; --line: #E7E2F3;
+  --brand: #6D3BD9; --brand-ink: #FFFFFF; --brand-2: #C98F00; --brand-soft: #EDE5FC;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-palette="lagoon"]:not([data-theme="light"]) {
+    --bg: #0B1A1C; --surface: #112628; --fg: #E6F4F2; --muted: #9DB8B6; --line: #1E3A3C;
+    --brand: #2DD4BF; --brand-ink: #032421; --brand-2: #A5B4FC; --brand-soft: #123634;
+  }
+  :root[data-palette="grape"]:not([data-theme="light"]) {
+    --bg: #13102A; --surface: #1C1838; --fg: #EFEAFB; --muted: #ADA5C6; --line: #2C2650;
+    --brand: #A98BFF; --brand-ink: #160B33; --brand-2: #FFD24A; --brand-soft: #2B2152;
+  }
+}
+:root[data-palette="lagoon"][data-theme="dark"] {
+  --bg: #0B1A1C; --surface: #112628; --fg: #E6F4F2; --muted: #9DB8B6; --line: #1E3A3C;
+  --brand: #2DD4BF; --brand-ink: #032421; --brand-2: #A5B4FC; --brand-soft: #123634;
+}
+:root[data-palette="grape"][data-theme="dark"] {
+  --bg: #13102A; --surface: #1C1838; --fg: #EFEAFB; --muted: #ADA5C6; --line: #2C2650;
+  --brand: #A98BFF; --brand-ink: #160B33; --brand-2: #FFD24A; --brand-soft: #2B2152;
+}
+
+.chosen { display: inline-block; font: 700 .7rem var(--font-body); letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; background: var(--brand); color: var(--brand-ink); }
+.logo-item.is-chosen .tiles { border: 2px solid var(--brand); }
+.decision { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; margin-top: 24px; max-width: 760px; }
+.decision svg { width: 72px; height: 72px; display: block; }
+.decision p { margin: 0; font-size: 1rem; color: var(--fg); }
+.decision code { font: 500 .85rem var(--font-mono); }
+
 :root {
   --tl-bg: #FFFFFF; --tl-fg: #16192B; --tl-brand: #E8492A; --tl-brand2: #1B2A4A; --tl-ink: #FFFFFF; --tl-line: #E3E4EC;
   --td-bg: #121729; --td-fg: #F3F4FA; --td-brand: #FF6B4A; --td-brand2: #9DB4E8; --td-ink: #1A0B06; --td-line: #262E47;
@@ -98,6 +133,10 @@
   <div class="eyebrow">Projekt · listopad 2026</div>
   <h1>meesh<b>Apps</b> Kit</h1>
   <p>Co trzeba mieć, żeby sprzedawać gry w App Store, jak ułożyć stronę studia, trzy palety kolorów, sześć wersji logo i trzy ikonki. Wybór palety poniżej przełącza cały kit i podgląd strony.</p>
+  <div class="decision">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="15" fill="#E8492A"/><path d="M17 44V29a7.5 7.5 0 0 1 15 0v15M32 29a7.5 7.5 0 0 1 15 0v15" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <p><b>Wybrane: logo 2, ikonka A, paleta Ember.</b> Strona używa już tylko Ember. Finalne pliki z napisem zamienionym na krzywe są w <code>brand/final/</code>, a PNG w <code>brand/final/png/</code>. Pozostałe propozycje zostały poniżej jako archiwum.</p>
+  </div>
   <nav class="toc" aria-label="Spis treści">
     <a href="#wymagania">Wymagania</a><a href="#uklad">Układ strony</a><a href="#palety">Palety</a><a href="#loga">Loga</a><a href="#ikonki">Ikonki</a>
   </nav>
@@ -157,17 +196,17 @@
     <a class="page-card" href="site/terms.html"><code>/terms</code><strong>Warunki korzystania</strong><span>Odesłanie do EULA Apple plus zasady bezpieczeństwa gier ruchowych.</span><span class="tag">EULA / ToU</span></a>
     <a class="page-card" href="site/legal.html"><code>/legal</code><strong>Dane sprzedawcy</strong><span>Te same dane, które deklarujesz w DSA.</span><span class="tag">DSA</span></a>
   </div>
-  <p class="note">Hosting: najprościej GitHub Pages (za darmo) z własną domeną, np. meeshapps.com albo meeshapps.app. Adresy support@ i privacy@ ustawisz jako przekierowania u rejestratora domeny. Pasek „Podgląd palety” na górze strony usuń po wyborze kolorów.</p>
+  <p class="note">Hosting: najprościej GitHub Pages (za darmo) z własną domeną, np. meeshapps.com albo meeshapps.app. Adresy support@ i privacy@ ustawisz jako przekierowania u rejestratora domeny.</p>
 </div></section>
 
 <section class="kit-section" id="palety"><div class="wrap">
   <h2>Trzy palety</h2>
-  <p class="intro">Każda paleta ma wersję jasną i ciemną. Kliknij, żeby przełączyć kit i podstrony.</p>
+  <p class="intro">Każda paleta ma wersję jasną i ciemną. Kliknięcie przełącza kolory kitu; strona używa już tylko Ember.</p>
   <div class="palettes" role="group" aria-label="Paleta">
     <button type="button" class="pal" data-set-palette="ember" aria-pressed="true">
       <div class="sw"><i style="background:#E8492A"></i><i style="background:#1B2A4A"></i><i style="background:#F7F7FA"></i><i style="background:#0F1424"></i></div>
       <div class="sw-codes"><span>#E8492A</span><span>#1B2A4A</span><span>#F7F7FA</span><span>#0F1424</span></div>
-      <strong>Ember</strong>
+      <strong>Ember <span class="chosen">Wybrana</span></strong>
       <p>Koral i granat. Energia strzału, tarcza łucznicza. Najbardziej „sportowa”.</p>
     </button>
     <button type="button" class="pal" data-set-palette="lagoon" aria-pressed="false">
@@ -198,8 +237,8 @@
       </div>
     </div>
 
-    <div class="logo-item">
-      <header><strong>2 · Łuk „m” + napis</strong><span>Litera m z dwóch łuków. Główna propozycja.</span></header>
+    <div class="logo-item is-chosen">
+      <header><strong>2 · Łuk „m” + napis</strong><span class="chosen">Wybrane</span><span>Litera m z dwóch łuków.</span></header>
       <div class="tiles">
         <div class="tile tile-l" data-export="logo-2-luk" data-variant="light"><svg viewBox="0 0 360 84" role="img" aria-label="meeshApps"><rect x="2" y="2" width="80" height="80" rx="22" fill="var(--lg-brand)"/><path d="M22 58V38a10 10 0 0 1 20 0v20M42 38a10 10 0 0 1 20 0v20" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><text class="wm" x="100" y="56" font-size="36" textLength="252" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
         <div class="tile tile-d" data-export="logo-2-luk" data-variant="dark"><svg viewBox="0 0 360 84" role="img" aria-label="meeshApps"><rect x="2" y="2" width="80" height="80" rx="22" fill="var(--lg-brand)"/><path d="M22 58V38a10 10 0 0 1 20 0v20M42 38a10 10 0 0 1 20 0v20" fill="none" stroke="var(--lg-ink)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><text class="wm" x="100" y="56" font-size="36" textLength="252" lengthAdjust="spacing"><tspan fill="var(--lg-fg)">meesh</tspan><tspan fill="var(--lg-brand)">Apps</tspan></text></svg></div>
@@ -239,7 +278,7 @@
     </div>
 
   </div>
-  <p class="note">Przed drukiem albo wysłaniem do grafika zamień tekst w SVG na krzywe (Figma: Outline stroke / Flatten, Inkscape: Ścieżka → Obiekt w ścieżkę). Pliki w <code>brand/</code> używają fontu Unbounded z Google Fonts; bez niego przeglądarka podstawi inny krój.</p>
+  <p class="note">Wybrane logo ma w <code>brand/final/</code> napis zamieniony na krzywe, więc wygląda tak samo bez zainstalowanego fontu. Pliki archiwalne w <code>brand/ember|lagoon|grape/</code> nadal używają fontu Unbounded z Google Fonts.</p>
 </div></section>
 
 <section class="kit-section" id="ikonki"><div class="wrap">
@@ -247,8 +286,8 @@
   <p class="intro">Mały znak na favicon, avatar w social media, stopkę ekranu startowego gry. Pokazane w 96, 48, 32 i 16 px, bo przy 16 px widać, czy znak się broni.</p>
   <div class="icons">
 
-    <div class="logo-item">
-      <header><strong>A · Łuk „m”</strong><span>Para do logo 2.</span></header>
+    <div class="logo-item is-chosen">
+      <header><strong>A · Łuk „m”</strong><span class="chosen">Wybrana</span><span>Para do logo 2.</span></header>
       <div class="tiles">
         <div class="tile tile-l icon-tile" data-export="icon-a-luk" data-variant="light">
           <div class="icon-row">

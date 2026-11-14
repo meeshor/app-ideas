@@ -47,6 +47,6 @@ Stan na listopad 2026. Zasady Apple zmieniają się co kilka miesięcy, więc pr
 ## 6. Przed publikacją strony
 
 1. Uzupełnij wszystkie pola oznaczone `<mark class="todo">` (dane sprzedawcy, adresy e-mail, daty).
-2. Wybierz paletę, ustaw ją jako domyślną w `site/assets/style.css` i `site.js`, usuń pasek „Podgląd palety” z każdej podstrony.
-3. Wybierz logo i ikonkę, zamień tekst w SVG na krzywe, podmień `site/assets/favicon.svg`.
+2. ~~Wybierz paletę i usuń pasek podglądu.~~ Zrobione: Ember.
+3. ~~Wybierz logo i ikonkę, zamień tekst na krzywe, podmień favicon.~~ Zrobione: logo 2 i ikonka A, pliki w `brand/final/`.
 4. Dla każdej nowej gry skopiuj `site/apps/cieciwa.html` i dodaj kafel na stronie głównej.

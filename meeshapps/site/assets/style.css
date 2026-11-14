@@ -1,7 +1,6 @@
 /* meeshApps — wspólny arkusz strony
    Układ: wąska kolumna treści (max 72ch dla tekstów prawnych), szeroka siatka na stronie głównej.
-   Palety: ember (domyślna), lagoon, grape — wybór przez data-palette na <html>.
-   Każda paleta ma wariant jasny i ciemny (prefers-color-scheme lub data-theme). */
+   Paleta: Ember, wariant jasny i ciemny (prefers-color-scheme lub data-theme). */
 
 :root {
   --font-display: "Unbounded", "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif;
@@ -24,42 +23,17 @@
   --radius: 14px;
   --wrap: 1080px;
 }
-:root[data-palette="lagoon"] {
-  --bg: #F3F8F8; --surface: #FFFFFF; --fg: #0F2224; --muted: #4F6567; --line: #DCE8E8;
-  --brand: #0F8F7E; --brand-ink: #FFFFFF; --brand-2: #4338CA; --brand-soft: #D9F3EF;
-}
-:root[data-palette="grape"] {
-  --bg: #F8F6FD; --surface: #FFFFFF; --fg: #1C1433; --muted: #615877; --line: #E7E2F3;
-  --brand: #6D3BD9; --brand-ink: #FFFFFF; --brand-2: #C98F00; --brand-soft: #EDE5FC;
-}
-
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0F1424; --surface: #171D31; --fg: #ECEEF6; --muted: #A3A8BD; --line: #262E47;
     --brand: #FF6B4A; --brand-ink: #1A0B06; --brand-2: #9DB4E8; --brand-soft: #3A1F1E;
     --todo: #4A3B00; --todo-fg: #FFE58A; color-scheme: dark;
   }
-  :root[data-palette="lagoon"]:not([data-theme="light"]) {
-    --bg: #0B1A1C; --surface: #112628; --fg: #E6F4F2; --muted: #9DB8B6; --line: #1E3A3C;
-    --brand: #2DD4BF; --brand-ink: #032421; --brand-2: #A5B4FC; --brand-soft: #123634;
-  }
-  :root[data-palette="grape"]:not([data-theme="light"]) {
-    --bg: #13102A; --surface: #1C1838; --fg: #EFEAFB; --muted: #ADA5C6; --line: #2C2650;
-    --brand: #A98BFF; --brand-ink: #160B33; --brand-2: #FFD24A; --brand-soft: #2B2152;
-  }
 }
 :root[data-theme="dark"] {
   --bg: #0F1424; --surface: #171D31; --fg: #ECEEF6; --muted: #A3A8BD; --line: #262E47;
   --brand: #FF6B4A; --brand-ink: #1A0B06; --brand-2: #9DB4E8; --brand-soft: #3A1F1E;
   --todo: #4A3B00; --todo-fg: #FFE58A; color-scheme: dark;
-}
-:root[data-palette="lagoon"][data-theme="dark"] {
-  --bg: #0B1A1C; --surface: #112628; --fg: #E6F4F2; --muted: #9DB8B6; --line: #1E3A3C;
-  --brand: #2DD4BF; --brand-ink: #032421; --brand-2: #A5B4FC; --brand-soft: #123634;
-}
-:root[data-palette="grape"][data-theme="dark"] {
-  --bg: #13102A; --surface: #1C1838; --fg: #EFEAFB; --muted: #ADA5C6; --line: #2C2650;
-  --brand: #A98BFF; --brand-ink: #160B33; --brand-2: #FFD24A; --brand-soft: #2B2152;
 }
 
 /* ---------- baza ---------- */
@@ -107,12 +81,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .lang-toggle button { background: none; border: 0; padding: 4px 10px; font: 600 .78rem var(--font-body); color: var(--muted); cursor: pointer; letter-spacing: .04em; }
 html:not([data-lang="en"]) .lang-toggle [data-set-lang="pl"],
 html[data-lang="en"] .lang-toggle [data-set-lang="en"] { background: var(--fg); color: var(--bg); }
-
-/* ---------- pasek podglądu palet (tylko na etapie projektu) ---------- */
-.preview-bar { background: var(--brand-2); color: var(--bg); font-size: .82rem; }
-.preview-bar .wrap { display: flex; gap: 12px; align-items: center; padding-block: 6px; flex-wrap: wrap; }
-.preview-bar button { border: 1px solid currentColor; background: transparent; color: inherit; border-radius: 999px; padding: 2px 12px; font: 600 .78rem var(--font-body); cursor: pointer; }
-.preview-bar button[aria-pressed="true"] { background: var(--bg); color: var(--fg); border-color: var(--bg); }
 
 /* ---------- strona główna ---------- */
 .hero { padding-block: clamp(48px, 9vw, 104px) clamp(32px, 6vw, 64px); }
