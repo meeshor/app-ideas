@@ -63,60 +63,42 @@ enum FixtureJudge {
     static func failures(in results: [FixtureResult]) -> [String] {
         let centers = results.filter { $0.expectation == .center }.flatMap(\.events)
         let center = centers.isEmpty ? nil : Reference(centers)
-        var failures: [String] = []
-
-        for result in results {
-            let events = result.events
-            func fail(_ message: String) { failures.append("\(result.label): \(message)") }
-            func single() -> ThrowEvent? {
-                guard events.count == 1 else {
-                    fail("oczekiwano 1 rzutu, jest \(events.count)")
-                    return nil
-                }
-                return events[0]
-            }
-
-            switch result.expectation {
-            case .count(let expected):
-                if events.count != expected { fail("oczekiwano \(expected) rzutów, jest \(events.count)") }
-            case .center:
-                _ = single()
-            case .left:
-                if let event = single(), let center, event.yaw > center.yaw - directionMargin {
-                    fail("yaw \(event.yaw) nie jest wyraźnie w lewo od środka \(center.yaw)")
-                }
-            case .right:
-                if let event = single(), let center, event.yaw < center.yaw + directionMargin {
-                    fail("yaw \(event.yaw) nie jest wyraźnie w prawo od środka \(center.yaw)")
-                }
-            case .high:
-                if let event = single(), let center, event.pitch < center.pitch + directionMargin {
-                    fail("pitch \(event.pitch) nie jest wyraźnie wyżej niż środek \(center.pitch)")
-                }
-            case .low:
-                if let event = single(), let center, event.pitch > center.pitch - directionMargin {
-                    fail("pitch \(event.pitch) nie jest wyraźnie niżej niż środek \(center.pitch)")
-                }
-            case .weak:
-                if events.count > 1 { fail("słaby ruch dał \(events.count) rzuty") }
-                if let event = events.first, let center, event.speed > center.speed * 0.7 {
-                    fail("słaby rzut ma prędkość \(event.speed) przy środku \(center.speed)")
-                }
-            case .strong:
-                if let event = single(), let center, event.speed < center.speed * 1.3 {
-                    fail("mocny rzut ma prędkość \(event.speed) przy środku \(center.speed)")
-                }
-            case .twist:
-                if let event = single(), abs(event.spin) < twistSpin {
-                    fail("rzut ze skrętem ma spin \(event.spin)")
-                }
-            case .jerky:
-                if let event = single(), let center, event.jerk < center.jerk * 1.5 {
-                    fail("szarpnięty rzut ma jerk \(event.jerk) przy środku \(center.jerk)")
-                }
-            }
+        return results.compactMap { result in
+            problem(with: result, center: center).map { "\(result.label): \($0)" }
         }
-        return failures
+    }
+
+    /// Opis niezgodności albo `nil`. Bez rzutów `flick_center_*` w zestawie kierunków nie sprawdzamy.
+    static func problem(with result: FixtureResult, center: Reference?) -> String? {
+        let events = result.events
+        switch result.expectation {
+        case .count(let expected):
+            return events.count == expected ? nil : "oczekiwano \(expected) rzutów, jest \(events.count)"
+        case .weak:
+            guard events.count <= 1 else { return "słaby ruch dał \(events.count) rzuty" }
+            guard let event = events.first, let center else { return nil }
+            return event.speed > center.speed * 0.7 ? "słaby rzut ma prędkość \(event.speed) przy środku \(center.speed)" : nil
+        default:
+            guard events.count == 1 else { return "oczekiwano 1 rzutu, jest \(events.count)" }
+            return directionProblem(result.expectation, event: events[0], center: center)
+        }
+    }
+
+    private static func directionProblem(_ expectation: FixtureExpectation, event e: ThrowEvent, center: Reference?) -> String? {
+        if expectation == .twist {
+            return abs(e.spin) < twistSpin ? "rzut ze skrętem ma spin \(e.spin)" : nil
+        }
+        guard let c = center else { return nil }
+        let m = directionMargin
+        switch expectation {
+        case .left: return e.yaw > c.yaw - m ? "yaw \(e.yaw) nie jest wyraźnie w lewo od środka \(c.yaw)" : nil
+        case .right: return e.yaw < c.yaw + m ? "yaw \(e.yaw) nie jest wyraźnie w prawo od środka \(c.yaw)" : nil
+        case .high: return e.pitch < c.pitch + m ? "pitch \(e.pitch) nie jest wyraźnie wyżej niż środek \(c.pitch)" : nil
+        case .low: return e.pitch > c.pitch - m ? "pitch \(e.pitch) nie jest wyraźnie niżej niż środek \(c.pitch)" : nil
+        case .strong: return e.speed < c.speed * 1.3 ? "mocny rzut ma prędkość \(e.speed) przy środku \(c.speed)" : nil
+        case .jerky: return e.jerk < c.jerk * 1.5 ? "szarpnięty rzut ma jerk \(e.jerk) przy środku \(c.jerk)" : nil
+        default: return nil
+        }
     }
 
     struct Reference {

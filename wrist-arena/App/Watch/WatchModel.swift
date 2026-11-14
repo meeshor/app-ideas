@@ -3,7 +3,7 @@ import Observation
 import WristKit
 import WristKitDevice
 
-/// Stan aplikacji na zegarku: czujniki, nagrywanie, podgląd na żywo dla telefonu.
+/// Stan aplikacji na zegarku: czujniki, nagrywanie, podgląd na żywo i sesja gry (rozpoznawanie rzutów).
 @MainActor
 @Observable
 final class WatchModel {
@@ -18,16 +18,25 @@ final class WatchModel {
     private(set) var lastSavedName: String?
     var label = "nagranie"
 
+    // Sesja gry
+    private(set) var sessionKind: ThrowKind?
+    private(set) var playerName: String?
+    private(set) var gesturePhase: GesturePhase = .idle
+    private(set) var throwCount = 0
+    private(set) var lastThrow: ThrowEvent?
+
     private let motion = LiveMotionSource()
     private let workout = WorkoutSessionController()
     private let link = WatchLink.shared
     private let store = try? RecordingStore(directory: RecordingStore.defaultDirectory())
     private var recorder = MotionRecorder(maxDuration: 120)
     private var batcher = SampleBatcher()
+    private var recognizer = FlickThrowRecognizer()
     private var motionTask: Task<Void, Never>?
     private var uiCounter = 0
 
     var motionAvailable: Bool { motion.isAvailable }
+    var isSessionActive: Bool { sessionKind != nil }
 
     func activate() {
         link.onMessage = { [weak self] message, _ in self?.handle(message) }
@@ -99,6 +108,47 @@ final class WatchModel {
         sendStatus()
     }
 
+    // MARK: - Sesja gry
+
+    func startSession(kind: ThrowKind) async {
+        // M2: tylko rzut z nadgarstka (rzutki). Inne gesty dojdą z kolejnymi modułami.
+        guard kind == .flick else {
+            lastError = "Gest \(kind.rawValue) jeszcze nieobsługiwany"
+            sendStatus()
+            return
+        }
+        sessionKind = kind
+        throwCount = 0
+        lastThrow = nil
+        recognizer.orientation = DeviceInfo.orientation
+        recognizer.reset()
+        gesturePhase = recognizer.phase
+        await startMotionIfNeeded()
+        Haptics.start()
+        sendStatus()
+    }
+
+    func stopSession() {
+        guard sessionKind != nil else { return }
+        sessionKind = nil
+        playerName = nil
+        recognizer.reset()
+        gesturePhase = .idle
+        stopMotionIfIdle()
+        sendStatus()
+    }
+
+    private func setActivePlayer(name: String, wrist: WristSide) {
+        playerName = name
+        // Przy pass & play gracz zakłada zegarek na swój nadgarstek; zakładamy koronkę od strony dłoni,
+        // chyba że to ten sam nadgarstek co w ustawieniach zegarka (wtedy bierzemy ustawienia).
+        let device = DeviceInfo.orientation
+        recognizer.orientation = wrist == device.wrist ? device : WristOrientation(wrist: wrist)
+        recognizer.reset()
+        gesturePhase = recognizer.phase
+        Haptics.click()
+    }
+
     // MARK: - Czujniki
 
     private func startMotionIfNeeded() async {
@@ -111,7 +161,7 @@ final class WatchModel {
             try await workout.start()
             workoutActive = workout.isRunning
         } catch {
-            // Bez sesji treningu nagrywamy dalej, ale tylko przy włączonym ekranie.
+            // Bez sesji treningu działamy dalej, ale tylko przy włączonym ekranie.
             lastError = "Trening: \(error.localizedDescription)"
         }
         let stream = motion.start(frequency: 100)
@@ -123,7 +173,7 @@ final class WatchModel {
     }
 
     private func stopMotionIfIdle() {
-        guard !isRecording, !isStreaming else { return }
+        guard !isRecording, !isStreaming, sessionKind == nil else { return }
         motion.stop()
         motionTask?.cancel()
         motionTask = nil
@@ -139,6 +189,11 @@ final class WatchModel {
         if isStreaming, let batch = batcher.add(sample) {
             link.send(.samples(batch))
         }
+        if sessionKind != nil {
+            for output in recognizer.process(sample) {
+                handle(output)
+            }
+        }
         // UI odświeżamy ~10 Hz, nie 100 Hz.
         uiCounter += 1
         if uiCounter % 10 == 0 {
@@ -148,6 +203,22 @@ final class WatchModel {
         }
         if uiCounter % 100 == 0, isRecording {
             sendStatus()
+        }
+    }
+
+    private func handle(_ output: GestureOutput<ThrowEvent>) {
+        switch output {
+        case .phaseChanged(let phase):
+            gesturePhase = phase
+            link.send(.phase(phase))
+            if phase == .ready { Haptics.click() }
+        case .event(let event):
+            throwCount += 1
+            lastThrow = event
+            link.send(.throwEvent(event))
+            Haptics.success()
+        case .live(let state):
+            link.send(.live(state))
         }
     }
 
@@ -166,8 +237,14 @@ final class WatchModel {
             Task { await setStreaming(false) }
         case .requestStatus:
             sendStatus()
-        case .startSession, .stopSession, .setActivePlayer, .updateTuning:
-            break // M2
+        case .startSession(let kind):
+            Task { await startSession(kind: kind) }
+        case .stopSession:
+            stopSession()
+        case .setActivePlayer(let name, let wrist):
+            setActivePlayer(name: name, wrist: wrist)
+        case .updateTuning(let tuning):
+            recognizer.tuning = tuning.flick
         }
     }
 
@@ -180,7 +257,8 @@ final class WatchModel {
             workoutActive: workoutActive,
             motionAvailable: motion.isAvailable,
             wrist: DeviceInfo.wrist,
-            lastError: lastError
+            lastError: lastError,
+            sessionKind: sessionKind
         )))
     }
 }

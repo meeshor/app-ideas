@@ -21,6 +21,16 @@ public enum DeviceInfo {
     public static var wrist: WristSide {
         WKInterfaceDevice.current().wristLocation == .left ? .left : .right
     }
+
+    /// Orientacja z ustawień zegarka (nadgarstek + strona koronki).
+    /// Koronka „od strony dłoni”: na lewym nadgarstku dłoń jest po prawej stronie tarczy, na prawym po lewej.
+    @MainActor
+    public static var orientation: WristOrientation {
+        let device = WKInterfaceDevice.current()
+        let wrist: WristSide = device.wristLocation == .left ? .left : .right
+        let crownRight = device.crownOrientation == .right
+        return WristOrientation(wrist: wrist, crownTowardHand: (wrist == .left) == crownRight)
+    }
     #endif
 }
 

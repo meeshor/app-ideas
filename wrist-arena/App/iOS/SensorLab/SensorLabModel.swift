@@ -39,16 +39,17 @@ final class SensorLabModel {
     func activate() {
         guard !activated else { return }
         activated = true
-        link.onMessage = { [weak self] message, receivedAt in
+        let hub = PhoneLink.shared
+        hub.addMessageHandler("sensorLab") { [weak self] message, receivedAt in
             self?.handle(message, receivedAt: receivedAt)
         }
-        link.onFile = { [weak self] url, name in
+        hub.onFile = { [weak self] url, name in
             self?.importFile(url, name: name)
         }
-        link.onStateChange = { [weak self] in
+        hub.addStateHandler("sensorLab") { [weak self] in
             self?.refreshLinkState()
         }
-        link.activate()
+        hub.activate()
         refreshLinkState()
         refreshRecordings()
     }
