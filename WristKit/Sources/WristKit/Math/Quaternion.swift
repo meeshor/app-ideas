@@ -64,6 +64,17 @@ public struct Quaternion: Sendable, Hashable, Codable {
         return Vector3(r.x, r.y, r.z)
     }
 
+    /// Kąty Eulera (konwencja ZYX, radiany): roll wokół X, pitch wokół Y, yaw wokół Z.
+    /// Do wykresów i debugowania; gesty liczą na kwaternionach względnych.
+    public var eulerAngles: (roll: Double, pitch: Double, yaw: Double) {
+        let q = normalized
+        let roll = atan2(2 * (q.w * q.x + q.y * q.z), 1 - 2 * (q.x * q.x + q.y * q.y))
+        let sinPitch = max(-1, min(1, 2 * (q.w * q.y - q.z * q.x)))
+        let pitch = asin(sinPitch)
+        let yaw = atan2(2 * (q.w * q.z + q.x * q.y), 1 - 2 * (q.y * q.y + q.z * q.z))
+        return (roll, pitch, yaw)
+    }
+
     /// Obrót prowadzący od `reference` do `self`, wyrażony w układzie `reference`.
     /// Na nim liczymy kierunek rzutu względem pozy „ready”.
     public func relative(to reference: Quaternion) -> Quaternion {

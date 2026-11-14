@@ -7,6 +7,11 @@ public enum ControlCommand: Sendable, Hashable, Codable {
     case setActivePlayer(name: String, wrist: WristSide)
     case startRecording(label: String)
     case stopRecording
+    /// Podgląd ruchu na żywo z zadaną częstotliwością (Hz) po przerzedzeniu.
+    case startLiveStream(sampleRate: Double)
+    case stopLiveStream
+    /// Prośba o `WristPayload.status`.
+    case requestStatus
     case updateTuning(GestureTuning)
 }
 
@@ -15,6 +20,9 @@ public enum WristPayload: Sendable, Hashable, Codable {
     case throwEvent(ThrowEvent)
     case live(LiveGestureState)
     case phase(GesturePhase)
+    /// Paczka przerzedzonych próbek (podgląd na żywo).
+    case samples([MotionSample])
+    case status(WatchStatus)
     /// Pomiar opóźnienia: `sentAt` według zegara nadawcy.
     case ping(id: UInt32, sentAt: TimeInterval)
     /// Odpowiedź na ping: czasy według zegara odpowiadającego.

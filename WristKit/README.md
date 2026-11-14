@@ -5,8 +5,8 @@ Nie zależy od żadnej z gier.
 
 | Produkt | Zawartość | Platformy |
 |---|---|---|
-| `WristKit` | `MotionSample`, `MotionRecording` (`.wkrec`), `MotionRecorder`/`MotionReplayer`, `GestureRecognizer`, `GestureTuning` (progi **do strojenia**), `ThrowEvent`, `WristMessage`, `ClockSync`, `PlayerProfile` | iOS, watchOS, macOS (testy) |
-| `WristKitDevice` | Core Motion, `HKWorkoutSession`, WatchConnectivity, haptyka (od M1) | iOS, watchOS |
+| `WristKit` | `MotionSample`, `MotionRecording` (`.wkrec`), `MotionRecorder`/`MotionReplayer`, `GestureRecognizer`, `GestureTuning` (progi **do strojenia**), `ThrowEvent`, `WristMessage`, `ClockSync`, `LatencySummary`, `PlayerProfile`, `RingBuffer`, `SampleBatcher`, `RecordingStore`, `MonotonicClock` | iOS, watchOS, macOS (testy) |
+| `WristKitDevice` | `LiveMotionSource` (Core Motion 100 Hz), `WorkoutSessionController` (`HKWorkoutSession`), `WatchLink` (WatchConnectivity: wiadomości, pliki, auto-pong), `Haptics`, `DeviceInfo` | iOS, watchOS |
 
 `WristKit` to czysty Swift (sam Foundation), więc testy idą bez symulatora:
 
