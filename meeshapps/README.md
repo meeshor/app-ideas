@@ -10,11 +10,12 @@ Marka studia dla gier z tego repo: strona www, dokumenty wymagane przez App Stor
   - `support.html` wsparcie (Support URL)
   - `terms.html` warunki korzystania (uzupełnienie EULA Apple)
   - `legal.html` dane sprzedawcy (DSA)
-- [`brand/final/`](brand/final/): **wybrana identyfikacja**: logo 2 („m” z łuków + napis), ikonka A, paleta Ember. Napisy zamienione na krzywe.
+- [`brand/final/`](brand/final/): **wybrana identyfikacja**: logo „Zegarek” („m” na tarczy Apple Watch + napis), paleta Ember. Znak zegarka służy też jako ikonka. Napisy zamienione na krzywe.
   - `meeshapps-logo-light|dark.svg`: pełne logo na jasne / ciemne tło
   - `meeshapps-symbol-*.svg`: sam znak, `meeshapps-wordmark-*.svg`: sam napis
-  - `meeshapps-icon-*.svg`, `favicon.svg`: ikonka
+  - `meeshapps-icon-*.svg`: zegarek na kwadratowym tle (avatar), `favicon.svg`: sam zegarek
   - `png/`: logo @3x z przezroczystym tłem, ikonka 1024 px (kwadrat, np. na avatar) i 512 px z zaokrągleniem
+- [`brand/archiwum-logo2/`](brand/archiwum-logo2/): poprzedni wybór (logo 2 + ikonka A), też na krzywych.
 - [`brand/warianty/`](brand/warianty/): cztery warianty w stylu logo 2 (zegarek, ruch, kontur, sześcian), logo + ikonka, jasne i ciemne tło, napis na krzywych.
 - [`brand/ember|lagoon|grape/`](brand/): archiwum wszystkich propozycji (6 logo, 3 ikonki) w trzech paletach.
 
