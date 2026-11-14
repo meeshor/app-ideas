@@ -15,6 +15,7 @@ Marka studia dla gier z tego repo: strona www, dokumenty wymagane przez App Stor
   - `meeshapps-symbol-*.svg`: sam znak, `meeshapps-wordmark-*.svg`: sam napis
   - `meeshapps-icon-*.svg`, `favicon.svg`: ikonka
   - `png/`: logo @3x z przezroczystym tłem, ikonka 1024 px (kwadrat, np. na avatar) i 512 px z zaokrągleniem
+- [`brand/warianty/`](brand/warianty/): cztery warianty w stylu logo 2 (zegarek, ruch, kontur, sześcian), logo + ikonka, jasne i ciemne tło, napis na krzywych.
 - [`brand/ember|lagoon|grape/`](brand/): archiwum wszystkich propozycji (6 logo, 3 ikonki) w trzech paletach.
 
 Paleta Ember: koral `#E8492A` (ciemny motyw `#FF6B4A`), granat `#1B2A4A`, tło `#F7F7FA` / `#0F1424`, tekst `#16192B`. Fonty: Unbounded (nagłówki, logo), Figtree (tekst).
