@@ -15,6 +15,7 @@ Marka studia dla gier z tego repo: strona www, dokumenty wymagane przez App Stor
   - `meeshapps-symbol-*.svg`: sam znak, `meeshapps-wordmark-*.svg`: sam napis
   - `meeshapps-icon-*.svg`: zegarek na kwadratowym tle (avatar), `favicon.svg`: sam zegarek
   - `png/`: logo @3x z przezroczystym tłem, ikonka 1024 px (kwadrat, np. na avatar) i 512 px z zaokrągleniem
+- [`brand/gry/`](brand/gry/): ikony gier w systemie „zegarek” (Cięciwa, Slingworks, Wrist Arena): SVG i PNG 1024 × 1024 gotowe do App Store.
 - [`brand/archiwum-logo2/`](brand/archiwum-logo2/): poprzedni wybór (logo 2 + ikonka A), też na krzywych.
 - [`brand/warianty/`](brand/warianty/): cztery warianty w stylu logo 2 (zegarek, ruch, kontur, sześcian), logo + ikonka, jasne i ciemne tło, napis na krzywych.
 - [`brand/ember|lagoon|grape/`](brand/): archiwum wszystkich propozycji (6 logo, 3 ikonki) w trzech paletach.

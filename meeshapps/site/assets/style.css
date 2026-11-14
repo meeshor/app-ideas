@@ -97,8 +97,7 @@ html[data-lang="en"] .lang-toggle [data-set-lang="en"] { background: var(--fg); 
 
 .apps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .app-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: grid; gap: 10px; align-content: start; }
-.app-card .app-icon { width: 64px; height: 64px; border-radius: 15px; display: grid; place-items: center; }
-.app-card .app-icon svg { width: 40px; height: 40px; }
+.app-card .app-icon { width: 64px; height: 64px; border-radius: 15px; display: block; }
 .app-card h3 { margin: 4px 0 0; }
 .app-card p { margin: 0; color: var(--muted); font-size: .97rem; }
 .pill { display: inline-block; justify-self: start; font: 600 .72rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--brand-soft); color: var(--fg); }
@@ -125,8 +124,7 @@ details[open] summary { margin-bottom: 8px; }
 /* ---------- strona aplikacji ---------- */
 .app-hero { padding-block: clamp(40px, 7vw, 80px) 24px; }
 .app-hero .wrap { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
-.app-hero .app-icon { width: 120px; height: 120px; border-radius: 27px; display: grid; place-items: center; background: var(--brand); flex: none; }
-.app-hero .app-icon svg { width: 72px; height: 72px; }
+.app-hero .app-icon { width: 120px; height: 120px; border-radius: 27px; display: block; flex: none; }
 .app-hero h1 { margin: 0; }
 .badge-store { display: inline-flex; align-items: center; gap: 8px; background: var(--fg); color: var(--bg); border-radius: 10px; padding: 9px 16px; font-weight: 600; text-decoration: none; font-size: .95rem; }
 .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
