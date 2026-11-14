@@ -4,6 +4,7 @@ import WristKit
 
 @main
 struct WristArenaApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var sensorLab = SensorLabModel()
 
     var body: some Scene {

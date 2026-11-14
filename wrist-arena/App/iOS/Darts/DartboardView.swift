@@ -10,6 +10,8 @@ struct DartboardView: View {
     var highlight: DartLanding?
     /// Pokaż punkt celowania i rozrzut (debug/kalibracja).
     var showAim = false
+    /// Pola do podświetlenia (cel w Around the Clock, otwarte pola w Cricket); 25 = środek.
+    var highlightedNumbers: Set<Int> = []
     var onTap: (@MainActor (BoardPoint) -> Void)?
 
     var body: some View {
@@ -17,6 +19,7 @@ struct DartboardView: View {
             let frame = BoardFrame(size: geometry.size)
             Canvas { context, _ in
                 DartboardPainter.drawBoard(in: &context, frame: frame)
+                DartboardPainter.drawHighlights(highlightedNumbers, in: &context, frame: frame)
                 for landing in landings {
                     DartboardPainter.drawDart(
                         landing,
@@ -116,6 +119,23 @@ enum DartboardPainter {
             wires.addPath(circle(radius: radius, frame: frame))
         }
         context.stroke(wires, with: .color(.gray.opacity(0.6)), lineWidth: 0.5)
+    }
+
+    /// Półprzezroczysta poświata na wybranych sektorach (wszystkie pierścienie) albo na środku.
+    static func drawHighlights(_ numbers: Set<Int>, in context: inout GraphicsContext, frame: BoardFrame) {
+        guard !numbers.isEmpty else { return }
+        let board = Dartboard.standard
+        let glow = GraphicsContext.Shading.color(.yellow.opacity(0.35))
+        let half = Dartboard.segmentAngle / 2
+        for (index, number) in Dartboard.segmentOrder.enumerated() where numbers.contains(number) {
+            let start = Double(index) * Dartboard.segmentAngle - half
+            let end = start + Dartboard.segmentAngle
+            let path = sector(inner: board.outerBullRadius, outer: board.doubleOuterRadius, from: start, to: end, frame: frame)
+            context.fill(path, with: glow)
+        }
+        if numbers.contains(25) {
+            context.fill(circle(radius: board.outerBullRadius, frame: frame), with: glow)
+        }
     }
 
     static func drawDart(

@@ -62,7 +62,7 @@ i puszcza SwiftLint (na Linuksie). Workflowy mają filtry `paths`.
 - [x] **M0:** szkielet, pakiety, CI, SwiftLint
 - [x] **M1:** nagrywanie i podgląd ruchu, wykresy, pomiar opóźnienia, eksport nagrań (ekran „Czujniki (debug)”, [`docs/latency.md`](docs/latency.md), [`docs/recording-protocol.md`](docs/recording-protocol.md))
 - [x] **M2:** `FlickThrowRecognizer`, tarcza, 501, pass & play, kalibracja (szczegóły niżej; progi do strojenia na zegarku: [`docs/tuning.md`](docs/tuning.md))
-- [ ] **M3:** Cricket, Around the Clock, ekran TV, statystyki, tryb dotykowy
+- [x] **M3:** Cricket, Around the Clock, ekran TV, statystyki, tryb dotykowy (szczegóły niżej)
 - [ ] M4: ręczna (po akceptacji)
 - [ ] M5: menu modułów, onboarding, Game Center
 
@@ -95,3 +95,27 @@ i puszcza SwiftLint (na Linuksie). Workflowy mają filtry `paths`.
    - czy opóźnienie od rzutu do kropki na tarczy jest akceptowalne (zdarzenie wychodzi ok. 0,2 s po rzucie, plus transport);
    - czy lewa ręka (zegarek przełożony na drugi nadgarstek, koronka od strony dłoni) działa tak samo.
 5. Zmierz opóźnienie (ekran Czujniki) i uzupełnij [`docs/latency.md`](docs/latency.md).
+
+## M3: co jest i jak to sprawdzić
+
+**Logika (ArenaCore, testy na Linuksie i macOS):**
+
+- `CricketRules`: zamykanie 15–20 i środka, punkty za nadmiarowe znaki, **cut-throat**, limit 20 rund, wygrana w trakcie tury.
+- `AroundTheClockRules`: 1–20, opcjonalnie środek na koniec i przeskakiwanie o mnożnik.
+- `DartsGame` / `DartsGameState`: jeden `DartsMatch` dla X01, Cricket i Around the Clock (cofanie, rewanż z rotacją rozpoczynającego, dziennik rzutek).
+- Statystyki: `PlayerMatchStats` (mecz) i `PlayerStats` (narastająco). Liczą średnią X01, najlepszą turę, zamknięcie, busty, MPR w Cricket, celność w Around the Clock oraz trafienia T/D/środek/pudła.
+
+**Aplikacja:**
+
+- Konfiguracja: wybór wariantu i jego opcji; w pasku **Statystyki** graczy (zapisywane po każdym zakończonym meczu).
+- Mecz: tablica wyników zależna od wariantu, tabela znaków Cricket, podświetlenie celu na tarczy (bieżący numer w Around the Clock, otwarte pola w Cricket), ekran zwycięzcy z podsumowaniem i **rewanżem**.
+- **Wpisz trafienie** (menu Rzut): poprawka źle rozpoznanego rzutu albo gra na prawdziwej tarczy.
+- **Tryb dotykowy**: stuknięcie w tarczę = celowanie z rozrzutem zależnym od poziomu gracza.
+- **Ekran TV**: scena `windowExternalDisplayNonInteractive` (AirPlay albo kabel) z dużą tarczą, wynikami i stanem tury. Telefon zostaje panelem kontrolnym z mniejszą tarczą.
+
+**Do sprawdzenia na urządzeniach:**
+
+1. AirPlay na Apple TV albo kabel HDMI. Po włączeniu Duplikowania ekranu TV powinien pokazać **osobny** obraz „Wrist Arena” (a nie kopię telefonu), a po starcie meczu tarczę. Tego nie da się sprawdzić w CI (scena zewnętrzna działa tylko z prawdziwym ekranem; w symulatorze: I/O → External Displays).
+2. Cricket 2 graczy: czy znaki i punkty zgadzają się z tabelą, czy podświetlenie otwartych pól pomaga.
+3. Around the Clock w pojedynkę: podświetlony cel, licznik postępu, wynik w statystykach.
+4. Statystyki po kilku meczach (także po cofnięciu ruchu po wygranej: mecz liczy się raz, przy wyjściu albo rewanżu).

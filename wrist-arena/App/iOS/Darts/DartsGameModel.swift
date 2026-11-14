@@ -18,7 +18,8 @@ enum DartsInput: String, CaseIterable, Identifiable {
     }
 }
 
-/// Mecz rzutek na telefonie: rzuty z zegarka/dotyku/symulacji → `DartsMatch`, przekazywanie zegarka.
+/// Mecz rzutek na telefonie: rzuty z zegarka/dotyku/symulacji → `DartsMatch`, przekazywanie zegarka,
+/// rewanż i zapis statystyk. Ten sam obiekt czyta ekran TV (`ActiveGame`).
 @MainActor
 @Observable
 final class DartsGameModel {
@@ -32,10 +33,13 @@ final class DartsGameModel {
 
     @ObservationIgnored private let hub = PhoneLink.shared
     @ObservationIgnored private let handlerKey = "darts"
+    @ObservationIgnored private let onFinish: @MainActor (DartsMatch) -> Void
+    @ObservationIgnored private var statsRecorded = false
 
-    init(match: DartsMatch, input: DartsInput) {
+    init(match: DartsMatch, input: DartsInput, onFinish: @escaping @MainActor (DartsMatch) -> Void = { _ in }) {
         self.match = match
         self.input = input
+        self.onFinish = onFinish
     }
 
     var gesturePhase: GesturePhase { hub.gesturePhase }
@@ -44,6 +48,7 @@ final class DartsGameModel {
     // MARK: - Cykl życia
 
     func start() {
+        ActiveGame.shared.current = self
         guard input == .watch else { return }
         hub.activate()
         hub.addMessageHandler(handlerKey) { [weak self] message, _ in
@@ -53,8 +58,13 @@ final class DartsGameModel {
         hub.send(.control(.startSession(kind: .flick)))
     }
 
+    /// Wyjście z meczu: zapis statystyk (jeśli skończony), koniec sesji na zegarku.
     func stop() {
+        recordStatsIfNeeded()
         hub.removeMessageHandler(handlerKey)
+        if ActiveGame.shared.current === self {
+            ActiveGame.shared.current = nil
+        }
         if input == .watch {
             hub.send(.control(.stopSession))
         }
@@ -64,10 +74,17 @@ final class DartsGameModel {
     func confirmHandoff() {
         awaitingHandoff = false
         banner = nil
-        if input == .watch {
-            let player = match.currentPlayer
-            hub.send(.control(.setActivePlayer(name: player.name, wrist: player.wrist)))
-        }
+        sendActivePlayer()
+    }
+
+    func rematch() {
+        recordStatsIfNeeded()
+        guard let next = try? match.rematch() else { return }
+        match = next
+        statsRecorded = false
+        lastLanding = nil
+        banner = nil
+        awaitingHandoff = true
     }
 
     // MARK: - Rzuty
@@ -94,6 +111,13 @@ final class DartsGameModel {
         show(landing, notices: notices)
     }
 
+    /// Ręczne wpisanie trafienia (poprawka, gdy zegarek źle rozpoznał rzut albo gra na prawdziwej tarczy).
+    func enter(_ hit: DartHit) {
+        guard !awaitingHandoff, !match.isFinished else { return }
+        let notices = match.record(hit: hit)
+        show(match.landings.last ?? match.previousTurnLandings.last, hit: hit, notices: notices)
+    }
+
     func undo() {
         let wasHandoff = awaitingHandoff
         let before = match.currentPlayer.id
@@ -103,20 +127,25 @@ final class DartsGameModel {
         // Cofnięcie do tury poprzedniego gracza: bez ekranu przekazania (zegarek wciąż u niego).
         if wasHandoff || before != match.currentPlayer.id {
             awaitingHandoff = false
-            if input == .watch {
-                let player = match.currentPlayer
-                hub.send(.control(.setActivePlayer(name: player.name, wrist: player.wrist)))
-            }
+            sendActivePlayer()
         }
     }
 
+    // MARK: - Pomocnicze
+
     private func show(_ landing: DartLanding, notices: [GameNotice]) {
+        show(landing, hit: landing.hit, notices: notices)
+    }
+
+    private func show(_ landing: DartLanding?, hit: DartHit, notices: [GameNotice]) {
         lastLanding = landing
-        banner = Self.describe(landing.hit)
+        banner = Self.describe(hit)
         for notice in notices {
             switch notice {
             case .bust:
-                banner = "Bust! \(Self.describe(landing.hit))"
+                banner = "Bust! \(Self.describe(hit))"
+            case .scored(_, let points) where points > 0 && isCricket:
+                banner = "\(Self.describe(hit)) · +\(points) pkt"
             case .finished(let winner):
                 let name = match.players.first { $0.id == winner }?.name ?? "?"
                 banner = "\(name) wygrywa!"
@@ -126,6 +155,23 @@ final class DartsGameModel {
                 break
             }
         }
+    }
+
+    private var isCricket: Bool {
+        if case .cricket = match.game { return true }
+        return false
+    }
+
+    private func sendActivePlayer() {
+        guard input == .watch else { return }
+        let player = match.currentPlayer
+        hub.send(.control(.setActivePlayer(name: player.name, wrist: player.wrist)))
+    }
+
+    private func recordStatsIfNeeded() {
+        guard match.isFinished, !statsRecorded else { return }
+        statsRecorded = true
+        onFinish(match)
     }
 
     // MARK: - Opisy
@@ -144,4 +190,17 @@ final class DartsGameModel {
     static func describe(_ hits: [DartHit]) -> String {
         hits.map { describe($0) }.joined(separator: " · ")
     }
+}
+
+/// Mecz widoczny dla drugiego ekranu (TV przez AirPlay albo kabel).
+@MainActor
+@Observable
+final class ActiveGame {
+    static let shared = ActiveGame()
+
+    var current: DartsGameModel?
+    /// Czy podłączony jest zewnętrzny ekran (telefon może wtedy pokazać mniejszą tarczę).
+    var isTVConnected = false
+
+    private init() {}
 }

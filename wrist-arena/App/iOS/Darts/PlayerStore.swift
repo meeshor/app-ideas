@@ -1,15 +1,18 @@
+import ArenaCore
 import Foundation
 import Observation
 import WristKit
 
-/// Zapamiętani gracze (imię, nadgarstek, poziom, kalibracje), w `UserDefaults` jako JSON.
+/// Zapamiętani gracze (imię, nadgarstek, poziom, kalibracje) i ich statystyki, w `UserDefaults` jako JSON.
 @MainActor
 @Observable
 final class PlayerStore {
     private(set) var profiles: [PlayerProfile] = []
+    private(set) var stats: [PlayerProfile.ID: PlayerStats] = [:]
 
     @ObservationIgnored private let defaults: UserDefaults
     @ObservationIgnored private let key = "wristarena.players.v1"
+    @ObservationIgnored private let statsKey = "wristarena.stats.v1"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -19,6 +22,28 @@ final class PlayerStore {
         }
         if profiles.isEmpty {
             profiles = [PlayerProfile(name: "Gracz 1"), PlayerProfile(name: "Gracz 2")]
+        }
+        if let data = defaults.data(forKey: statsKey),
+           let decoded = try? JSONDecoder().decode([PlayerProfile.ID: PlayerStats].self, from: data) {
+            stats = decoded
+        }
+    }
+
+    /// Dopisuje statystyki zakończonego meczu (wołać raz na mecz).
+    func record(_ match: DartsMatch) {
+        guard match.isFinished else { return }
+        for matchStats in match.stats {
+            stats[matchStats.player, default: PlayerStats()].add(matchStats, game: match.game)
+        }
+        if let data = try? JSONEncoder().encode(stats) {
+            defaults.set(data, forKey: statsKey)
+        }
+    }
+
+    func resetStats(for id: PlayerProfile.ID) {
+        stats[id] = nil
+        if let data = try? JSONEncoder().encode(stats) {
+            defaults.set(data, forKey: statsKey)
         }
     }
 
