@@ -57,7 +57,7 @@ public struct BoardPoint: Sendable, Hashable, Codable {
 }
 
 /// Geometria tarczy o standardowych wymiarach (promienie w mm).
-public struct Dartboard: Sendable, Hashable {
+public struct Dartboard: Sendable, Hashable, Codable {
     public var innerBullRadius = 6.35
     public var outerBullRadius = 15.9
     public var tripleInnerRadius = 99.0

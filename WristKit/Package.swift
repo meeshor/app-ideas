@@ -22,7 +22,11 @@ let package = Package(
     targets: [
         .target(name: "WristKit"),
         .target(name: "WristKitDevice", dependencies: ["WristKit"]),
-        .testTarget(name: "WristKitTests", dependencies: ["WristKit"])
+        .testTarget(
+            name: "WristKitTests",
+            dependencies: ["WristKit"],
+            resources: [.copy("Fixtures")]
+        )
     ],
     swiftLanguageModes: [.v6]
 )

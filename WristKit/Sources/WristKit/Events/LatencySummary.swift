@@ -53,6 +53,8 @@ public struct WatchStatus: Sendable, Hashable, Codable {
     public var motionAvailable: Bool
     public var wrist: WristSide
     public var lastError: String?
+    /// Aktywna sesja gry (rozpoznawanie gestu) albo `nil`.
+    public var sessionKind: ThrowKind?
 
     public init(
         isRecording: Bool = false,
@@ -62,7 +64,8 @@ public struct WatchStatus: Sendable, Hashable, Codable {
         workoutActive: Bool = false,
         motionAvailable: Bool = false,
         wrist: WristSide = .right,
-        lastError: String? = nil
+        lastError: String? = nil,
+        sessionKind: ThrowKind? = nil
     ) {
         self.isRecording = isRecording
         self.recordingDuration = recordingDuration
@@ -72,5 +75,6 @@ public struct WatchStatus: Sendable, Hashable, Codable {
         self.motionAvailable = motionAvailable
         self.wrist = wrist
         self.lastError = lastError
+        self.sessionKind = sessionKind
     }
 }
