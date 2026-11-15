@@ -82,5 +82,13 @@ public enum ModuleCatalog {
         playerRange: 1...4
     )
 
-    public static let all: [ModuleDescriptor] = [darts]
+    public static let handball = ModuleDescriptor(
+        id: "handball",
+        name: "Rzut karny (ręczna)",
+        requiredGesture: .overarm,
+        supportedInputs: [.watch, .touch, .replay],
+        playerRange: 1...4
+    )
+
+    public static let all: [ModuleDescriptor] = [darts, handball]
 }
