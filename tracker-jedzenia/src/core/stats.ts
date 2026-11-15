@@ -66,3 +66,29 @@ export function quickEntries(entries: readonly LogEntry[], limits: { recent: num
     .slice(0, limits.frequent);
   return { recent, frequent };
 }
+
+export interface SeriesDay {
+  date: string;
+  totals: Macros;
+  /** Czy w tym dniu coś zapisano (dni puste rysujemy inaczej i pomijamy w średniej). */
+  logged: boolean;
+}
+
+/** Kolejne dni (także puste) kończące się w `endDate`, od najstarszego — do wykresu. */
+export function dailySeries(entries: readonly LogEntry[], endDate: string, days: number): SeriesDay[] {
+  const from = addDays(endDate, -(days - 1));
+  const byDate = new Map(summarizeDays(entries.filter((e) => e.date >= from && e.date <= endDate)).map((d) => [d.date, d]));
+  const zero: Macros = { kcal: 0, carbs: 0, protein: 0, fat: 0 };
+  return Array.from({ length: days }, (_, i) => {
+    const date = addDays(from, i);
+    const day = byDate.get(date);
+    return { date, totals: day?.totals ?? zero, logged: Boolean(day) };
+  });
+}
+
+/** Ile dni z wpisami mieści się w ±tolerancji celu kalorycznego (np. 0.1 = ±10%). */
+export function daysOnTarget(series: readonly SeriesDay[], goalKcal: number, tolerance = 0.1): { onTarget: number; logged: number } {
+  const logged = series.filter((d) => d.logged);
+  const onTarget = goalKcal > 0 ? logged.filter((d) => Math.abs(d.totals.kcal - goalKcal) <= goalKcal * tolerance).length : 0;
+  return { onTarget, logged: logged.length };
+}

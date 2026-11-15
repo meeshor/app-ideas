@@ -70,6 +70,12 @@ Podsumowania kamieni milowych (sesja autonomiczna). Stan końcowy i uczciwa ocen
 
 ---
 
+## Po M5 — wykres historii ✅
+
+- `dailySeries` / `daysOnTarget` (`src/core/stats.ts`) z testami; komponent `KcalChart` (słupki jako przyciski z etykietami dla czytnika ekranu,
+  przekroczenie celu >10% innym kolorem, puste dni jako kreska przy osi); przełącznik 14/30 dni; e2e `e2e/history-chart.spec.ts`.
+- Sprawdzone: 190 testów jednostkowych, 10/10 e2e w Chromium (Pixel 7), zrzuty w jasnym i ciemnym motywie. WebKit nie był uruchamiany w tej sesji.
+
 # Stan końcowy — uczciwie
 
 ## Wyniki testów (ostatnie uruchomienie przed commitem M4)
@@ -96,7 +102,7 @@ Podsumowania kamieni milowych (sesja autonomiczna). Stan końcowy i uczciwa ocen
 - Masy porcji i składy dań („bułka z szynką” = 2 plastry + 5 g masła) to rozsądne domysły do strojenia.
 - **Znane braki parsera** (szczegóły w [`parser.md`](parser.md)): „i sałata” bez polskich znaków nie dokleja się jako dodatek; mianownik po „i” zawsze tworzy nową pozycję; brak liczebników złożonych („dwadzieścia”, „sto”); odmiana z reguł bywa niepełna dla form nieregularnych; „pół X” liczone od porcji domyślnej; „na wodzie”/„z grilla” tylko gdy są w aliasach lub na liście wypełniaczy; zawartość tłuszczu („3,2%”) ignorowana.
 - Safari/iOS sprawdzone na symulatorze (M5), nie na fizycznym telefonie. Instalacja PWA na ekran główny nie była sprawdzana.
-- Brak wykresów historii (jest lista dni i średnia tygodniowa) i brak wyszukiwania kodem kreskowym (poza zakresem MVP).
+- Historia ma wykres kalorii (14/30 dni, linia celu, liczba dni „w celu” ±10%, stuknięcie w słupek otwiera dzień). Brak wyszukiwania kodem kreskowym (poza zakresem MVP).
 - Pakiet 608 kB JS: pierwsze wczytanie na słabym łączu może trwać chwilę; potem offline z cache.
 
 ## Co warto przetestować ręcznie na telefonie
