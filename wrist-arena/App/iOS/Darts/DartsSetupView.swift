@@ -153,7 +153,8 @@ struct DartsSetupView: View {
 
     private func start() {
         do {
-            let match = try DartsMatch(players: store.profiles, game: selectedGame)
+            let throwModel = DartThrowModel(tuning: TuningStore.shared.darts)
+            let match = try DartsMatch(players: store.profiles, game: selectedGame, model: throwModel)
             error = nil
             let model = DartsGameModel(match: match, input: input) { [store] finished in
                 store.record(finished)

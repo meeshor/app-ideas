@@ -37,6 +37,11 @@ struct HomeView: View {
                 }
                 Section("Narzędzia") {
                     NavigationLink {
+                        TuningLabView()
+                    } label: {
+                        Label("Strojenie gestu", systemImage: "slider.horizontal.3")
+                    }
+                    NavigationLink {
                         SensorLabView(model: sensorLab)
                     } label: {
                         Label("Czujniki (debug)", systemImage: "waveform.path.ecg")

@@ -55,6 +55,7 @@ final class DartsGameModel {
             guard case .throwEvent(let event) = message.payload else { return }
             self?.receive(event)
         }
+        hub.send(.control(.updateTuning(TuningStore.shared.gesture)))
         hub.send(.control(.startSession(kind: .flick)))
     }
 
@@ -103,7 +104,8 @@ final class DartsGameModel {
 
     func simulateThrow() {
         guard !awaitingHandoff, !match.isFinished else { return }
-        guard let event = ThrowSimulator.throwEvent(wrist: match.currentPlayer.wrist) else {
+        let tuning = TuningStore.shared.gesture.flick
+        guard let event = ThrowSimulator.throwEvent(wrist: match.currentPlayer.wrist, tuning: tuning) else {
             banner = "Symulacja nie dała rzutu"
             return
         }

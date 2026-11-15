@@ -5,7 +5,7 @@ import WristKit
 /// który działa na zegarku. Do gry w symulatorze i bez zegarka (debug).
 enum ThrowSimulator {
     /// - Parameter skill: 0 = losowo jak początkujący, 1 = bardzo powtarzalnie.
-    static func throwEvent(wrist: WristSide, skill: Double = 0.6) -> ThrowEvent? {
+    static func throwEvent(wrist: WristSide, skill: Double = 0.6, tuning: FlickTuning = FlickTuning()) -> ThrowEvent? {
         var rng = SystemRandomNumberGenerator()
         let wobble = 0.08 * (1 - min(max(skill, 0), 1)) + 0.01
         let orientation = WristOrientation(wrist: wrist)
@@ -22,7 +22,7 @@ enum ThrowSimulator {
             jerkiness: abs(rng.nextGaussian()) * 0.2
         ))
         motion.hold(0.6)
-        var recognizer = FlickThrowRecognizer(orientation: orientation)
+        var recognizer = FlickThrowRecognizer(tuning: tuning, orientation: orientation)
         return MotionReplayer(recording: motion.recording(label: "sim")).events(&recognizer).first
     }
 }

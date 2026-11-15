@@ -29,6 +29,7 @@ final class CalibrationModel {
             guard case .throwEvent(let event) = message.payload else { return }
             self?.add(event)
         }
+        hub.send(.control(.updateTuning(TuningStore.shared.gesture)))
         hub.send(.control(.startSession(kind: .flick)))
         hub.send(.control(.setActivePlayer(name: profile.name, wrist: profile.wrist)))
     }
@@ -38,7 +39,8 @@ final class CalibrationModel {
     }
 
     func simulateThrow() {
-        guard let event = ThrowSimulator.throwEvent(wrist: profile.wrist, skill: 0.9) else { return }
+        let tuning = TuningStore.shared.gesture.flick
+        guard let event = ThrowSimulator.throwEvent(wrist: profile.wrist, skill: 0.9, tuning: tuning) else { return }
         add(event)
     }
 
