@@ -78,21 +78,31 @@ public struct SyntheticMotion: Sendable {
     /// Ruch zadany prędkością kątową w układzie świata jako funkcją postępu τ ∈ [0, 1)
     /// i bieżącej symulacji (np. do obrotu wokół aktualnej osi dłoni).
     public mutating func move(_ duration: TimeInterval, worldRate: (Double, SyntheticMotion) -> Vector3) {
+        move(duration, worldRate: worldRate) { _, _ in .zero }
+    }
+
+    /// Ruch z dodatkowym przyspieszeniem liniowym całej ręki (w g, układ świata),
+    /// np. naciąg cięciwy: dłoń jedzie w tył wzdłuż przedramienia bez obrotu.
+    public mutating func move(
+        _ duration: TimeInterval,
+        worldRate: (Double, SyntheticMotion) -> Vector3,
+        linear: (Double, SyntheticMotion) -> Vector3
+    ) {
         let dt = 1 / sampleRate
         let steps = max(1, Int((duration * sampleRate).rounded()))
         for step in 0..<steps {
             let tau = Double(step) / Double(steps)
             let kick = Vector3(rng.nextGaussian(), rng.nextGaussian(), rng.nextGaussian()) * (tremor * 0.2)
             tremorState = tremorState * 0.98 + kick
-            emit(worldRate: worldRate(tau, self) + tremorState, dt: dt)
+            emit(worldRate: worldRate(tau, self) + tremorState, linear: linear(tau, self), dt: dt)
         }
     }
 
-    private mutating func emit(worldRate omega: Vector3, dt: Double) {
+    private mutating func emit(worldRate omega: Vector3, linear extra: Vector3 = .zero, dt: Double) {
         let alpha = (omega - previousWorldRate) / dt
         previousWorldRate = omega
         let hand = handDirection * leverArm
-        let linear = alpha.cross(hand) + omega.cross(omega.cross(hand))
+        let linear = alpha.cross(hand) + omega.cross(omega.cross(hand)) + extra * Self.standardGravity
         let noise = Vector3(rng.nextGaussian(), rng.nextGaussian(), rng.nextGaussian()) * accelerationNoise
         let inverse = attitude.inverse
         samples.append(MotionSample(
@@ -228,6 +238,41 @@ public struct SyntheticMotion: Sendable {
         let right = rightAxis
         move(0.3) { tau, _ in right * (windupRate * Self.bell(tau)) }
         move(0.2) { tau, _ in right * (-forwardRate * Self.bell(tau)) }
+    }
+
+    // MARK: - Łucznictwo (ręka naciągająca)
+
+    /// Uniesienie ręki z opuszczonej do poziomu (przedramię wskazuje przód).
+    public mutating func raiseArm(from elevation: Double = -1.2, duration: TimeInterval = 0.8) {
+        let right = rightAxis
+        let rate = 2 * (0 - elevation) / duration
+        move(duration) { tau, _ in right * (rate * Self.bell(tau)) }
+    }
+
+    /// Naciąg: dłoń przyspiesza w tył wzdłuż przedramienia, potem hamuje przy kotwicy.
+    /// `peakAcceleration` w g; impuls fazy przyspieszania = peak · duration / π.
+    public mutating func draw(peakAcceleration: Double = 0.3, duration: TimeInterval = 1.2) {
+        let back = -handDirection
+        move(duration, worldRate: { _, _ in .zero }) { tau, _ in
+            back * (peakAcceleration * sin(2 * .pi * tau))
+        }
+    }
+
+    /// Kotwica: ręka nieruchoma z zadanym drżeniem (rad/s).
+    public mutating func anchor(_ duration: TimeInterval, tremor shake: Double = 0.03) {
+        let saved = tremor
+        tremor = shake
+        hold(duration)
+        tremor = saved
+    }
+
+    /// Puszczenie cięciwy: dłoń odskakuje w tył (szarpnięcie liniowe i obrót nadgarstka).
+    public mutating func release(strength: Double = 1) {
+        let back = -handDirection
+        let right = rightAxis
+        move(0.08, worldRate: { tau, _ in right * (6 * strength * Self.bell(tau)) }) { tau, _ in
+            back * (2.5 * strength * Self.bell(tau))
+        }
     }
 
     /// Machanie na „cześć”: oscylacja wokół osi przód–tył.

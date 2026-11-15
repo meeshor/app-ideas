@@ -90,10 +90,46 @@ public struct OverarmTuning: Sendable, Hashable, Codable {
     public init() {}
 }
 
+/// Progi naciągu i puszczenia cięciwy (łucznictwo). Opis: `DrawReleaseRecognizer`.
+public struct DrawTuning: Sendable, Hashable, Codable {
+    /// DO STROJENIA: przedramię „uniesione”, gdy oś dłoni jest wyżej niż ten kąt, rad (−0,35 ≈ −20°).
+    public var raisedMinElevation: Double = -0.35
+    /// DO STROJENIA: histereza opuszczenia ręki (anulowanie), rad.
+    public var lowerHysteresis: Double = 0.25
+    /// DO STROJENIA: przyspieszenie w tył wzdłuż przedramienia, od którego liczymy naciąg, g.
+    public var drawAccelerationThreshold: Double = 0.08
+    /// DO STROJENIA: impuls fazy przyspieszania (g·s) odpowiadający pełnemu naciągowi (siła 1).
+    public var fullDrawImpulse: Double = 0.1
+    /// DO STROJENIA: minimalna siła, żeby uznać, że był naciąg (poniżej: ruch przypadkowy).
+    public var minDrawStrength: Double = 0.2
+    /// DO STROJENIA: kotwica = |ω| poniżej tego progu…, rad/s.
+    public var anchorMaxRotationRate: Double = 0.6
+    /// DO STROJENIA: … i |a| poniżej tego progu, g.
+    public var anchorMaxAcceleration: Double = 0.12
+    /// DO STROJENIA: … przez co najmniej tyle sekund (prompt: ≥ 300 ms).
+    public var anchorMinDuration: TimeInterval = 0.3
+    /// DO STROJENIA: okno RMS żyroskopu do miary stabilności, s (prompt: 0,5 s).
+    public var stabilityWindow: TimeInterval = 0.5
+    /// DO STROJENIA: puszczenie = skok |a| powyżej, g…
+    public var releaseAcceleration: Double = 1.0
+    /// DO STROJENIA: … albo skok |ω| powyżej, rad/s.
+    public var releaseRotationRate: Double = 4.0
+    /// DO STROJENIA: po strzale albo anulowaniu tyle sekund nic nie liczymy
+    /// (odskok ręki po puszczeniu wyglądałby jak nowy naciąg), s.
+    public var rearmDelay: TimeInterval = 0.6
+    /// DO STROJENIA: najdłuższa kotwica, po której anulujemy (ręka opadła bez strzału), s.
+    public var maxAnchorDuration: TimeInterval = 12
+    /// DO STROJENIA: co ile próbek wysyłać stan na żywo (stabilność do kołysania celownika); 5 = 20 Hz.
+    public var liveEverySamples: Int = 5
+
+    public init() {}
+}
+
 /// Komplet ustawień WristKit.
 public struct GestureTuning: Sendable, Hashable, Codable {
     public var flick = FlickTuning()
     public var overarm = OverarmTuning()
+    public var draw = DrawTuning()
 
     public init() {}
 
