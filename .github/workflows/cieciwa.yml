@@ -1,0 +1,37 @@
+name: Cięciwa
+
+on:
+  push:
+    branches: [main, cieciwa]
+    paths:
+      - "cieciwa/**"
+      - "WristKit/Sources/**"
+      - "WristKit/Package.swift"
+      - ".github/workflows/cieciwa.yml"
+  pull_request:
+    paths:
+      - "cieciwa/**"
+      - "WristKit/Sources/**"
+      - "WristKit/Package.swift"
+      - ".github/workflows/cieciwa.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: cieciwa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  core:
+    # CieciwaCore i WristKit to czysty Swift: Linux wystarcza i jest tańszy niż macOS.
+    name: CieciwaCore + WristKit (Linux)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    container: swift:6.0
+    steps:
+      - uses: actions/checkout@v5
+      - name: Test CieciwaCore
+        working-directory: cieciwa/CieciwaCore
+        run: swift test
+      - name: Test WristKit
+        working-directory: WristKit
+        run: swift test

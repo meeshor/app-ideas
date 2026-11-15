@@ -12,3 +12,9 @@ Pomysły na gry ruchowe na telefon + zegarek.
 
 - [`WristKit/`](WristKit/): wspólny Swift Package (ruch z Apple Watch, nagrania, rozpoznawanie gestów, transport zdarzeń). Używają go wszystkie trzy gry.
 - [`wrist-arena/`](wrist-arena/): **Wrist Arena**, pakiet sportów z nadgarstka (iOS + watchOS). W toku: M0 (szkielet).
+
+## Kod
+
+- [`wrist-arena/`](wrist-arena/): Wrist Arena (rzutki, rzut karny w ręcznej), iOS + watchOS. Stan i instrukcje: [`wrist-arena/README.md`](wrist-arena/README.md).
+- [`cieciwa/`](cieciwa/): Cięciwa (łucznictwo), na razie logika i rozpoznawanie gestu: [`cieciwa/README.md`](cieciwa/README.md).
+- [`WristKit/`](WristKit/): wspólny pakiet ruchu i gestów z Apple Watch (rzut z nadgarstka, rzut nad głową ze zwodem, naciąg i puszczenie cięciwy).
