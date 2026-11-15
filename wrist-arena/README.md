@@ -63,7 +63,7 @@ i puszcza SwiftLint (na Linuksie). Workflowy mają filtry `paths`.
 - [x] **M1:** nagrywanie i podgląd ruchu, wykresy, pomiar opóźnienia, eksport nagrań (ekran „Czujniki (debug)”, [`docs/latency.md`](docs/latency.md), [`docs/recording-protocol.md`](docs/recording-protocol.md))
 - [x] **M2:** `FlickThrowRecognizer`, tarcza, 501, pass & play, kalibracja (szczegóły niżej; progi do strojenia na zegarku: [`docs/tuning.md`](docs/tuning.md))
 - [x] **M3:** Cricket, Around the Clock, ekran TV, statystyki, tryb dotykowy (szczegóły niżej)
-- [ ] M4: ręczna (po akceptacji)
+- [x] **M4:** ręczna: rzut nad głową ze zwodem, bramkarz AI, pojedynek 2 graczy (szczegóły niżej)
 - [ ] M5: menu modułów, onboarding, Game Center
 
 ## M2: co jest i jak to sprawdzić
@@ -119,3 +119,37 @@ i puszcza SwiftLint (na Linuksie). Workflowy mają filtry `paths`.
 2. Cricket 2 graczy: czy znaki i punkty zgadzają się z tabelą, czy podświetlenie otwartych pól pomaga.
 3. Around the Clock w pojedynkę: podświetlony cel, licznik postępu, wynik w statystykach.
 4. Statystyki po kilku meczach (także po cofnięciu ruchu po wygranej: mecz liczy się raz, przy wyjściu albo rewanżu).
+
+## Strojenie gestu (ekran „Strojenie gestu”)
+
+Ekran główny → Narzędzia → **Strojenie gestu**:
+
+- **Start rozpoznawania**: zegarek rozpoznaje rzuty z bieżącymi progami.
+- Suwaki progów `FlickTuning` i `StillnessTuning` idą na zegarek po 0,3 s, bez przebudowy. Suwaki `DartsTuning` działają w nowych meczach.
+- Lista ostatnich rzutów: prędkość, yaw, pitch, spin i jerk, a pod nią średnie (punkt wyjścia do `referenceSpeed` i `jerkForUnit`).
+- **Symulowany rzut**: sprawdza, czy bieżące progi przepuszczają wzorcowy rzut syntetyczny.
+- **Kopiuj ustawienia (JSON)**: po strojeniu wklej je do issue albo przenieś do wartości domyślnych.
+
+Ustawienia są zapisywane w telefonie. Mecze i kalibracja same wysyłają je na zegarek.
+
+## M4: rzut karny w piłce ręcznej
+
+**Logika (testy na Linuksie i macOS):**
+
+- `OverarmThrowRecognizer` (WristKit) rozpoznaje rzut z zamachem i **zwód** (zamach zaczęty i zatrzymany). Po zwodzie wraca od razu do „gotowy”.
+  `ThrowRecognizer` przełącza gest na zegarku.
+- `HandballModel` (ArenaCore):
+  - bramka 3×2 m z 7 m, strefy 3×3, słupek;
+  - rzut zamieniany na punkt, prędkość w km/h i rozrzut, z „wkrętką” od skrętu;
+  - bramkarz AI: czas reakcji porównywany z czasem lotu piłki, zwody „kupują” bramkarza z szansą zależną od poziomu;
+  - bramkarz-człowiek z wybraną strefą.
+- `HandballMatch` to konkurs dla 1–4 graczy przeciw AI albo pojedynek. Mecz rozstrzyga się wcześniej, gdy nikt nie dogoni lidera. Dogrywka idzie pełnymi kolejkami. Jest cofanie.
+
+**Aplikacja:** moduł **Rzut karny** (kalibracja rzutu nad głową, tryb AI albo pojedynek, bramka z piłką i bramkarzem, kropki goli, rewanż, widok na TV).
+Zegarek ma testowy przycisk **Ręczna (test)**.
+
+**Do sprawdzenia na zegarku:**
+
+1. Pozycja „gotowy” przy rzucie nad głową (ręka uniesiona). Jeśli przedramię jest prawie pionowe, „przód” bierzemy z tarczy zegarka (−z, `OverarmThrowRecognizer.fallbackForward`). Sprawdź, czy rzut w lewo i w prawo daje dobry znak yaw.
+2. Zwód: krótkie kliknięcie haptyczne i napis „Zwód!” na telefonie. Prawdziwy rzut nie powinien być brany za zwód (próg `minPeakRotationRate` 9 rad/s).
+3. Progi rzutu nad głową (`OverarmTuning`) nie mają jeszcze suwaków. Zmienia się je w kodzie albo przez `updateTuning`.
