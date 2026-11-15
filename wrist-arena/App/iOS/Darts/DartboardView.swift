@@ -2,8 +2,8 @@ import ArenaCore
 import SwiftUI
 
 /// Tarcza do rzutek rysowana w `Canvas` z tej samej geometrii co `Dartboard` (mm).
-/// SpriteKit (zapowiedziany w planie) wejdzie z animacją lotu i ekranem TV w M3;
-/// na M2 wystarczy statyczny rysunek z oznaczeniem trafień.
+/// Nowa rzutka (`highlight`) najpierw „leci” (~0,3 s, maskuje opóźnienie zegarka), a dopiero potem
+/// pojawia się na tarczy. Animacja w SwiftUI (`keyframeAnimator`) — SpriteKit nie był potrzebny.
 struct DartboardView: View {
     var landings: [DartLanding] = []
     /// Wyróżniona (ostatnia) rzutka.
@@ -13,6 +13,16 @@ struct DartboardView: View {
     /// Pola do podświetlenia (cel w Around the Clock, otwarte pola w Cricket); 25 = środek.
     var highlightedNumbers: Set<Int> = []
     var onTap: (@MainActor (BoardPoint) -> Void)?
+    /// Animuj lot nowej rzutki.
+    var animateFlight = true
+
+    /// Rzutka, której lot się skończył (do tego czasu nie rysujemy jej na tarczy).
+    @State private var landed: DartLanding?
+
+    private var inFlight: DartLanding? {
+        guard animateFlight, let highlight, highlight != landed else { return nil }
+        return highlight
+    }
 
     var body: some View {
         GeometryReader { geometry in
@@ -20,7 +30,7 @@ struct DartboardView: View {
             Canvas { context, _ in
                 DartboardPainter.drawBoard(in: &context, frame: frame)
                 DartboardPainter.drawHighlights(highlightedNumbers, in: &context, frame: frame)
-                for landing in landings {
+                for landing in landings where landing != inFlight {
                     DartboardPainter.drawDart(
                         landing,
                         in: &context,
@@ -36,11 +46,62 @@ struct DartboardView: View {
                     onTap?(frame.boardPoint(at: value.location))
                 }
             )
+            .overlay {
+                if let flight = inFlight {
+                    FlyingDart(landing: flight, frame: frame) { landed = flight }
+                        .id(flight)
+                }
+            }
         }
         .aspectRatio(1, contentMode: .fit)
+        .sensoryFeedback(.impact(weight: .light), trigger: landed)
         .accessibilityElement()
         .accessibilityLabel("Tarcza")
         .accessibilityValue(landings.map { DartsGameModel.describe($0.hit) }.joined(separator: ", "))
+    }
+}
+
+/// Rzutka w locie: z dołu ekranu łukiem do punktu trafienia, zmniejszając się (perspektywa).
+private struct FlyingDart: View {
+    let landing: DartLanding
+    let frame: BoardFrame
+    let onLanded: @MainActor () -> Void
+
+    static let duration = 0.3
+
+    @State private var launched = false
+
+    private struct Flight {
+        var progress = 0.0
+        var scale = 3.0
+    }
+
+    var body: some View {
+        let end = frame.screenPoint(landing.point)
+        let start = CGPoint(x: frame.center.x, y: frame.center.y + BoardFrame.viewRadius * frame.scale * 1.4)
+        let arc = BoardFrame.viewRadius * frame.scale * 0.5
+        Circle()
+            .fill(.yellow)
+            .overlay(Circle().stroke(.black, lineWidth: 1.5))
+            .frame(width: 9, height: 9)
+            .keyframeAnimator(initialValue: Flight(), trigger: launched) { content, flight in
+                let t = flight.progress
+                content
+                    .scaleEffect(flight.scale)
+                    .position(
+                        x: start.x + (end.x - start.x) * t,
+                        y: start.y + (end.y - start.y) * t - arc * 4 * t * (1 - t)
+                    )
+            } keyframes: { _ in
+                KeyframeTrack(\.progress) { CubicKeyframe(1, duration: Self.duration) }
+                KeyframeTrack(\.scale) { CubicKeyframe(1, duration: Self.duration) }
+            }
+            .allowsHitTesting(false)
+            .onAppear { launched = true }
+            .task {
+                try? await Task.sleep(for: .seconds(Self.duration))
+                onLanded()
+            }
     }
 }
 
