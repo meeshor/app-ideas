@@ -63,9 +63,37 @@ public struct FlickTuning: Sendable, Hashable, Codable {
     public init() {}
 }
 
+/// Progi rzutu z zamachem nad głową (piłka ręczna), ze zwodem. Opis: `OverarmThrowRecognizer`.
+public struct OverarmTuning: Sendable, Hashable, Codable {
+    public var stillness = StillnessTuning()
+    /// DO STROJENIA: |ω|, od której z „ready” zaczyna się zamach, rad/s.
+    public var startRotationRate: Double = 2.0
+    /// DO STROJENIA: minimalny szczyt |ω| prawdziwego rzutu, rad/s.
+    public var minPeakRotationRate: Double = 9.0
+    /// DO STROJENIA: minimalny szczyt |a| prawdziwego rzutu, g.
+    public var minPeakAcceleration: Double = 2.0
+    /// DO STROJENIA: puszczenie = |ω| spada poniżej tego ułamka szczytu.
+    public var releaseDropRatio: Double = 0.5
+    /// DO STROJENIA: zwód = ruch, który osiągnął co najmniej tyle |ω|, ale nie stał się rzutem, rad/s.
+    public var feintMinPeakRotationRate: Double = 3.0
+    /// DO STROJENIA: zwód kończy się, gdy ręka stoi tak długo (spoczynek wg `stillness`), s.
+    public var feintHold: TimeInterval = 0.12
+    /// DO STROJENIA: maks. czas zamachu z rzutem albo zwodem, s.
+    public var maxActiveDuration: TimeInterval = 1.5
+    /// DO STROJENIA: przerwa po rzucie, s.
+    public var cooldown: TimeInterval = 1.0
+    /// DO STROJENIA: ramię dźwigni (bark → dłoń) do szacowania prędkości, m.
+    public var leverArm: Double = 0.6
+    /// DO STROJENIA: jerk (g/s), który mapujemy na 1.0.
+    public var jerkForUnit: Double = 600
+
+    public init() {}
+}
+
 /// Komplet ustawień WristKit.
 public struct GestureTuning: Sendable, Hashable, Codable {
     public var flick = FlickTuning()
+    public var overarm = OverarmTuning()
 
     public init() {}
 

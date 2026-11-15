@@ -176,6 +176,60 @@ public struct SyntheticMotion: Sendable {
         }
     }
 
+    /// Parametry rzutu z zamachem nad głową (piłka ręczna).
+    public struct Overarm: Sendable, Hashable {
+        /// Szczyt |ω| zamachu w tył, rad/s.
+        public var windupRate: Double = 5
+        /// Szczyt |ω| rzutu w przód, rad/s.
+        public var peakRate: Double = 16
+        /// Czas rzutu w przód, s.
+        public var duration: TimeInterval = 0.22
+        public var yawDeviation: Double = 0
+        public var pitchDeviation: Double = 0
+        /// Rotacja przedramienia („wkrętka”), rad/s; dodatnia = supinacja.
+        public var spinRate: Double = 0
+
+        public init(
+            windupRate: Double = 5,
+            peakRate: Double = 16,
+            duration: TimeInterval = 0.22,
+            yawDeviation: Double = 0,
+            pitchDeviation: Double = 0,
+            spinRate: Double = 0
+        ) {
+            self.windupRate = windupRate
+            self.peakRate = peakRate
+            self.duration = duration
+            self.yawDeviation = yawDeviation
+            self.pitchDeviation = pitchDeviation
+            self.spinRate = spinRate
+        }
+    }
+
+    /// Zamach w tył (ręka idzie za głowę), bez pauzy przechodzi w rzut w przód.
+    public mutating func overarm(_ spec: Overarm) {
+        // Stała płaszczyzna zamachu: przy ręce za głową pozioma oś dłoni zmienia zwrot.
+        let right = rightAxis
+        move(0.3) { tau, _ in right * (spec.windupRate * Self.bell(tau)) }
+        // Rzut w bok = cała płaszczyzna rzutu obrócona o yawDeviation (ręka startuje prawie pionowo,
+        // więc obrót wokół pionu niewiele by zmienił).
+        let thrownRight = Quaternion(axis: Self.worldUp, angle: -spec.yawDeviation).act(on: right)
+        let pitchRate = 4 * spec.pitchDeviation / spec.duration
+        let spinSign = orientation.wrist.mirrorSign
+        move(spec.duration) { tau, sim in
+            let shape = Self.bell(tau)
+            return thrownRight * (-spec.peakRate * shape + pitchRate * shape)
+                + sim.handDirection * (spec.spinRate * spinSign * shape)
+        }
+    }
+
+    /// Zwód: zamach w tył i początek ruchu w przód, zatrzymany przed rzutem.
+    public mutating func feint(windupRate: Double = 5, forwardRate: Double = 4) {
+        let right = rightAxis
+        move(0.3) { tau, _ in right * (windupRate * Self.bell(tau)) }
+        move(0.2) { tau, _ in right * (-forwardRate * Self.bell(tau)) }
+    }
+
     /// Machanie na „cześć”: oscylacja wokół osi przód–tył.
     public mutating func wave(cycles: Int = 3, frequency: Double = 2, peakRate: Double = 7) {
         let axis = rightAxis.cross(Self.worldUp)

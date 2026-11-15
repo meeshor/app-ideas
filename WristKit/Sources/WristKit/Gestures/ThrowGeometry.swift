@@ -15,16 +15,23 @@ public enum ThrowGeometry {
     }
 
     /// Kąt w poziomie między osią dłoni w „ready” a w chwili `attitude`, rad; dodatni = w prawo.
-    /// Gdy przedramię w „ready” jest prawie pionowe, kierunek „przód” jest nieokreślony i zwracamy 0.
+    ///
+    /// „Przód” = pozioma składowa osi dłoni w „ready”. Gdy przedramię jest prawie pionowe
+    /// (rzut nad głową), bierzemy `fallbackForward` (oś urządzenia, np. −z: tarcza zegarka
+    /// zwrócona do gracza, gdy dłoń jest otwarta do przodu). Bez niej zwracamy 0.
     public static func yaw(
         axis: Vector3,
         readyAttitude: Quaternion,
         readyGravity: Vector3,
-        attitude: Quaternion
+        attitude: Quaternion,
+        fallbackForward: Vector3? = nil
     ) -> Double {
         let up = -readyGravity.normalized
         let h0 = axis.normalized
-        let forward = horizontal(h0, up: up)
+        var forward = horizontal(h0, up: up)
+        if forward.length <= 0.2, let fallbackForward {
+            forward = horizontal(fallbackForward.normalized, up: up)
+        }
         guard forward.length > 0.2 else { return 0 }
         let f = forward.normalized
         let right = f.cross(up)
