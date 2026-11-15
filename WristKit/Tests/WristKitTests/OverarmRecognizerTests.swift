@@ -102,3 +102,36 @@ struct OverarmRecognizerTests {
         #expect(phases == [.ready, .windup, .active, .cooldown, .idle, .ready])
     }
 }
+
+@Suite("ThrowRecognizer (wybór gestu)")
+struct ThrowRecognizerTests {
+    @Test func dispatchesByKind() throws {
+        #expect(ThrowRecognizer(kind: .swing) == nil)
+        var flick = try #require(ThrowRecognizer(kind: .flick))
+        var overarm = try #require(ThrowRecognizer(kind: .overarm))
+        #expect(flick.kind == .flick)
+        #expect(overarm.kind == .overarm)
+
+        var motion = SyntheticMotion(elevation: 0.8, seed: 4)
+        motion.hold(1)
+        motion.overarm(.init())
+        motion.hold(1.5)
+        let replayer = MotionReplayer(recording: motion.recording(label: "x"))
+        #expect(replayer.events(&overarm).map(\.kind) == [.overarm])
+        #expect(replayer.events(&flick).allSatisfy { $0.kind == .flick })
+    }
+
+    @Test func orientationAndTuningPassThrough() throws {
+        var recognizer = try #require(ThrowRecognizer(kind: .overarm))
+        recognizer.orientation = WristOrientation(wrist: .left)
+        #expect(recognizer.orientation.wrist == .left)
+        var tuning = GestureTuning()
+        tuning.overarm.minPeakRotationRate = 99
+        recognizer.apply(tuning)
+        guard case .overarm(let inner) = recognizer else {
+            Issue.record("zły rodzaj")
+            return
+        }
+        #expect(inner.tuning.minPeakRotationRate == 99)
+    }
+}

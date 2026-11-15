@@ -7,6 +7,7 @@ import WristKit
 @Observable
 final class CalibrationModel {
     private(set) var profile: PlayerProfile
+    let kind: ThrowKind
     private(set) var session = CalibrationSession()
     private(set) var message: String
     private(set) var result: Calibration?
@@ -14,9 +15,10 @@ final class CalibrationModel {
     @ObservationIgnored private let hub = PhoneLink.shared
     @ObservationIgnored private let handlerKey = "calibration"
 
-    init(profile: PlayerProfile) {
+    init(profile: PlayerProfile, kind: ThrowKind = .flick) {
         self.profile = profile
-        self.message = "Rzuć \(CalibrationSession().requiredThrows) razy, celując w środek tarczy."
+        self.kind = kind
+        self.message = "Rzuć \(CalibrationSession().requiredThrows) razy, celując w środek."
     }
 
     var thrown: Int { session.directions.count }
@@ -26,11 +28,11 @@ final class CalibrationModel {
     func start() {
         hub.activate()
         hub.addMessageHandler(handlerKey) { [weak self] message, _ in
-            guard case .throwEvent(let event) = message.payload else { return }
+            guard case .throwEvent(let event) = message.payload, !event.isFeint else { return }
             self?.add(event)
         }
         hub.send(.control(.updateTuning(TuningStore.shared.gesture)))
-        hub.send(.control(.startSession(kind: .flick)))
+        hub.send(.control(.startSession(kind: kind)))
         hub.send(.control(.setActivePlayer(name: profile.name, wrist: profile.wrist)))
     }
 
@@ -39,22 +41,25 @@ final class CalibrationModel {
     }
 
     func simulateThrow() {
-        let tuning = TuningStore.shared.gesture.flick
-        guard let event = ThrowSimulator.throwEvent(wrist: profile.wrist, skill: 0.9, tuning: tuning) else { return }
+        let tuning = TuningStore.shared.gesture
+        let event = kind == .overarm
+            ? ThrowSimulator.overarmEvent(wrist: profile.wrist, skill: 0.9, tuning: tuning.overarm)
+            : ThrowSimulator.throwEvent(wrist: profile.wrist, skill: 0.9, tuning: tuning.flick)
+        guard let event else { return }
         add(event)
     }
 
     func restart() {
         session.reset()
         result = nil
-        message = "Rzuć \(session.requiredThrows) razy, celując w środek tarczy."
+        message = "Rzuć \(session.requiredThrows) razy, celując w środek."
     }
 
     /// Profil z zapisaną kalibracją (po zakończeniu).
     var calibratedProfile: PlayerProfile? {
         guard let result else { return nil }
         var updated = profile
-        updated.calibrations[.flick] = result
+        updated.calibrations[kind] = result
         return updated
     }
 

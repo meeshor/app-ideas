@@ -31,7 +31,9 @@ final class WatchModel {
     private let store = try? RecordingStore(directory: RecordingStore.defaultDirectory())
     private var recorder = MotionRecorder(maxDuration: 120)
     private var batcher = SampleBatcher()
-    private var recognizer = FlickThrowRecognizer()
+    private var recognizer: ThrowRecognizer = .flick(FlickThrowRecognizer())
+    /// Ostatnie progi z telefonu (dla każdego gestu), stosowane też po zmianie gry.
+    private var tuning = GestureTuning.default
     private var motionTask: Task<Void, Never>?
     private var uiCounter = 0
 
@@ -111,17 +113,15 @@ final class WatchModel {
     // MARK: - Sesja gry
 
     func startSession(kind: ThrowKind) async {
-        // M2: tylko rzut z nadgarstka (rzutki). Inne gesty dojdą z kolejnymi modułami.
-        guard kind == .flick else {
+        guard let selected = ThrowRecognizer(kind: kind, tuning: tuning, orientation: DeviceInfo.orientation) else {
             lastError = "Gest \(kind.rawValue) jeszcze nieobsługiwany"
             sendStatus()
             return
         }
+        recognizer = selected
         sessionKind = kind
         throwCount = 0
         lastThrow = nil
-        recognizer.orientation = DeviceInfo.orientation
-        recognizer.reset()
         gesturePhase = recognizer.phase
         await startMotionIfNeeded()
         Haptics.start()
@@ -213,10 +213,14 @@ final class WatchModel {
             link.send(.phase(phase))
             if phase == .ready { Haptics.click() }
         case .event(let event):
-            throwCount += 1
-            lastThrow = event
             link.send(.throwEvent(event))
-            Haptics.success()
+            if event.isFeint {
+                Haptics.click()
+            } else {
+                throwCount += 1
+                lastThrow = event
+                Haptics.success()
+            }
         case .live(let state):
             link.send(.live(state))
         }
@@ -244,7 +248,8 @@ final class WatchModel {
         case .setActivePlayer(let name, let wrist):
             setActivePlayer(name: name, wrist: wrist)
         case .updateTuning(let tuning):
-            recognizer.tuning = tuning.flick
+            self.tuning = tuning
+            recognizer.apply(tuning)
         }
     }
 

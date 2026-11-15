@@ -49,6 +49,8 @@ struct TVRootView: View {
             Color.black.ignoresSafeArea()
             if let game = active.current {
                 TVGameView(model: game)
+            } else if let handball = active.handball {
+                TVHandballView(model: handball)
             } else {
                 VStack(spacing: 16) {
                     Image(systemName: "applewatch.radiowaves.left.and.right")

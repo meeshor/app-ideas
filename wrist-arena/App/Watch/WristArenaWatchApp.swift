@@ -103,6 +103,13 @@ struct WatchHomeView: View {
                 }
 
                 Button {
+                    Task { await model.startSession(kind: .overarm) }
+                } label: {
+                    Label("Ręczna (test)", systemImage: "figure.handball")
+                        .frame(maxWidth: .infinity)
+                }
+
+                Button {
                     Task { await model.toggleRecording() }
                 } label: {
                     Label(
@@ -113,7 +120,8 @@ struct WatchHomeView: View {
                 }
                 .tint(model.isRecording ? .red : .accentColor)
 
-                Text("\(model.label) · \(model.sampleCount) próbek · \(model.recordingDuration, format: .number.precision(.fractionLength(1))) s")
+                let seconds = model.recordingDuration.formatted(.number.precision(.fractionLength(1)))
+                Text("\(model.label) · \(model.sampleCount) próbek · \(seconds) s")
                     .font(.caption2)
 
                 Text("|ω| \(model.rotationMagnitude, format: .number.precision(.fractionLength(2))) rad/s")

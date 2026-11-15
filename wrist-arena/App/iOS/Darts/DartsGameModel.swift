@@ -201,6 +201,7 @@ final class ActiveGame {
     static let shared = ActiveGame()
 
     var current: DartsGameModel?
+    var handball: HandballGameModel?
     /// Czy podłączony jest zewnętrzny ekran (telefon może wtedy pokazać mniejszą tarczę).
     var isTVConnected = false
 
