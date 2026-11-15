@@ -13,7 +13,7 @@ test('M3: „duża bułka żytnia z szynką” → podgląd z rozbiciem → zapi
   await expect(preview.getByTestId('preview-item')).toHaveCount(1);
   await expect(preview).toContainText('bułka z szynką (bułka żytnia)');
   await expect(preview).toContainText('bułka żytnia 1 szt. (duża: 80 g) = 80 g → 200 kcal');
-  await expect(preview).toContainText('masło 5 g → 37 kcal');
+  await expect(preview).toContainText('masło 5 g → 36 kcal');
   const total = await preview.getByTestId('preview-total').textContent();
   const kcal = Number(total!.match(/(\d+) kcal/)![1]);
   expect(kcal).toBeGreaterThan(250);
@@ -31,14 +31,14 @@ test('M3: „duża bułka żytnia z szynką” → podgląd z rozbiciem → zapi
 
 test('edycja pozycji w podglądzie zmienia wynik; Enter zapisuje', async ({ page }) => {
   await input(page).fill('jajko');
-  await expect(page.getByTestId('preview-total')).toHaveText('Razem 77 kcal');
+  await expect(page.getByTestId('preview-total')).toHaveText('Razem 79 kcal');
   await page.getByTestId('preview-item').getByRole('button').first().click();
   const qty = page.getByTestId('item-editor').getByLabel('Ilość');
   await qty.fill('3');
-  await expect(page.getByTestId('preview-total')).toHaveText('Razem 231 kcal');
+  await expect(page.getByTestId('preview-total')).toHaveText('Razem 236 kcal');
   await input(page).focus();
   await page.keyboard.press('Enter');
-  await expect(page.getByTestId('day-kcal')).toHaveText('231');
+  await expect(page.getByTestId('day-kcal')).toHaveText('236');
 });
 
 test('niezrozumiany fragment jest podświetlony i można dodać produkt', async ({ page }) => {

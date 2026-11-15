@@ -49,14 +49,14 @@ test('edycja produktu w bazie zmienia wyliczenie, przywrócenie cofa', async ({ 
   await expect(page.getByRole('button', { name: /bułka pszenna.*zmienione/ })).toBeVisible();
   await nav(page, 'Dziś');
   await input(page).fill('bułka');
-  await expect(page.getByTestId('preview')).toContainText('bułka pszenna 100 g → 290 kcal');
+  await expect(page.getByTestId('preview')).toContainText('bułka pszenna 100 g → 293 kcal');
   await nav(page, 'Baza');
   await page.getByLabel('Szukaj w bazie').fill('bułka pszenna');
   await page.getByRole('button', { name: /bułka pszenna/ }).first().click();
   await page.getByRole('dialog').getByRole('button', { name: 'Przywróć domyślne' }).click();
   await nav(page, 'Dziś');
   await input(page).fill('bułka');
-  await expect(page.getByTestId('preview')).toContainText('bułka pszenna 60 g → 174 kcal');
+  await expect(page.getByTestId('preview')).toContainText('bułka pszenna 60 g → 176 kcal');
 });
 
 test('profil → cel Mifflin-St Jeor; historia ze średnią; szybkie ponawianie', async ({ page }) => {
@@ -72,11 +72,11 @@ test('profil → cel Mifflin-St Jeor; historia ze średnią; szybkie ponawianie'
   await add(page, 'kawa z mlekiem');
   await add(page, '2 jajka');
   // szybkie ponawianie
-  await page.getByRole('button', { name: /^kawa z mlekiem · 20/ }).click();
+  await page.getByRole('button', { name: /^kawa z mlekiem · 18/ }).click();
   await expect(page.getByTestId('entry')).toHaveCount(3);
-  await expect(page.getByTestId('day-kcal')).toHaveText('194');
+  await expect(page.getByTestId('day-kcal')).toHaveText('193');
   await nav(page, 'Historia');
-  await expect(page.getByTestId('week-kcal')).toHaveText('194');
+  await expect(page.getByTestId('week-kcal')).toHaveText('193');
   await page.getByRole('button', { name: /Dziś · 3 wpisy/ }).click();
   await expect(page.getByTestId('entry')).toHaveCount(3);
 });
@@ -93,12 +93,41 @@ test('eksport i import JSON', async ({ page }) => {
   await page.getByRole('button', { name: 'Resetuj dane' }).click();
   await expect(page.getByText(/0 wpisów/)).toBeVisible();
   await page.getByTestId('import-file').setInputFiles(path!);
-  await expect(page.getByRole('status')).toContainText('Zaimportowano 1 wpisów');
+  await page.getByRole('dialog').getByRole('button', { name: 'Zastąp wszystko' }).click();
+  await expect(page.getByRole('status')).toContainText('Zastąpiono dane: 1 wpisów');
   await nav(page, 'Dziś');
   await expect(page.getByTestId('entry')).toHaveCount(1);
+  // scalenie: ten sam plik + nowy wpis lokalny → nic nie ginie, nic się nie dubluje
+  await add(page, 'jabłko');
+  await nav(page, 'Ustawienia');
+  await page.getByTestId('import-file').setInputFiles(path!);
+  await page.getByRole('dialog').getByRole('button', { name: 'Scal z obecnymi' }).click();
+  await expect(page.getByRole('status')).toContainText('Scalono: 0 nowych wpisów');
+  await nav(page, 'Dziś');
+  await expect(page.getByTestId('entry')).toHaveCount(2);
 });
 
-test('PWA: manifest i działanie offline po pierwszym wczytaniu', async ({ page, context }) => {
+test('edycja pozycji zapisanego wpisu', async ({ page }) => {
+  await add(page, '2 jajka i banan');
+  const entry = page.getByTestId('entry');
+  const before = Number(await page.getByTestId('day-kcal').textContent());
+  await entry.getByRole('button').first().click();
+  await entry.getByRole('button', { name: 'Edytuj pozycje' }).click();
+  const ed = page.getByTestId('entry-editor');
+  await ed.getByRole('button', { name: /jajko/ }).first().click();
+  await ed.getByTestId('item-editor').getByLabel('Ilość').fill('3');
+  await ed.getByRole('button', { name: 'Zapisz zmiany' }).click();
+  await expect(page.getByTestId('entry-editor')).toHaveCount(0);
+  await expect.poll(async () => Number(await page.getByTestId('day-kcal').textContent())).toBeGreaterThan(before);
+  await page.reload();
+  await expect(page.getByTestId('entry')).toHaveCount(1);
+  expect(Number(await page.getByTestId('day-kcal').textContent())).toBeGreaterThan(before);
+});
+
+test('PWA: manifest i działanie offline po pierwszym wczytaniu', async ({ page, context, browserName }) => {
+  // Playwright WebKit nie przepuszcza przeładowania w trybie offline przez service workera („internal error”);
+  // offline na iOS sprawdzany ręcznie w Safari na symulatorze (docs/postep.md, M5).
+  test.skip(browserName === 'webkit', 'offline + service worker nieobsługiwane w Playwright WebKit');
   const manifest = await (await page.request.get('/manifest.webmanifest')).json();
   expect(manifest.name).toContain('Zjadłem');
   await page.evaluate(async () => {

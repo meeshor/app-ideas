@@ -16,7 +16,7 @@ import { CONFIG } from './config.ts';
 import { sameFamily, resolveFood, type FoodDb } from './db.ts';
 import { osaDistance } from './fuzzy.ts';
 import { buildLexicon, type Lexicon, type NameEntry } from './lexicon.ts';
-import { tokenize, tokensText, type Token } from './text.ts';
+import { keyOf, tokenize, tokensText, type Token } from './text.ts';
 import type { Dish, IngredientChange, Meal, ParsedItem, ParseResult, Parser, SizeKey, UnitKey } from './types.ts';
 
 interface NameMatch {
@@ -41,6 +41,8 @@ interface Attachment {
 interface Draft {
   start: number;
   main: NameMatch;
+  /** Ostatnie słowo nazwy głównej tak, jak je wpisano (z ogonkami lub bez). */
+  mainLastRaw: string;
   qty: number | null;
   unit: UnitKey | null;
   size: SizeKey | null;
@@ -307,6 +309,7 @@ export class RuleParser implements Parser {
     const draft: Draft = {
       start,
       main: name,
+      mainLastRaw: tokens[q.end + name.len - 1]?.raw ?? '',
       qty: q.qty,
       unit: q.unit,
       size: q.size,
@@ -325,7 +328,7 @@ export class RuleParser implements Parser {
     if (name.entry.kind === 'dish' && name.entry.keys.some((k) => k === 'z' || k === 'ze') && name.len > 1) {
       const head = this.exactName(tokens, q.end, true, name.len - 1);
       if (head) {
-        const alt: Draft = { ...draft, main: head, labels: [...draft.labels].slice(0, Number(!!q.size) + Number(!!q.factorLabel)), attachments: [], removals: [], unknown: [], end: q.end + head.len };
+        const alt: Draft = { ...draft, main: head, mainLastRaw: tokens[q.end + head.len - 1]?.raw ?? '', labels: [...draft.labels].slice(0, Number(!!q.size) + Number(!!q.factorLabel)), attachments: [], removals: [], unknown: [], end: q.end + head.len };
         this.parsePost(tokens, alt);
         if (alt.end > draft.end && alt.unknown.length <= draft.unknown.length) return alt;
       }
@@ -510,7 +513,7 @@ export class RuleParser implements Parser {
         const lastRaw = tokens[p + name.len - 1]!.raw;
         const firstRaw = t.raw;
         const instr = CONFIG.parser.instrumentalEndings.some((e) => firstRaw.endsWith(e) || lastRaw.endsWith(e));
-        if (instr) {
+        if (instr || this.plainInstrumental(d, name.entry.id, lastRaw)) {
           const att = this.parseAttachment(tokens, p);
           if (att) {
             att.att.fragment = tokensText(tokens.slice(pos, att.end));
@@ -521,6 +524,29 @@ export class RuleParser implements Parser {
       }
     }
     return null;
+  }
+
+  /** Czy `word` to (bez ogonków) narzędnik produktu na „-ą”: „szynka” ↔ „szynką”, „salata” ↔ „sałatą”. */
+  private instrumentalWithoutTail(foodId: string, word: string): boolean {
+    if (!word.endsWith('a')) return false;
+    const food = this.db.foods.get(foodId);
+    if (!food) return false;
+    const key = keyOf(word);
+    return [food.name, ...(food.aliases ?? []), ...(food.forms ?? [])].some((f) => f.endsWith('ą') && keyOf(f).split(' ').pop() === key);
+  }
+
+  /**
+   * „bulka z szynka i salata”: jeśli wcześniejszy dodatek („z szynka”) był napisany bez ogonka w końcówce,
+   * to „salata” też może być narzędnikiem — traktujemy jako dodatek, gdy produkt bywa dodatkiem (`addon`).
+   * Decyduje końcówka poprzedniego dodatku, nie całe wejście: autokorekta iOS dokłada ogonki tylko części słów
+   * („Bulka z szynka i sałata”).
+   */
+  private plainInstrumental(d: Draft, foodId: string, raw: string): boolean {
+    if (!this.db.foods.get(foodId)?.addon || !this.instrumentalWithoutTail(foodId, raw)) return false;
+    // dodatek z nazwy dania („bulka z szynka” dopasowane do „bułka z szynką”): ostatnie słowo nazwy ma „-ą”, wpisano „-a”
+    const main = d.main.entry;
+    const mainTyped = main.raw.length > 0 && main.raw[main.raw.length - 1]!.endsWith('ą') && d.mainLastRaw.endsWith('a');
+    return mainTyped || d.attachments.some((a) => !a.viaMod && this.instrumentalWithoutTail(a.foodId, a.fragment.split(' ').pop() ?? ''));
   }
 
   // ---------- składanie wyniku ----------

@@ -51,15 +51,18 @@ Ten sam tekst i ta sama baza dają zawsze ten sam wynik (test „jest determinis
 
 ## Czego nie rozumie / znane braki
 
-1. **Bez polskich znaków „i X” po „z …” jest nierozpoznawalne jako dodatek**: „bulka z szynka i salata” daje
-   bułkę z szynką + osobną sałatę (porcja domyślna), bo „salata” może być mianownikiem. Z ogonkami („i sałatą”) działa.
+1. ~~Bez polskich znaków „i X” po „z …”~~ — **naprawione (M5)**: jeśli wcześniejszy dodatek był wpisany bez ogonka
+   w końcówce („z szynka”), to „i salata” jest dodatkiem, o ile produkt bywa dodatkiem (`addon`). Decyduje końcówka
+   poprzedniego dodatku, nie całe wejście, bo autokorekta iOS dokłada ogonki tylko niektórym słowom
+   („Bulka z szynka i sałata”). „bulka z szynka i kawa” nadal daje dwie pozycje.
 2. **Mianownik po „i”** jest zawsze nową pozycją: „bułka z szynką i ser” → bułka z szynką + ser (porcja domyślna).
    Zwykle zgodne z intencją, ale nie zawsze.
 3. **Odmiana z reguł** jest przybliżona: generuje też formy nieistniejące (nieszkodliwe), a może pominąć nieregularne
    (np. „pierś” → „piersi” trzeba było dopisać ręcznie). Nowy produkt dodany w UI dostaje formy z tych samych reguł.
 4. **„na wodzie”, „w bułce”, „z grilla”** — sposób przygotowania rozumiany tylko, jeśli jest w aliasie
    („owsianka na wodzie”, „kebab w bułce”) albo słowo jest na liście wypełniaczy (grill, piekarnik, patelnia).
-5. **Brak liczebników złożonych** („dwadzieścia”, „sto pięćdziesiąt gramów”) — działają cyfry i liczebniki 1–10.
+5. ~~Brak liczebników złożonych~~ — **naprawione (M5)**: „sto pięćdziesiąt gramów”, „dwustu dwudziestu pięciu”,
+   „tysiąc dwieście”, „dwanaście pierogów” (`mergeNumerals` w `text.ts`). Bez „i pół” po liczebniku złożonym.
 6. **„dużo X” po przecinku** modyfikuje poprzednią pozycję tylko, gdy X już w niej jest; inaczej jest nową pozycją ×2.
 7. **Dwuznaczne „pół”**: „pół pizzy” = pół porcji domyślnej (u pizzy: pół całej, 225 g). Dla produktów z porcją
    „kawałek” wynik może nie odpowiadać intencji.

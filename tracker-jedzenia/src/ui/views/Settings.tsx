@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
-import { makeBackup, parseBackup } from '../../core/backup.ts';
+import { makeBackup, mergeBackup, parseBackup, type Backup } from '../../core/backup.ts';
 import { DEFAULT_SETTINGS, isValidProfile } from '../../core/goals.ts';
 import { CONFIG } from '../../core/config.ts';
 import type { Activity, GoalKind, Profile, Settings, SizeKey } from '../../core/types.ts';
 import { useApp } from '../state.tsx';
-import { NumberInput } from '../components/common.tsx';
+import { Modal, NumberInput } from '../components/common.tsx';
 import { localDate } from '../../core/meals.ts';
 
 const ACTIVITY: Record<Activity, string> = {
@@ -22,6 +22,7 @@ export function SettingsView() {
   const { settings, goals } = app;
   const [msg, setMsg] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const [pending, setPending] = useState<Backup | null>(null);
   const profile = settings.profile ?? DEFAULT_PROFILE;
   const set = (patch: Partial<Settings>) => app.saveSettings({ ...settings, ...patch });
   const setProfile = (patch: Partial<Profile>) => set({ profile: { ...profile, ...patch } });
@@ -39,10 +40,21 @@ export function SettingsView() {
   const importJson = async (file: File) => {
     const r = parseBackup(await file.text());
     if (!r.ok) return setMsg(r.error);
-    const b = r.backup;
-    if (!confirm(`Zastąpić wszystkie dane tym plikiem? (${b.entries.length} wpisów, ${b.overrides.length} własnych definicji)`)) return;
+    setPending(r.backup);
+  };
+  const mergeImport = async (b: Backup) => {
+    setPending(null);
+    const { data, stats } = mergeBackup({ settings, overrides: app.overrides, entries: app.entries }, b);
+    await app.replaceAll(data);
+    setMsg(
+      `Scalono: ${stats.entriesAdded} nowych wpisów, ${stats.entriesUpdated} zaktualizowanych; ` +
+        `${stats.overridesAdded} nowych definicji, ${stats.overridesUpdated} zaktualizowanych. Ustawienia bez zmian.`,
+    );
+  };
+  const replaceImport = async (b: Backup) => {
+    setPending(null);
     await app.replaceAll({ settings: b.settings, overrides: b.overrides, entries: b.entries });
-    setMsg(`Zaimportowano ${b.entries.length} wpisów i ${b.overrides.length} definicji.`);
+    setMsg(`Zastąpiono dane: ${b.entries.length} wpisów i ${b.overrides.length} definicji.`);
   };
 
   return (
@@ -259,6 +271,29 @@ export function SettingsView() {
       <p className="disclaimer">
         Zjadłem — wersja {__APP_VERSION__}. Bez kont, bez serwera, bez AI: liczby pochodzą z bazy w aplikacji, a każdą możesz zmienić.
       </p>
+      {pending && (
+        <Modal title="Import danych" onClose={() => setPending(null)}>
+          <div className="stack">
+            <p className="small">
+              Plik z {pending.exportedAt.slice(0, 10)}: {pending.entries.length} wpisów, {pending.overrides.length} własnych definicji.
+            </p>
+            <p className="small muted">
+              Scalenie dopisuje brakujące wpisy i definicje (przy konflikcie wygrywa nowsza zmiana) i zostawia Twoje ustawienia. Zastąpienie usuwa obecne dane.
+            </p>
+            <div className="row">
+              <button className="btn primary" onClick={() => void mergeImport(pending)}>
+                Scal z obecnymi
+              </button>
+              <button className="btn danger" onClick={() => void replaceImport(pending)}>
+                Zastąp wszystko
+              </button>
+              <button className="btn ghost" onClick={() => setPending(null)}>
+                Anuluj
+              </button>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 }

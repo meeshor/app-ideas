@@ -28,4 +28,13 @@ describe('text', () => {
     expect(tokenize('hot-dog').map((x) => x.raw)).toEqual(['hot', 'dog']);
     expect(tokenize(' , ,')).toEqual([]);
   });
+  it('liczebniki złożone', () => {
+    const nums = (t: string) => tokenize(t).filter((x) => x.type === 'num').map((x) => (x as { value: number }).value);
+    expect(nums('sto pięćdziesiąt gramów')).toEqual([150]);
+    expect(nums('dwustu dwudziestu pięciu')).toEqual([225]);
+    expect(nums('tysiąc dwieście')).toEqual([1200]);
+    expect(nums('piętnaście')).toEqual([15]);
+    expect(nums('dwa jajka')).toEqual([]); // jedności same zostają słowami
+    expect(tokenize('sto gramów').map((x) => x.raw)).toEqual(['sto', 'gramów']);
+  });
 });

@@ -2,15 +2,15 @@
   {
     "id": "bulka",
     "name": "bułka pszenna",
-    "per100": {"kcal": 290, "carbs": 57, "protein": 9, "fat": 2.5},
+    "per100": {"kcal": 293, "carbs": 52.7, "protein": 9.9, "fat": 4.3},
     "portions": {"sztuka": 60},
     "defaultPortion": "sztuka",
     "sizes": {"small": 45, "standard": 60, "large": 80},
     "aliases": ["bułka","kajzerka","bułeczka","bułka zwykła"],
     "forms": ["bułce","bułce pszennej","bułce zwykłej","bułeczce","bułeczek","bułeczkach","bułeczkami","bułeczką","bułeczkę","bułeczki","bułeczkich","bułeczkie","bułeczkiej","bułeczkimi","bułek","bułek pszennych","bułek zwykłych","bułkach","bułkach pszennych","bułkach zwykłych","bułkami","bułkami pszennymi","bułkami zwykłymi","bułką","bułką pszenną","bułką zwykłą","bułkę","bułkę pszenną","bułkę zwykłą","bułki","bułki pszenne","bułki pszennej","bułki zwykłe","bułki zwykłej","bułkich","bułkie","bułkiej","bułkimi","kajzerce","kajzerek","kajzerkach","kajzerkami","kajzerką","kajzerkę","kajzerki","kajzerkich","kajzerkie","kajzerkiej","kajzerkimi","pszenna bułka","pszenną bułką","pszenną bułkę","pszenne bułki","pszennej bułce","pszennej bułki","pszennych bułek","pszennych bułkach","pszennymi bułkami","zwykła bułka","zwykłą bułką","zwykłą bułkę","zwykłe bułki","zwykłej bułce","zwykłej bułki","zwykłych bułek","zwykłych bułkach","zwykłymi bułkami"],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #175031: Rolls, hard (includes kaiser); kajzerka",
+    "verified": true
   },
   {
     "id": "bulka-zytnia",
@@ -95,61 +95,61 @@
     "id": "chleb-pelnoziarnisty",
     "name": "chleb pełnoziarnisty",
     "parentId": "chleb",
-    "per100": {"kcal": 240, "carbs": 42, "protein": 9, "fat": 3.5},
+    "per100": {"kcal": 252, "carbs": 42.7, "protein": 12.5, "fat": 3.5},
     "aliases": ["chleb ziarnisty","chleb wieloziarnisty"],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172688: Bread, whole-wheat, commercially prepared",
+    "verified": true,
     "forms": ["chleb pełnoziarnistego","chleb wieloziarnistego","chleb ziarnistego","chleba pełnoziarnistego","chleba pełnoziarnisty","chleba wieloziarnistego","chleba wieloziarnisty","chleba ziarnistego","chleba ziarnisty","chlebach pełnoziarnistych","chlebach wieloziarnistych","chlebach ziarnistych","chlebami pełnoziarnistymi","chlebami wieloziarnistymi","chlebami ziarnistymi","chlebem pełnoziarnistym","chlebem wieloziarnistym","chlebem ziarnistym","chlebie pełnoziarnistym","chlebie wieloziarnistym","chlebie ziarnistym","chlebów pełnoziarnistych","chlebów wieloziarnistych","chlebów ziarnistych","chlebu pełnoziarnistego","chlebu pełnoziarnistym","chlebu wieloziarnistego","chlebu wieloziarnistym","chlebu ziarnistego","chlebu ziarnistym","chleby pełnoziarniste","chleby wieloziarniste","chleby ziarniste","pełnoziarniste chleby","pełnoziarnistego chleb","pełnoziarnistego chleba","pełnoziarnistego chlebu","pełnoziarnisty chleb","pełnoziarnisty chleba","pełnoziarnistych chlebach","pełnoziarnistych chlebów","pełnoziarnistym chlebem","pełnoziarnistym chlebie","pełnoziarnistym chlebu","pełnoziarnistymi chlebami","wieloziarniste chleby","wieloziarnistego chleb","wieloziarnistego chleba","wieloziarnistego chlebu","wieloziarnisty chleb","wieloziarnisty chleba","wieloziarnistych chlebach","wieloziarnistych chlebów","wieloziarnistym chlebem","wieloziarnistym chlebie","wieloziarnistym chlebu","wieloziarnistymi chlebami","ziarniste chleby","ziarnistego chleb","ziarnistego chleba","ziarnistego chlebu","ziarnisty chleb","ziarnisty chleba","ziarnistych chlebach","ziarnistych chlebów","ziarnistym chlebem","ziarnistym chlebie","ziarnistym chlebu","ziarnistymi chlebami"]
   },
   {
     "id": "chleb-tostowy",
     "name": "chleb tostowy",
     "parentId": "chleb",
-    "per100": {"kcal": 265, "carbs": 48, "protein": 8, "fat": 4},
+    "per100": {"kcal": 266, "carbs": 49.4, "protein": 8.9, "fat": 3.3},
     "portions": {"kromka": 25, "sztuka": 25},
     "sizes": {"small": 20, "standard": 25, "large": 30},
     "aliases": ["tostowy"],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #174924: Bread, white, commercially prepared (includes soft bread crumbs); biały chleb kanapkowy",
+    "verified": true,
     "forms": ["chleb tostowego","chleba tostowego","chleba tostowy","chlebach tostowych","chlebami tostowymi","chlebem tostowym","chlebie tostowym","chlebów tostowych","chlebu tostowego","chlebu tostowym","chleby tostowe","tostow","tostowa","tostowach","tostowami","tostową","tostowe","tostowe chleby","tostowego","tostowego chleb","tostowego chleba","tostowego chlebu","tostowem","tostowę","tostowie","tostowów","tostowu","tostowy chleb","tostowy chleba","tostowych","tostowych chlebach","tostowych chlebów","tostowym","tostowym chlebem","tostowym chlebie","tostowym chlebu","tostowymi","tostowymi chlebami"]
   },
   {
     "id": "bagietka",
     "name": "bagietka",
-    "per100": {"kcal": 270, "carbs": 55, "protein": 9, "fat": 1.5},
+    "per100": {"kcal": 272, "carbs": 51.9, "protein": 10.8, "fat": 2.4},
     "portions": {"kawalek": 50, "sztuka": 250, "kromka": 20},
     "defaultPortion": "kawalek",
     "aliases": [],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172675: Bread, french or vienna (includes sourdough)",
+    "verified": true,
     "forms": ["bagietce","bagietek","bagietkach","bagietkami","bagietką","bagietkę","bagietki","bagietkich","bagietkie","bagietkiej","bagietkimi"]
   },
   {
     "id": "croissant",
     "name": "croissant",
-    "per100": {"kcal": 406, "carbs": 45, "protein": 8, "fat": 21},
+    "per100": {"kcal": 406, "carbs": 45.8, "protein": 8.2, "fat": 21},
     "portions": {"sztuka": 60},
     "defaultPortion": "sztuka",
     "sizes": {"small": 40, "standard": 60, "large": 80},
     "aliases": ["rogalik","rogal","croissanta"],
     "forms": ["croissancie","croissantach","croissantami","croissantą","croissante","croissantej","croissantem","croissantę","croissantów","croissantu","croissanty","croissantych","croissantymi","rogala","rogalach","rogalami","rogale","rogalem","rogali","rogalika","rogalikach","rogalikami","rogaliki","rogalikiem","rogalików","rogaliku","rogalów","rogalu","rogaly"],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #174987: Croissants, butter",
+    "verified": true
   },
   {
     "id": "wafle-ryzowe",
     "name": "wafel ryżowy",
-    "per100": {"kcal": 390, "carbs": 81, "protein": 8, "fat": 3},
+    "per100": {"kcal": 387, "carbs": 81.5, "protein": 8.2, "fat": 2.8},
     "portions": {"sztuka": 9},
     "defaultPortion": "sztuka",
     "aliases": ["wafle ryżowe","wafelek ryżowy"],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170250: Snacks, rice cakes, brown rice, plain, unsalted",
+    "verified": true,
     "forms": ["ryżowe wafele","ryżowe wafelki","ryżowe wafla","ryżowe wafle","ryżowego wafel","ryżowego wafela","ryżowego wafelek","ryżowego wafelka","ryżowego wafelku","ryżowego wafelu","ryżowego wafla","ryżowego wafle","ryżowy wafel","ryżowy wafela","ryżowy wafelek","ryżowy wafelka","ryżowych wafelach","ryżowych wafeli","ryżowych wafelkach","ryżowych wafelków","ryżowych wafelów","ryżowych wafely","ryżowych wafl","ryżowych waflach","ryżowym wafelem","ryżowym wafelkiem","ryżowym wafelku","ryżowym wafelu","ryżowym waflem","ryżowym waflu","ryżowymi wafelami","ryżowymi wafelkami","ryżowymi waflami","wafel ryżowego","wafela ryżowego","wafela ryżowy","wafelach ryżowych","wafelami ryżowymi","wafele ryżowe","wafelek ryżowego","wafelem ryżowym","wafeli ryżowych","wafelka ryżowego","wafelka ryżowy","wafelkach ryżowych","wafelkami ryżowymi","wafelki ryżowe","wafelkiem ryżowym","wafelków ryżowych","wafelku ryżowego","wafelku ryżowym","wafelów ryżowych","wafelu ryżowego","wafelu ryżowym","wafely ryżowych","wafl ryżowych","wafla ryżowe","wafla ryżowego","waflach ryżowych","waflami ryżowymi","wafle ryżowego","waflem ryżowym","waflu ryżowym"]
   },
   {
@@ -181,14 +181,14 @@
   {
     "id": "tortilla",
     "name": "tortilla",
-    "per100": {"kcal": 300, "carbs": 50, "protein": 8, "fat": 7},
+    "per100": {"kcal": 306, "carbs": 49.4, "protein": 8.2, "fat": 8},
     "portions": {"sztuka": 60},
     "defaultPortion": "sztuka",
     "aliases": ["placek tortilla","tortille"],
     "forms": ["placka tortilla","plackach tortilla","plackami tortilla","placki tortilla","plackiem tortilla","placków tortilla","placku tortilla","tortill","tortillach","tortillami","tortillą","tortillem","tortillę","tortilli","tortillu"],
     "category": "pieczywo",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #175037: Tortillas, ready-to-bake or -fry, flour, refrigerated",
+    "verified": true
   },
   {
     "id": "nalesnik",
@@ -205,15 +205,15 @@
   {
     "id": "maslo",
     "name": "masło",
-    "per100": {"kcal": 735, "carbs": 0.7, "protein": 0.7, "fat": 82.5},
+    "per100": {"kcal": 717, "carbs": 0.1, "protein": 0.9, "fat": 81.1},
     "portions": {"lyzeczka": 5, "lyzka": 12, "plaster": 5, "kostka": 200},
     "defaultPortion": "lyzeczka",
     "addon": {"qty": 5, "unit": "g"},
     "aliases": ["masełko"],
     "forms": ["masełek","masełka","masełkach","masełkami","masełkiem","masełku","masł","masła","masłach","masłami","masłem","masłu","maśle"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #173430: Butter, without salt",
+    "verified": true
   },
   {
     "id": "margaryna",
@@ -231,7 +231,7 @@
   {
     "id": "mleko",
     "name": "mleko",
-    "per100": {"kcal": 50, "carbs": 4.8, "protein": 3.4, "fat": 2},
+    "per100": {"kcal": 50, "carbs": 4.8, "protein": 3.3, "fat": 2},
     "portions": {"szklanka": 250, "kubek": 250, "lyzka": 15},
     "defaultPortion": "szklanka",
     "addon": {"qty": 30, "unit": "ml"},
@@ -239,29 +239,29 @@
     "aliases": ["mleko krowie"],
     "forms": ["mlek","mlek krowie","mleka","mleka krowie","mlekach","mlekach krowie","mlekami","mlekami krowie","mlekiem","mlekiem krowie","mleku","mleku krowie"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; mleko 2%",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #172205: Milk, reduced fat, fluid, 2% milkfat, without added vitamin A and vitamin D; 2%",
+    "verified": true
   },
   {
     "id": "mleko-pelne",
     "name": "mleko pełne",
     "parentId": "mleko",
-    "per100": {"kcal": 61, "carbs": 4.7, "protein": 3.2, "fat": 3.2},
+    "per100": {"kcal": 61, "carbs": 4.8, "protein": 3.2, "fat": 3.3},
     "aliases": ["mleko tłuste","mleko pełnotłuste"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; mleko 3,2%",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172217: Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D; 3,25%",
+    "verified": true,
     "forms": ["mlek pełnotłustych","mlek pełnych","mlek tłustych","mleka pełne","mleka pełnego","mleka pełnotłuste","mleka pełnotłustego","mleka tłuste","mleka tłustego","mlekach pełnotłustych","mlekach pełnych","mlekach tłustych","mlekami pełnotłustymi","mlekami pełnymi","mlekami tłustymi","mlekiem pełnotłustym","mlekiem pełnym","mlekiem tłustym","mleko pełnego","mleko pełnotłustego","mleko tłustego","mleku pełnotłustym","mleku pełnym","mleku tłustym","pełne mleka","pełne mleko","pełnego mleka","pełnego mleko","pełnotłuste mleka","pełnotłuste mleko","pełnotłustego mleka","pełnotłustego mleko","pełnotłustych mlek","pełnotłustych mlekach","pełnotłustym mlekiem","pełnotłustym mleku","pełnotłustymi mlekami","pełnych mlek","pełnych mlekach","pełnym mlekiem","pełnym mleku","pełnymi mlekami","tłuste mleka","tłuste mleko","tłustego mleka","tłustego mleko","tłustych mlek","tłustych mlekach","tłustym mlekiem","tłustym mleku","tłustymi mlekami"]
   },
   {
     "id": "mleko-chude",
     "name": "mleko chude",
     "parentId": "mleko",
-    "per100": {"kcal": 36, "carbs": 4.9, "protein": 3.4, "fat": 0.5},
+    "per100": {"kcal": 35, "carbs": 4.9, "protein": 3.4, "fat": 0.2},
     "aliases": ["mleko odtłuszczone"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; mleko 0,5%",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #173432: Milk, nonfat, fluid, without added vitamin A and vitamin D (fat free or skim)",
+    "verified": true,
     "forms": ["chude mleka","chude mleko","chudego mleka","chudego mleko","chudych mlek","chudych mlekach","chudym mlekiem","chudym mleku","chudymi mlekami","mlek chudych","mlek odtłuszczonych","mleka chude","mleka chudego","mleka odtłuszczone","mleka odtłuszczonego","mlekach chudych","mlekach odtłuszczonych","mlekami chudymi","mlekami odtłuszczonymi","mlekiem chudym","mlekiem odtłuszczonym","mleko chudego","mleko odtłuszczonego","mleku chudym","mleku odtłuszczonym","odtłuszczone mleka","odtłuszczone mleko","odtłuszczonego mleka","odtłuszczonego mleko","odtłuszczonych mlek","odtłuszczonych mlekach","odtłuszczonym mlekiem","odtłuszczonym mleku","odtłuszczonymi mlekami"]
   },
   {
@@ -279,11 +279,11 @@
     "id": "mleko-sojowe",
     "name": "mleko sojowe",
     "parentId": "mleko",
-    "per100": {"kcal": 40, "carbs": 2.5, "protein": 3.3, "fat": 1.8},
+    "per100": {"kcal": 43, "carbs": 4.9, "protein": 2.6, "fat": 1.5},
     "aliases": ["napój sojowy"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172456: Soymilk, original and vanilla, with added calcium, vitamins A and D",
+    "verified": true,
     "forms": ["mlek sojowych","mleka sojowe","mleka sojowego","mlekach sojowych","mlekami sojowymi","mlekiem sojowym","mleko sojowego","mleku sojowym","napoja sojowego","napoja sojowy","napojach sojowych","napojami sojowymi","napoje sojowe","napojem sojowym","napoji sojowych","napojów sojowych","napoju sojowego","napoju sojowym","napojy sojowych","napój sojowego","sojowe mleka","sojowe mleko","sojowe napoje","sojowego mleka","sojowego mleko","sojowego napoja","sojowego napoju","sojowego napój","sojowy napoja","sojowy napój","sojowych mlek","sojowych mlekach","sojowych napojach","sojowych napoji","sojowych napojów","sojowych napojy","sojowym mlekiem","sojowym mleku","sojowym napojem","sojowym napoju","sojowymi mlekami","sojowymi napojami"]
   },
   {
@@ -376,36 +376,36 @@
     "id": "smietana-12",
     "name": "śmietana 12%",
     "parentId": "smietana",
-    "per100": {"kcal": 135, "carbs": 3.9, "protein": 2.7, "fat": 12},
+    "per100": {"kcal": 135, "carbs": 4.3, "protein": 2.9, "fat": 12},
     "aliases": ["śmietanka do kawy"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #171256: Cream, sour, reduced fat, cultured",
+    "verified": true,
     "forms": ["śmietan 12%","śmietanach 12%","śmietanami 12%","śmietaną 12%","śmietance do kawy","śmietanek do kawy","śmietanę 12%","śmietanie 12%","śmietankach do kawy","śmietankami do kawy","śmietanką do kawy","śmietankę do kawy","śmietanki do kawy","śmietany 12%"]
   },
   {
     "id": "smietana-30",
     "name": "śmietana 30%",
     "parentId": "smietana",
-    "per100": {"kcal": 290, "carbs": 3.2, "protein": 2.2, "fat": 30},
+    "per100": {"kcal": 292, "carbs": 3, "protein": 2.2, "fat": 30.9},
     "aliases": ["kremówka","śmietana kremówka","bita śmietana"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170858: Cream, fluid, light whipping",
+    "verified": true,
     "forms": ["bicie śmietanej","bit śmietanych","bitach śmietanych","bitami śmietanymi","bitą śmietaną","bitę śmietaną","bity śmietane","bity śmietanej","kremówce","kremówek","kremówka śmietana","kremówkach","kremówkami","kremówką","kremówką śmietaną","kremówką śmietanę","kremówkę","kremówki","kremówkich","kremówkich śmietan","kremówkich śmietanach","kremówkie","kremówkie śmietany","kremówkiej","kremówkiej śmietanie","kremówkiej śmietany","kremówkimi","kremówkimi śmietanami","śmietan 30%","śmietan kremówkich","śmietana bita","śmietanach 30%","śmietanach kremówkich","śmietanami 30%","śmietanami kremówkimi","śmietaną 30%","śmietaną bitą","śmietaną bitę","śmietaną kremówką","śmietane bity","śmietanej bicie","śmietanej bity","śmietanę 30%","śmietanę kremówką","śmietanie 30%","śmietanie kremówkiej","śmietany 30%","śmietany kremówkie","śmietany kremówkiej","śmietanych bit","śmietanych bitach","śmietanymi bitami"]
   },
   {
     "id": "ser-zolty",
     "name": "ser żółty",
-    "per100": {"kcal": 356, "carbs": 2.2, "protein": 25, "fat": 27},
+    "per100": {"kcal": 356, "carbs": 2.2, "protein": 24.9, "fat": 27.4},
     "portions": {"plaster": 20, "kawalek": 30, "lyzka": 8},
     "defaultPortion": "plaster",
     "addon": {"qty": 1, "unit": "plaster"},
     "aliases": ["ser","gouda","ser gouda","ser edamski","ser królewski"],
     "forms": ["edamski ser","edamski sera","edamskich serach","edamskich serów","edamskie sery","edamskiego ser","edamskiego sera","edamskiego seru","edamskim serem","edamskim seru","edamskim serze","edamskimi serami","goud","goudach","goudami","goudą","goude","goude sery","goudego ser","goudego sera","goudego seru","goudej","goudę","goudy","goudy ser","goudy sera","goudych","goudych serach","goudych serów","goudym serem","goudym seru","goudym serze","goudymi","goudymi serami","goudzie","królewski ser","królewski sera","królewskich serach","królewskich serów","królewskie sery","królewskiego ser","królewskiego sera","królewskiego seru","królewskim serem","królewskim seru","królewskim serze","królewskimi serami","ser edamskiego","ser goudego","ser goudy","ser królewskiego","ser żółtego","sera","sera edamski","sera edamskiego","sera goudego","sera goudy","sera królewski","sera królewskiego","sera żółtego","sera żółty","serach","serach edamskich","serach goudych","serach królewskich","serach żółtych","serami","serami edamskimi","serami goudymi","serami królewskimi","serami żółtymi","serek żółty","serem","serem edamskim","serem goudym","serem królewskim","serem żółtym","serkiem żółtym","serów","serów edamskich","serów goudych","serów królewskich","serów żółtych","seru","seru edamskiego","seru edamskim","seru goudego","seru goudym","seru królewskiego","seru królewskim","seru żółtego","seru żółtym","sery","sery edamskie","sery goude","sery królewskie","sery żółte","serze","serze edamskim","serze goudym","serze królewskim","serze żółtym","żółte sery","żółtego ser","żółtego sera","żółtego seru","żółty ser","żółty sera","żółtych serach","żółtych serów","żółtym serem","żółtym seru","żółtym serze","żółtymi serami"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171241: Cheese, gouda; gouda",
+    "verified": true
   },
   {
     "id": "mozzarella",
@@ -423,15 +423,15 @@
   {
     "id": "parmezan",
     "name": "parmezan",
-    "per100": {"kcal": 392, "carbs": 3, "protein": 35, "fat": 28},
+    "per100": {"kcal": 392, "carbs": 3.2, "protein": 35.8, "fat": 25},
     "portions": {"lyzka": 7, "lyzeczka": 3},
     "defaultPortion": "lyzka",
     "addon": {"qty": 1, "unit": "lyzka"},
     "aliases": [],
     "forms": ["parmezanem","parmezanu"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170848: Cheese, parmesan, hard",
+    "verified": true
   },
   {
     "id": "twarog",
@@ -520,33 +520,33 @@
   {
     "id": "feta",
     "name": "ser feta",
-    "per100": {"kcal": 265, "carbs": 4, "protein": 14, "fat": 21},
+    "per100": {"kcal": 265, "carbs": 3.9, "protein": 14.2, "fat": 21.5},
     "portions": {"kawalek": 30, "kostka": 200, "plaster": 30},
     "defaultPortion": "kawalek",
     "addon": {"qty": 30, "unit": "g"},
     "aliases": ["feta","ser typu feta","ser sałatkowy"],
     "forms": ["feta ser","feta sera","feta serach","feta serami","feta serem","feta serów","feta seru","feta sery","feta serze","fetą","fety","sałatkowe sery","sałatkowego ser","sałatkowego sera","sałatkowego seru","sałatkowy ser","sałatkowy sera","sałatkowych serach","sałatkowych serów","sałatkowym serem","sałatkowym seru","sałatkowym serze","sałatkowymi serami","ser sałatkowego","sera feta","sera sałatkowego","sera sałatkowy","sera typu feta","serach feta","serach sałatkowych","serach typu feta","serami feta","serami sałatkowymi","serami typu feta","serem feta","serem sałatkowym","serem typu feta","serów feta","serów sałatkowych","serów typu feta","seru feta","seru sałatkowego","seru sałatkowym","seru typu feta","sery feta","sery sałatkowe","sery typu feta","serze feta","serze sałatkowym","serze typu feta"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #173420: Cheese, feta",
+    "verified": true
   },
   {
     "id": "ser-plesniowy",
     "name": "ser pleśniowy",
-    "per100": {"kcal": 300, "carbs": 0.5, "protein": 20, "fat": 24},
+    "per100": {"kcal": 300, "carbs": 0.5, "protein": 19.8, "fat": 24.3},
     "portions": {"kawalek": 30},
     "defaultPortion": "kawalek",
     "addon": {"qty": 30, "unit": "g"},
     "aliases": ["camembert","brie","ser z pleśnią","lazur"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172178: Cheese, camembert; camembert",
+    "verified": true,
     "forms": ["bri","bria","briach","briami","briem","briu","camembercie","camemberta","camembertach","camembertami","camembertem","camembertów","camembertu","camemberty","lazura","lazurach","lazurami","lazurem","lazurów","lazuru","lazury","lazurze","pleśniowe sery","pleśniowego ser","pleśniowego sera","pleśniowego seru","pleśniowy ser","pleśniowy sera","pleśniowych serach","pleśniowych serów","pleśniowym serem","pleśniowym seru","pleśniowym serze","pleśniowymi serami","ser pleśniowego","sera pleśniowego","sera pleśniowy","sera z pleśnią","serach pleśniowych","serach z pleśnią","serami pleśniowymi","serami z pleśnią","serem pleśniowym","serem z pleśnią","serów pleśniowych","serów z pleśnią","seru pleśniowego","seru pleśniowym","seru z pleśnią","sery pleśniowe","sery z pleśnią","serze pleśniowym","serze z pleśnią"]
   },
   {
     "id": "jajko",
     "name": "jajko",
-    "per100": {"kcal": 140, "carbs": 0.7, "protein": 12.5, "fat": 9.7},
+    "per100": {"kcal": 143, "carbs": 0.7, "protein": 12.6, "fat": 9.5},
     "portions": {"sztuka": 55},
     "defaultPortion": "sztuka",
     "sizes": {"small": 45, "standard": 55, "large": 65},
@@ -554,8 +554,8 @@
     "aliases": ["jajo","jajeczko","jajko gotowane","jajko na twardo","jajko na miękko","jajko kurze"],
     "forms": ["gotowane jajka","gotowane jajko","gotowanego jajka","gotowanego jajko","gotowanych jajek","gotowanych jajkach","gotowanym jajkiem","gotowanym jajku","gotowanymi jajkami","jaj","jaja","jajach","jajami","jajeczek","jajeczka","jajeczkach","jajeczkami","jajeczkiem","jajeczku","jajek","jajek gotowanych","jajek kurze","jajek na miękko","jajek na twardo","jajem","jajka","jajka gotowane","jajka gotowanego","jajka kurze","jajka na miękko","jajka na twardo","jajkach","jajkach gotowanych","jajkach kurze","jajkach na miękko","jajkach na twardo","jajkami","jajkami gotowanymi","jajkami kurze","jajkami na miękko","jajkami na twardo","jajkiem","jajkiem gotowanym","jajkiem kurze","jajkiem na miękko","jajkiem na twardo","jajko gotowanego","jajku","jajku gotowanym","jajku kurze","jajku na miękko","jajku na twardo","jaju"],
     "category": "nabiał",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; masa części jadalnej",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171287: Egg, whole, raw, fresh",
+    "verified": true
   },
   {
     "id": "szynka",
@@ -645,41 +645,41 @@
   {
     "id": "parowka",
     "name": "parówka",
-    "per100": {"kcal": 260, "carbs": 2, "protein": 11, "fat": 23},
+    "per100": {"kcal": 269, "carbs": 0.3, "protein": 12.8, "fat": 23.7},
     "portions": {"sztuka": 45},
     "defaultPortion": "sztuka",
     "addon": {"qty": 1, "unit": "sztuka"},
     "aliases": ["parówki","frankfurterka"],
     "category": "wędliny",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172964: Frankfurter, pork; frankfurterka wieprzowa",
+    "verified": true,
     "forms": ["frankfurterce","frankfurterek","frankfurterkach","frankfurterkami","frankfurterką","frankfurterkę","frankfurterki","frankfurterkich","frankfurterkie","frankfurterkiej","frankfurterkimi","parówce","parówek","parówkach","parówkami","parówką","parówkę","parówkich","parówkie","parówkiego","parówkiej","parówkiem","parówkim","parówkimi","parówków","parówku"]
   },
   {
     "id": "salami",
     "name": "salami",
-    "per100": {"kcal": 430, "carbs": 1, "protein": 22, "fat": 37},
+    "per100": {"kcal": 378, "carbs": 0.7, "protein": 21.1, "fat": 31.7},
     "portions": {"plaster": 8},
     "defaultPortion": "plaster",
     "addon": {"qty": 3, "unit": "plaster"},
     "aliases": [],
     "category": "wędliny",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #174582: Salami, dry or hard, pork, beef",
+    "verified": true,
     "forms": []
   },
   {
     "id": "boczek",
     "name": "boczek",
-    "per100": {"kcal": 400, "carbs": 0.5, "protein": 15, "fat": 38},
+    "per100": {"kcal": 393, "carbs": 0, "protein": 13.7, "fat": 37.1},
     "portions": {"plaster": 15},
     "defaultPortion": "plaster",
     "addon": {"qty": 2, "unit": "plaster"},
     "aliases": ["bekon","boczek wędzony","skwarki"],
     "forms": ["bekona","bekonach","bekonami","bekonem","bekonie","bekonów","bekonu","bekony","boczek wędzonego","boczka","boczka wędzonego","boczka wędzony","boczkach","boczkach wędzonych","boczkami","boczkami wędzonymi","boczki","boczki wędzone","boczkiem","boczkiem wędzonym","boczków","boczków wędzonych","boczku","boczku wędzonego","boczku wędzonym","skwarce","skwarek","skwarka","skwarkach","skwarkami","skwarką","skwarkę","skwarkich","skwarkie","skwarkiego","skwarkiem","skwarkim","skwarkimi","skwarków","skwarku","wędzone boczki","wędzonego boczek","wędzonego boczka","wędzonego boczku","wędzony boczek","wędzony boczka","wędzonych boczkach","wędzonych boczków","wędzonym boczkiem","wędzonym boczku","wędzonymi boczkami"],
     "category": "wędliny",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; boczek wędzony",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #168277: Pork, cured, bacon, unprepared; surowy wędzony",
+    "verified": true
   },
   {
     "id": "pasztet",
@@ -704,20 +704,20 @@
     "aliases": ["kurczak","filet z kurczaka","pierś kurczaka","kurczak grillowany","filet drobiowy","pierś drobiowa"],
     "forms": ["drobiowe filety","drobiowe pierśe","drobiowego filet","drobiowego fileta","drobiowego filetu","drobiowego pierś","drobiowego pierśa","drobiowego pierśu","drobiowy filet","drobiowy fileta","drobiowy pierś","drobiowy pierśa","drobiowych filetach","drobiowych filetów","drobiowych pierśach","drobiowych pierśi","drobiowych pierśów","drobiowych pierśy","drobiowym filecie","drobiowym filetem","drobiowym filetu","drobiowym pierśem","drobiowym pierśu","drobiowymi filetami","drobiowymi pierśami","filecie drobiowym","filecie z kurczaka","filet drobiowego","fileta drobiowego","fileta drobiowy","fileta z kurczaka","filetach drobiowych","filetach z kurczaka","filetami drobiowymi","filetami z kurczaka","filetem drobiowym","filetem z kurczaka","filetów drobiowych","filetów z kurczaka","filetu drobiowego","filetu drobiowym","filetu z kurczaka","filety drobiowe","filety z kurczaka","grillowane kurczaki","grillowanego kurczak","grillowanego kurczaka","grillowanego kurczaku","grillowany kurczak","grillowany kurczaka","grillowanych kurczakach","grillowanych kurczaków","grillowanym kurczakiem","grillowanym kurczaku","grillowanymi kurczakami","kurczak grillowanego","kurczaka","kurczaka grillowanego","kurczaka grillowany","kurczakach","kurczakach grillowanych","kurczakami","kurczakami grillowanymi","kurczaki","kurczaki grillowane","kurczaki pierś","kurczaki pierśa","kurczakich pierśach","kurczakich pierśi","kurczakich pierśów","kurczakich pierśy","kurczakie pierśe","kurczakiego pierś","kurczakiego pierśa","kurczakiego pierśu","kurczakiem","kurczakiem grillowanym","kurczakim pierśem","kurczakim pierśu","kurczakimi pierśami","kurczaków","kurczaków grillowanych","kurczaku","kurczaku grillowanego","kurczaku grillowanym","piersi drobiowej","piersi kurczaka","piersi z kurczaka","piersią drobiową","piersią kurczaka","piersią z kurczaka","pierś drobiowego","pierś drobiowy","pierś kurczaki","pierś kurczakiego","pierśa drobiowego","pierśa drobiowy","pierśa kurczaki","pierśa kurczakiego","pierśa z kurczaka","pierśach drobiowych","pierśach kurczakich","pierśach z kurczaka","pierśami drobiowymi","pierśami kurczakimi","pierśami z kurczaka","pierśe drobiowe","pierśe kurczakie","pierśe z kurczaka","pierśem drobiowym","pierśem kurczakim","pierśem z kurczaka","pierśi drobiowych","pierśi kurczakich","pierśi z kurczaka","pierśów drobiowych","pierśów kurczakich","pierśów z kurczaka","pierśu drobiowego","pierśu drobiowym","pierśu kurczakiego","pierśu kurczakim","pierśu z kurczaka","pierśy drobiowych","pierśy kurczakich","pierśy z kurczaka"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; pieczona/grillowana, bez skóry",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171477: Chicken, broilers or fryers, breast, meat only, cooked, roasted; pieczona, bez skóry",
+    "verified": true
   },
   {
     "id": "kurczak-udko",
     "name": "udko z kurczaka",
-    "per100": {"kcal": 215, "carbs": 0, "protein": 24, "fat": 13},
+    "per100": {"kcal": 232, "carbs": 0, "protein": 23.3, "fat": 14.7},
     "portions": {"sztuka": 100},
     "defaultPortion": "sztuka",
     "aliases": ["udko","udka","podudzie","noga z kurczaka","skrzydełko"],
     "forms": ["nodze z kurczaka","nog z kurczaka","nogach z kurczaka","nogami z kurczaka","nogą z kurczaka","nogę z kurczaka","nogi z kurczaka","podudzi","podudzia","podudziach","podudziami","podudziem","podudziu","skrzydełek","skrzydełka","skrzydełkach","skrzydełkami","skrzydełkiem","skrzydełku","udce","udek","udek z kurczaka","udka z kurczaka","udkach","udkach z kurczaka","udkami","udkami z kurczaka","udką","udkę","udki","udkich","udkie","udkiej","udkiem","udkiem z kurczaka","udkimi","udku","udku z kurczaka"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; pieczone, ze skórą, część jadalna",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #173625: Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted; pieczone, ze skórą",
+    "verified": true
   },
   {
     "id": "kotlet-drobiowy",
@@ -735,26 +735,26 @@
   {
     "id": "indyk",
     "name": "pierś z indyka",
-    "per100": {"kcal": 135, "carbs": 0, "protein": 29, "fat": 2},
+    "per100": {"kcal": 136, "carbs": 0, "protein": 29.5, "fat": 2},
     "portions": {"porcja": 150},
     "defaultPortion": "porcja",
     "addon": {"qty": 100, "unit": "g"},
     "aliases": ["indyk","filet z indyka"],
     "forms": ["filecie z indyka","fileta z indyka","filetach z indyka","filetami z indyka","filetem z indyka","filetów z indyka","filetu z indyka","filety z indyka","indyka","indykach","indykami","indyki","indykiem","indyków","indyku","piersi z indyka","piersią z indyka","pierśa z indyka","pierśach z indyka","pierśami z indyka","pierśe z indyka","pierśem z indyka","pierśi z indyka","pierśów z indyka","pierśu z indyka","pierśy z indyka"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; pieczona",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #174516: Turkey, retail parts, breast, meat only, cooked, roasted; pieczona",
+    "verified": true
   },
   {
     "id": "schab",
     "name": "schab pieczony",
-    "per100": {"kcal": 180, "carbs": 0, "protein": 28, "fat": 7},
+    "per100": {"kcal": 173, "carbs": 0, "protein": 27.6, "fat": 6.1},
     "portions": {"plaster": 50, "porcja": 120},
     "defaultPortion": "porcja",
     "aliases": ["schab","schabik","pieczeń wieprzowa"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168253: Pork, fresh, loin, top loin (chops), boneless, separable lean only, cooked, broiled; chudy, z grilla",
+    "verified": true,
     "forms": ["pieczeń wieprzowego","pieczeń wieprzowy","pieczeńa wieprzowego","pieczeńa wieprzowy","pieczeńach wieprzowych","pieczeńami wieprzowymi","pieczeńe wieprzowe","pieczeńem wieprzowym","pieczeńi wieprzowych","pieczeńów wieprzowych","pieczeńu wieprzowego","pieczeńu wieprzowym","pieczeńy wieprzowych","pieczone schaby","pieczonego schab","pieczonego schaba","pieczonego schabu","pieczony schab","pieczony schaba","pieczonych schabach","pieczonych schabów","pieczonym schabem","pieczonym schabie","pieczonym schabu","pieczonymi schabami","schab pieczonego","schaba","schaba pieczonego","schaba pieczony","schabach","schabach pieczonych","schabami","schabami pieczonymi","schabem","schabem pieczonym","schabie","schabie pieczonym","schabika","schabikach","schabikami","schabiki","schabikiem","schabików","schabiku","schabów","schabów pieczonych","schabu","schabu pieczonego","schabu pieczonym","schaby","schaby pieczone","wieprzowe pieczeńe","wieprzowego pieczeń","wieprzowego pieczeńa","wieprzowego pieczeńu","wieprzowy pieczeń","wieprzowy pieczeńa","wieprzowych pieczeńach","wieprzowych pieczeńi","wieprzowych pieczeńów","wieprzowych pieczeńy","wieprzowym pieczeńem","wieprzowym pieczeńu","wieprzowymi pieczeńami"]
   },
   {
@@ -786,26 +786,26 @@
   {
     "id": "karkowka",
     "name": "karkówka",
-    "per100": {"kcal": 250, "carbs": 0, "protein": 22, "fat": 18},
+    "per100": {"kcal": 259, "carbs": 0, "protein": 25.6, "fat": 16.6},
     "portions": {"plaster": 120, "porcja": 120},
     "defaultPortion": "plaster",
     "aliases": ["karkówka z grilla"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; grillowana/pieczona",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #167851: Pork, fresh, shoulder, blade, boston (steaks), separable lean and fat, cooked, broiled",
+    "verified": true,
     "forms": ["karkówce","karkówce z grilla","karkówek","karkówek z grilla","karkówkach","karkówkach z grilla","karkówkami","karkówkami z grilla","karkówką","karkówką z grilla","karkówkę","karkówkę z grilla","karkówki","karkówki z grilla","karkówkich","karkówkie","karkówkiej","karkówkimi"]
   },
   {
     "id": "wolowina",
     "name": "wołowina",
-    "per100": {"kcal": 200, "carbs": 0, "protein": 28, "fat": 10},
+    "per100": {"kcal": 204, "carbs": 0, "protein": 30.7, "fat": 9},
     "portions": {"porcja": 120, "sztuka": 200},
     "defaultPortion": "porcja",
     "aliases": ["stek","polędwica wołowa","mięso wołowe"],
     "forms": ["mięs wołowych","mięsa wołowe","mięsa wołowego","mięsach wołowych","mięsami wołowymi","mięsem wołowym","mięsie wołowym","mięso wołowego","mięsu wołowym","polędwic wołowych","polędwicach wołowych","polędwicami wołowymi","polędwicą wołową","polędwicę wołową","polędwicy wołowe","polędwicy wołowej","steka","steki","stekiem","stka","stkach","stkami","stki","stkiem","stków","stku","wołowa polędwica","wołową polędwicą","wołową polędwicę","wołowe mięsa","wołowe mięso","wołowe polędwicy","wołowego mięsa","wołowego mięso","wołowej polędwicy","wołowin","wołowinach","wołowinami","wołowiną","wołowine","wołowinej","wołowinę","wołowinie","wołowiny","wołowinych","wołowinymi","wołowych mięs","wołowych mięsach","wołowych polędwic","wołowych polędwicach","wołowym mięsem","wołowym mięsie","wołowym mięsu","wołowymi mięsami","wołowymi polędwicami"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; duszona/pieczona, chuda",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169531: Beef, round, top round steak, separable lean and fat, trimmed to 1/8\"\" fat, all grades, cooked, broiled; zrazowa górna, pieczona",
+    "verified": true
   },
   {
     "id": "mieso-mielone",
@@ -823,27 +823,27 @@
   {
     "id": "losos",
     "name": "łosoś",
-    "per100": {"kcal": 206, "carbs": 0, "protein": 22, "fat": 13},
+    "per100": {"kcal": 206, "carbs": 0, "protein": 22.1, "fat": 12.4},
     "portions": {"porcja": 125, "kawalek": 125, "plaster": 20},
     "defaultPortion": "porcja",
     "addon": {"qty": 50, "unit": "g"},
     "aliases": ["łosoś pieczony","łosoś wędzony"],
     "forms": ["łososi","łososia","łososia wędzonego","łososie","łososiem","łososiem wędzonym","łososiu","łosoś pieczonego","łosoś wędzonego","łosośa","łosośa pieczonego","łosośa pieczony","łosośa wędzonego","łosośa wędzony","łosośach","łosośach pieczonych","łosośach wędzonych","łosośami","łosośami pieczonymi","łosośami wędzonymi","łosośe","łosośe pieczone","łosośe wędzone","łosośem","łosośem pieczonym","łosośem wędzonym","łosośi","łosośi pieczonych","łosośi wędzonych","łosośów","łosośów pieczonych","łosośów wędzonych","łosośu","łosośu pieczonego","łosośu pieczonym","łosośu wędzonego","łosośu wędzonym","łosośy","łosośy pieczonych","łosośy wędzonych","pieczone łosośe","pieczonego łosoś","pieczonego łosośa","pieczonego łosośu","pieczony łosoś","pieczony łosośa","pieczonych łosośach","pieczonych łosośi","pieczonych łosośów","pieczonych łosośy","pieczonym łosośem","pieczonym łosośu","pieczonymi łosośami","wędzone łosośe","wędzonego łosoś","wędzonego łosośa","wędzonego łosośu","wędzony łosoś","wędzony łosośa","wędzonych łosośach","wędzonych łosośi","wędzonych łosośów","wędzonych łosośy","wędzonym łosośem","wędzonym łosośu","wędzonymi łosośami"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; pieczony",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #175168: Fish, salmon, Atlantic, farmed, cooked, dry heat; hodowlany, pieczony",
+    "verified": true
   },
   {
     "id": "dorsz",
     "name": "dorsz",
-    "per100": {"kcal": 105, "carbs": 0, "protein": 23, "fat": 0.9},
+    "per100": {"kcal": 105, "carbs": 0, "protein": 22.8, "fat": 0.9},
     "portions": {"porcja": 150, "kawalek": 120},
     "defaultPortion": "porcja",
     "aliases": ["ryba","mintaj","filet rybny","morszczuk"],
     "forms": ["dorsza","dorszach","dorszami","dorsze","dorszem","dorszi","dorszów","dorszu","dorszy","filecie rybnym","filet rybnego","fileta rybnego","fileta rybny","filetach rybnych","filetami rybnymi","filetem rybnym","filetów rybnych","filetu rybnego","filetu rybnym","filety rybne","mintaja","mintajach","mintajami","mintaje","mintajem","mintaji","mintajów","mintaju","mintajy","morszczuka","morszczukach","morszczukami","morszczuki","morszczukiem","morszczuków","morszczuku","ryb","rybach","rybami","rybą","rybę","rybie","rybne filety","rybnego filet","rybnego fileta","rybnego filetu","rybny filet","rybny fileta","rybnych filetach","rybnych filetów","rybnym filecie","rybnym filetem","rybnym filetu","rybnymi filetami","ryby"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; pieczony",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171956: Fish, cod, Atlantic, cooked, dry heat",
+    "verified": true
   },
   {
     "id": "ryba-panierowana",
@@ -860,15 +860,15 @@
   {
     "id": "tunczyk",
     "name": "tuńczyk w sosie własnym",
-    "per100": {"kcal": 110, "carbs": 0, "protein": 25, "fat": 1},
+    "per100": {"kcal": 116, "carbs": 0, "protein": 25.5, "fat": 0.8},
     "portions": {"puszka": 120, "lyzka": 20},
     "defaultPortion": "puszka",
     "addon": {"qty": 60, "unit": "g"},
     "aliases": ["tuńczyk"],
     "forms": ["tuńczyka","tuńczyka w sosie własnym","tuńczykach","tuńczykach w sosie własnym","tuńczykami","tuńczykami w sosie własnym","tuńczyki","tuńczyki w sosie własnym","tuńczykiem","tuńczykiem w sosie własnym","tuńczyków","tuńczyków w sosie własnym","tuńczyku","tuńczyku w sosie własnym"],
     "category": "mięso i ryby",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171986: Fish, tuna, light, canned in water, without salt, drained solids",
+    "verified": true
   },
   {
     "id": "sledz",
@@ -897,134 +897,134 @@
   {
     "id": "ryz",
     "name": "ryż biały",
-    "per100": {"kcal": 130, "carbs": 28, "protein": 2.7, "fat": 0.3},
+    "per100": {"kcal": 130, "carbs": 28.2, "protein": 2.7, "fat": 0.3},
     "portions": {"porcja": 150, "szklanka": 180, "torebka": 250, "lyzka": 20},
     "defaultPortion": "porcja",
     "addon": {"qty": 150, "unit": "g"},
     "aliases": ["ryż","ryż gotowany","ryż jaśminowy","ryż basmati"],
     "forms": ["białe ryże","białego ryż","białego ryża","białego ryżu","biały ryż","biały ryża","białych ryżach","białych ryżi","białych ryżów","białych ryży","białym ryżem","białym ryżu","białymi ryżami","gotowane ryże","gotowanego ryż","gotowanego ryża","gotowanego ryżu","gotowany ryż","gotowany ryża","gotowanych ryżach","gotowanych ryżi","gotowanych ryżów","gotowanych ryży","gotowanym ryżem","gotowanym ryżu","gotowanymi ryżami","jaśminowe ryże","jaśminowego ryż","jaśminowego ryża","jaśminowego ryżu","jaśminowy ryż","jaśminowy ryża","jaśminowych ryżach","jaśminowych ryżi","jaśminowych ryżów","jaśminowych ryży","jaśminowym ryżem","jaśminowym ryżu","jaśminowymi ryżami","ryż białego","ryż gotowanego","ryż jaśminowego","ryża","ryża basmati","ryża białego","ryża biały","ryża gotowanego","ryża gotowany","ryża jaśminowego","ryża jaśminowy","ryżach","ryżach basmati","ryżach białych","ryżach gotowanych","ryżach jaśminowych","ryżami","ryżami basmati","ryżami białymi","ryżami gotowanymi","ryżami jaśminowymi","ryże","ryże basmati","ryże białe","ryże gotowane","ryże jaśminowe","ryżem","ryżem basmati","ryżem białym","ryżem gotowanym","ryżem jaśminowym","ryżi","ryżi basmati","ryżi białych","ryżi gotowanych","ryżi jaśminowych","ryżów","ryżów basmati","ryżów białych","ryżów gotowanych","ryżów jaśminowych","ryżu","ryżu basmati","ryżu białego","ryżu białym","ryżu gotowanego","ryżu gotowanym","ryżu jaśminowego","ryżu jaśminowym","ryży","ryży basmati","ryży białych","ryży gotowanych","ryży jaśminowych"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowany",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #168878: Rice, white, long-grain, regular, enriched, cooked",
+    "verified": true
   },
   {
     "id": "ryz-brazowy",
     "name": "ryż brązowy",
     "parentId": "ryz",
-    "per100": {"kcal": 112, "carbs": 23, "protein": 2.6, "fat": 0.9},
+    "per100": {"kcal": 123, "carbs": 25.6, "protein": 2.7, "fat": 1},
     "aliases": ["ryż pełnoziarnisty","ryż dziki"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowany",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169704: Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+    "verified": true,
     "forms": ["brązowe ryże","brązowego ryż","brązowego ryża","brązowego ryżu","brązowy ryż","brązowy ryża","brązowych ryżach","brązowych ryżi","brązowych ryżów","brązowych ryży","brązowym ryżem","brązowym ryżu","brązowymi ryżami","dziki ryż","dziki ryża","dzikich ryżach","dzikich ryżi","dzikich ryżów","dzikich ryży","dzikie ryże","dzikiego ryż","dzikiego ryża","dzikiego ryżu","dzikim ryżem","dzikim ryżu","dzikimi ryżami","pełnoziarniste ryże","pełnoziarnistego ryż","pełnoziarnistego ryża","pełnoziarnistego ryżu","pełnoziarnisty ryż","pełnoziarnisty ryża","pełnoziarnistych ryżach","pełnoziarnistych ryżi","pełnoziarnistych ryżów","pełnoziarnistych ryży","pełnoziarnistym ryżem","pełnoziarnistym ryżu","pełnoziarnistymi ryżami","ryż brązowego","ryż dzikiego","ryż pełnoziarnistego","ryża brązowego","ryża brązowy","ryża dziki","ryża dzikiego","ryża pełnoziarnistego","ryża pełnoziarnisty","ryżach brązowych","ryżach dzikich","ryżach pełnoziarnistych","ryżami brązowymi","ryżami dzikimi","ryżami pełnoziarnistymi","ryże brązowe","ryże dzikie","ryże pełnoziarniste","ryżem brązowym","ryżem dzikim","ryżem pełnoziarnistym","ryżi brązowych","ryżi dzikich","ryżi pełnoziarnistych","ryżów brązowych","ryżów dzikich","ryżów pełnoziarnistych","ryżu brązowego","ryżu brązowym","ryżu dzikiego","ryżu dzikim","ryżu pełnoziarnistego","ryżu pełnoziarnistym","ryży brązowych","ryży dzikich","ryży pełnoziarnistych"]
   },
   {
     "id": "makaron",
     "name": "makaron",
-    "per100": {"kcal": 158, "carbs": 31, "protein": 5.8, "fat": 0.9},
+    "per100": {"kcal": 158, "carbs": 30.9, "protein": 5.8, "fat": 0.9},
     "portions": {"porcja": 180, "talerz": 250, "szklanka": 140},
     "defaultPortion": "porcja",
     "addon": {"qty": 60, "unit": "g"},
     "aliases": ["makaron pszenny","spaghetti","penne","świderki","kokardki","nitki","tagliatelle"],
     "forms": ["kokardce","kokardek","kokardka","kokardkach","kokardkami","kokardką","kokardkę","kokardkich","kokardkie","kokardkiego","kokardkiem","kokardkim","kokardkimi","kokardków","kokardku","makaron pszennego","makarona","makarona pszennego","makarona pszenny","makaronach","makaronach pszennych","makaronami","makaronami pszennymi","makaronem","makaronem pszennym","makaronie","makaronie pszennym","makaronów","makaronów pszennych","makaronu","makaronu pszennego","makaronu pszennym","makarony","makarony pszenne","nitce","nitek","nitka","nitkach","nitkami","nitką","nitkę","nitkich","nitkie","nitkiego","nitkiem","nitkim","nitkimi","nitków","nitku","penn","penna","pennach","pennami","penną","pennego","pennej","pennem","pennu","penny","pennych","pennym","pennymi","pszenne makarony","pszennego makaron","pszennego makarona","pszennego makaronu","pszenny makaron","pszenny makarona","pszennych makaronach","pszennych makaronów","pszennym makaronem","pszennym makaronie","pszennym makaronu","pszennymi makaronami","świderce","świderek","świderka","świderkach","świderkami","świderką","świderkę","świderkich","świderkie","świderkiego","świderkiem","świderkim","świderkimi","świderków","świderku","tagliatell","tagliatella","tagliatellach","tagliatellami","tagliatellem","tagliatellu"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowany",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169737: Pasta, cooked, enriched, without added salt",
+    "verified": true
   },
   {
     "id": "makaron-pelnoziarnisty",
     "name": "makaron pełnoziarnisty",
     "parentId": "makaron",
-    "per100": {"kcal": 124, "carbs": 25, "protein": 5.3, "fat": 0.5},
+    "per100": {"kcal": 149, "carbs": 30.1, "protein": 6, "fat": 1.7},
     "aliases": ["makaron razowy"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowany",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168910: Pasta, whole-wheat, cooked (Includes foods for USDA's Food Distribution Program)",
+    "verified": true,
     "forms": ["makaron pełnoziarnistego","makaron razowego","makarona pełnoziarnistego","makarona pełnoziarnisty","makarona razowego","makarona razowy","makaronach pełnoziarnistych","makaronach razowych","makaronami pełnoziarnistymi","makaronami razowymi","makaronem pełnoziarnistym","makaronem razowym","makaronie pełnoziarnistym","makaronie razowym","makaronów pełnoziarnistych","makaronów razowych","makaronu pełnoziarnistego","makaronu pełnoziarnistym","makaronu razowego","makaronu razowym","makarony pełnoziarniste","makarony razowe","pełnoziarniste makarony","pełnoziarnistego makaron","pełnoziarnistego makarona","pełnoziarnistego makaronu","pełnoziarnisty makaron","pełnoziarnisty makarona","pełnoziarnistych makaronach","pełnoziarnistych makaronów","pełnoziarnistym makaronem","pełnoziarnistym makaronie","pełnoziarnistym makaronu","pełnoziarnistymi makaronami","razowe makarony","razowego makaron","razowego makarona","razowego makaronu","razowy makaron","razowy makarona","razowych makaronach","razowych makaronów","razowym makaronem","razowym makaronie","razowym makaronu","razowymi makaronami"]
   },
   {
     "id": "kasza-gryczana",
     "name": "kasza gryczana",
-    "per100": {"kcal": 92, "carbs": 20, "protein": 3.4, "fat": 0.6},
+    "per100": {"kcal": 92, "carbs": 19.9, "protein": 3.4, "fat": 0.6},
     "portions": {"porcja": 150, "torebka": 250, "szklanka": 170},
     "defaultPortion": "porcja",
     "addon": {"qty": 150, "unit": "g"},
     "aliases": ["gryczana","kasza","gryka"],
     "forms": ["gryce","gryczan","gryczana kasza","gryczanach","gryczanami","gryczaną","gryczaną kaszą","gryczaną kaszę","gryczane","gryczane kaszy","gryczanej","gryczanej kaszy","gryczanę","gryczanie","gryczany","gryczanych","gryczanych kasz","gryczanych kaszach","gryczanymi","gryczanymi kaszami","gryk","grykach","grykami","gryką","grykę","gryki","grykich","grykie","grykiej","grykimi","kasz","kasz gryczanych","kaszach","kaszach gryczanych","kaszami","kaszami gryczanymi","kaszą","kaszą gryczaną","kaszę","kaszę gryczaną","kaszy","kaszy gryczane","kaszy gryczanej"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowana",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170686: Buckwheat groats, roasted, cooked",
+    "verified": true
   },
   {
     "id": "kasza-jaglana",
     "name": "kasza jaglana",
     "parentId": "kasza-gryczana",
-    "per100": {"kcal": 119, "carbs": 24, "protein": 3.5, "fat": 1},
+    "per100": {"kcal": 119, "carbs": 23.7, "protein": 3.5, "fat": 1},
     "aliases": ["jaglanka","jaglana"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowana",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168871: Millet, cooked",
+    "verified": true,
     "forms": ["jaglan","jaglana kasza","jaglanach","jaglanami","jaglaną","jaglaną kaszą","jaglaną kaszę","jaglance","jaglane","jaglane kaszy","jaglanej","jaglanej kaszy","jaglanek","jaglanę","jaglanie","jaglankach","jaglankami","jaglanką","jaglankę","jaglanki","jaglankich","jaglankie","jaglankiej","jaglankimi","jaglany","jaglanych","jaglanych kasz","jaglanych kaszach","jaglanymi","jaglanymi kaszami","kasz jaglanych","kaszach jaglanych","kaszami jaglanymi","kaszą jaglaną","kaszę jaglaną","kaszy jaglane","kaszy jaglanej"]
   },
   {
     "id": "kasza-peczak",
     "name": "kasza jęczmienna",
     "parentId": "kasza-gryczana",
-    "per100": {"kcal": 123, "carbs": 28, "protein": 2.3, "fat": 0.4},
+    "per100": {"kcal": 123, "carbs": 28.2, "protein": 2.3, "fat": 0.4},
     "aliases": ["pęczak","kasza pęczak","kasza perłowa","kasza bulgur","bulgur"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowana",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170285: Barley, pearled, cooked",
+    "verified": true,
     "forms": ["bulgura","bulgurach","bulgurami","bulgurem","bulgurów","bulguru","bulgury","bulgurze","jęczmienna kasza","jęczmienną kaszą","jęczmienną kaszę","jęczmienne kaszy","jęczmiennej kaszy","jęczmiennych kasz","jęczmiennych kaszach","jęczmiennymi kaszami","kasz bulgur","kasz jęczmiennych","kasz perłowych","kasz pęczak","kaszach bulgur","kaszach jęczmiennych","kaszach perłowych","kaszach pęczak","kaszami bulgur","kaszami jęczmiennymi","kaszami perłowymi","kaszami pęczak","kaszą bulgur","kaszą jęczmienną","kaszą perłową","kaszą pęczak","kaszę bulgur","kaszę jęczmienną","kaszę perłową","kaszę pęczak","kaszy bulgur","kaszy jęczmienne","kaszy jęczmiennej","kaszy perłowe","kaszy perłowej","kaszy pęczak","perłowa kasza","perłową kaszą","perłową kaszę","perłowe kaszy","perłowej kaszy","perłowych kasz","perłowych kaszach","perłowymi kaszami","pęczaka","pęczakach","pęczakami","pęczaki","pęczakiem","pęczaków","pęczaku"]
   },
   {
     "id": "kasza-manna",
     "name": "kasza manna",
-    "per100": {"kcal": 360, "carbs": 75, "protein": 10, "fat": 1},
+    "per100": {"kcal": 360, "carbs": 72.8, "protein": 12.7, "fat": 1.1},
     "portions": {"lyzka": 12, "porcja": 40},
     "defaultPortion": "lyzka",
     "aliases": ["manna","kaszka manna","semolina"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; sucha",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169715: Semolina, enriched; sucha",
+    "verified": true,
     "forms": ["kasz mannych","kaszach mannych","kaszami mannymi","kaszą manną","kaszce mannej","kaszek mannych","kaszę manną","kaszkach mannych","kaszkami mannymi","kaszką manną","kaszkę manną","kaszki manne","kaszki mannej","kaszy manne","kaszy mannej","mann","manna kasza","manna kaszka","mannach","mannami","manną","manną kaszą","manną kaszę","manną kaszką","manną kaszkę","manne","manne kaszki","manne kaszy","mannej","mannej kaszce","mannej kaszki","mannej kaszy","mannę","mannie","manny","mannych","mannych kasz","mannych kaszach","mannych kaszek","mannych kaszkach","mannymi","mannymi kaszami","mannymi kaszkami","semolin","semolinach","semolinami","semoliną","semoline","semolinej","semolinę","semolinie","semoliny","semolinych","semolinymi"]
   },
   {
     "id": "kuskus",
     "name": "kuskus",
-    "per100": {"kcal": 112, "carbs": 23, "protein": 3.8, "fat": 0.2},
+    "per100": {"kcal": 112, "carbs": 23.2, "protein": 3.8, "fat": 0.2},
     "portions": {"porcja": 150},
     "defaultPortion": "porcja",
     "addon": {"qty": 150, "unit": "g"},
     "aliases": ["kus kus","cous cous"],
     "forms": ["cousa cous","cousach cous","cousami cous","cousem cous","cousie cous","cousów cous","cousu cous","cousy cous","kusa kus","kusach kus","kusami kus","kusem kus","kusie kus","kuskusa","kuskusach","kuskusami","kuskusem","kuskusie","kuskusów","kuskusu","kuskusy","kusów kus","kusu kus","kusy kus"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowany",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169700: Couscous, cooked",
+    "verified": true
   },
   {
     "id": "komosa",
     "name": "komosa ryżowa",
-    "per100": {"kcal": 120, "carbs": 21, "protein": 4.4, "fat": 1.9},
+    "per100": {"kcal": 120, "carbs": 21.3, "protein": 4.4, "fat": 1.9},
     "portions": {"porcja": 150},
     "defaultPortion": "porcja",
     "addon": {"qty": 150, "unit": "g"},
     "aliases": ["quinoa","kinoa"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; ugotowana",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168917: Quinoa, cooked",
+    "verified": true,
     "forms": ["kino","kinoach","kinoami","kinoą","kinoę","kinoy","komos ryżowych","komosach ryżowych","komosami ryżowymi","komosą ryżową","komosę ryżową","komosie ryżowej","komosy ryżowe","komosy ryżowej","quino","quinoach","quinoami","quinoą","quinoę","quinoy","ryżowa komosa","ryżową komosą","ryżową komosę","ryżowe komosy","ryżowej komosie","ryżowej komosy","ryżowych komos","ryżowych komosach","ryżowymi komosami"]
   },
   {
     "id": "platki-owsiane",
     "name": "płatki owsiane",
-    "per100": {"kcal": 370, "carbs": 60, "protein": 13, "fat": 7},
+    "per100": {"kcal": 379, "carbs": 67.7, "protein": 13.2, "fat": 6.5},
     "portions": {"lyzka": 10, "szklanka": 90, "garsc": 30, "porcja": 50},
     "defaultPortion": "porcja",
     "aliases": ["owsiane","płatki górskie","płatki owsiane górskie"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; suche",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #173904: Cereals, oats, regular and quick, not fortified, dry",
+    "verified": true,
     "forms": ["górska płatek","górska płatka","górską płatek","górską płatka","górską płatką","górską płatkę","górską płatki","górską płatkiem","górski płatek","górski płatka","górski płatkę","górski płatki","górskich płatek","górskich płatkach","górskich płatków","górskie płatki","górskiego płatek","górskiego płatka","górskiego płatkę","górskiego płatki","górskiego płatku","górskiej płatce","górskiej płatka","górskiej płatki","górskiej płatku","górskim płatce","górskim płatką","górskim płatkiem","górskim płatku","górskimi płatkami","owsian","owsiana","owsiana płatek","owsiana płatka","owsianach","owsianami","owsianą","owsianą płatek","owsianą płatka","owsianą płatką","owsianą płatkę","owsianą płatki","owsianą płatkiem","owsiane płatki","owsianego","owsianego płatek","owsianego płatka","owsianego płatkę","owsianego płatki","owsianego płatku","owsianej","owsianej płatce","owsianej płatka","owsianej płatki","owsianej płatku","owsianem","owsianu","owsiany","owsiany płatek","owsiany płatka","owsiany płatkę","owsiany płatki","owsianych","owsianych płatek","owsianych płatkach","owsianych płatków","owsianym","owsianym płatce","owsianym płatką","owsianym płatkiem","owsianym płatku","owsianymi","owsianymi płatkami","płatce górskiej","płatce górskim","płatce owsianej","płatce owsianej górskiej","płatce owsianej górskim","płatce owsianym","płatce owsianym górskiej","płatce owsianym górskim","płatek górska","płatek górską","płatek górski","płatek górskich","płatek górskiego","płatek owsiana","płatek owsiana górska","płatek owsiana górski","płatek owsianą","płatek owsianą górską","płatek owsianą górski","płatek owsianą górskiego","płatek owsianego","płatek owsianego górską","płatek owsianego górski","płatek owsianego górskiego","płatek owsiany","płatek owsiany górska","płatek owsiany górską","płatek owsiany górski","płatek owsiany górskiego","płatek owsianych","płatek owsianych górskich","płatka górska","płatka górską","płatka górski","płatka górskiego","płatka górskiej","płatka owsiana","płatka owsiana górska","płatka owsiana górski","płatka owsianą","płatka owsianą górską","płatka owsianą górski","płatka owsianą górskiego","płatka owsianego","płatka owsianego górską","płatka owsianego górski","płatka owsianego górskiego","płatka owsianego górskiej","płatka owsianej","płatka owsianej górskiego","płatka owsianej górskiej","płatka owsiany","płatka owsiany górska","płatka owsiany górską","płatka owsiany górski","płatka owsiany górskiego","płatkach górskich","płatkach owsianych","płatkach owsianych górskich","płatkami górskimi","płatkami owsianymi","płatkami owsianymi górskimi","płatką górską","płatką górskim","płatką owsianą","płatką owsianą górską","płatką owsianą górskim","płatką owsianym","płatką owsianym górską","płatką owsianym górskim","płatkę górską","płatkę górski","płatkę górskiego","płatkę owsianą","płatkę owsianą górską","płatkę owsianą górski","płatkę owsianą górskiego","płatkę owsianego","płatkę owsianego górską","płatkę owsianego górski","płatkę owsianego górskiego","płatkę owsiany","płatkę owsiany górską","płatkę owsiany górski","płatkę owsiany górskiego","płatki górską","płatki górski","płatki górskiego","płatki górskiej","płatki owsianą","płatki owsianą górską","płatki owsianą górski","płatki owsianą górskiego","płatki owsianego","płatki owsianego górską","płatki owsianego górski","płatki owsianego górskiego","płatki owsianego górskiej","płatki owsianej","płatki owsianej górskiego","płatki owsianej górskiej","płatki owsiany","płatki owsiany górską","płatki owsiany górski","płatki owsiany górskiego","płatkiem górską","płatkiem górskim","płatkiem owsianą","płatkiem owsianą górską","płatkiem owsianą górskim","płatkiem owsianym","płatkiem owsianym górską","płatkiem owsianym górskim","płatków górskich","płatków owsianych","płatków owsianych górskich","płatku górskiego","płatku górskiej","płatku górskim","płatku owsianego","płatku owsianego górskiego","płatku owsianego górskiej","płatku owsianej","płatku owsianej górskiego","płatku owsianej górskiej","płatku owsianej górskim","płatku owsianym","płatku owsianym górskiej","płatku owsianym górskim"]
   },
   {
@@ -1043,19 +1043,19 @@
   {
     "id": "platki-kukurydziane",
     "name": "płatki kukurydziane",
-    "per100": {"kcal": 375, "carbs": 84, "protein": 7, "fat": 1},
+    "per100": {"kcal": 384, "carbs": 88, "protein": 5.9, "fat": 0.9},
     "portions": {"porcja": 40, "miska": 40, "garsc": 20, "szklanka": 30},
     "defaultPortion": "porcja",
     "aliases": ["płatki","corn flakes","płatki śniadaniowe","cini minis","płatki czekoladowe"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #174648: Cereals ready-to-eat, RALSTON Corn Flakes",
+    "verified": true,
     "forms": ["cin minis","cina minis","cinach minis","cinami minis","ciną minis","cinem minis","cinę minis","cinie minis","cinów minis","cinu minis","ciny minis","corna flakes","cornach flakes","cornami flakes","cornem flakes","cornie flakes","cornów flakes","cornu flakes","corny flakes","czekoladowa płatek","czekoladowa płatka","czekoladową płatek","czekoladową płatka","czekoladową płatką","czekoladową płatkę","czekoladową płatki","czekoladową płatkiem","czekoladowe płatki","czekoladowego płatek","czekoladowego płatka","czekoladowego płatkę","czekoladowego płatki","czekoladowego płatku","czekoladowej płatce","czekoladowej płatka","czekoladowej płatki","czekoladowej płatku","czekoladowy płatek","czekoladowy płatka","czekoladowy płatkę","czekoladowy płatki","czekoladowych płatek","czekoladowych płatkach","czekoladowych płatków","czekoladowym płatce","czekoladowym płatką","czekoladowym płatkiem","czekoladowym płatku","czekoladowymi płatkami","kukurydziana płatek","kukurydziana płatka","kukurydzianą płatek","kukurydzianą płatka","kukurydzianą płatką","kukurydzianą płatkę","kukurydzianą płatki","kukurydzianą płatkiem","kukurydziane płatki","kukurydzianego płatek","kukurydzianego płatka","kukurydzianego płatkę","kukurydzianego płatki","kukurydzianego płatku","kukurydzianej płatce","kukurydzianej płatka","kukurydzianej płatki","kukurydzianej płatku","kukurydziany płatek","kukurydziany płatka","kukurydziany płatkę","kukurydziany płatki","kukurydzianych płatek","kukurydzianych płatkach","kukurydzianych płatków","kukurydzianym płatce","kukurydzianym płatką","kukurydzianym płatkiem","kukurydzianym płatku","kukurydzianymi płatkami","płatce","płatce czekoladowej","płatce czekoladowym","płatce kukurydzianej","płatce kukurydzianym","płatce śniadaniowej","płatce śniadaniowym","płatek","płatek czekoladowa","płatek czekoladową","płatek czekoladowego","płatek czekoladowy","płatek czekoladowych","płatek kukurydziana","płatek kukurydzianą","płatek kukurydzianego","płatek kukurydziany","płatek kukurydzianych","płatek śniadaniowa","płatek śniadaniową","płatek śniadaniowego","płatek śniadaniowy","płatek śniadaniowych","płatka","płatka czekoladowa","płatka czekoladową","płatka czekoladowego","płatka czekoladowej","płatka czekoladowy","płatka kukurydziana","płatka kukurydzianą","płatka kukurydzianego","płatka kukurydzianej","płatka kukurydziany","płatka śniadaniowa","płatka śniadaniową","płatka śniadaniowego","płatka śniadaniowej","płatka śniadaniowy","płatkach","płatkach czekoladowych","płatkach kukurydzianych","płatkach śniadaniowych","płatkami","płatkami czekoladowymi","płatkami kukurydzianymi","płatkami śniadaniowymi","płatką","płatką czekoladową","płatką czekoladowym","płatką kukurydzianą","płatką kukurydzianym","płatką śniadaniową","płatką śniadaniowym","płatkę","płatkę czekoladową","płatkę czekoladowego","płatkę czekoladowy","płatkę kukurydzianą","płatkę kukurydzianego","płatkę kukurydziany","płatkę śniadaniową","płatkę śniadaniowego","płatkę śniadaniowy","płatki czekoladową","płatki czekoladowego","płatki czekoladowej","płatki czekoladowy","płatki kukurydzianą","płatki kukurydzianego","płatki kukurydzianej","płatki kukurydziany","płatki śniadaniową","płatki śniadaniowego","płatki śniadaniowej","płatki śniadaniowy","płatkich","płatkie","płatkiego","płatkiem","płatkiem czekoladową","płatkiem czekoladowym","płatkiem kukurydzianą","płatkiem kukurydzianym","płatkiem śniadaniową","płatkiem śniadaniowym","płatkim","płatkimi","płatków","płatków czekoladowych","płatków kukurydzianych","płatków śniadaniowych","płatku","płatku czekoladowego","płatku czekoladowej","płatku czekoladowym","płatku kukurydzianego","płatku kukurydzianej","płatku kukurydzianym","płatku śniadaniowego","płatku śniadaniowej","płatku śniadaniowym","śniadaniowa płatek","śniadaniowa płatka","śniadaniową płatek","śniadaniową płatka","śniadaniową płatką","śniadaniową płatkę","śniadaniową płatki","śniadaniową płatkiem","śniadaniowe płatki","śniadaniowego płatek","śniadaniowego płatka","śniadaniowego płatkę","śniadaniowego płatki","śniadaniowego płatku","śniadaniowej płatce","śniadaniowej płatka","śniadaniowej płatki","śniadaniowej płatku","śniadaniowy płatek","śniadaniowy płatka","śniadaniowy płatkę","śniadaniowy płatki","śniadaniowych płatek","śniadaniowych płatkach","śniadaniowych płatków","śniadaniowym płatce","śniadaniowym płatką","śniadaniowym płatkiem","śniadaniowym płatku","śniadaniowymi płatkami"]
   },
   {
     "id": "ziemniaki",
     "name": "ziemniaki gotowane",
-    "per100": {"kcal": 86, "carbs": 20, "protein": 1.9, "fat": 0.1},
+    "per100": {"kcal": 86, "carbs": 20, "protein": 1.7, "fat": 0.1},
     "portions": {"sztuka": 100, "porcja": 200, "talerz": 300, "lyzka": 40},
     "defaultPortion": "porcja",
     "sizes": {"small": 150, "standard": 200, "large": 300},
@@ -1063,18 +1063,18 @@
     "aliases": ["ziemniaki","ziemniak","kartofle","kartofel","ziemniaczki","młode ziemniaki"],
     "forms": ["gotowana ziemniak","gotowana ziemniaka","gotowaną ziemniak","gotowaną ziemniaka","gotowaną ziemniaką","gotowaną ziemniakę","gotowaną ziemniaki","gotowaną ziemniakiem","gotowane ziemniaki","gotowanego ziemniak","gotowanego ziemniaka","gotowanego ziemniakę","gotowanego ziemniaki","gotowanego ziemniaku","gotowanej ziemniace","gotowanej ziemniaka","gotowanej ziemniaki","gotowanej ziemniaku","gotowany ziemniak","gotowany ziemniaka","gotowany ziemniakę","gotowany ziemniaki","gotowanych ziemniak","gotowanych ziemniakach","gotowanych ziemniaków","gotowanym ziemniace","gotowanym ziemniaką","gotowanym ziemniakiem","gotowanym ziemniaku","gotowanymi ziemniakami","kartofela","kartofelach","kartofelami","kartofele","kartofelem","kartofeli","kartofelów","kartofelu","kartofely","kartofl","kartofla","kartoflach","kartoflami","kartoflem","kartofli","kartoflu","młod ziemniakich","młoda ziemniakie","młoda ziemniakiego","młodach ziemniakich","młodami ziemniakimi","młode ziemniakie","młode ziemniakiego","młodem ziemniakim","młodu ziemniakim","ziemniace","ziemniace gotowanej","ziemniace gotowanym","ziemniaczce","ziemniaczek","ziemniaczka","ziemniaczkach","ziemniaczkami","ziemniaczką","ziemniaczkę","ziemniaczkich","ziemniaczkie","ziemniaczkiego","ziemniaczkiem","ziemniaczkim","ziemniaczkimi","ziemniaczków","ziemniaczku","ziemniak gotowana","ziemniak gotowaną","ziemniak gotowanego","ziemniak gotowany","ziemniak gotowanych","ziemniaka","ziemniaka gotowana","ziemniaka gotowaną","ziemniaka gotowanego","ziemniaka gotowanej","ziemniaka gotowany","ziemniakach","ziemniakach gotowanych","ziemniakami","ziemniakami gotowanymi","ziemniaką","ziemniaką gotowaną","ziemniaką gotowanym","ziemniakę","ziemniakę gotowaną","ziemniakę gotowanego","ziemniakę gotowany","ziemniaki gotowaną","ziemniaki gotowanego","ziemniaki gotowanej","ziemniaki gotowany","ziemniakich","ziemniakich młod","ziemniakich młodach","ziemniakie","ziemniakie młoda","ziemniakie młode","ziemniakiego","ziemniakiego młoda","ziemniakiego młode","ziemniakiem","ziemniakiem gotowaną","ziemniakiem gotowanym","ziemniakim","ziemniakim młodem","ziemniakim młodu","ziemniakimi","ziemniakimi młodami","ziemniaków","ziemniaków gotowanych","ziemniaku","ziemniaku gotowanego","ziemniaku gotowanej","ziemniaku gotowanym"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170440: Potatoes, boiled, cooked without skin, flesh, without salt",
+    "verified": true
   },
   {
     "id": "puree",
     "name": "puree ziemniaczane",
     "parentId": "ziemniaki",
-    "per100": {"kcal": 106, "carbs": 15, "protein": 2, "fat": 4.2},
+    "per100": {"kcal": 113, "carbs": 16.8, "protein": 1.9, "fat": 4.2},
     "aliases": ["puree","purée","ziemniaki tłuczone","tłuczone ziemniaki"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168555: Potatoes, mashed, home-prepared, whole milk and butter added",
+    "verified": true,
     "forms": ["pure","puré","pure ziemniaczanych","purea","puréa","purea ziemniaczane","purea ziemniaczanego","pureach","puréach","pureach ziemniaczanych","pureami","puréami","pureami ziemniaczanymi","puree ziemniaczanego","pureem","puréem","pureem ziemniaczanym","pureu","puréu","pureu ziemniaczanym","tłuczon ziemniakich","tłuczona ziemniak","tłuczona ziemniaka","tłuczona ziemniakie","tłuczona ziemniakiego","tłuczonach ziemniakich","tłuczonami ziemniakimi","tłuczoną ziemniak","tłuczoną ziemniaka","tłuczoną ziemniaką","tłuczoną ziemniakę","tłuczoną ziemniaki","tłuczoną ziemniakiem","tłuczone ziemniakie","tłuczone ziemniakiego","tłuczonego ziemniak","tłuczonego ziemniaka","tłuczonego ziemniakę","tłuczonego ziemniaki","tłuczonego ziemniaku","tłuczonej ziemniace","tłuczonej ziemniaka","tłuczonej ziemniaki","tłuczonej ziemniaku","tłuczonem ziemniakim","tłuczonu ziemniakim","tłuczony ziemniak","tłuczony ziemniaka","tłuczony ziemniakę","tłuczony ziemniaki","tłuczonych ziemniak","tłuczonych ziemniakach","tłuczonych ziemniaków","tłuczonym ziemniace","tłuczonym ziemniaką","tłuczonym ziemniakiem","tłuczonym ziemniaku","tłuczonymi ziemniakami","ziemniace tłuczonej","ziemniace tłuczonym","ziemniaczane purea","ziemniaczane puree","ziemniaczanego purea","ziemniaczanego puree","ziemniaczanych pure","ziemniaczanych pureach","ziemniaczanym pureem","ziemniaczanym pureu","ziemniaczanymi pureami","ziemniak tłuczona","ziemniak tłuczoną","ziemniak tłuczonego","ziemniak tłuczony","ziemniak tłuczonych","ziemniaka tłuczona","ziemniaka tłuczoną","ziemniaka tłuczonego","ziemniaka tłuczonej","ziemniaka tłuczony","ziemniakach tłuczonych","ziemniakami tłuczonymi","ziemniaką tłuczoną","ziemniaką tłuczonym","ziemniakę tłuczoną","ziemniakę tłuczonego","ziemniakę tłuczony","ziemniaki tłuczoną","ziemniaki tłuczonego","ziemniaki tłuczonej","ziemniaki tłuczony","ziemniakich tłuczon","ziemniakich tłuczonach","ziemniakie tłuczona","ziemniakie tłuczone","ziemniakiego tłuczona","ziemniakiego tłuczone","ziemniakiem tłuczoną","ziemniakiem tłuczonym","ziemniakim tłuczonem","ziemniakim tłuczonu","ziemniakimi tłuczonami","ziemniaków tłuczonych","ziemniaku tłuczonego","ziemniaku tłuczonej","ziemniaku tłuczonym"]
   },
   {
@@ -1091,15 +1091,15 @@
   {
     "id": "frytki",
     "name": "frytki",
-    "per100": {"kcal": 312, "carbs": 41, "protein": 3.4, "fat": 15},
+    "per100": {"kcal": 312, "carbs": 41.4, "protein": 3.4, "fat": 14.7},
     "portions": {"porcja": 115, "garsc": 50},
     "defaultPortion": "porcja",
     "sizes": {"small": 80, "standard": 115, "large": 155},
     "addon": {"qty": 115, "unit": "g"},
     "aliases": ["frytka"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170698: Fast foods, potato, french fried in vegetable oil",
+    "verified": true,
     "forms": ["frytce","frytek","frytkach","frytkami","frytką","frytkę","frytkich","frytkie","frytkiego","frytkiej","frytkiem","frytkim","frytkimi","frytków","frytku"]
   },
   {
@@ -1118,15 +1118,15 @@
   {
     "id": "placki-ziemniaczane",
     "name": "placki ziemniaczane",
-    "per100": {"kcal": 230, "carbs": 25, "protein": 4, "fat": 13},
+    "per100": {"kcal": 268, "carbs": 27.8, "protein": 6.1, "fat": 14.8},
     "portions": {"sztuka": 70},
     "defaultPortion": "sztuka",
     "sizes": {"small": 50, "standard": 70, "large": 100},
     "aliases": ["placek ziemniaczany","placki","placuszki"],
     "forms": ["placce","placce ziemniaczanej","placce ziemniaczanym","placek","placek ziemniaczana","placek ziemniaczaną","placek ziemniaczanego","placek ziemniaczanych","placka","placka ziemniaczana","placka ziemniaczaną","placka ziemniaczanego","placka ziemniaczanej","placka ziemniaczany","plackach","plackach ziemniaczanych","plackami","plackami ziemniaczanymi","placką","placką ziemniaczaną","placką ziemniaczanym","plackę","plackę ziemniaczaną","plackę ziemniaczanego","plackę ziemniaczany","placki ziemniaczaną","placki ziemniaczanego","placki ziemniaczanej","placki ziemniaczany","plackich","plackie","plackiego","plackiem","plackiem ziemniaczaną","plackiem ziemniaczanym","plackim","plackimi","placków","placków ziemniaczanych","placku","placku ziemniaczanego","placku ziemniaczanej","placku ziemniaczanym","placuszce","placuszek","placuszka","placuszkach","placuszkami","placuszką","placuszkę","placuszkich","placuszkie","placuszkiego","placuszkiem","placuszkim","placuszkimi","placuszków","placuszku","ziemniaczana placek","ziemniaczana placka","ziemniaczaną placek","ziemniaczaną placka","ziemniaczaną placką","ziemniaczaną plackę","ziemniaczaną placki","ziemniaczaną plackiem","ziemniaczane placki","ziemniaczanego placek","ziemniaczanego placka","ziemniaczanego plackę","ziemniaczanego placki","ziemniaczanego placku","ziemniaczanej placce","ziemniaczanej placka","ziemniaczanej placki","ziemniaczanej placku","ziemniaczany placek","ziemniaczany placka","ziemniaczany plackę","ziemniaczany placki","ziemniaczanych placek","ziemniaczanych plackach","ziemniaczanych placków","ziemniaczanym placce","ziemniaczanym placką","ziemniaczanym plackiem","ziemniaczanym placku","ziemniaczanymi plackami"],
     "category": "zboża i ziemniaki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170092: Potato pancakes",
+    "verified": true
   },
   {
     "id": "pomidor",
@@ -1139,8 +1139,8 @@
     "aliases": ["pomidorek"],
     "forms": ["pomidora","pomidorach","pomidorami","pomidorem","pomidorka","pomidorkach","pomidorkami","pomidorki","pomidorkiem","pomidorków","pomidorku","pomidorów","pomidoru","pomidory","pomidorze"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170457: Tomatoes, red, ripe, raw, year round average",
+    "verified": true
   },
   {
     "id": "pomidorki-koktajlowe",
@@ -1152,8 +1152,8 @@
     "addon": {"qty": 4, "unit": "sztuka"},
     "aliases": ["pomidorki cherry","pomidorek koktajlowy","koktajlowe"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170457: Tomatoes, red, ripe, raw, year round average",
+    "verified": true,
     "forms": ["cherra pomidorek","cherra pomidorka","cherrą pomidorek","cherrą pomidorka","cherrą pomidorką","cherrą pomidorkę","cherrą pomidorki","cherrą pomidorkiem","cherre pomidorki","cherrego pomidorek","cherrego pomidorka","cherrego pomidorkę","cherrego pomidorki","cherrego pomidorku","cherrej pomidorce","cherrej pomidorka","cherrej pomidorki","cherrej pomidorku","cherry pomidorek","cherry pomidorka","cherry pomidorkę","cherry pomidorki","cherrych pomidorek","cherrych pomidorkach","cherrych pomidorków","cherrym pomidorce","cherrym pomidorką","cherrym pomidorkiem","cherrym pomidorku","cherrymi pomidorkami","koktajlow","koktajlowa","koktajlowa pomidorek","koktajlowa pomidorka","koktajlowach","koktajlowami","koktajlową","koktajlową pomidorek","koktajlową pomidorka","koktajlową pomidorką","koktajlową pomidorkę","koktajlową pomidorki","koktajlową pomidorkiem","koktajlowe pomidorki","koktajlowego","koktajlowego pomidorek","koktajlowego pomidorka","koktajlowego pomidorkę","koktajlowego pomidorki","koktajlowego pomidorku","koktajlowej","koktajlowej pomidorce","koktajlowej pomidorka","koktajlowej pomidorki","koktajlowej pomidorku","koktajlowem","koktajlowu","koktajlowy","koktajlowy pomidorek","koktajlowy pomidorka","koktajlowy pomidorkę","koktajlowy pomidorki","koktajlowych","koktajlowych pomidorek","koktajlowych pomidorkach","koktajlowych pomidorków","koktajlowym","koktajlowym pomidorce","koktajlowym pomidorką","koktajlowym pomidorkiem","koktajlowym pomidorku","koktajlowymi","koktajlowymi pomidorkami","pomidorce cherrej","pomidorce cherrym","pomidorce koktajlowej","pomidorce koktajlowym","pomidorek cherra","pomidorek cherrą","pomidorek cherrego","pomidorek cherry","pomidorek cherrych","pomidorek koktajlowa","pomidorek koktajlową","pomidorek koktajlowego","pomidorek koktajlowych","pomidorka cherra","pomidorka cherrą","pomidorka cherrego","pomidorka cherrej","pomidorka cherry","pomidorka koktajlowa","pomidorka koktajlową","pomidorka koktajlowego","pomidorka koktajlowej","pomidorka koktajlowy","pomidorkach cherrych","pomidorkach koktajlowych","pomidorkami cherrymi","pomidorkami koktajlowymi","pomidorką cherrą","pomidorką cherrym","pomidorką koktajlową","pomidorką koktajlowym","pomidorkę cherrą","pomidorkę cherrego","pomidorkę cherry","pomidorkę koktajlową","pomidorkę koktajlowego","pomidorkę koktajlowy","pomidorki cherrą","pomidorki cherre","pomidorki cherrego","pomidorki cherrej","pomidorki koktajlową","pomidorki koktajlowego","pomidorki koktajlowej","pomidorki koktajlowy","pomidorkiem cherrą","pomidorkiem cherrym","pomidorkiem koktajlową","pomidorkiem koktajlowym","pomidorków cherrych","pomidorków koktajlowych","pomidorku cherrego","pomidorku cherrej","pomidorku cherrym","pomidorku koktajlowego","pomidorku koktajlowej","pomidorku koktajlowym"]
   },
   {
@@ -1165,21 +1165,21 @@
     "addon": {"qty": 3, "unit": "plaster"},
     "aliases": ["ogórek świeży","ogóreczek","ogórek zielony"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168409: Cucumber, with peel, raw",
+    "verified": true,
     "forms": ["ogóreczka","ogóreczkach","ogóreczkami","ogóreczki","ogóreczkiem","ogóreczków","ogóreczku","ogórek zielonego","ogórka","ogórka świeży","ogórka zielonego","ogórka zielony","ogórkach","ogórkach świeży","ogórkach zielonych","ogórkami","ogórkami świeży","ogórkami zielonymi","ogórki","ogórki świeży","ogórki zielone","ogórkiem","ogórkiem świeży","ogórkiem zielonym","ogórków","ogórków świeży","ogórków zielonych","ogórku","ogórku świeży","ogórku zielonego","ogórku zielonym","zielone ogórki","zielonego ogórek","zielonego ogórka","zielonego ogórku","zielony ogórek","zielony ogórka","zielonych ogórkach","zielonych ogórków","zielonym ogórkiem","zielonym ogórku","zielonymi ogórkami"]
   },
   {
     "id": "ogorek-kiszony",
     "name": "ogórek kiszony",
     "parentId": "ogorek",
-    "per100": {"kcal": 12, "carbs": 2.2, "protein": 0.7, "fat": 0.1},
+    "per100": {"kcal": 11, "carbs": 2.3, "protein": 0.3, "fat": 0.2},
     "portions": {"sztuka": 70},
     "addon": {"qty": 1, "unit": "sztuka"},
     "aliases": ["ogórek kwaszony","kiszony"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169379: Pickles, cucumber, sour",
+    "verified": true,
     "forms": ["kiszon","kiszona","kiszonach","kiszonami","kiszoną","kiszone","kiszone ogórki","kiszonego","kiszonego ogórek","kiszonego ogórka","kiszonego ogórku","kiszonem","kiszonę","kiszonie","kiszonów","kiszonu","kiszony ogórek","kiszony ogórka","kiszonych","kiszonych ogórkach","kiszonych ogórków","kiszonym","kiszonym ogórkiem","kiszonym ogórku","kiszonymi","kiszonymi ogórkami","kwaszone ogórki","kwaszonego ogórek","kwaszonego ogórka","kwaszonego ogórku","kwaszony ogórek","kwaszony ogórka","kwaszonych ogórkach","kwaszonych ogórków","kwaszonym ogórkiem","kwaszonym ogórku","kwaszonymi ogórkami","ogórek kiszonego","ogórek kwaszonego","ogórka kiszonego","ogórka kiszony","ogórka kwaszonego","ogórka kwaszony","ogórkach kiszonych","ogórkach kwaszonych","ogórkami kiszonymi","ogórkami kwaszonymi","ogórki kiszone","ogórki kwaszone","ogórkiem kiszonym","ogórkiem kwaszonym","ogórków kiszonych","ogórków kwaszonych","ogórku kiszonego","ogórku kiszonym","ogórku kwaszonego","ogórku kwaszonym"]
   },
   {
@@ -1205,20 +1205,20 @@
     "aliases": ["sałata lodowa","sałata masłowa","rukola","roszponka","mix sałat"],
     "forms": ["lodowa sałata","lodową sałatą","lodową sałatę","lodowe sałaty","lodowej sałacie","lodowej sałaty","lodowych sałat","lodowych sałatach","lodowymi sałatami","masłowa sałata","masłową sałatą","masłową sałatę","masłowe sałaty","masłowej sałacie","masłowej sałaty","masłowych sałat","masłowych sałatach","masłowymi sałatami","mixa sałat","mixach sałat","mixami sałat","mixem sałat","mixów sałat","mixu sałat","mixy sałat","roszponce","roszponek","roszponkach","roszponkami","roszponką","roszponkę","roszponki","roszponkich","roszponkie","roszponkiej","roszponkimi","rukol","rukolach","rukolami","rukolą","rukolę","rukoli","sałacie","sałacie lodowej","sałacie masłowej","sałat","sałat lodowych","sałat masłowych","sałatach","sałatach lodowych","sałatach masłowych","sałatami","sałatami lodowymi","sałatami masłowymi","sałatą","sałatą lodową","sałatą masłową","sałate","sałatej","sałatę","sałatę lodową","sałatę masłową","sałaty","sałaty lodowe","sałaty lodowej","sałaty masłowe","sałaty masłowej","sałatych","sałatymi"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169249: Lettuce, green leaf, raw",
+    "verified": true
   },
   {
     "id": "papryka",
     "name": "papryka",
-    "per100": {"kcal": 31, "carbs": 6, "protein": 1, "fat": 0.3},
+    "per100": {"kcal": 26, "carbs": 6, "protein": 1, "fat": 0.3},
     "portions": {"sztuka": 150, "plaster": 15},
     "defaultPortion": "sztuka",
     "addon": {"qty": 30, "unit": "g"},
     "aliases": ["papryka czerwona","papryczka"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170108: Peppers, sweet, red, raw",
+    "verified": true,
     "forms": ["czerwona papryka","czerwoną papryką","czerwoną paprykę","czerwone papryki","czerwonej papryce","czerwonej papryki","czerwonych papryk","czerwonych paprykach","czerwonymi paprykami","papryce","papryce czerwonej","papryczce","papryczek","papryczkach","papryczkami","papryczką","papryczkę","papryczki","papryczkich","papryczkie","papryczkiej","papryczkimi","papryk","papryk czerwonych","paprykach","paprykach czerwonych","paprykami","paprykami czerwonymi","papryką","papryką czerwoną","paprykę","paprykę czerwoną","papryki","papryki czerwone","papryki czerwonej","paprykich","paprykie","paprykiej","paprykimi"]
   },
   {
@@ -1230,8 +1230,8 @@
     "aliases": ["marchewka","marchewki"],
     "forms": ["marchewa","marchewach","marchewami","marchewce","marchewek","marchewem","marchewie","marchewkach","marchewkami","marchewką","marchewkę","marchewkich","marchewkie","marchewkiego","marchewkiej","marchewkiem","marchewkim","marchewkimi","marchewków","marchewku","marchewów","marchewu","marchewy","marchwi","marchwią"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170393: Carrots, raw",
+    "verified": true
   },
   {
     "id": "cebula",
@@ -1242,60 +1242,60 @@
     "addon": {"qty": 20, "unit": "g"},
     "aliases": ["cebulka","cebula czerwona"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170000: Onions, raw",
+    "verified": true,
     "forms": ["cebul","cebul czerwonych","cebulach","cebulach czerwonych","cebulami","cebulami czerwonymi","cebulą","cebulą czerwoną","cebulce","cebulek","cebulę","cebulę czerwoną","cebuli","cebuli czerwone","cebuli czerwonej","cebulkach","cebulkami","cebulką","cebulkę","cebulki","cebulkich","cebulkie","cebulkiej","cebulkimi","czerwona cebula","czerwoną cebulą","czerwoną cebulę","czerwone cebuli","czerwonej cebuli","czerwonych cebul","czerwonych cebulach","czerwonymi cebulami"]
   },
   {
     "id": "czosnek",
     "name": "czosnek",
-    "per100": {"kcal": 149, "carbs": 33, "protein": 6.4, "fat": 0.5},
+    "per100": {"kcal": 149, "carbs": 33.1, "protein": 6.4, "fat": 0.5},
     "portions": {"zabek": 5},
     "defaultPortion": "zabek",
     "addon": {"qty": 1, "unit": "zabek"},
     "aliases": [],
     "forms": ["czosnka","czosnkach","czosnkami","czosnki","czosnkiem","czosnków","czosnku"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169230: Garlic, raw",
+    "verified": true
   },
   {
     "id": "brokul",
     "name": "brokuł",
-    "per100": {"kcal": 35, "carbs": 7, "protein": 2.4, "fat": 0.4},
+    "per100": {"kcal": 35, "carbs": 7.2, "protein": 2.4, "fat": 0.4},
     "portions": {"porcja": 150, "sztuka": 300},
     "defaultPortion": "porcja",
     "addon": {"qty": 100, "unit": "g"},
     "aliases": ["brokuły","brokułki"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; gotowany",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169967: Broccoli, cooked, boiled, drained, without salt; gotowany",
+    "verified": true,
     "forms": ["brokule","brokuła","brokułach","brokułami","brokułą","brokułce","brokułe","brokułego","brokułek","brokułem","brokułę","brokułka","brokułkach","brokułkami","brokułką","brokułkę","brokułkich","brokułkie","brokułkiego","brokułkiem","brokułkim","brokułkimi","brokułków","brokułku","brokułów","brokułu","brokułych","brokułym","brokułymi"]
   },
   {
     "id": "kalafior",
     "name": "kalafior",
-    "per100": {"kcal": 25, "carbs": 5, "protein": 1.9, "fat": 0.3},
+    "per100": {"kcal": 23, "carbs": 4.1, "protein": 1.8, "fat": 0.5},
     "portions": {"porcja": 150},
     "defaultPortion": "porcja",
     "addon": {"qty": 100, "unit": "g"},
     "aliases": [],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; gotowany",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170397: Cauliflower, cooked, boiled, drained, without salt; gotowany",
+    "verified": true,
     "forms": ["kalafiora","kalafiorach","kalafiorami","kalafiorem","kalafiorów","kalafioru","kalafiory","kalafiorze"]
   },
   {
     "id": "kapusta-kiszona",
     "name": "kapusta kiszona",
-    "per100": {"kcal": 21, "carbs": 4.3, "protein": 1.1, "fat": 0.1},
+    "per100": {"kcal": 19, "carbs": 4.3, "protein": 0.9, "fat": 0.1},
     "portions": {"porcja": 100},
     "defaultPortion": "porcja",
     "addon": {"qty": 100, "unit": "g"},
     "aliases": ["kiszona kapusta"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169279: Sauerkraut, canned, solids and liquids",
+    "verified": true,
     "forms": ["kapust kiszonych","kapustach kiszonych","kapustami kiszonymi","kapustą kiszoną","kapustą kiszonę","kapuste kiszony","kapustej kiszonie","kapustej kiszony","kapustę kiszoną","kapusty kiszone","kapusty kiszonej","kapustych kiszon","kapustych kiszonach","kapustymi kiszonami","kapuście kiszonej","kiszon kapustych","kiszonach kapustych","kiszonami kapustymi","kiszoną kapustą","kiszoną kapustę","kiszone kapusty","kiszonej kapusty","kiszonej kapuście","kiszonę kapustą","kiszonie kapustej","kiszony kapuste","kiszony kapustej","kiszonych kapust","kiszonych kapustach","kiszonymi kapustami"]
   },
   {
@@ -1307,8 +1307,8 @@
     "addon": {"qty": 100, "unit": "g"},
     "aliases": ["kapusta biała","kapusta pekińska","kapusta zasmażana","kapusta duszona"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169975: Cabbage, raw",
+    "verified": true,
     "forms": ["biała kapusta","białą kapustą","białą kapustę","białe kapusty","białej kapusty","białej kapuście","białych kapust","białych kapustach","białymi kapustami","duszona kapusta","duszoną kapustą","duszoną kapustę","duszone kapusty","duszonej kapusty","duszonej kapuście","duszonych kapust","duszonych kapustach","duszonymi kapustami","kapust","kapust białych","kapust duszonych","kapust pekińskich","kapust zasmażanych","kapustach","kapustach białych","kapustach duszonych","kapustach pekińskich","kapustach zasmażanych","kapustami","kapustami białymi","kapustami duszonymi","kapustami pekińskimi","kapustami zasmażanymi","kapustą","kapustą białą","kapustą duszoną","kapustą pekińską","kapustą zasmażaną","kapuste","kapustej","kapustę","kapustę białą","kapustę duszoną","kapustę pekińską","kapustę zasmażaną","kapusty","kapusty białe","kapusty białej","kapusty duszone","kapusty duszonej","kapusty pekińskie","kapusty pekińskiej","kapusty zasmażane","kapusty zasmażanej","kapustych","kapustymi","kapuście","kapuście białej","kapuście duszonej","kapuście pekińskiej","kapuście zasmażanej","pekińska kapusta","pekińską kapustą","pekińską kapustę","pekińskich kapust","pekińskich kapustach","pekińskie kapusty","pekińskiej kapusty","pekińskiej kapuście","pekińskimi kapustami","zasmażana kapusta","zasmażaną kapustą","zasmażaną kapustę","zasmażane kapusty","zasmażanej kapusty","zasmażanej kapuście","zasmażanych kapust","zasmażanych kapustach","zasmażanymi kapustami"]
   },
   {
@@ -1333,34 +1333,34 @@
     "addon": {"qty": 100, "unit": "g"},
     "aliases": ["fasolka"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; gotowana",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169141: Beans, snap, green, cooked, boiled, drained, without salt",
+    "verified": true,
     "forms": ["fasolce","fasolce szparagowej","fasolek","fasolek szparagowych","fasolkach","fasolkach szparagowych","fasolkami","fasolkami szparagowymi","fasolką","fasolką szparagową","fasolkę","fasolkę szparagową","fasolki","fasolki szparagowe","fasolki szparagowej","fasolkich","fasolkie","fasolkiej","fasolkimi","szparagowa fasolka","szparagową fasolką","szparagową fasolkę","szparagowe fasolki","szparagowej fasolce","szparagowej fasolki","szparagowych fasolek","szparagowych fasolkach","szparagowymi fasolkami"]
   },
   {
     "id": "groszek",
     "name": "groszek zielony",
-    "per100": {"kcal": 84, "carbs": 15.6, "protein": 5.4, "fat": 0.2},
+    "per100": {"kcal": 78, "carbs": 14.3, "protein": 5.2, "fat": 0.3},
     "portions": {"porcja": 100, "lyzka": 15, "puszka": 280},
     "defaultPortion": "porcja",
     "addon": {"qty": 50, "unit": "g"},
     "aliases": ["groszek","groszek konserwowy"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; gotowany/konserwowy",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170017: Peas, green, frozen, cooked, boiled, drained, without salt",
+    "verified": true,
     "forms": ["groszek konserwowego","groszek zielonego","groszka","groszka konserwowego","groszka konserwowy","groszka zielonego","groszka zielony","groszkach","groszkach konserwowych","groszkach zielonych","groszkami","groszkami konserwowymi","groszkami zielonymi","groszki","groszki konserwowe","groszki zielone","groszkiem","groszkiem konserwowym","groszkiem zielonym","groszków","groszków konserwowych","groszków zielonych","groszku","groszku konserwowego","groszku konserwowym","groszku zielonego","groszku zielonym","konserwowe groszki","konserwowego groszek","konserwowego groszka","konserwowego groszku","konserwowy groszek","konserwowy groszka","konserwowych groszkach","konserwowych groszków","konserwowym groszkiem","konserwowym groszku","konserwowymi groszkami","zielone groszki","zielonego groszek","zielonego groszka","zielonego groszku","zielony groszek","zielony groszka","zielonych groszkach","zielonych groszków","zielonym groszkiem","zielonym groszku","zielonymi groszkami"]
   },
   {
     "id": "kukurydza",
     "name": "kukurydza konserwowa",
-    "per100": {"kcal": 80, "carbs": 15, "protein": 2.5, "fat": 1.2},
+    "per100": {"kcal": 67, "carbs": 14.3, "protein": 2.3, "fat": 1.2},
     "portions": {"lyzka": 15, "porcja": 100, "puszka": 280, "sztuka": 150},
     "defaultPortion": "lyzka",
     "addon": {"qty": 2, "unit": "lyzka"},
     "aliases": ["kukurydza","kolba kukurydzy"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169214: Corn, sweet, yellow, canned, whole kernel, drained solids",
+    "verified": true,
     "forms": ["kolb kukurydzych","kolba kukurydza","kolbach kukurydzych","kolbami kukurydzymi","kolbą kukurydzą","kolbę kukurydzą","kolbie kukurydzej","kolby kukurydze","kolby kukurydzej","konserwowa kukurydza","konserwową kukurydzą","konserwową kukurydzę","konserwowe kukurydzy","konserwowej kukurydzy","konserwowych kukurydz","konserwowych kukurydzach","konserwowymi kukurydzami","kukurydz","kukurydz konserwowych","kukurydza kolba","kukurydzach","kukurydzach konserwowych","kukurydzami","kukurydzami konserwowymi","kukurydzą","kukurydzą kolbą","kukurydzą kolbę","kukurydzą konserwową","kukurydze kolby","kukurydzej kolbie","kukurydzej kolby","kukurydzę","kukurydzę konserwową","kukurydzy","kukurydzy konserwowe","kukurydzy konserwowej","kukurydzych kolb","kukurydzych kolbach","kukurydzymi kolbami"]
   },
   {
@@ -1373,8 +1373,8 @@
     "aliases": ["fasola","fasola biała","ciecierzyca","soczewica"],
     "forms": ["biała fasola","białą fasolą","białą fasolę","białe fasoli","białej fasoli","białych fasol","białych fasolach","białymi fasolami","ciecierzyc","ciecierzycach","ciecierzycami","ciecierzycą","ciecierzycę","ciecierzycy","czerwona fasola","czerwoną fasolą","czerwoną fasolę","czerwone fasoli","czerwonej fasoli","czerwonych fasol","czerwonych fasolach","czerwonymi fasolami","fasol","fasol białych","fasol czerwonych","fasolach","fasolach białych","fasolach czerwonych","fasolami","fasolami białymi","fasolami czerwonymi","fasolą","fasolą białą","fasolą czerwoną","fasolę","fasolę białą","fasolę czerwoną","fasoli","fasoli białe","fasoli białej","fasoli czerwone","fasoli czerwonej","soczewic","soczewicach","soczewicami","soczewicą","soczewicę","soczewicy"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; gotowana/konserwowa",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #175194: Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+    "verified": true
   },
   {
     "id": "awokado",
@@ -1387,8 +1387,8 @@
     "aliases": ["avocado"],
     "forms": ["awokad","awokada","awokadach","awokadami","awokadem","awokadu","awokadzie"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171705: Avocados, raw, all commercial varieties",
+    "verified": true
   },
   {
     "id": "pieczarki",
@@ -1400,8 +1400,8 @@
     "aliases": ["pieczarka","grzyby","grzybki"],
     "forms": ["grzyb","grzyba","grzybach","grzybami","grzybą","grzybce","grzybek","grzybem","grzybę","grzybie","grzybka","grzybkach","grzybkami","grzybką","grzybkę","grzybkich","grzybkie","grzybkiego","grzybkiem","grzybkim","grzybkimi","grzybków","grzybku","grzybów","grzybu","pieczarce","pieczarek","pieczarkach","pieczarkami","pieczarką","pieczarkę","pieczarkich","pieczarkie","pieczarkiego","pieczarkiej","pieczarkiem","pieczarkim","pieczarkimi","pieczarków","pieczarku"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169251: Mushrooms, white, raw",
+    "verified": true
   },
   {
     "id": "szpinak",
@@ -1412,8 +1412,8 @@
     "addon": {"qty": 30, "unit": "g"},
     "aliases": [],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168462: Spinach, raw",
+    "verified": true,
     "forms": ["szpinaka","szpinakach","szpinakami","szpinaki","szpinakiem","szpinaków","szpinaku"]
   },
   {
@@ -1425,8 +1425,8 @@
     "addon": {"qty": 3, "unit": "sztuka"},
     "aliases": ["rzodkiewki"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169276: Radishes, raw",
+    "verified": true,
     "forms": ["rzodkiewce","rzodkiewek","rzodkiewkach","rzodkiewkami","rzodkiewką","rzodkiewkę","rzodkiewkich","rzodkiewkie","rzodkiewkiego","rzodkiewkiej","rzodkiewkiem","rzodkiewkim","rzodkiewkimi","rzodkiewków","rzodkiewku"]
   },
   {
@@ -1439,8 +1439,8 @@
     "aliases": ["burak","buraczki","ćwikła"],
     "forms": ["burace","buraczce","buraczek","buraczka","buraczkach","buraczkami","buraczką","buraczkę","buraczkich","buraczkie","buraczkiego","buraczkiem","buraczkim","buraczkimi","buraczków","buraczku","buraka","burakach","burakami","buraką","burakę","burakich","burakie","burakiego","burakiem","burakim","burakimi","buraków","buraku","ćwikle","ćwikł","ćwikłach","ćwikłami","ćwikłą","ćwikłe","ćwikłej","ćwikłę","ćwikły","ćwikłych","ćwikłymi"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; gotowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169146: Beets, cooked, boiled, drained",
+    "verified": true
   },
   {
     "id": "cukinia",
@@ -1451,22 +1451,22 @@
     "addon": {"qty": 50, "unit": "g"},
     "aliases": ["bakłażan","kabaczek"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169291: Squash, summer, zucchini, includes skin, raw",
+    "verified": true,
     "forms": ["bakłażana","bakłażanach","bakłażanami","bakłażanem","bakłażanie","bakłażanów","bakłażanu","bakłażany","cukin","cukini","cukiniach","cukiniami","cukinią","cukinich","cukinie","cukiniej","cukinię","cukinimi","kabaczka","kabaczkach","kabaczkami","kabaczki","kabaczkiem","kabaczków","kabaczku"]
   },
   {
     "id": "szczypiorek",
     "name": "szczypiorek",
-    "per100": {"kcal": 30, "carbs": 4, "protein": 3, "fat": 0.5},
+    "per100": {"kcal": 30, "carbs": 4.4, "protein": 3.3, "fat": 0.7},
     "portions": {"lyzka": 5, "garsc": 10},
     "defaultPortion": "lyzka",
     "addon": {"qty": 1, "unit": "lyzka"},
     "aliases": ["koperek","natka pietruszki","pietruszka","koper"],
     "forms": ["kopera","koperach","koperami","koperem","koperka","koperkach","koperkami","koperki","koperkiem","koperków","koperku","koperów","koperu","kopery","koperze","natce pietruszkiej","natek pietruszkich","natka pietruszka","natkach pietruszkich","natkami pietruszkimi","natką","natką pietruszką","natkę pietruszką","natki pietruszkie","natki pietruszkiej","pietruszce","pietruszek","pietruszka natka","pietruszkach","pietruszkami","pietruszką","pietruszką natką","pietruszką natkę","pietruszkę","pietruszki","pietruszkich","pietruszkich natek","pietruszkich natkach","pietruszkie","pietruszkie natki","pietruszkiej","pietruszkiej natce","pietruszkiej natki","pietruszkimi","pietruszkimi natkami","szczypiorka","szczypiorkach","szczypiorkami","szczypiorki","szczypiorkiem","szczypiorków","szczypiorku"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169994: Chives, raw",
+    "verified": true
   },
   {
     "id": "warzywa",
@@ -1484,14 +1484,14 @@
   {
     "id": "oliwki",
     "name": "oliwki",
-    "per100": {"kcal": 145, "carbs": 4, "protein": 1, "fat": 15},
+    "per100": {"kcal": 145, "carbs": 3.8, "protein": 1, "fat": 15.3},
     "portions": {"sztuka": 4, "garsc": 30, "lyzka": 15},
     "defaultPortion": "sztuka",
     "addon": {"qty": 5, "unit": "sztuka"},
     "aliases": ["oliwka"],
     "category": "warzywa",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169096: Olives, pickled, canned or bottled, green; zielone",
+    "verified": true,
     "forms": ["oliwce","oliwek","oliwkach","oliwkami","oliwką","oliwkę","oliwkich","oliwkie","oliwkiego","oliwkiej","oliwkiem","oliwkim","oliwkimi","oliwków","oliwku"]
   },
   {
@@ -1505,8 +1505,8 @@
     "aliases": ["jabłuszko"],
     "forms": ["jabłek","jabłka","jabłkach","jabłkami","jabłkiem","jabłku","jabłuszek","jabłuszka","jabłuszkach","jabłuszkami","jabłuszkiem","jabłuszku"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171688: Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+    "verified": true
   },
   {
     "id": "banan",
@@ -1518,21 +1518,21 @@
     "addon": {"qty": 1, "unit": "sztuka"},
     "aliases": [],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; masa bez skórki",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #173944: Bananas, raw",
+    "verified": true,
     "forms": ["banana","bananach","bananami","bananem","bananie","bananów","bananu","banany"]
   },
   {
     "id": "gruszka",
     "name": "gruszka",
-    "per100": {"kcal": 57, "carbs": 15, "protein": 0.4, "fat": 0.1},
+    "per100": {"kcal": 57, "carbs": 15.2, "protein": 0.4, "fat": 0.1},
     "portions": {"sztuka": 170},
     "defaultPortion": "sztuka",
     "sizes": {"small": 120, "standard": 170, "large": 230},
     "aliases": [],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169118: Pears, raw",
+    "verified": true,
     "forms": ["gruszce","gruszek","gruszkach","gruszkami","gruszką","gruszkę","gruszki","gruszkich","gruszkie","gruszkiej","gruszkimi"]
   },
   {
@@ -1544,20 +1544,20 @@
     "sizes": {"small": 120, "standard": 160, "large": 220},
     "aliases": [],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; bez skórki",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169097: Oranges, raw, all commercial varieties",
+    "verified": true,
     "forms": ["pomarańcz","pomarańczach","pomarańczami","pomarańczą","pomarańczę","pomarańczy"]
   },
   {
     "id": "mandarynka",
     "name": "mandarynka",
-    "per100": {"kcal": 53, "carbs": 13, "protein": 0.8, "fat": 0.3},
+    "per100": {"kcal": 53, "carbs": 13.3, "protein": 0.8, "fat": 0.3},
     "portions": {"sztuka": 70},
     "defaultPortion": "sztuka",
     "aliases": ["klementynka"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169105: Tangerines, (mandarin oranges), raw",
+    "verified": true,
     "forms": ["klementynce","klementynek","klementynkach","klementynkami","klementynką","klementynkę","klementynki","klementynkich","klementynkie","klementynkiej","klementynkimi","mandarynce","mandarynek","mandarynkach","mandarynkami","mandarynką","mandarynkę","mandarynki","mandarynkich","mandarynkie","mandarynkiej","mandarynkimi"]
   },
   {
@@ -1569,21 +1569,21 @@
     "addon": {"qty": 80, "unit": "g"},
     "aliases": ["truskawka"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #167762: Strawberries, raw",
+    "verified": true,
     "forms": ["truskawce","truskawek","truskawkach","truskawkami","truskawką","truskawkę","truskawkich","truskawkie","truskawkiego","truskawkiej","truskawkiem","truskawkim","truskawkimi","truskawków","truskawku"]
   },
   {
     "id": "winogrona",
     "name": "winogrona",
-    "per100": {"kcal": 69, "carbs": 18, "protein": 0.7, "fat": 0.2},
+    "per100": {"kcal": 69, "carbs": 18.1, "protein": 0.7, "fat": 0.2},
     "portions": {"garsc": 80, "kisc": 150},
     "defaultPortion": "garsc",
     "aliases": ["winogrono","winogronka"],
     "forms": ["winogron","winogronach","winogronami","winogroną","winogronce","winogrone","winogronej","winogronek","winogronem","winogronę","winogronie","winogronkach","winogronkami","winogronką","winogronkę","winogronki","winogronkich","winogronkie","winogronkiej","winogronkimi","winogronu","winogrony","winogronych","winogronymi"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #174683: Grapes, red or green (European type, such as Thompson seedless), raw",
+    "verified": true
   },
   {
     "id": "borowki",
@@ -1594,21 +1594,21 @@
     "addon": {"qty": 60, "unit": "g"},
     "aliases": ["borówka","jagody","jagoda","borówki amerykańskie"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #171711: Blueberries, raw",
+    "verified": true,
     "forms": ["amerykańska borówek","amerykańska borówka","amerykańską borówek","amerykańską borówka","amerykańską borówką","amerykańską borówkę","amerykańską borówki","amerykańską borówkiem","amerykański borówek","amerykański borówka","amerykański borówkę","amerykański borówki","amerykańskich borówek","amerykańskich borówkach","amerykańskich borówków","amerykańskie borówki","amerykańskiego borówek","amerykańskiego borówka","amerykańskiego borówkę","amerykańskiego borówki","amerykańskiego borówku","amerykańskiej borówce","amerykańskiej borówka","amerykańskiej borówki","amerykańskiej borówku","amerykańskim borówce","amerykańskim borówką","amerykańskim borówkiem","amerykańskim borówku","amerykańskimi borówkami","borówce","borówce amerykańskiej","borówce amerykańskim","borówek","borówek amerykańska","borówek amerykańską","borówek amerykański","borówek amerykańskich","borówek amerykańskiego","borówka amerykańska","borówka amerykańską","borówka amerykański","borówka amerykańskiego","borówka amerykańskiej","borówkach","borówkach amerykańskich","borówkami","borówkami amerykańskimi","borówką","borówką amerykańską","borówką amerykańskim","borówkę","borówkę amerykańską","borówkę amerykański","borówkę amerykańskiego","borówki amerykańską","borówki amerykański","borówki amerykańskiego","borówki amerykańskiej","borówkich","borówkie","borówkiego","borówkiej","borówkiem","borówkiem amerykańską","borówkiem amerykańskim","borówkim","borówkimi","borówków","borówków amerykańskich","borówku","borówku amerykańskiego","borówku amerykańskiej","borówku amerykańskim","jagod","jagodach","jagodami","jagodą","jagode","jagodego","jagodej","jagodem","jagodę","jagodów","jagodu","jagodych","jagodym","jagodymi","jagodzie"]
   },
   {
     "id": "maliny",
     "name": "maliny",
-    "per100": {"kcal": 52, "carbs": 12, "protein": 1.2, "fat": 0.7},
+    "per100": {"kcal": 52, "carbs": 11.9, "protein": 1.2, "fat": 0.7},
     "portions": {"garsc": 60, "szklanka": 120},
     "defaultPortion": "garsc",
     "addon": {"qty": 60, "unit": "g"},
     "aliases": ["malina"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #167755: Raspberries, raw",
+    "verified": true,
     "forms": ["malin","malinach","malinami","maliną","maline","malinego","malinej","malinem","malinę","malinie","malinów","malinu","malinych","malinym","malinymi"]
   },
   {
@@ -1619,8 +1619,8 @@
     "defaultPortion": "sztuka",
     "aliases": ["śliwka"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169949: Plums, raw",
+    "verified": true,
     "forms": ["śliwce","śliwek","śliwkach","śliwkami","śliwką","śliwkę","śliwkich","śliwkie","śliwkiego","śliwkiej","śliwkiem","śliwkim","śliwkimi","śliwków","śliwku"]
   },
   {
@@ -1631,8 +1631,8 @@
     "defaultPortion": "sztuka",
     "aliases": [],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168153: Kiwifruit, green, raw",
+    "verified": true,
     "forms": []
   },
   {
@@ -1644,8 +1644,8 @@
     "aliases": ["melon"],
     "forms": ["arbuza","arbuzach","arbuzami","arbuzem","arbuzie","arbuzów","arbuzu","arbuzy","melona","melonach","melonami","melonem","melonie","melonów","melonu","melony"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #167765: Watermelon, raw",
+    "verified": true
   },
   {
     "id": "brzoskwinia",
@@ -1655,46 +1655,46 @@
     "defaultPortion": "sztuka",
     "aliases": ["nektarynka","morela"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169928: Peaches, yellow, raw",
+    "verified": true,
     "forms": ["brzoskwin","brzoskwini","brzoskwiniach","brzoskwiniami","brzoskwinią","brzoskwinich","brzoskwinie","brzoskwiniej","brzoskwinię","brzoskwinimi","morel","morelach","morelami","morelą","morelę","moreli","nektarynce","nektarynek","nektarynkach","nektarynkami","nektarynką","nektarynkę","nektarynki","nektarynkich","nektarynkie","nektarynkiej","nektarynkimi"]
   },
   {
     "id": "ananas",
     "name": "ananas",
-    "per100": {"kcal": 50, "carbs": 13, "protein": 0.5, "fat": 0.1},
+    "per100": {"kcal": 50, "carbs": 13.1, "protein": 0.5, "fat": 0.1},
     "portions": {"plaster": 80, "porcja": 150},
     "defaultPortion": "porcja",
     "aliases": ["mango"],
     "forms": ["ananasa","ananasach","ananasami","ananasem","ananasie","ananasów","ananasu","ananasy","mang","manga","mangach","mangami","mangiem","mangu"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169124: Pineapple, raw, all varieties",
+    "verified": true
   },
   {
     "id": "cytryna",
     "name": "cytryna",
-    "per100": {"kcal": 29, "carbs": 9, "protein": 1.1, "fat": 0.3},
+    "per100": {"kcal": 29, "carbs": 9.3, "protein": 1.1, "fat": 0.3},
     "portions": {"plaster": 10, "sztuka": 80},
     "defaultPortion": "plaster",
     "addon": {"qty": 1, "unit": "plaster"},
     "aliases": ["limonka"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #167746: Lemons, raw, without peel",
+    "verified": true,
     "forms": ["cytryn","cytrynach","cytrynami","cytryną","cytryne","cytrynej","cytrynę","cytrynie","cytryny","cytrynych","cytrynymi","limonce","limonek","limonkach","limonkami","limonką","limonkę","limonki","limonkich","limonkie","limonkiej","limonkimi"]
   },
   {
     "id": "rodzynki",
     "name": "rodzynki",
-    "per100": {"kcal": 299, "carbs": 79, "protein": 3, "fat": 0.5},
+    "per100": {"kcal": 299, "carbs": 79.3, "protein": 3.3, "fat": 0.3},
     "portions": {"lyzka": 15, "garsc": 30},
     "defaultPortion": "lyzka",
     "addon": {"qty": 15, "unit": "g"},
     "aliases": ["żurawina suszona","bakalie","suszone owoce"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #168165: Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
+    "verified": true,
     "forms": ["bakali","bakalia","bakaliach","bakaliami","bakaliem","bakaliu","rodzynce","rodzynek","rodzynka","rodzynkach","rodzynkami","rodzynką","rodzynkę","rodzynkich","rodzynkie","rodzynkiego","rodzynkiem","rodzynkim","rodzynkimi","rodzynków","rodzynku","suszon owoce","suszona owoce","suszona żurawina","suszonach owoce","suszonami owoce","suszoną żurawiną","suszoną żurawinę","suszone żurawiny","suszonej żurawinie","suszonej żurawiny","suszonem owoce","suszonu owoce","suszonych żurawin","suszonych żurawinach","suszonymi żurawinami","żurawin suszonych","żurawinach suszonych","żurawinami suszonymi","żurawiną suszoną","żurawinę suszoną","żurawinie suszonej","żurawiny suszone","żurawiny suszonej"]
   },
   {
@@ -1705,60 +1705,60 @@
     "defaultPortion": "sztuka",
     "aliases": ["daktyl","figi suszone","morele suszone","śliwki suszone"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; suszone",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #171726: Dates, deglet noor",
+    "verified": true,
     "forms": ["daktyla","daktylach","daktylami","daktylem","daktyli","daktylów","daktylu","daktyly","fidze suszonej","fidze suszonym","fig suszona","fig suszoną","fig suszonego","fig suszony","fig suszonych","figa suszona","figa suszoną","figa suszonego","figa suszonej","figa suszony","figach suszonych","figami suszonymi","figą suszoną","figą suszonym","figę suszoną","figę suszonego","figę suszony","figi suszoną","figi suszonego","figi suszonej","figi suszony","figiem suszoną","figiem suszonym","figów suszonych","figu suszonego","figu suszonej","figu suszonym","morel suszonych","morela suszone","morela suszonego","morelach suszonych","morelami suszonymi","morele suszonego","morelem suszonym","morelu suszonym","suszona fig","suszona figa","suszona śliwek","suszona śliwka","suszoną fig","suszoną figa","suszoną figą","suszoną figę","suszoną figi","suszoną figiem","suszoną śliwek","suszoną śliwka","suszoną śliwką","suszoną śliwkę","suszoną śliwki","suszoną śliwkiem","suszone figi","suszone morela","suszone morele","suszone śliwki","suszonego fig","suszonego figa","suszonego figę","suszonego figi","suszonego figu","suszonego morela","suszonego morele","suszonego śliwek","suszonego śliwka","suszonego śliwkę","suszonego śliwki","suszonego śliwku","suszonej fidze","suszonej figa","suszonej figi","suszonej figu","suszonej śliwce","suszonej śliwka","suszonej śliwki","suszonej śliwku","suszony fig","suszony figa","suszony figę","suszony figi","suszony śliwek","suszony śliwka","suszony śliwkę","suszony śliwki","suszonych fig","suszonych figach","suszonych figów","suszonych morel","suszonych morelach","suszonych śliwek","suszonych śliwkach","suszonych śliwków","suszonym fidze","suszonym figą","suszonym figiem","suszonym figu","suszonym morelem","suszonym morelu","suszonym śliwce","suszonym śliwką","suszonym śliwkiem","suszonym śliwku","suszonymi figami","suszonymi morelami","suszonymi śliwkami","śliwce suszonej","śliwce suszonym","śliwek suszona","śliwek suszoną","śliwek suszonego","śliwek suszony","śliwek suszonych","śliwka suszona","śliwka suszoną","śliwka suszonego","śliwka suszonej","śliwka suszony","śliwkach suszonych","śliwkami suszonymi","śliwką suszoną","śliwką suszonym","śliwkę suszoną","śliwkę suszonego","śliwkę suszony","śliwki suszoną","śliwki suszonego","śliwki suszonej","śliwki suszony","śliwkiem suszoną","śliwkiem suszonym","śliwków suszonych","śliwku suszonego","śliwku suszonej","śliwku suszonym"]
   },
   {
     "id": "orzechy-wloskie",
     "name": "orzechy włoskie",
-    "per100": {"kcal": 654, "carbs": 13.7, "protein": 15, "fat": 65},
+    "per100": {"kcal": 654, "carbs": 13.7, "protein": 15.2, "fat": 65.2},
     "portions": {"garsc": 30, "sztuka": 5, "lyzka": 10},
     "defaultPortion": "garsc",
     "addon": {"qty": 15, "unit": "g"},
     "aliases": ["orzechy","orzech włoski","orzeszki","mix orzechów","orzechy laskowe","orzechy nerkowca","nerkowce"],
     "forms": ["laskowa orzech","laskowa orzecha","laskową orzech","laskową orzecha","laskową orzechą","laskową orzechem","laskową orzechę","laskową orzechy","laskowe orzechy","laskowego orzech","laskowego orzecha","laskowego orzechę","laskowego orzechu","laskowego orzechy","laskowej orzecha","laskowej orzechu","laskowej orzechy","laskowej orzesze","laskowy orzech","laskowy orzecha","laskowy orzechę","laskowy orzechy","laskowych orzech","laskowych orzechach","laskowych orzechów","laskowym orzechą","laskowym orzechem","laskowym orzechu","laskowym orzesze","laskowymi orzechami","mixa orzechów","mixach orzechów","mixami orzechów","mixem orzechów","mixów orzechów","mixu orzechów","mixy orzechów","nerkowc","nerkowca","nerkowcach","nerkowcami","nerkowcem","nerkowcu","orzech","orzech laskowa","orzech laskową","orzech laskowego","orzech laskowy","orzech laskowych","orzech nerkowca","orzech włoska","orzech włoską","orzech włoskich","orzech włoskiego","orzecha","orzecha laskowa","orzecha laskową","orzecha laskowego","orzecha laskowej","orzecha laskowy","orzecha nerkowca","orzecha włoska","orzecha włoską","orzecha włoski","orzecha włoskiego","orzecha włoskiej","orzechach","orzechach laskowych","orzechach nerkowca","orzechach włoskich","orzechami","orzechami laskowymi","orzechami nerkowca","orzechami włoskimi","orzechą","orzechą laskową","orzechą laskowym","orzechą nerkowca","orzechą włoską","orzechą włoskim","orzechem","orzechem laskową","orzechem laskowym","orzechem nerkowca","orzechem włoską","orzechem włoskim","orzechę","orzechę laskową","orzechę laskowego","orzechę laskowy","orzechę nerkowca","orzechę włoską","orzechę włoski","orzechę włoskiego","orzechów","orzechów laskowych","orzechów nerkowca","orzechów włoskich","orzechu","orzechu laskowego","orzechu laskowej","orzechu laskowym","orzechu nerkowca","orzechu włoskiego","orzechu włoskiej","orzechu włoskim","orzechy laskową","orzechy laskowego","orzechy laskowej","orzechy laskowy","orzechy włoską","orzechy włoski","orzechy włoskiego","orzechy włoskiej","orzeszce","orzesze","orzesze laskowej","orzesze laskowym","orzesze nerkowca","orzesze włoskiej","orzesze włoskim","orzeszek","orzeszka","orzeszkach","orzeszkami","orzeszką","orzeszkę","orzeszkich","orzeszkie","orzeszkiego","orzeszkiem","orzeszkim","orzeszkimi","orzeszków","orzeszku","włoska orzech","włoska orzecha","włoską orzech","włoską orzecha","włoską orzechą","włoską orzechem","włoską orzechę","włoską orzechy","włoski orzech","włoski orzecha","włoski orzechę","włoski orzechy","włoskich orzech","włoskich orzechach","włoskich orzechów","włoskie orzechy","włoskiego orzech","włoskiego orzecha","włoskiego orzechę","włoskiego orzechu","włoskiego orzechy","włoskiej orzecha","włoskiej orzechu","włoskiej orzechy","włoskiej orzesze","włoskim orzechą","włoskim orzechem","włoskim orzechu","włoskim orzesze","włoskimi orzechami"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170187: Nuts, walnuts, english",
+    "verified": true
   },
   {
     "id": "migdaly",
     "name": "migdały",
-    "per100": {"kcal": 579, "carbs": 21.6, "protein": 21, "fat": 50},
+    "per100": {"kcal": 579, "carbs": 21.6, "protein": 21.2, "fat": 49.9},
     "portions": {"garsc": 30, "sztuka": 1.2},
     "defaultPortion": "garsc",
     "addon": {"qty": 15, "unit": "g"},
     "aliases": ["migdał"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170567: Nuts, almonds",
+    "verified": true,
     "forms": ["migdale","migdała","migdałach","migdałami","migdałą","migdałe","migdałego","migdałem","migdałę","migdałów","migdału","migdałych","migdałym","migdałymi"]
   },
   {
     "id": "orzeszki-ziemne",
     "name": "orzeszki ziemne",
-    "per100": {"kcal": 585, "carbs": 16, "protein": 26, "fat": 49},
+    "per100": {"kcal": 587, "carbs": 21.3, "protein": 24.4, "fat": 49.7},
     "portions": {"garsc": 30, "opakowanie": 100},
     "defaultPortion": "garsc",
     "aliases": ["orzeszki solone","fistaszki","pistacje"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; prażone",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #173806: Peanuts, all types, dry-roasted, without salt",
+    "verified": true,
     "forms": ["fistaszce","fistaszek","fistaszka","fistaszkach","fistaszkami","fistaszką","fistaszkę","fistaszkich","fistaszkie","fistaszkiego","fistaszkiem","fistaszkim","fistaszkimi","fistaszków","fistaszku","orzeszce solonej","orzeszce solonym","orzeszce ziemnej","orzeszce ziemnym","orzeszek solona","orzeszek soloną","orzeszek solonego","orzeszek solony","orzeszek solonych","orzeszek ziemna","orzeszek ziemną","orzeszek ziemnego","orzeszek ziemny","orzeszek ziemnych","orzeszka solona","orzeszka soloną","orzeszka solonego","orzeszka solonej","orzeszka solony","orzeszka ziemna","orzeszka ziemną","orzeszka ziemnego","orzeszka ziemnej","orzeszka ziemny","orzeszkach solonych","orzeszkach ziemnych","orzeszkami solonymi","orzeszkami ziemnymi","orzeszką soloną","orzeszką solonym","orzeszką ziemną","orzeszką ziemnym","orzeszkę soloną","orzeszkę solonego","orzeszkę solony","orzeszkę ziemną","orzeszkę ziemnego","orzeszkę ziemny","orzeszki soloną","orzeszki solonego","orzeszki solonej","orzeszki solony","orzeszki ziemną","orzeszki ziemnego","orzeszki ziemnej","orzeszki ziemny","orzeszkiem soloną","orzeszkiem solonym","orzeszkiem ziemną","orzeszkiem ziemnym","orzeszków solonych","orzeszków ziemnych","orzeszku solonego","orzeszku solonej","orzeszku solonym","orzeszku ziemnego","orzeszku ziemnej","orzeszku ziemnym","pistacj","pistacja","pistacjach","pistacjami","pistacjem","pistacju","solona orzeszek","solona orzeszka","soloną orzeszek","soloną orzeszka","soloną orzeszką","soloną orzeszkę","soloną orzeszki","soloną orzeszkiem","solone orzeszki","solonego orzeszek","solonego orzeszka","solonego orzeszkę","solonego orzeszki","solonego orzeszku","solonej orzeszce","solonej orzeszka","solonej orzeszki","solonej orzeszku","solony orzeszek","solony orzeszka","solony orzeszkę","solony orzeszki","solonych orzeszek","solonych orzeszkach","solonych orzeszków","solonym orzeszce","solonym orzeszką","solonym orzeszkiem","solonym orzeszku","solonymi orzeszkami","ziemna orzeszek","ziemna orzeszka","ziemną orzeszek","ziemną orzeszka","ziemną orzeszką","ziemną orzeszkę","ziemną orzeszki","ziemną orzeszkiem","ziemne orzeszki","ziemnego orzeszek","ziemnego orzeszka","ziemnego orzeszkę","ziemnego orzeszki","ziemnego orzeszku","ziemnej orzeszce","ziemnej orzeszka","ziemnej orzeszki","ziemnej orzeszku","ziemny orzeszek","ziemny orzeszka","ziemny orzeszkę","ziemny orzeszki","ziemnych orzeszek","ziemnych orzeszkach","ziemnych orzeszków","ziemnym orzeszce","ziemnym orzeszką","ziemnym orzeszkiem","ziemnym orzeszku","ziemnymi orzeszkami"]
   },
   {
     "id": "pestki",
     "name": "pestki dyni",
-    "per100": {"kcal": 560, "carbs": 11, "protein": 30, "fat": 46},
+    "per100": {"kcal": 559, "carbs": 10.7, "protein": 30.2, "fat": 49.1},
     "portions": {"lyzka": 10, "garsc": 25},
     "defaultPortion": "lyzka",
     "addon": {"qty": 1, "unit": "lyzka"},
     "aliases": ["pestki","słonecznik","pestki słonecznika","nasiona chia","siemię lniane"],
     "forms": ["chia","dyni pestek","dyni pestka","dyni pestkę","dyni pestki","dynia pestek","dynia pestka","dynią pestek","dynią pestka","dynią pestką","dynią pestkę","dynią pestki","dynią pestkiem","dynich pestek","dynich pestkach","dynich pestków","dynie pestki","dyniego pestek","dyniego pestka","dyniego pestkę","dyniego pestki","dyniego pestku","dyniej pestce","dyniej pestka","dyniej pestki","dyniej pestku","dynim pestce","dynim pestką","dynim pestkiem","dynim pestku","dynimi pestkami","lniane siemia","lniane siemię","lnianego siemia","lnianego siemię","lnianych siemi","lnianych siemiach","lnianym siemiem","lnianym siemiu","lnianymi siemiami","nasion chia","nasionach chia","nasionami chia","nasioną chia","nasionę chia","nasionie chia","nasiony chia","pestce","pestce dyniej","pestce dynim","pestce słonecznikiej","pestce słonecznikim","pestek","pestek dyni","pestek dynia","pestek dynią","pestek dynich","pestek dyniego","pestek słonecznika","pestek słoneczniką","pestek słoneczniki","pestek słonecznikich","pestek słonecznikiego","pestka","pestka dyni","pestka dynia","pestka dynią","pestka dyniego","pestka dyniej","pestka słonecznika","pestka słoneczniką","pestka słoneczniki","pestka słonecznikiego","pestka słonecznikiej","pestkach","pestkach dynich","pestkach słonecznikich","pestkami","pestkami dynimi","pestkami słonecznikimi","pestką","pestką dynią","pestką dynim","pestką słoneczniką","pestką słonecznikim","pestkę","pestkę dyni","pestkę dynią","pestkę dyniego","pestkę słoneczniką","pestkę słoneczniki","pestkę słonecznikiego","pestki dynią","pestki dynie","pestki dyniego","pestki dyniej","pestki słoneczniką","pestki słoneczniki","pestki słonecznikie","pestki słonecznikiego","pestki słonecznikiej","pestkich","pestkie","pestkiego","pestkiem","pestkiem dynią","pestkiem dynim","pestkiem słoneczniką","pestkiem słonecznikim","pestkim","pestkimi","pestków","pestków dynich","pestków słonecznikich","pestku","pestku dyniego","pestku dyniej","pestku dynim","pestku słonecznikiego","pestku słonecznikiej","pestku słonecznikim","siemi lnianych","siemia lniane","siemia lnianego","siemiach lnianych","siemiami lnianymi","siemiem lnianym","siemię lnianego","siemiu lnianym","słonecznika","słonecznika pestek","słonecznika pestka","słonecznikach","słonecznikami","słoneczniką pestek","słoneczniką pestka","słoneczniką pestką","słoneczniką pestkę","słoneczniką pestki","słoneczniką pestkiem","słoneczniki","słoneczniki pestek","słoneczniki pestka","słoneczniki pestkę","słoneczniki pestki","słonecznikich pestek","słonecznikich pestkach","słonecznikich pestków","słonecznikie pestki","słonecznikiego pestek","słonecznikiego pestka","słonecznikiego pestkę","słonecznikiego pestki","słonecznikiego pestku","słonecznikiej pestce","słonecznikiej pestka","słonecznikiej pestki","słonecznikiej pestku","słonecznikiem","słonecznikim pestce","słonecznikim pestką","słonecznikim pestkiem","słonecznikim pestku","słonecznikimi pestkami","słoneczników","słoneczniku"],
     "category": "owoce i orzechy",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170556: Seeds, pumpkin and squash seed kernels, dried",
+    "verified": true
   },
   {
     "id": "olej",
@@ -1771,8 +1771,8 @@
     "aliases": ["olej","olej słonecznikowy","tłuszcz"],
     "forms": ["olej rzepakowego","olej słonecznikowego","oleja","oleja rzepakowego","oleja rzepakowy","oleja słonecznikowego","oleja słonecznikowy","olejach","olejach rzepakowych","olejach słonecznikowych","olejami","olejami rzepakowymi","olejami słonecznikowymi","oleje","oleje rzepakowe","oleje słonecznikowe","olejem","olejem rzepakowym","olejem słonecznikowym","oleji","oleji rzepakowych","oleji słonecznikowych","olejów","olejów rzepakowych","olejów słonecznikowych","oleju","oleju rzepakowego","oleju rzepakowym","oleju słonecznikowego","oleju słonecznikowym","olejy","olejy rzepakowych","olejy słonecznikowych","rzepakowe oleje","rzepakowego olej","rzepakowego oleja","rzepakowego oleju","rzepakowy olej","rzepakowy oleja","rzepakowych olejach","rzepakowych oleji","rzepakowych olejów","rzepakowych olejy","rzepakowym olejem","rzepakowym oleju","rzepakowymi olejami","słonecznikowe oleje","słonecznikowego olej","słonecznikowego oleja","słonecznikowego oleju","słonecznikowy olej","słonecznikowy oleja","słonecznikowych olejach","słonecznikowych oleji","słonecznikowych olejów","słonecznikowych olejy","słonecznikowym olejem","słonecznikowym oleju","słonecznikowymi olejami","tłuszcza","tłuszczach","tłuszczami","tłuszcze","tłuszczem","tłuszczi","tłuszczów","tłuszczu","tłuszczy"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #172336: Oil, canola",
+    "verified": true
   },
   {
     "id": "oliwa",
@@ -1782,34 +1782,34 @@
     "aliases": ["oliwa"],
     "forms": ["oliw","oliw z oliwek","oliwach","oliwach z oliwek","oliwami","oliwami z oliwek","oliwą","oliwą z oliwek","oliwe","oliwej","oliwę","oliwę z oliwek","oliwie","oliwie z oliwek","oliwy","oliwy z oliwek","oliwych","oliwymi"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171413: Oil, olive, salad or cooking",
+    "verified": true
   },
   {
     "id": "majonez",
     "name": "majonez",
-    "per100": {"kcal": 680, "carbs": 1, "protein": 1, "fat": 75},
+    "per100": {"kcal": 680, "carbs": 0.6, "protein": 1, "fat": 74.9},
     "portions": {"lyzka": 15, "lyzeczka": 6},
     "defaultPortion": "lyzka",
     "addon": {"qty": 2, "unit": "lyzeczka"},
     "aliases": ["majonezik"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #171009: Salad dressing, mayonnaise, regular",
+    "verified": true,
     "forms": ["majoneza","majonezach","majonezami","majonezem","majonezie","majonezika","majonezikach","majonezikami","majoneziki","majonezikiem","majonezików","majoneziku","majonezów","majonezu","majonezy"]
   },
   {
     "id": "keczup",
     "name": "keczup",
-    "per100": {"kcal": 100, "carbs": 24, "protein": 1.5, "fat": 0.2},
+    "per100": {"kcal": 101, "carbs": 27.4, "protein": 1, "fat": 0.1},
     "portions": {"lyzka": 15, "lyzeczka": 6},
     "defaultPortion": "lyzka",
     "addon": {"qty": 1, "unit": "lyzka"},
     "aliases": ["ketchup","sos pomidorowy"],
     "forms": ["keczupa","keczupach","keczupami","keczupem","keczupie","keczupów","keczupu","keczupy","ketchupa","ketchupach","ketchupami","ketchupem","ketchupie","ketchupów","ketchupu","ketchupy","pomidorowe sosy","pomidorowego sos","pomidorowego sosa","pomidorowego sosu","pomidorowy sos","pomidorowy sosa","pomidorowych sosach","pomidorowych sosów","pomidorowym sosem","pomidorowym sosie","pomidorowym sosu","pomidorowymi sosami","sos pomidorowego","sosa pomidorowego","sosa pomidorowy","sosach pomidorowych","sosami pomidorowymi","sosem pomidorowym","sosie pomidorowym","sosów pomidorowych","sosu pomidorowego","sosu pomidorowym","sosy pomidorowe"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #168556: Catsup",
+    "verified": true
   },
   {
     "id": "musztarda",
@@ -1866,67 +1866,67 @@
   {
     "id": "miod",
     "name": "miód",
-    "per100": {"kcal": 304, "carbs": 82, "protein": 0.3, "fat": 0},
+    "per100": {"kcal": 304, "carbs": 82.4, "protein": 0.3, "fat": 0},
     "portions": {"lyzeczka": 12, "lyzka": 21},
     "defaultPortion": "lyzeczka",
     "addon": {"qty": 1, "unit": "lyzeczka"},
     "aliases": ["miodek","syrop klonowy"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #169640: Honey",
+    "verified": true,
     "forms": ["klonowe syropy","klonowego syrop","klonowego syropa","klonowego syropu","klonowy syrop","klonowy syropa","klonowych syropach","klonowych syropów","klonowym syropem","klonowym syropie","klonowym syropu","klonowymi syropami","mioda","miodach","miodami","miodem","miodka","miodkach","miodkami","miodki","miodkiem","miodków","miodku","miodów","miodu","miody","miodzie","syrop klonowego","syropa klonowego","syropa klonowy","syropach klonowych","syropami klonowymi","syropem klonowym","syropie klonowym","syropów klonowych","syropu klonowego","syropu klonowym","syropy klonowe"]
   },
   {
     "id": "cukier",
     "name": "cukier",
-    "per100": {"kcal": 400, "carbs": 100, "protein": 0, "fat": 0},
+    "per100": {"kcal": 387, "carbs": 100, "protein": 0, "fat": 0},
     "portions": {"lyzeczka": 5, "lyzka": 12, "kostka": 4},
     "defaultPortion": "lyzeczka",
     "addon": {"qty": 1, "unit": "lyzeczka"},
     "aliases": ["cukier biały","cukier brązowy"],
     "forms": ["białe cukiery","białego cukier","białego cukiera","białego cukieru","biały cukier","biały cukiera","białych cukierach","białych cukierów","białym cukierem","białym cukieru","białym cukierze","białymi cukierami","brązowe cukiery","brązowego cukier","brązowego cukiera","brązowego cukieru","brązowy cukier","brązowy cukiera","brązowych cukierach","brązowych cukierów","brązowym cukierem","brązowym cukieru","brązowym cukierze","brązowymi cukierami","cukier białego","cukier brązowego","cukiera","cukiera białego","cukiera biały","cukiera brązowego","cukiera brązowy","cukierach","cukierach białych","cukierach brązowych","cukierami","cukierami białymi","cukierami brązowymi","cukierem","cukierem białym","cukierem brązowym","cukierów","cukierów białych","cukierów brązowych","cukieru","cukieru białego","cukieru białym","cukieru brązowego","cukieru brązowym","cukiery","cukiery białe","cukiery brązowe","cukierze","cukierze białym","cukierze brązowym","cukrem","cukrów","cukru"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169655: Sugars, granulated",
+    "verified": true
   },
   {
     "id": "krem-czekoladowy",
     "name": "krem czekoladowy",
-    "per100": {"kcal": 540, "carbs": 58, "protein": 6, "fat": 31},
+    "per100": {"kcal": 539, "carbs": 62.4, "protein": 5.4, "fat": 29.7},
     "portions": {"lyzeczka": 12, "lyzka": 25},
     "defaultPortion": "lyzeczka",
     "addon": {"qty": 2, "unit": "lyzeczka"},
     "aliases": ["nutella","krem orzechowy"],
     "forms": ["czekoladowe kremy","czekoladowego krem","czekoladowego krema","czekoladowego kremu","czekoladowy krem","czekoladowy krema","czekoladowych kremach","czekoladowych kremów","czekoladowym kremem","czekoladowym kremie","czekoladowym kremu","czekoladowymi kremami","krem czekoladowego","krem orzechowego","krema czekoladowego","krema czekoladowy","krema orzechowego","krema orzechowy","kremach czekoladowych","kremach orzechowych","kremami czekoladowymi","kremami orzechowymi","kremem czekoladowym","kremem orzechowym","kremie czekoladowym","kremie orzechowym","kremów czekoladowych","kremów orzechowych","kremu czekoladowego","kremu czekoladowym","kremu orzechowego","kremu orzechowym","kremy czekoladowe","kremy orzechowe","nutell","nutellach","nutellami","nutellą","nutellę","nutelli","orzechowe kremy","orzechowego krem","orzechowego krema","orzechowego kremu","orzechowy krem","orzechowy krema","orzechowych kremach","orzechowych kremów","orzechowym kremem","orzechowym kremie","orzechowym kremu","orzechowymi kremami"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #168000: Chocolate-flavored hazelnut spread",
+    "verified": true
   },
   {
     "id": "maslo-orzechowe",
     "name": "masło orzechowe",
-    "per100": {"kcal": 588, "carbs": 20, "protein": 25, "fat": 50},
+    "per100": {"kcal": 598, "carbs": 22.3, "protein": 22.2, "fat": 51.4},
     "portions": {"lyzeczka": 8, "lyzka": 16},
     "defaultPortion": "lyzka",
     "addon": {"qty": 1, "unit": "lyzka"},
     "aliases": ["masło z orzeszków"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #172470: Peanut butter, smooth style, without salt",
+    "verified": true,
     "forms": ["masł orzechowych","masł z orzeszków","masła orzechowe","masła orzechowego","masła z orzeszków","masłach orzechowych","masłach z orzeszków","masłami orzechowymi","masłami z orzeszków","masłem orzechowym","masłem z orzeszków","masło orzechowego","masłu orzechowym","masłu z orzeszków","maśle orzechowym","maśle z orzeszków","orzechowe masła","orzechowe masło","orzechowego masła","orzechowego masło","orzechowych masł","orzechowych masłach","orzechowym masłem","orzechowym masłu","orzechowym maśle","orzechowymi masłami"]
   },
   {
     "id": "hummus",
     "name": "hummus",
-    "per100": {"kcal": 170, "carbs": 14, "protein": 8, "fat": 10},
+    "per100": {"kcal": 237, "carbs": 15, "protein": 7.8, "fat": 17.8},
     "portions": {"lyzka": 20},
     "defaultPortion": "lyzka",
     "addon": {"qty": 2, "unit": "lyzka"},
     "aliases": [],
     "forms": ["hummusa","hummusach","hummusami","hummusem","hummusie","hummusów","hummusu","hummusy","humus","humusem"],
     "category": "dodatki",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #174289: Hummus, commercial",
+    "verified": true
   },
   {
     "id": "kakao-proszek",
@@ -1943,39 +1943,39 @@
   {
     "id": "kawa",
     "name": "kawa czarna",
-    "per100": {"kcal": 2, "carbs": 0, "protein": 0.3, "fat": 0},
+    "per100": {"kcal": 1, "carbs": 0, "protein": 0.1, "fat": 0},
     "portions": {"kubek": 250, "filizanka": 150, "szklanka": 250},
     "defaultPortion": "kubek",
     "aliases": ["kawa","kawka","kawa czarna bez cukru","americano","kawa z ekspresu","kawa rozpuszczalna","kawa parzona"],
     "forms": ["american","americana","americanach","americanami","americanem","americanie","americanu","czarna kawa","czarną kawą","czarną kawę","czarne kawy","czarnej kawie","czarnej kawy","czarnych kaw","czarnych kawach","czarnymi kawami","kaw","kaw czarnych","kaw czarnych bez cukru","kaw parzonych","kaw rozpuszczalnych","kaw z ekspresu","kawach","kawach czarnych","kawach czarnych bez cukru","kawach parzonych","kawach rozpuszczalnych","kawach z ekspresu","kawami","kawami czarnymi","kawami czarnymi bez cukru","kawami parzonymi","kawami rozpuszczalnymi","kawami z ekspresu","kawą","kawą czarną","kawą czarną bez cukru","kawą parzoną","kawą rozpuszczalną","kawą z ekspresu","kawce","kawe","kawej","kawek","kawę","kawę czarną","kawę czarną bez cukru","kawę parzoną","kawę rozpuszczalną","kawę z ekspresu","kawie","kawie czarnej","kawie czarnej bez cukru","kawie parzonej","kawie rozpuszczalnej","kawie z ekspresu","kawkach","kawkami","kawką","kawkę","kawki","kawkich","kawkie","kawkiej","kawkimi","kawy","kawy czarne","kawy czarne bez cukru","kawy czarnej","kawy czarnej bez cukru","kawy parzone","kawy parzonej","kawy rozpuszczalne","kawy rozpuszczalnej","kawy z ekspresu","kawych","kawymi","parzona kawa","parzoną kawą","parzoną kawę","parzone kawy","parzonej kawie","parzonej kawy","parzonych kaw","parzonych kawach","parzonymi kawami","rozpuszczalna kawa","rozpuszczalną kawą","rozpuszczalną kawę","rozpuszczalne kawy","rozpuszczalnej kawie","rozpuszczalnej kawy","rozpuszczalnych kaw","rozpuszczalnych kawach","rozpuszczalnymi kawami"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #171890: Beverages, coffee, brewed, prepared with tap water",
+    "verified": true
   },
   {
     "id": "espresso",
     "name": "espresso",
     "parentId": "kawa",
-    "per100": {"kcal": 2, "carbs": 0, "protein": 0.1, "fat": 0.2},
+    "per100": {"kcal": 9, "carbs": 1.7, "protein": 0.1, "fat": 0.2},
     "portions": {"filizanka": 30, "kubek": 30},
     "defaultPortion": "filizanka",
     "aliases": ["kawa espresso","doppio"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #171891: Beverages, coffee, brewed, espresso, restaurant-prepared",
+    "verified": true,
     "forms": ["doppi","doppia","doppiach","doppiami","doppiem","doppiu","kaw espresso","kawach espresso","kawami espresso","kawą espresso","kawę espresso","kawie espresso","kawy espresso"]
   },
   {
     "id": "herbata",
     "name": "herbata",
-    "per100": {"kcal": 1, "carbs": 0.2, "protein": 0, "fat": 0},
+    "per100": {"kcal": 1, "carbs": 0.3, "protein": 0, "fat": 0},
     "portions": {"kubek": 250, "szklanka": 250, "filizanka": 200},
     "defaultPortion": "kubek",
     "aliases": ["herbatka","herbata czarna","herbata zielona","herbata owocowa","napar","mięta","rumianek"],
     "forms": ["czarna herbata","czarną herbatą","czarną herbatę","czarne herbaty","czarnej herbacie","czarnej herbaty","czarnych herbat","czarnych herbatach","czarnymi herbatami","herbacie","herbacie czarnej","herbacie owocowej","herbacie zielonej","herbat","herbat czarnych","herbat owocowych","herbat zielonych","herbatach","herbatach czarnych","herbatach owocowych","herbatach zielonych","herbatami","herbatami czarnymi","herbatami owocowymi","herbatami zielonymi","herbatą","herbatą czarną","herbatą owocową","herbatą zieloną","herbatce","herbate","herbatej","herbatek","herbatę","herbatę czarną","herbatę owocową","herbatę zieloną","herbatkach","herbatkami","herbatką","herbatkę","herbatki","herbatkich","herbatkie","herbatkiej","herbatkimi","herbaty","herbaty czarne","herbaty czarnej","herbaty owocowe","herbaty owocowej","herbaty zielone","herbaty zielonej","herbatych","herbatymi","mięcie","mięt","miętach","miętami","miętą","mięte","miętej","miętę","mięty","miętych","miętymi","napara","naparach","naparami","naparem","naparów","naparu","napary","naparze","owocowa herbata","owocową herbatą","owocową herbatę","owocowe herbaty","owocowej herbacie","owocowej herbaty","owocowych herbat","owocowych herbatach","owocowymi herbatami","rumianka","rumiankach","rumiankami","rumianki","rumiankiem","rumianków","rumianku","zielona herbata","zieloną herbatą","zieloną herbatę","zielone herbaty","zielonej herbacie","zielonej herbaty","zielonych herbat","zielonych herbatach","zielonymi herbatami"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #173227: Beverages, tea, black, brewed, prepared with tap water",
+    "verified": true
   },
   {
     "id": "woda",
@@ -1999,8 +1999,8 @@
     "aliases": ["sok","sok owocowy","soczek","sok multiwitamina"],
     "forms": ["multiwitamine soki","multiwitaminego sok","multiwitaminego soka","multiwitaminego soku","multiwitaminy sok","multiwitaminy soka","multiwitaminych sokach","multiwitaminych soków","multiwitaminym sokiem","multiwitaminym soku","multiwitaminymi sokami","owocowe soki","owocowego sok","owocowego soka","owocowego soku","owocowy sok","owocowy soka","owocowych sokach","owocowych soków","owocowym sokiem","owocowym soku","owocowymi sokami","pomarańczowe soki","pomarańczowego sok","pomarańczowego soka","pomarańczowego soku","pomarańczowy sok","pomarańczowy soka","pomarańczowych sokach","pomarańczowych soków","pomarańczowym sokiem","pomarańczowym soku","pomarańczowymi sokami","soczka","soczkach","soczkami","soczki","soczkiem","soczków","soczku","sok multiwitaminego","sok multiwitaminy","sok owocowego","sok pomarańczowego","soka","soka multiwitaminego","soka multiwitaminy","soka owocowego","soka owocowy","soka pomarańczowego","soka pomarańczowy","sokach","sokach multiwitaminych","sokach owocowych","sokach pomarańczowych","sokami","sokami multiwitaminymi","sokami owocowymi","sokami pomarańczowymi","soki","soki multiwitamine","soki owocowe","soki pomarańczowe","sokiem","sokiem multiwitaminym","sokiem owocowym","sokiem pomarańczowym","soków","soków multiwitaminych","soków owocowych","soków pomarańczowych","soku","soku multiwitaminego","soku multiwitaminym","soku owocowego","soku owocowym","soku pomarańczowego","soku pomarańczowym"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169098: Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+    "verified": true
   },
   {
     "id": "sok-jablkowy",
@@ -2009,22 +2009,22 @@
     "per100": {"kcal": 46, "carbs": 11.3, "protein": 0.1, "fat": 0.1},
     "aliases": [],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #173933: Apple juice, canned or bottled, unsweetened, without added ascorbic acid",
+    "verified": true,
     "forms": ["jabłkowe soki","jabłkowego sok","jabłkowego soka","jabłkowego soku","jabłkowy sok","jabłkowy soka","jabłkowych sokach","jabłkowych soków","jabłkowym sokiem","jabłkowym soku","jabłkowymi sokami","sok jabłkowego","soka jabłkowego","soka jabłkowy","sokach jabłkowych","sokami jabłkowymi","soki jabłkowe","sokiem jabłkowym","soków jabłkowych","soku jabłkowego","soku jabłkowym"]
   },
   {
     "id": "cola",
     "name": "cola",
-    "per100": {"kcal": 42, "carbs": 10.6, "protein": 0, "fat": 0},
+    "per100": {"kcal": 41, "carbs": 10.6, "protein": 0, "fat": 0},
     "portions": {"puszka": 330, "butelka": 500, "szklanka": 250},
     "defaultPortion": "szklanka",
     "density": 1.04,
     "aliases": ["coca cola","pepsi","napój gazowany","oranżada","fanta","sprite","napój słodzony"],
     "forms": ["coc cola","cocach cola","cocami cola","cocą cola","cocę cola","cocy cola","colą","colę","coli","fancie","fant","fantach","fantami","fantą","fante","fantej","fantę","fanty","fantych","fantymi","gazowane napoje","gazowanego napoja","gazowanego napoju","gazowanego napój","gazowany napoja","gazowany napój","gazowanych napojach","gazowanych napoji","gazowanych napojów","gazowanych napojy","gazowanym napojem","gazowanym napoju","gazowanymi napojami","napoja gazowanego","napoja gazowany","napoja słodzonego","napoja słodzony","napojach gazowanych","napojach słodzonych","napojami gazowanymi","napojami słodzonymi","napoje gazowane","napoje słodzone","napojem gazowanym","napojem słodzonym","napoji gazowanych","napoji słodzonych","napojów gazowanych","napojów słodzonych","napoju gazowanego","napoju gazowanym","napoju słodzonego","napoju słodzonym","napojy gazowanych","napojy słodzonych","napój gazowanego","napój słodzonego","oranżad","oranżadach","oranżadami","oranżadą","oranżade","oranżadej","oranżadę","oranżady","oranżadych","oranżadymi","oranżadzie","peps","pepsa","pepsach","pepsami","pepsą","pepsem","pepsę","pepsie","pepsów","pepsu","pepsy","słodzone napoje","słodzonego napoja","słodzonego napoju","słodzonego napój","słodzony napoja","słodzony napój","słodzonych napojach","słodzonych napoji","słodzonych napojów","słodzonych napojy","słodzonym napojem","słodzonym napoju","słodzonymi napojami","sprit","sprita","spritach","spritami","spritą","spritego","spritej","spritem","spritu","sprity","spritych","spritym","spritymi"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #174851: Beverages, carbonated, cola, without caffeine",
+    "verified": true
   },
   {
     "id": "cola-zero",
@@ -2040,15 +2040,15 @@
   {
     "id": "napoj-energetyczny",
     "name": "napój energetyczny",
-    "per100": {"kcal": 45, "carbs": 11, "protein": 0, "fat": 0},
+    "per100": {"kcal": 43, "carbs": 10.2, "protein": 0.5, "fat": 0},
     "portions": {"puszka": 250},
     "defaultPortion": "puszka",
     "density": 1.04,
     "aliases": ["energetyk","red bull","monster","tiger"],
     "forms": ["energetyczne napoje","energetycznego napoja","energetycznego napoju","energetycznego napój","energetyczny napoja","energetyczny napój","energetycznych napojach","energetycznych napoji","energetycznych napojów","energetycznych napojy","energetycznym napojem","energetycznym napoju","energetycznymi napojami","energetyka","energetykach","energetykami","energetyki","energetykiem","energetyków","energetyku","monstera","monsterach","monsterami","monsterem","monsterów","monsteru","monstery","monsterze","napoja energetycznego","napoja energetyczny","napojach energetycznych","napojami energetycznymi","napoje energetyczne","napojem energetycznym","napoji energetycznych","napojów energetycznych","napoju energetycznego","napoju energetycznym","napojy energetycznych","napój energetycznego","reda bull","redach bull","redami bull","redem bull","redów bull","redu bull","redy bull","redzie bull","tigera","tigerach","tigerami","tigerem","tigerów","tigeru","tigery","tigerze"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #173210: Beverages, Energy drink, RED BULL",
+    "verified": true
   },
   {
     "id": "piwo",
@@ -2059,8 +2059,8 @@
     "aliases": ["piwko","piwo jasne","lager"],
     "forms": ["jasne piwa","jasne piwo","jasnego piwa","jasnego piwo","jasnych piw","jasnych piwach","jasnym piwem","jasnym piwie","jasnym piwu","jasnymi piwami","lagera","lagerach","lagerami","lagerem","lagerów","lageru","lagery","lagerze","piw","piw jasnych","piwa","piwa jasne","piwa jasnego","piwach","piwach jasnych","piwami","piwami jasnymi","piwek","piwem","piwem jasnym","piwie","piwie jasnym","piwka","piwkach","piwkami","piwkiem","piwku","piwo jasnego","piwu","piwu jasnym"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #168746: Alcoholic beverage, beer, regular, all",
+    "verified": true
   },
   {
     "id": "piwo-bezalkoholowe",
@@ -2081,33 +2081,33 @@
     "defaultPortion": "kieliszek",
     "aliases": ["wino","wino białe","wino wytrawne"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #173190: Alcoholic beverage, wine, table, red",
+    "verified": true,
     "forms": ["białe wina","białe wino","białego wina","białego wino","białych win","białych winach","białym winem","białym winie","białym winu","białymi winami","czerwone wina","czerwone wino","czerwonego wina","czerwonego wino","czerwonych win","czerwonych winach","czerwonym winem","czerwonym winie","czerwonym winu","czerwonymi winami","win","win białych","win czerwonych","win wytrawnych","wina","wina białe","wina białego","wina czerwone","wina czerwonego","wina wytrawne","wina wytrawnego","winach","winach białych","winach czerwonych","winach wytrawnych","winami","winami białymi","winami czerwonymi","winami wytrawnymi","winem","winem białym","winem czerwonym","winem wytrawnym","winie","winie białym","winie czerwonym","winie wytrawnym","wino białego","wino czerwonego","wino wytrawnego","winu","winu białym","winu czerwonym","winu wytrawnym","wytrawne wina","wytrawne wino","wytrawnego wina","wytrawnego wino","wytrawnych win","wytrawnych winach","wytrawnym winem","wytrawnym winie","wytrawnym winu","wytrawnymi winami"]
   },
   {
     "id": "wodka",
     "name": "wódka",
-    "per100": {"kcal": 230, "carbs": 0, "protein": 0, "fat": 0},
+    "per100": {"kcal": 231, "carbs": 0, "protein": 0, "fat": 0},
     "portions": {"kieliszek": 40},
     "defaultPortion": "kieliszek",
     "density": 0.95,
     "aliases": ["wódeczka","whisky","gin","rum","nalewka","shot"],
     "forms": ["gina","ginach","ginami","ginem","ginie","ginów","ginu","giny","nalewce","nalewek","nalewkach","nalewkami","nalewką","nalewkę","nalewki","nalewkich","nalewkie","nalewkiej","nalewkimi","ruma","rumach","rumami","rumem","rumie","rumów","rumu","rumy","shocie","shota","shotach","shotami","shotem","shotów","shotu","shoty","whisce","whisek","whiska","whiskach","whiskami","whiską","whiskę","whiski","whiskiem","whisków","whisku","wódce","wódeczce","wódeczek","wódeczkach","wódeczkami","wódeczką","wódeczkę","wódeczki","wódeczkich","wódeczkie","wódeczkiej","wódeczkimi","wódek","wódkach","wódkami","wódką","wódkę","wódki","wódkich","wódkie","wódkiej","wódkimi"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #174815: Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",
+    "verified": true
   },
   {
     "id": "kakao-napoj",
     "name": "kakao",
-    "per100": {"kcal": 80, "carbs": 11, "protein": 3.5, "fat": 2.5},
+    "per100": {"kcal": 77, "carbs": 10.7, "protein": 3.5, "fat": 2.3},
     "portions": {"kubek": 250, "szklanka": 250},
     "defaultPortion": "kubek",
     "aliases": ["kakao na mleku","czekolada na gorąco","gorąca czekolada"],
     "category": "napoje",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; napój na mleku 2% z cukrem",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #171277: Milk, chocolate beverage, hot cocoa, homemade; na mleku",
+    "verified": true,
     "forms": ["czekolad na gorąco","czekolada gorąca","czekoladach na gorąco","czekoladami na gorąco","czekoladą gorącą","czekoladą gorącę","czekoladą na gorąco","czekolade gorący","czekoladej gorący","czekoladę na gorąco","czekolady na gorąco","czekoladych gorąc","czekoladych gorącach","czekoladymi gorącami","czekoladzie na gorąco","gorąc czekoladych","gorącach czekoladych","gorącami czekoladymi","gorącą czekoladą","gorącę czekoladą","gorący czekolade","gorący czekoladej","kaka","kaka na mleku","kakaa","kakaa na mleku","kakaach","kakaach na mleku","kakaami","kakaami na mleku","kakaem","kakaem na mleku","kakau","kakau na mleku"]
   },
   {
@@ -2138,24 +2138,24 @@
   {
     "id": "czekolada",
     "name": "czekolada mleczna",
-    "per100": {"kcal": 535, "carbs": 59, "protein": 7.6, "fat": 30},
+    "per100": {"kcal": 535, "carbs": 59.4, "protein": 7.7, "fat": 29.7},
     "portions": {"kostka": 5, "rzad": 25, "tabliczka": 100},
     "defaultPortion": "kostka",
     "aliases": ["czekolada","czekoladka","czekolada z orzechami","czekolada biała"],
     "forms": ["biała czekolada","białą czekoladą","białą czekoladę","białe czekolady","białej czekolady","białej czekoladzie","białych czekolad","białych czekoladach","białymi czekoladami","czekolad","czekolad białych","czekolad mlecznych","czekolad z orzechami","czekoladach","czekoladach białych","czekoladach mlecznych","czekoladach z orzechami","czekoladami","czekoladami białymi","czekoladami mlecznymi","czekoladami z orzechami","czekoladą","czekoladą białą","czekoladą mleczną","czekoladą z orzechami","czekoladce","czekolade","czekoladej","czekoladek","czekoladę","czekoladę białą","czekoladę mleczną","czekoladę z orzechami","czekoladkach","czekoladkami","czekoladką","czekoladkę","czekoladki","czekoladkich","czekoladkie","czekoladkiej","czekoladkimi","czekolady","czekolady białe","czekolady białej","czekolady mleczne","czekolady mlecznej","czekolady z orzechami","czekoladych","czekoladymi","czekoladzie","czekoladzie białej","czekoladzie mlecznej","czekoladzie z orzechami","mleczna czekolada","mleczną czekoladą","mleczną czekoladę","mleczne czekolady","mlecznej czekolady","mlecznej czekoladzie","mlecznych czekolad","mlecznych czekoladach","mlecznymi czekoladami"],
     "category": "słodycze i przekąski",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #167587: Candies, milk chocolate",
+    "verified": true
   },
   {
     "id": "czekolada-gorzka",
     "name": "czekolada gorzka",
     "parentId": "czekolada",
-    "per100": {"kcal": 598, "carbs": 46, "protein": 7.8, "fat": 43},
+    "per100": {"kcal": 598, "carbs": 45.9, "protein": 7.8, "fat": 42.6},
     "aliases": ["gorzka czekolada","czekolada deserowa"],
     "category": "słodycze i przekąski",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false,
+    "source": "USDA FoodData Central, SR Legacy (2018) #170273: Chocolate, dark, 70-85% cacao solids; 70–85% kakao",
+    "verified": true,
     "forms": ["czekolad deserowych","czekolad gorzkich","czekoladach deserowych","czekoladach gorzkich","czekoladami deserowymi","czekoladami gorzkimi","czekoladą deserową","czekoladą gorzką","czekoladą gorzkę","czekolade gorzki","czekoladej gorzce","czekoladej gorzki","czekoladę deserową","czekoladę gorzką","czekolady deserowe","czekolady deserowej","czekolady gorzkie","czekolady gorzkiej","czekoladych gorzek","czekoladych gorzkach","czekoladymi gorzkami","czekoladzie deserowej","czekoladzie gorzkiej","deserowa czekolada","deserową czekoladą","deserową czekoladę","deserowe czekolady","deserowej czekolady","deserowej czekoladzie","deserowych czekolad","deserowych czekoladach","deserowymi czekoladami","gorzce czekoladej","gorzek czekoladych","gorzkach czekoladych","gorzkami czekoladymi","gorzką czekoladą","gorzką czekoladę","gorzkę czekoladą","gorzki czekolade","gorzki czekoladej","gorzkich czekolad","gorzkich czekoladach","gorzkie czekolady","gorzkiej czekolady","gorzkiej czekoladzie","gorzkimi czekoladami"]
   },
   {
@@ -2245,38 +2245,38 @@
   {
     "id": "lody",
     "name": "lody",
-    "per100": {"kcal": 210, "carbs": 24, "protein": 3.5, "fat": 11},
+    "per100": {"kcal": 207, "carbs": 23.6, "protein": 3.5, "fat": 11},
     "portions": {"galka": 50, "porcja": 100, "sztuka": 70},
     "defaultPortion": "galka",
     "aliases": ["lód","lody śmietankowe","lody waniliowe","lody czekoladowe","rożek","lody na patyku"],
     "forms": ["czekoladowa lod","czekoladowa loda","czekoladową lod","czekoladową loda","czekoladową lodą","czekoladową lodem","czekoladową lodę","czekoladową lody","czekoladowe lody","czekoladowego lod","czekoladowego loda","czekoladowego lodę","czekoladowego lodu","czekoladowego lody","czekoladowej loda","czekoladowej lodu","czekoladowej lody","czekoladowej lodzie","czekoladowy lod","czekoladowy loda","czekoladowy lodę","czekoladowy lody","czekoladowych lod","czekoladowych lodach","czekoladowych lodów","czekoladowym lodą","czekoladowym lodem","czekoladowym lodu","czekoladowym lodzie","czekoladowymi lodami","lod","lod czekoladowa","lod czekoladową","lod czekoladowego","lod czekoladowy","lod czekoladowych","lod na patyku","lod śmietankowa","lod śmietankową","lod śmietankowego","lod śmietankowy","lod śmietankowych","lod waniliowa","lod waniliową","lod waniliowego","lod waniliowy","lod waniliowych","loda","loda czekoladowa","loda czekoladową","loda czekoladowego","loda czekoladowej","loda czekoladowy","loda na patyku","loda śmietankowa","loda śmietankową","loda śmietankowego","loda śmietankowej","loda śmietankowy","loda waniliowa","loda waniliową","loda waniliowego","loda waniliowej","loda waniliowy","lodach","lodach czekoladowych","lodach na patyku","lodach śmietankowych","lodach waniliowych","lodami","lodami czekoladowymi","lodami na patyku","lodami śmietankowymi","lodami waniliowymi","lodą","lodą czekoladową","lodą czekoladowym","lodą na patyku","lodą śmietankową","lodą śmietankowym","lodą waniliową","lodą waniliowym","lode","lodego","lodem","lodem czekoladową","lodem czekoladowym","lodem na patyku","lodem śmietankową","lodem śmietankowym","lodem waniliową","lodem waniliowym","lodę","lodę czekoladową","lodę czekoladowego","lodę czekoladowy","lodę na patyku","lodę śmietankową","lodę śmietankowego","lodę śmietankowy","lodę waniliową","lodę waniliowego","lodę waniliowy","lodów","lodów czekoladowych","lodów na patyku","lodów śmietankowych","lodów waniliowych","lodu","lodu czekoladowego","lodu czekoladowej","lodu czekoladowym","lodu na patyku","lodu śmietankowego","lodu śmietankowej","lodu śmietankowym","lodu waniliowego","lodu waniliowej","lodu waniliowym","lody czekoladową","lody czekoladowego","lody czekoladowej","lody czekoladowy","lody śmietankową","lody śmietankowego","lody śmietankowej","lody śmietankowy","lody waniliową","lody waniliowego","lody waniliowej","lody waniliowy","lodych","lodym","lodymi","lodzie","lodzie czekoladowej","lodzie czekoladowym","lodzie na patyku","lodzie śmietankowej","lodzie śmietankowym","lodzie waniliowej","lodzie waniliowym","rożka","rożkach","rożkami","rożki","rożkiem","rożków","rożku","śmietankowa lod","śmietankowa loda","śmietankową lod","śmietankową loda","śmietankową lodą","śmietankową lodem","śmietankową lodę","śmietankową lody","śmietankowe lody","śmietankowego lod","śmietankowego loda","śmietankowego lodę","śmietankowego lodu","śmietankowego lody","śmietankowej loda","śmietankowej lodu","śmietankowej lody","śmietankowej lodzie","śmietankowy lod","śmietankowy loda","śmietankowy lodę","śmietankowy lody","śmietankowych lod","śmietankowych lodach","śmietankowych lodów","śmietankowym lodą","śmietankowym lodem","śmietankowym lodu","śmietankowym lodzie","śmietankowymi lodami","waniliowa lod","waniliowa loda","waniliową lod","waniliową loda","waniliową lodą","waniliową lodem","waniliową lodę","waniliową lody","waniliowe lody","waniliowego lod","waniliowego loda","waniliowego lodę","waniliowego lodu","waniliowego lody","waniliowej loda","waniliowej lodu","waniliowej lody","waniliowej lodzie","waniliowy lod","waniliowy loda","waniliowy lodę","waniliowy lody","waniliowych lod","waniliowych lodach","waniliowych lodów","waniliowym lodą","waniliowym lodem","waniliowym lodu","waniliowym lodzie","waniliowymi lodami"],
     "category": "słodycze i przekąski",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #167575: Ice creams, vanilla; waniliowe",
+    "verified": true
   },
   {
     "id": "chipsy",
     "name": "chipsy",
-    "per100": {"kcal": 540, "carbs": 53, "protein": 6.5, "fat": 34},
+    "per100": {"kcal": 532, "carbs": 53.8, "protein": 6.4, "fat": 34},
     "portions": {"garsc": 25, "opakowanie": 140, "porcja": 30},
     "defaultPortion": "garsc",
     "aliases": ["czipsy","chips","chrupki","nachosy"],
     "forms": ["chipsa","chipsach","chipsami","chipsą","chipsem","chipsę","chipsie","chipsów","chipsu","chrupce","chrupek","chrupka","chrupkach","chrupkami","chrupką","chrupkę","chrupkich","chrupkie","chrupkiego","chrupkiem","chrupkim","chrupkimi","chrupków","chrupku","czips","czipsa","czipsach","czipsami","czipsą","czipsem","czipsę","czipsie","czipsów","czipsu","nachos","nachosa","nachosach","nachosami","nachosą","nachosem","nachosę","nachosie","nachosów","nachosu"],
     "category": "słodycze i przekąski",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #169677: Snacks, potato chips, plain, salted",
+    "verified": true
   },
   {
     "id": "paluszki",
     "name": "paluszki słone",
-    "per100": {"kcal": 380, "carbs": 75, "protein": 10, "fat": 4},
+    "per100": {"kcal": 384, "carbs": 80.4, "protein": 10, "fat": 2.9},
     "portions": {"garsc": 20, "opakowanie": 70},
     "defaultPortion": "garsc",
     "aliases": ["paluszki","precelki","popcorn"],
     "forms": ["paluszce","paluszce słonej","paluszce słonym","paluszek","paluszek słona","paluszek słoną","paluszek słonego","paluszek słony","paluszek słonych","paluszka","paluszka słona","paluszka słoną","paluszka słonego","paluszka słonej","paluszka słony","paluszkach","paluszkach słonych","paluszkami","paluszkami słonymi","paluszką","paluszką słoną","paluszką słonym","paluszkę","paluszkę słoną","paluszkę słonego","paluszkę słony","paluszki słoną","paluszki słonego","paluszki słonej","paluszki słony","paluszkich","paluszkie","paluszkiego","paluszkiem","paluszkiem słoną","paluszkiem słonym","paluszkim","paluszkimi","paluszków","paluszków słonych","paluszku","paluszku słonego","paluszku słonej","paluszku słonym","popcorna","popcornach","popcornami","popcornem","popcornie","popcornów","popcornu","popcorny","precelce","precelek","precelka","precelkach","precelkami","precelką","precelkę","precelkich","precelkie","precelkiego","precelkiem","precelkim","precelkimi","precelków","precelku","słona paluszek","słona paluszka","słoną paluszek","słoną paluszka","słoną paluszką","słoną paluszkę","słoną paluszki","słoną paluszkiem","słone paluszki","słonego paluszek","słonego paluszka","słonego paluszkę","słonego paluszki","słonego paluszku","słonej paluszce","słonej paluszka","słonej paluszki","słonej paluszku","słony paluszek","słony paluszka","słony paluszkę","słony paluszki","słonych paluszek","słonych paluszkach","słonych paluszków","słonym paluszce","słonym paluszką","słonym paluszkiem","słonym paluszku","słonymi paluszkami"],
     "category": "słodycze i przekąski",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #167555: Snacks, pretzels, hard, plain, salted; precle",
+    "verified": true
   },
   {
     "id": "zelki",
@@ -2305,14 +2305,14 @@
   {
     "id": "gofr",
     "name": "gofr",
-    "per100": {"kcal": 290, "carbs": 35, "protein": 7, "fat": 14},
+    "per100": {"kcal": 291, "carbs": 32.9, "protein": 7.9, "fat": 14.1},
     "portions": {"sztuka": 80},
     "defaultPortion": "sztuka",
     "aliases": ["gofry","gofer"],
     "forms": ["gofera","goferach","goferami","goferem","goferów","goferu","gofery","goferze","gofra","gofrach","goframi","gofrą","gofre","gofrego","gofrem","gofrę","gofrów","gofru","gofrych","gofrym","gofrymi","gofrze"],
     "category": "słodycze i przekąski",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; bez dodatków",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #175039: Waffles, plain, prepared from recipe",
+    "verified": true
   },
   {
     "id": "zupa-pomidorowa",
@@ -2557,15 +2557,15 @@
   {
     "id": "pizza",
     "name": "pizza",
-    "per100": {"kcal": 250, "carbs": 32, "protein": 11, "fat": 9},
+    "per100": {"kcal": 268, "carbs": 29, "protein": 10.4, "fat": 12.3},
     "portions": {"kawalek": 110, "sztuka": 450, "porcja": 450},
     "defaultPortion": "sztuka",
     "sizes": {"small": 300, "standard": 450, "large": 650},
     "aliases": ["pizza margherita","pizza capricciosa","pizza pepperoni","pica"],
     "forms": ["margherita pizza","margheritą pizzą","margheritą pizzę","margherite pizzy","margheritej pizzie","margheritej pizzy","margheritych pizz","margheritych pizzach","margheritymi pizzami","pepperonia pizza","pepperonią pizzą","pepperonią pizzę","pepperonich pizz","pepperonich pizzach","pepperonie pizzy","pepperoniej pizzie","pepperoniej pizzy","pepperonimi pizzami","pic","picach","picami","picą","picę","picy","pizz","pizz capricciosa","pizz margheritych","pizz pepperonich","pizza pepperonia","pizzach","pizzach capricciosa","pizzach margheritych","pizzach pepperonich","pizzami","pizzami capricciosa","pizzami margheritymi","pizzami pepperonimi","pizzą","pizzą capricciosa","pizzą margheritą","pizzą pepperonią","pizzę","pizzę capricciosa","pizzę margheritą","pizzę pepperonią","pizzie","pizzie capricciosa","pizzie margheritej","pizzie pepperoniej","pizzy","pizzy capricciosa","pizzy margherite","pizzy margheritej","pizzy pepperonie","pizzy pepperoniej"],
     "category": "dania gotowe",
-    "source": "przybliżone; typowe wartości z tabel składu (NIZP-PZH / USDA), niezweryfikowane; typu margherita/capricciosa",
-    "verified": false
+    "source": "USDA FoodData Central, SR Legacy (2018) #170317: Pizza, cheese topping, regular crust, frozen, cooked; z serem, mrożona, upieczona",
+    "verified": true
   },
   {
     "id": "kebab",

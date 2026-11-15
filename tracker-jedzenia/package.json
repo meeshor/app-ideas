@@ -13,7 +13,8 @@
     "e2e": "playwright test",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "data": "tsx scripts/build-data.ts"
+    "data": "tsx scripts/build-data.ts",
+    "usda": "tsx scripts/usda-sync.ts"
   },
   "dependencies": {
     "idb": "^8.0.4",

@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { computeAll, computeItem, sumMacros } from '../../core/calculator.ts';
-import { fmtNum } from '../../core/format.ts';
+import { fmtNum, qtyPrefix } from '../../core/format.ts';
 import { addDays, formatDatePl, guessMeal, localDate, localTime, MEAL_LABELS } from '../../core/meals.ts';
 import { quickEntries } from '../../core/stats.ts';
 import { CONFIG } from '../../core/config.ts';
@@ -74,9 +74,63 @@ function Summary({ entries }: { entries: LogEntry[] }) {
   );
 }
 
+function EntryEditor({ e, onDone }: { e: LogEntry; onDone: () => void }) {
+  const app = useApp();
+  const { db, calc } = app;
+  const [items, setItems] = useState<ParsedItem[]>(() => cloneItems(e.items));
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const preview = useMemo(() => computeAll(db, items, calc), [db, items, calc]);
+  const setItem = (i: number, it: ParsedItem | null) => {
+    const list = [...items];
+    if (it) list[i] = it;
+    else list.splice(i, 1);
+    setItems(list);
+    if (!it) setOpenIdx(null);
+  };
+  const save = async () => {
+    if (!items.length) await app.deleteEntry(e.id);
+    else await app.saveEntry({ ...e, items, computed: preview.computed, totals: preview.totals, updatedAt: Date.now() });
+    onDone();
+  };
+  return (
+    <div className="preview" data-testid="entry-editor">
+      <ul className="pv-list">
+        {items.map((it, i) => {
+          const c = preview.computed[i] ?? computeItem(db, it, calc);
+          const open = openIdx === i;
+          return (
+            <li key={i} className="pv-item">
+              <button className="pv-head" onClick={() => setOpenIdx(open ? null : i)} aria-expanded={open}>
+                <span className="name">
+                  {!it.ingredients ? qtyPrefix(it.quantity, it.unit) : ''}
+                  {c.label}
+                </span>
+                <span className="kcal">{Math.round(c.totals.kcal)} kcal</span>
+              </button>
+              <Lines c={c} />
+              {open && <ItemEditor item={it} onChange={(n) => setItem(i, n)} onRemove={() => setItem(i, null)} />}
+            </li>
+          );
+        })}
+      </ul>
+      <div className="pv-total">
+        <span className="sum">Razem {Math.round(preview.totals.kcal)} kcal</span>
+        <span className="spacer" />
+        <button className="btn ghost" onClick={onDone}>
+          Anuluj
+        </button>
+        <button className="btn primary" onClick={save}>
+          {items.length ? 'Zapisz zmiany' : 'Usuń wpis'}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function EntryCard({ e }: { e: LogEntry }) {
   const app = useApp();
   const [open, setOpen] = useState(false);
+  const [editing, setEditing] = useState(false);
   return (
     <li className="entry" data-testid="entry">
       <button onClick={() => setOpen(!open)} aria-expanded={open}>
@@ -84,7 +138,8 @@ function EntryCard({ e }: { e: LogEntry }) {
         <span className="text">{e.text}</span>
         <b style={{ whiteSpace: 'nowrap' }}>{Math.round(e.totals.kcal)} kcal</b>
       </button>
-      {open && (
+      {open && editing && <EntryEditor e={e} onDone={() => setEditing(false)} />}
+      {open && !editing && (
         <div className="details">
           {e.computed.map((c, i) => (
             <div key={i}>
@@ -103,6 +158,9 @@ function EntryCard({ e }: { e: LogEntry }) {
                 </option>
               ))}
             </select>
+            <button className="btn small" onClick={() => setEditing(true)}>
+              Edytuj pozycje
+            </button>
             <button className="btn small" onClick={() => app.recompute(e)} title="Policz te same pozycje według aktualnej bazy">
               Przelicz ponownie
             </button>
@@ -260,7 +318,7 @@ export function TodayView({ date, setDate }: { date: string; setDate: (d: string
                     <li key={i} className="pv-item" data-testid="preview-item">
                       <button className="pv-head" onClick={() => setOpenIdx(open ? null : i)} aria-expanded={open}>
                         <span className="name">
-                          {it.quantity !== 1 && !it.ingredients ? `${fmtNum(it.quantity, 2)} × ` : ''}
+                          {!it.ingredients ? qtyPrefix(it.quantity, it.unit) : ''}
                           {c.label}
                           {it.modifiers.length > 0 && <span className="muted small"> · {it.modifiers.join(', ')}</span>} {confidenceBadge(c.confidence)}
                           {it.edited && <span className="badge">zmienione</span>}

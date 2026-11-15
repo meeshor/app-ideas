@@ -5,6 +5,7 @@ import { FOODS } from '../data-src/foods.ts';
 import { DISHES } from '../data-src/dishes.ts';
 import { MODIFIERS } from '../data-src/modifiers.ts';
 import { inflectAll } from '../src/core/inflect.ts';
+import { applyUsda, usdaReport } from './usda-apply.ts';
 
 function withForms<T extends { name: string; aliases?: string[]; forms?: string[] }>(x: T): T {
   const base = [x.name, ...(x.aliases ?? [])];
@@ -32,11 +33,12 @@ function stringify(v: unknown, indent = 0): string {
   return JSON.stringify(v);
 }
 
-const foods = FOODS.map(withForms);
+const foods = applyUsda(FOODS).map(withForms);
 const dishes = DISHES.map(withForms);
 const dir = new URL('../data/', import.meta.url);
 writeFileSync(new URL('foods.json', dir), stringify(foods) + '\n');
 writeFileSync(new URL('dishes.json', dir), stringify(dishes) + '\n');
 writeFileSync(new URL('modifiers.json', dir), stringify(MODIFIERS) + '\n');
+writeFileSync(new URL('../docs/weryfikacja.md', import.meta.url), usdaReport(FOODS));
 const formCount = foods.reduce((n, f) => n + (f.forms?.length ?? 0), 0);
-console.log(`produkty: ${foods.length} (w tym wariantów: ${foods.filter((f) => f.parentId).length}), dania: ${dishes.length}, formy produktów: ${formCount}`);
+console.log(`produkty: ${foods.length} (w tym wariantów: ${foods.filter((f) => f.parentId).length}), dania: ${dishes.length}, formy produktów: ${formCount}, zweryfikowane z USDA: ${foods.filter((f) => f.verified).length}`);

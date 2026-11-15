@@ -10,6 +10,8 @@ export default defineConfig({
   },
   projects: [
     { name: 'chromium-telefon', use: { ...devices['Pixel 7'], browserName: 'chromium' } },
+    // silnik Safari (WebKit) z emulacją iPhone'a — najbliżej prawdziwego Safari na iOS, jakie da się puścić w CI
+    { name: 'webkit-iphone', use: { ...devices['iPhone 15'], browserName: 'webkit' } },
   ],
   webServer: {
     command: 'npm run preview -- --port 4173 --strictPort',

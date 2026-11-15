@@ -58,6 +58,12 @@ const CASES: Case[] = [
   { in: '2,5 kromki chleba', items: [{ id: 'chleb', qty: 2.5, unit: 'kromka' }] },
   { in: '200 g ryżu', items: [{ id: 'ryz', qty: 200, unit: 'g' }] },
   { in: '200g ryżu', items: [{ id: 'ryz', qty: 200, unit: 'g' }] },
+  { in: 'sto pięćdziesiąt gramów ryżu', items: [{ id: 'ryz', qty: 150, unit: 'g' }], note: 'liczebnik złożony' },
+  { in: 'dwadzieścia gramów masła', items: [{ id: 'maslo', qty: 20, unit: 'g' }] },
+  { in: 'dwieście ml mleka', items: [{ id: 'mleko', qty: 200, unit: 'ml' }] },
+  { in: 'dwanaście pierogów', items: [{ id: 'pierogi', qty: 12 }] },
+  { in: 'dwadziescia piec g masla', items: [{ id: 'maslo', qty: 25, unit: 'g', conf: 'lt1' }], note: 'bez polskich znaków' },
+  { in: 'dziesięć pierogów', items: [{ id: 'pierogi', qty: 10 }], note: '„dziesięć” samo zostaje w słowniku' },
   { in: 'ryż 150 g', items: [{ id: 'ryz', qty: 150, unit: 'g' }], note: 'ilość po nazwie' },
   { in: 'szklanka mleka', items: [{ id: 'mleko', qty: 1, unit: 'szklanka' }] },
   { in: 'pół szklanki mleka', items: [{ id: 'mleko', qty: 0.5, unit: 'szklanka' }] },
@@ -131,6 +137,10 @@ const CASES: Case[] = [
   { in: 'kawa 2 jajka', items: [{ id: 'kawa' }, { id: 'jajko', qty: 2 }], note: 'bez separatora' },
   { in: 'ziemniaki z koperkiem, schabowy i mizeria', items: [{ id: 'ziemniaki', ch: ['add:szczypiorek'] }, { id: 'kotlet-schabowy' }, { id: 'mizeria' }] },
   { in: 'bułka z szynką i ser', items: [{ id: 'bulka-z-szynka' }, { id: 'ser-zolty' }], note: 'mianownik po „i” = nowa pozycja' },
+  { in: 'bulka z szynka i salata', items: [{ id: 'bulka-z-szynka', ch: ['add:salata'], conf: 'lt1' }], note: 'bez ogonków „salata” = „sałatą” (dodatek)' },
+  { in: 'bulka z szynka i kawa', items: [{ id: 'bulka-z-szynka' }, { id: 'kawa' }], note: 'kawa nie bywa dodatkiem → osobna pozycja' },
+  { in: 'bułka z szynką i sałata', items: [{ id: 'bulka-z-szynka' }, { id: 'salata' }], note: 'z ogonkami mianownik zostaje osobną pozycją' },
+  { in: 'Bulka z szynka i sałata', items: [{ id: 'bulka-z-szynka', ch: ['add:salata'] }], note: 'autokorekta iOS dodała ogonki tylko do „sałata”' },
   { in: 'ciastko do kawy', items: [{ id: 'ciastko' }, { id: 'kawa' }] },
   // --- bez polskich znaków ---
   { in: 'bulka z szynka', items: [{ id: 'bulka-z-szynka', conf: 'lt1' }] },
@@ -201,7 +211,7 @@ describe('parser — własności', () => {
     expect(c.lines.map((l) => l.foodId)).toEqual(['bulka-zytnia', 'szynka', 'maslo']);
     expect(c.lines[0]!.explain).toBe('bułka żytnia 1 szt. (duża: 80 g) = 80 g → 200 kcal');
     expect(c.lines[1]!.explain).toMatch(/^szynka 2 plastry = 30 g → \d+ kcal$/);
-    expect(c.lines[2]!.explain).toBe('masło 5 g → 37 kcal');
+    expect(c.lines[2]!.explain).toBe('masło 5 g → 36 kcal');
   });
 
   it('„bez masła” usuwa składnik domyślny z wyliczenia', () => {

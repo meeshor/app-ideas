@@ -43,3 +43,40 @@ export function parseBackup(json: string): ParseBackupResult {
   }
   return { ok: true, backup: raw as unknown as Backup };
 }
+
+export interface MergeStats {
+  entriesAdded: number;
+  entriesUpdated: number;
+  overridesAdded: number;
+  overridesUpdated: number;
+}
+
+const entryStamp = (e: LogEntry) => e.updatedAt ?? e.createdAt;
+
+/**
+ * Scala kopię z bieżącymi danymi (np. z drugiego telefonu): wpisy po id, definicje po kluczu,
+ * przy konflikcie wygrywa nowsza zmiana. Ustawienia zostają bieżące.
+ */
+export function mergeBackup(
+  current: { settings: Settings; overrides: UserOverride[]; entries: LogEntry[] },
+  incoming: Backup,
+): { data: { settings: Settings; overrides: UserOverride[]; entries: LogEntry[] }; stats: MergeStats } {
+  const stats: MergeStats = { entriesAdded: 0, entriesUpdated: 0, overridesAdded: 0, overridesUpdated: 0 };
+  const entries = new Map(current.entries.map((e) => [e.id, e]));
+  for (const e of incoming.entries) {
+    const mine = entries.get(e.id);
+    if (!mine) stats.entriesAdded++;
+    else if (entryStamp(e) > entryStamp(mine)) stats.entriesUpdated++;
+    else continue;
+    entries.set(e.id, e);
+  }
+  const overrides = new Map(current.overrides.map((o) => [o.key, o]));
+  for (const o of incoming.overrides) {
+    const mine = overrides.get(o.key);
+    if (!mine) stats.overridesAdded++;
+    else if (o.updatedAt > mine.updatedAt) stats.overridesUpdated++;
+    else continue;
+    overrides.set(o.key, o);
+  }
+  return { data: { settings: current.settings, overrides: [...overrides.values()], entries: [...entries.values()] }, stats };
+}

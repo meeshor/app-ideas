@@ -3,8 +3,9 @@
 // `npm run data` generuje z tego data/foods.json (z formami odmiany).
 //
 // UCZCIWIE O LICZBACH: wartości to przybliżenia typowych pozycji z tabel składu żywności
-// (NIZP-PZH, USDA FoodData Central) z pamięci autora danych, zaokrąglone. Żadna nie została
-// sprawdzona z tabelą w trakcie tej sesji → wszędzie verified: false. Masy porcji to typowe
+// (NIZP-PZH, USDA FoodData Central) z pamięci autora danych, zaokrąglone → verified: false.
+// Produkty powiązane z USDA jako 'same' (data-src/usda-map.ts) dostają przy `npm run data` wartości
+// z USDA i verified: true; raport w docs/weryfikacja.md. Masy porcji to typowe
 // wartości „kuchenne” (do strojenia). Dla mięs i kasz podajemy wartości PO przygotowaniu
 // (tak ludzie zwykle opisują porcję na talerzu) — zaznaczone w `source`.
 

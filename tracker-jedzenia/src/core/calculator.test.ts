@@ -12,8 +12,8 @@ describe('kalkulator', () => {
   it('produkt w gramach', () => {
     const c = computeItem(db, item({ kind: 'food', matchedId: 'maslo', quantity: 5, unit: 'g' }));
     expect(c.grams).toBe(5);
-    expect(Math.round(c.totals.kcal)).toBe(37);
-    expect(c.lines[0]!.explain).toBe('masło 5 g → 37 kcal');
+    expect(Math.round(c.totals.kcal)).toBe(36); // 5 g × 717 kcal (USDA)
+    expect(c.lines[0]!.explain).toBe('masło 5 g → 36 kcal');
   });
   it('porcja nazwana i forma liczebnikowa', () => {
     const c = computeItem(db, item({ kind: 'food', matchedId: 'szynka', quantity: 2, unit: 'plaster' }));

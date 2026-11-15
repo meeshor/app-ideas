@@ -1,0 +1,1301 @@
+{
+ "167542": {
+  "desc": "Snacks, granola bars, hard, plain",
+  "kcal": 471,
+  "carbs": 64.4,
+  "fiber": 5.3,
+  "protein": 10.1,
+  "fat": 19.8
+ },
+ "167555": {
+  "desc": "Snacks, pretzels, hard, plain, salted",
+  "kcal": 384,
+  "carbs": 80.39,
+  "fiber": 3.4,
+  "protein": 10.04,
+  "fat": 2.93
+ },
+ "167575": {
+  "desc": "Ice creams, vanilla",
+  "kcal": 207,
+  "carbs": 23.6,
+  "fiber": 0.7,
+  "protein": 3.5,
+  "fat": 11
+ },
+ "167587": {
+  "desc": "Candies, milk chocolate",
+  "kcal": 535,
+  "carbs": 59.4,
+  "fiber": 3.4,
+  "protein": 7.65,
+  "fat": 29.66
+ },
+ "167746": {
+  "desc": "Lemons, raw, without peel",
+  "kcal": 29,
+  "carbs": 9.32,
+  "fiber": 2.8,
+  "protein": 1.1,
+  "fat": 0.3
+ },
+ "167755": {
+  "desc": "Raspberries, raw",
+  "kcal": 52,
+  "carbs": 11.94,
+  "fiber": 6.5,
+  "protein": 1.2,
+  "fat": 0.65
+ },
+ "167762": {
+  "desc": "Strawberries, raw",
+  "kcal": 32,
+  "carbs": 7.68,
+  "fiber": 2,
+  "protein": 0.67,
+  "fat": 0.3
+ },
+ "167765": {
+  "desc": "Watermelon, raw",
+  "kcal": 30,
+  "carbs": 7.55,
+  "fiber": 0.4,
+  "protein": 0.61,
+  "fat": 0.15
+ },
+ "167851": {
+  "desc": "Pork, fresh, shoulder, blade, boston (steaks), separable lean and fat, cooked, broiled",
+  "kcal": 259,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 25.58,
+  "fat": 16.61
+ },
+ "167874": {
+  "desc": "Pork, cured, ham, steak, boneless, extra lean, unheated",
+  "kcal": 122,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 19.56,
+  "fat": 4.25
+ },
+ "167902": {
+  "desc": "Pork, fresh, ground, raw",
+  "kcal": 263,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 16.88,
+  "fat": 21.19
+ },
+ "167989": {
+  "desc": "Candies, gumdrops, starch jelly pieces",
+  "kcal": 396,
+  "carbs": 98.9,
+  "fiber": 0.1,
+  "protein": 0,
+  "fat": 0
+ },
+ "168000": {
+  "desc": "Chocolate-flavored hazelnut spread",
+  "kcal": 539,
+  "carbs": 62.36,
+  "fiber": 5.4,
+  "protein": 5.41,
+  "fat": 29.73
+ },
+ "168153": {
+  "desc": "Kiwifruit, green, raw",
+  "kcal": 61,
+  "carbs": 14.66,
+  "fiber": 3,
+  "protein": 1.14,
+  "fat": 0.52
+ },
+ "168165": {
+  "desc": "Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
+  "kcal": 299,
+  "carbs": 79.32,
+  "fiber": 4.5,
+  "protein": 3.3,
+  "fat": 0.25
+ },
+ "168253": {
+  "desc": "Pork, fresh, loin, top loin (chops), boneless, separable lean only, cooked, broiled",
+  "kcal": 173,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 27.58,
+  "fat": 6.08
+ },
+ "168277": {
+  "desc": "Pork, cured, bacon, unprepared",
+  "kcal": 393,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 13.66,
+  "fat": 37.13
+ },
+ "168409": {
+  "desc": "Cucumber, with peel, raw",
+  "kcal": 15,
+  "carbs": 3.63,
+  "fiber": 0.5,
+  "protein": 0.65,
+  "fat": 0.11
+ },
+ "168462": {
+  "desc": "Spinach, raw",
+  "kcal": 23,
+  "carbs": 3.63,
+  "fiber": 2.2,
+  "protein": 2.86,
+  "fat": 0.39
+ },
+ "168555": {
+  "desc": "Potatoes, mashed, home-prepared, whole milk and butter added",
+  "kcal": 113,
+  "carbs": 16.81,
+  "fiber": 1.5,
+  "protein": 1.86,
+  "fat": 4.22
+ },
+ "168556": {
+  "desc": "Catsup",
+  "kcal": 101,
+  "carbs": 27.4,
+  "fiber": 0.3,
+  "protein": 1.04,
+  "fat": 0.1
+ },
+ "168746": {
+  "desc": "Alcoholic beverage, beer, regular, all",
+  "kcal": 43,
+  "carbs": 3.55,
+  "fiber": 0,
+  "protein": 0.46,
+  "fat": 0,
+  "alcohol": 3.9
+ },
+ "168871": {
+  "desc": "Millet, cooked",
+  "kcal": 119,
+  "carbs": 23.67,
+  "fiber": 1.3,
+  "protein": 3.51,
+  "fat": 1
+ },
+ "168878": {
+  "desc": "Rice, white, long-grain, regular, enriched, cooked",
+  "kcal": 130,
+  "carbs": 28.17,
+  "fiber": 0.4,
+  "protein": 2.69,
+  "fat": 0.28
+ },
+ "168910": {
+  "desc": "Pasta, whole-wheat, cooked (Includes foods for USDA's Food Distribution Program)",
+  "kcal": 149,
+  "carbs": 30.07,
+  "fiber": 3.9,
+  "protein": 5.99,
+  "fat": 1.71
+ },
+ "168917": {
+  "desc": "Quinoa, cooked",
+  "kcal": 120,
+  "carbs": 21.3,
+  "fiber": 2.8,
+  "protein": 4.4,
+  "fat": 1.92
+ },
+ "169096": {
+  "desc": "Olives, pickled, canned or bottled, green",
+  "kcal": 145,
+  "carbs": 3.84,
+  "fiber": 3.3,
+  "protein": 1.03,
+  "fat": 15.32
+ },
+ "169097": {
+  "desc": "Oranges, raw, all commercial varieties",
+  "kcal": 47,
+  "carbs": 11.75,
+  "fiber": 2.4,
+  "protein": 0.94,
+  "fat": 0.12
+ },
+ "169098": {
+  "desc": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+  "kcal": 45,
+  "carbs": 10.4,
+  "fiber": 0.2,
+  "protein": 0.7,
+  "fat": 0.2
+ },
+ "169105": {
+  "desc": "Tangerines, (mandarin oranges), raw",
+  "kcal": 53,
+  "carbs": 13.34,
+  "fiber": 1.8,
+  "protein": 0.81,
+  "fat": 0.31
+ },
+ "169118": {
+  "desc": "Pears, raw",
+  "kcal": 57,
+  "carbs": 15.23,
+  "fiber": 3.1,
+  "protein": 0.36,
+  "fat": 0.14
+ },
+ "169124": {
+  "desc": "Pineapple, raw, all varieties",
+  "kcal": 50,
+  "carbs": 13.12,
+  "fiber": 1.4,
+  "protein": 0.54,
+  "fat": 0.12
+ },
+ "169141": {
+  "desc": "Beans, snap, green, cooked, boiled, drained, without salt",
+  "kcal": 35,
+  "carbs": 7.88,
+  "fiber": 3.2,
+  "protein": 1.89,
+  "fat": 0.28
+ },
+ "169146": {
+  "desc": "Beets, cooked, boiled, drained",
+  "kcal": 44,
+  "carbs": 9.96,
+  "fiber": 2,
+  "protein": 1.68,
+  "fat": 0.18
+ },
+ "169214": {
+  "desc": "Corn, sweet, yellow, canned, whole kernel, drained solids",
+  "kcal": 67,
+  "carbs": 14.34,
+  "fiber": 2,
+  "protein": 2.29,
+  "fat": 1.22
+ },
+ "169230": {
+  "desc": "Garlic, raw",
+  "kcal": 149,
+  "carbs": 33.06,
+  "fiber": 2.1,
+  "protein": 6.36,
+  "fat": 0.5
+ },
+ "169249": {
+  "desc": "Lettuce, green leaf, raw",
+  "kcal": 15,
+  "carbs": 2.87,
+  "fiber": 1.3,
+  "protein": 1.36,
+  "fat": 0.15
+ },
+ "169251": {
+  "desc": "Mushrooms, white, raw",
+  "kcal": 22,
+  "carbs": 3.26,
+  "fiber": 1,
+  "protein": 3.09,
+  "fat": 0.34
+ },
+ "169276": {
+  "desc": "Radishes, raw",
+  "kcal": 16,
+  "carbs": 3.4,
+  "fiber": 1.6,
+  "protein": 0.68,
+  "fat": 0.1
+ },
+ "169279": {
+  "desc": "Sauerkraut, canned, solids and liquids",
+  "kcal": 19,
+  "carbs": 4.28,
+  "fiber": 2.9,
+  "protein": 0.91,
+  "fat": 0.14
+ },
+ "169291": {
+  "desc": "Squash, summer, zucchini, includes skin, raw",
+  "kcal": 17,
+  "carbs": 3.11,
+  "fiber": 1,
+  "protein": 1.21,
+  "fat": 0.32
+ },
+ "169378": {
+  "desc": "Pickles, cucumber, sweet (includes bread and butter pickles)",
+  "kcal": 91,
+  "carbs": 21.15,
+  "fiber": 1,
+  "protein": 0.58,
+  "fat": 0.41
+ },
+ "169379": {
+  "desc": "Pickles, cucumber, sour",
+  "kcal": 11,
+  "carbs": 2.26,
+  "fiber": 1.2,
+  "protein": 0.33,
+  "fat": 0.2
+ },
+ "169531": {
+  "desc": "Beef, round, top round steak, separable lean and fat, trimmed to 1/8\"\" fat, all grades, cooked, broiled",
+  "kcal": 204,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 30.67,
+  "fat": 9
+ },
+ "169589": {
+  "desc": "Candies, MARS SNACKFOOD US, SNICKERS Bar",
+  "kcal": 491,
+  "carbs": 61.51,
+  "fiber": 2.3,
+  "protein": 7.53,
+  "fat": 23.85
+ },
+ "169593": {
+  "desc": "Cocoa, dry powder, unsweetened",
+  "kcal": 228,
+  "carbs": 57.9,
+  "fiber": 37,
+  "protein": 19.6,
+  "fat": 13.7
+ },
+ "169608": {
+  "desc": "Puddings, vanilla, ready-to-eat",
+  "kcal": 130,
+  "carbs": 22.6,
+  "fiber": 0,
+  "protein": 1.45,
+  "fat": 3.78
+ },
+ "169640": {
+  "desc": "Honey",
+  "kcal": 304,
+  "carbs": 82.4,
+  "fiber": 0.2,
+  "protein": 0.3,
+  "fat": 0
+ },
+ "169641": {
+  "desc": "Jams and preserves",
+  "kcal": 278,
+  "carbs": 68.86,
+  "fiber": 1.1,
+  "protein": 0.37,
+  "fat": 0.07
+ },
+ "169655": {
+  "desc": "Sugars, granulated",
+  "kcal": 387,
+  "carbs": 99.98,
+  "fiber": 0,
+  "protein": 0,
+  "fat": 0
+ },
+ "169677": {
+  "desc": "Snacks, potato chips, plain, salted",
+  "kcal": 532,
+  "carbs": 53.83,
+  "fiber": 3.1,
+  "protein": 6.39,
+  "fat": 33.98
+ },
+ "169700": {
+  "desc": "Couscous, cooked",
+  "kcal": 112,
+  "carbs": 23.22,
+  "fiber": 1.4,
+  "protein": 3.79,
+  "fat": 0.16
+ },
+ "169704": {
+  "desc": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+  "kcal": 123,
+  "carbs": 25.58,
+  "fiber": 1.6,
+  "protein": 2.74,
+  "fat": 0.97
+ },
+ "169715": {
+  "desc": "Semolina, enriched",
+  "kcal": 360,
+  "carbs": 72.83,
+  "fiber": 3.9,
+  "protein": 12.68,
+  "fat": 1.05
+ },
+ "169737": {
+  "desc": "Pasta, cooked, enriched, without added salt",
+  "kcal": 158,
+  "carbs": 30.86,
+  "fiber": 1.8,
+  "protein": 5.8,
+  "fat": 0.93
+ },
+ "169928": {
+  "desc": "Peaches, yellow, raw",
+  "kcal": 39,
+  "carbs": 9.54,
+  "fiber": 1.5,
+  "protein": 0.91,
+  "fat": 0.25
+ },
+ "169949": {
+  "desc": "Plums, raw",
+  "kcal": 46,
+  "carbs": 11.42,
+  "fiber": 1.4,
+  "protein": 0.7,
+  "fat": 0.28
+ },
+ "169967": {
+  "desc": "Broccoli, cooked, boiled, drained, without salt",
+  "kcal": 35,
+  "carbs": 7.18,
+  "fiber": 3.3,
+  "protein": 2.38,
+  "fat": 0.41
+ },
+ "169975": {
+  "desc": "Cabbage, raw",
+  "kcal": 25,
+  "carbs": 5.8,
+  "fiber": 2.5,
+  "protein": 1.28,
+  "fat": 0.1
+ },
+ "169994": {
+  "desc": "Chives, raw",
+  "kcal": 30,
+  "carbs": 4.35,
+  "fiber": 2.5,
+  "protein": 3.27,
+  "fat": 0.73
+ },
+ "170000": {
+  "desc": "Onions, raw",
+  "kcal": 40,
+  "carbs": 9.34,
+  "fiber": 1.7,
+  "protein": 1.1,
+  "fat": 0.1
+ },
+ "170017": {
+  "desc": "Peas, green, frozen, cooked, boiled, drained, without salt",
+  "kcal": 78,
+  "carbs": 14.26,
+  "fiber": 4.5,
+  "protein": 5.15,
+  "fat": 0.27
+ },
+ "170092": {
+  "desc": "Potato pancakes",
+  "kcal": 268,
+  "carbs": 27.81,
+  "fiber": 3.3,
+  "protein": 6.08,
+  "fat": 14.76
+ },
+ "170093": {
+  "desc": "Potatoes, baked, flesh and skin, without salt",
+  "kcal": 93,
+  "carbs": 21.15,
+  "fiber": 2.2,
+  "protein": 2.5,
+  "fat": 0.13
+ },
+ "170108": {
+  "desc": "Peppers, sweet, red, raw",
+  "kcal": 26,
+  "carbs": 6.03,
+  "fiber": 2.1,
+  "protein": 0.99,
+  "fat": 0.3
+ },
+ "170187": {
+  "desc": "Nuts, walnuts, english",
+  "kcal": 654,
+  "carbs": 13.71,
+  "fiber": 6.7,
+  "protein": 15.23,
+  "fat": 65.21
+ },
+ "170250": {
+  "desc": "Snacks, rice cakes, brown rice, plain, unsalted",
+  "kcal": 387,
+  "carbs": 81.5,
+  "fiber": 4.2,
+  "protein": 8.2,
+  "fat": 2.8
+ },
+ "170273": {
+  "desc": "Chocolate, dark, 70-85% cacao solids",
+  "kcal": 598,
+  "carbs": 45.9,
+  "fiber": 10.9,
+  "protein": 7.79,
+  "fat": 42.63
+ },
+ "170285": {
+  "desc": "Barley, pearled, cooked",
+  "kcal": 123,
+  "carbs": 28.22,
+  "fiber": 3.8,
+  "protein": 2.26,
+  "fat": 0.44
+ },
+ "170317": {
+  "desc": "Pizza, cheese topping, regular crust, frozen, cooked",
+  "kcal": 268,
+  "carbs": 29.02,
+  "fiber": 2.2,
+  "protein": 10.36,
+  "fat": 12.28
+ },
+ "170393": {
+  "desc": "Carrots, raw",
+  "kcal": 41,
+  "carbs": 9.58,
+  "fiber": 2.8,
+  "protein": 0.93,
+  "fat": 0.24
+ },
+ "170397": {
+  "desc": "Cauliflower, cooked, boiled, drained, without salt",
+  "kcal": 23,
+  "carbs": 4.11,
+  "fiber": 2.3,
+  "protein": 1.84,
+  "fat": 0.45
+ },
+ "170440": {
+  "desc": "Potatoes, boiled, cooked without skin, flesh, without salt",
+  "kcal": 86,
+  "carbs": 20.01,
+  "fiber": 1.8,
+  "protein": 1.71,
+  "fat": 0.1
+ },
+ "170457": {
+  "desc": "Tomatoes, red, ripe, raw, year round average",
+  "kcal": 18,
+  "carbs": 3.89,
+  "fiber": 1.2,
+  "protein": 0.88,
+  "fat": 0.2
+ },
+ "170556": {
+  "desc": "Seeds, pumpkin and squash seed kernels, dried",
+  "kcal": 559,
+  "carbs": 10.71,
+  "fiber": 6,
+  "protein": 30.23,
+  "fat": 49.05
+ },
+ "170567": {
+  "desc": "Nuts, almonds",
+  "kcal": 579,
+  "carbs": 21.55,
+  "fiber": 12.5,
+  "protein": 21.15,
+  "fat": 49.93
+ },
+ "170686": {
+  "desc": "Buckwheat groats, roasted, cooked",
+  "kcal": 92,
+  "carbs": 19.94,
+  "fiber": 2.7,
+  "protein": 3.38,
+  "fat": 0.62
+ },
+ "170694": {
+  "desc": "Fast foods, hamburger; single, regular patty; with condiments",
+  "kcal": 263,
+  "carbs": 29.57,
+  "fiber": 1.8,
+  "protein": 13.3,
+  "fat": 10.18
+ },
+ "170698": {
+  "desc": "Fast foods, potato, french fried in vegetable oil",
+  "kcal": 312,
+  "carbs": 41.44,
+  "fiber": 3.8,
+  "protein": 3.43,
+  "fat": 14.73
+ },
+ "170845": {
+  "desc": "Cheese, mozzarella, whole milk",
+  "kcal": 299,
+  "carbs": 2.4,
+  "fiber": 0,
+  "protein": 22.17,
+  "fat": 22.14
+ },
+ "170848": {
+  "desc": "Cheese, parmesan, hard",
+  "kcal": 392,
+  "carbs": 3.22,
+  "fiber": 0,
+  "protein": 35.75,
+  "fat": 25
+ },
+ "170858": {
+  "desc": "Cream, fluid, light whipping",
+  "kcal": 292,
+  "carbs": 2.96,
+  "fiber": 0,
+  "protein": 2.17,
+  "fat": 30.91
+ },
+ "170874": {
+  "desc": "Milk, buttermilk, fluid, cultured, lowfat",
+  "kcal": 40,
+  "carbs": 4.79,
+  "fiber": 0,
+  "protein": 3.31,
+  "fat": 1.07
+ },
+ "170904": {
+  "desc": "Kefir, lowfat, plain, LIFEWAY",
+  "kcal": 43,
+  "carbs": 4.77,
+  "fiber": 0,
+  "protein": 3.79,
+  "fat": 1.02
+ },
+ "171009": {
+  "desc": "Salad dressing, mayonnaise, regular",
+  "kcal": 680,
+  "carbs": 0.57,
+  "fiber": 0,
+  "protein": 0.96,
+  "fat": 74.85
+ },
+ "171176": {
+  "desc": "Soup, tomato, canned, prepared with equal volume water, commercial",
+  "kcal": 32,
+  "carbs": 7.45,
+  "fiber": 0.5,
+  "protein": 0.71,
+  "fat": 0.21
+ },
+ "171241": {
+  "desc": "Cheese, gouda",
+  "kcal": 356,
+  "carbs": 2.22,
+  "fiber": 0,
+  "protein": 24.94,
+  "fat": 27.44
+ },
+ "171256": {
+  "desc": "Cream, sour, reduced fat, cultured",
+  "kcal": 135,
+  "carbs": 4.26,
+  "fiber": 0,
+  "protein": 2.94,
+  "fat": 12
+ },
+ "171257": {
+  "desc": "Cream, sour, cultured",
+  "kcal": 198,
+  "carbs": 4.63,
+  "fiber": 0,
+  "protein": 2.44,
+  "fat": 19.35
+ },
+ "171277": {
+  "desc": "Milk, chocolate beverage, hot cocoa, homemade",
+  "kcal": 77,
+  "carbs": 10.74,
+  "fiber": 1,
+  "protein": 3.52,
+  "fat": 2.34
+ },
+ "171284": {
+  "desc": "Yogurt, plain, whole milk",
+  "kcal": 61,
+  "carbs": 4.66,
+  "fiber": 0,
+  "protein": 3.47,
+  "fat": 3.25
+ },
+ "171286": {
+  "desc": "Yogurt, fruit, low fat, 11g protein/8 oz",
+  "kcal": 105,
+  "carbs": 18.6,
+  "fiber": 0,
+  "protein": 4.86,
+  "fat": 1.41
+ },
+ "171287": {
+  "desc": "Egg, whole, raw, fresh",
+  "kcal": 143,
+  "carbs": 0.72,
+  "fiber": 0,
+  "protein": 12.56,
+  "fat": 9.51
+ },
+ "171290": {
+  "desc": "Cheese, pasteurized process, American, without added vitamin D",
+  "kcal": 371,
+  "carbs": 3.7,
+  "fiber": 0,
+  "protein": 18.13,
+  "fat": 31.79
+ },
+ "171304": {
+  "desc": "Yogurt, Greek, plain, whole milk",
+  "kcal": 97,
+  "carbs": 3.98,
+  "fiber": 0,
+  "protein": 9,
+  "fat": 5
+ },
+ "171413": {
+  "desc": "Oil, olive, salad or cooking",
+  "kcal": 884,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 0,
+  "fat": 100
+ },
+ "171475": {
+  "desc": "Chicken, broilers or fryers, breast, meat and skin, cooked, fried, batter",
+  "kcal": 260,
+  "carbs": 8.99,
+  "fiber": 0.3,
+  "protein": 24.84,
+  "fat": 13.2
+ },
+ "171477": {
+  "desc": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+  "kcal": 165,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 31.02,
+  "fat": 3.57
+ },
+ "171688": {
+  "desc": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+  "kcal": 52,
+  "carbs": 13.81,
+  "fiber": 2.4,
+  "protein": 0.26,
+  "fat": 0.17
+ },
+ "171705": {
+  "desc": "Avocados, raw, all commercial varieties",
+  "kcal": 160,
+  "carbs": 8.53,
+  "fiber": 6.7,
+  "protein": 2,
+  "fat": 14.66
+ },
+ "171711": {
+  "desc": "Blueberries, raw",
+  "kcal": 57,
+  "carbs": 14.49,
+  "fiber": 2.4,
+  "protein": 0.74,
+  "fat": 0.33
+ },
+ "171726": {
+  "desc": "Dates, deglet noor",
+  "kcal": 282,
+  "carbs": 75.03,
+  "fiber": 8,
+  "protein": 2.45,
+  "fat": 0.39
+ },
+ "171890": {
+  "desc": "Beverages, coffee, brewed, prepared with tap water",
+  "kcal": 1,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 0.12,
+  "fat": 0.02
+ },
+ "171891": {
+  "desc": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+  "kcal": 9,
+  "carbs": 1.67,
+  "fiber": 0,
+  "protein": 0.12,
+  "fat": 0.18
+ },
+ "171956": {
+  "desc": "Fish, cod, Atlantic, cooked, dry heat",
+  "kcal": 105,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 22.83,
+  "fat": 0.86
+ },
+ "171986": {
+  "desc": "Fish, tuna, light, canned in water, without salt, drained solids",
+  "kcal": 116,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 25.51,
+  "fat": 0.82
+ },
+ "172178": {
+  "desc": "Cheese, camembert",
+  "kcal": 300,
+  "carbs": 0.46,
+  "fiber": 0,
+  "protein": 19.8,
+  "fat": 24.26
+ },
+ "172179": {
+  "desc": "Cheese, cottage, creamed, large or small curd",
+  "kcal": 98,
+  "carbs": 3.38,
+  "fiber": 0,
+  "protein": 11.12,
+  "fat": 4.3
+ },
+ "172205": {
+  "desc": "Milk, reduced fat, fluid, 2% milkfat, without added vitamin A and vitamin D",
+  "kcal": 50,
+  "carbs": 4.8,
+  "fiber": 0,
+  "protein": 3.3,
+  "fat": 1.98
+ },
+ "172217": {
+  "desc": "Milk, whole, 3.25% milkfat, without added vitamin A and vitamin D",
+  "kcal": 61,
+  "carbs": 4.78,
+  "fiber": 0,
+  "protein": 3.15,
+  "fat": 3.27
+ },
+ "172234": {
+  "desc": "Mustard, prepared, yellow",
+  "kcal": 60,
+  "carbs": 5.83,
+  "fiber": 4,
+  "protein": 3.74,
+  "fat": 3.34
+ },
+ "172336": {
+  "desc": "Oil, canola",
+  "kcal": 884,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 0,
+  "fat": 100
+ },
+ "172347": {
+  "desc": "Margarine, regular, 80% fat, composite, tub, with salt",
+  "kcal": 713,
+  "carbs": 0.75,
+  "fiber": 0,
+  "protein": 0.22,
+  "fat": 80.17
+ },
+ "172456": {
+  "desc": "Soymilk, original and vanilla, with added calcium, vitamins A and D",
+  "kcal": 43,
+  "carbs": 4.92,
+  "fiber": 0.2,
+  "protein": 2.6,
+  "fat": 1.47
+ },
+ "172470": {
+  "desc": "Peanut butter, smooth style, without salt",
+  "kcal": 598,
+  "carbs": 22.31,
+  "fiber": 5,
+  "protein": 22.21,
+  "fat": 51.36
+ },
+ "172675": {
+  "desc": "Bread, french or vienna (includes sourdough)",
+  "kcal": 272,
+  "carbs": 51.88,
+  "fiber": 2.2,
+  "protein": 10.75,
+  "fat": 2.42
+ },
+ "172684": {
+  "desc": "Bread, rye",
+  "kcal": 259,
+  "carbs": 48.3,
+  "fiber": 5.8,
+  "protein": 8.5,
+  "fat": 3.3
+ },
+ "172688": {
+  "desc": "Bread, whole-wheat, commercially prepared",
+  "kcal": 252,
+  "carbs": 42.71,
+  "fiber": 6,
+  "protein": 12.45,
+  "fat": 3.5
+ },
+ "172711": {
+  "desc": "Cake, cheesecake, commercially prepared",
+  "kcal": 321,
+  "carbs": 25.5,
+  "fiber": 0.4,
+  "protein": 5.5,
+  "fat": 22.5
+ },
+ "172758": {
+  "desc": "Doughnuts, yeast-leavened, glazed, enriched (includes honey buns)",
+  "kcal": 421,
+  "carbs": 47.93,
+  "fiber": 2.1,
+  "protein": 6.14,
+  "fat": 22.7
+ },
+ "172930": {
+  "desc": "Pate, liver, not specified, canned",
+  "kcal": 319,
+  "carbs": 1.5,
+  "fiber": 0,
+  "protein": 14.2,
+  "fat": 28
+ },
+ "172954": {
+  "desc": "Sausage, Polish, pork and beef, smoked",
+  "kcal": 301,
+  "carbs": 1.98,
+  "fiber": 0,
+  "protein": 12.07,
+  "fat": 26.56
+ },
+ "172963": {
+  "desc": "Chicken breast, oven-roasted, fat-free, sliced",
+  "kcal": 79,
+  "carbs": 2.17,
+  "fiber": 0,
+  "protein": 16.79,
+  "fat": 0.39
+ },
+ "172964": {
+  "desc": "Frankfurter, pork",
+  "kcal": 269,
+  "carbs": 0.28,
+  "fiber": 0.1,
+  "protein": 12.81,
+  "fat": 23.68
+ },
+ "173190": {
+  "desc": "Alcoholic beverage, wine, table, red",
+  "kcal": 85,
+  "carbs": 2.61,
+  "fiber": 0,
+  "protein": 0.07,
+  "fat": 0,
+  "alcohol": 10.6
+ },
+ "173210": {
+  "desc": "Beverages, Energy drink, RED BULL",
+  "kcal": 43,
+  "carbs": 10.23,
+  "fiber": 0,
+  "protein": 0.46,
+  "fat": 0
+ },
+ "173227": {
+  "desc": "Beverages, tea, black, brewed, prepared with tap water",
+  "kcal": 1,
+  "carbs": 0.3,
+  "fiber": 0,
+  "protein": 0,
+  "fat": 0
+ },
+ "173418": {
+  "desc": "Cheese, cream",
+  "kcal": 350,
+  "carbs": 5.52,
+  "fiber": 0,
+  "protein": 6.15,
+  "fat": 34.44
+ },
+ "173420": {
+  "desc": "Cheese, feta",
+  "kcal": 265,
+  "carbs": 3.88,
+  "fiber": 0,
+  "protein": 14.21,
+  "fat": 21.49
+ },
+ "173430": {
+  "desc": "Butter, without salt",
+  "kcal": 717,
+  "carbs": 0.06,
+  "fiber": 0,
+  "protein": 0.85,
+  "fat": 81.11
+ },
+ "173432": {
+  "desc": "Milk, nonfat, fluid, without added vitamin A and vitamin D (fat free or skim)",
+  "kcal": 35,
+  "carbs": 4.86,
+  "fiber": 0,
+  "protein": 3.37,
+  "fat": 0.18
+ },
+ "173625": {
+  "desc": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+  "kcal": 232,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 23.26,
+  "fat": 14.71
+ },
+ "173806": {
+  "desc": "Peanuts, all types, dry-roasted, without salt",
+  "kcal": 587,
+  "carbs": 21.26,
+  "fiber": 8.4,
+  "protein": 24.35,
+  "fat": 49.66
+ },
+ "173904": {
+  "desc": "Cereals, oats, regular and quick, not fortified, dry",
+  "kcal": 379,
+  "carbs": 67.7,
+  "fiber": 10.1,
+  "protein": 13.15,
+  "fat": 6.52
+ },
+ "173933": {
+  "desc": "Apple juice, canned or bottled, unsweetened, without added ascorbic acid",
+  "kcal": 46,
+  "carbs": 11.3,
+  "fiber": 0.2,
+  "protein": 0.1,
+  "fat": 0.13
+ },
+ "173944": {
+  "desc": "Bananas, raw",
+  "kcal": 89,
+  "carbs": 22.84,
+  "fiber": 2.6,
+  "protein": 1.09,
+  "fat": 0.33
+ },
+ "174107": {
+  "desc": "Rolls, dinner, sweet",
+  "kcal": 321,
+  "carbs": 53.58,
+  "fiber": 3.1,
+  "protein": 10.04,
+  "fat": 7.37
+ },
+ "174195": {
+  "desc": "Fish, fish sticks, frozen, prepared",
+  "kcal": 277,
+  "carbs": 21.66,
+  "fiber": 1.5,
+  "protein": 11.01,
+  "fat": 16.23
+ },
+ "174289": {
+  "desc": "Hummus, commercial",
+  "kcal": 237,
+  "carbs": 15,
+  "fiber": 5.5,
+  "protein": 7.78,
+  "fat": 17.82
+ },
+ "174516": {
+  "desc": "Turkey, retail parts, breast, meat only, cooked, roasted",
+  "kcal": 136,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 29.51,
+  "fat": 1.97
+ },
+ "174536": {
+  "desc": "Soup, chicken broth, ready-to-serve",
+  "kcal": 6,
+  "carbs": 0.44,
+  "fiber": 0,
+  "protein": 0.64,
+  "fat": 0.21
+ },
+ "174561": {
+  "desc": "Soup, pea, green, canned, prepared with equal volume water",
+  "kcal": 61,
+  "carbs": 9.88,
+  "fiber": 1.9,
+  "protein": 3.2,
+  "fat": 1.09
+ },
+ "174582": {
+  "desc": "Salami, dry or hard, pork, beef",
+  "kcal": 378,
+  "carbs": 0.72,
+  "fiber": 0,
+  "protein": 21.07,
+  "fat": 31.65
+ },
+ "174648": {
+  "desc": "Cereals ready-to-eat, RALSTON Corn Flakes",
+  "kcal": 384,
+  "carbs": 88.01,
+  "fiber": 2.7,
+  "protein": 5.9,
+  "fat": 0.91
+ },
+ "174683": {
+  "desc": "Grapes, red or green (European type, such as Thompson seedless), raw",
+  "kcal": 69,
+  "carbs": 18.1,
+  "fiber": 0.9,
+  "protein": 0.72,
+  "fat": 0.16
+ },
+ "174815": {
+  "desc": "Alcoholic beverage, distilled, all (gin, rum, vodka, whiskey) 80 proof",
+  "kcal": 231,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 0,
+  "fat": 0,
+  "alcohol": 33.4
+ },
+ "174851": {
+  "desc": "Beverages, carbonated, cola, without caffeine",
+  "kcal": 41,
+  "carbs": 10.58,
+  "fiber": 0,
+  "protein": 0,
+  "fat": 0
+ },
+ "174918": {
+  "desc": "Bread, pumpernickel",
+  "kcal": 250,
+  "carbs": 47.5,
+  "fiber": 6.5,
+  "protein": 8.7,
+  "fat": 3.1
+ },
+ "174924": {
+  "desc": "Bread, white, commercially prepared (includes soft bread crumbs)",
+  "kcal": 266,
+  "carbs": 49.42,
+  "fiber": 2.7,
+  "protein": 8.85,
+  "fat": 3.33
+ },
+ "174944": {
+  "desc": "Cake, yellow, commercially prepared, with chocolate frosting, in-store bakery",
+  "kcal": 379,
+  "carbs": 55.36,
+  "fiber": 1.5,
+  "protein": 3.16,
+  "fat": 17.75
+ },
+ "174950": {
+  "desc": "Cookies, butter, commercially prepared, enriched",
+  "kcal": 467,
+  "carbs": 68.9,
+  "fiber": 0.8,
+  "protein": 6.1,
+  "fat": 18.8
+ },
+ "174987": {
+  "desc": "Croissants, butter",
+  "kcal": 406,
+  "carbs": 45.8,
+  "fiber": 2.6,
+  "protein": 8.2,
+  "fat": 21
+ },
+ "175009": {
+  "desc": "Pancakes, plain, prepared from recipe",
+  "kcal": 227,
+  "carbs": 28.3,
+  "fiber": 0,
+  "protein": 6.4,
+  "fat": 9.7
+ },
+ "175011": {
+  "desc": "Pie, apple, commercially prepared, enriched flour",
+  "kcal": 237,
+  "carbs": 34,
+  "fiber": 1.6,
+  "protein": 1.9,
+  "fat": 11
+ },
+ "175031": {
+  "desc": "Rolls, hard (includes kaiser)",
+  "kcal": 293,
+  "carbs": 52.7,
+  "fiber": 2.3,
+  "protein": 9.9,
+  "fat": 4.3
+ },
+ "175034": {
+  "desc": "Sweet rolls, cinnamon, commercially prepared with raisins",
+  "kcal": 372,
+  "carbs": 50.9,
+  "fiber": 2.4,
+  "protein": 6.2,
+  "fat": 16.4
+ },
+ "175037": {
+  "desc": "Tortillas, ready-to-bake or -fry, flour, refrigerated",
+  "kcal": 306,
+  "carbs": 49.38,
+  "fiber": 3.5,
+  "protein": 8.2,
+  "fat": 7.99
+ },
+ "175039": {
+  "desc": "Waffles, plain, prepared from recipe",
+  "kcal": 291,
+  "carbs": 32.9,
+  "fiber": 0,
+  "protein": 7.9,
+  "fat": 14.1
+ },
+ "175118": {
+  "desc": "Fish, herring, Atlantic, pickled",
+  "kcal": 262,
+  "carbs": 9.64,
+  "fiber": 0,
+  "protein": 14.19,
+  "fat": 18
+ },
+ "175120": {
+  "desc": "Fish, mackerel, Atlantic, cooked, dry heat",
+  "kcal": 262,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 23.85,
+  "fat": 17.81
+ },
+ "175168": {
+  "desc": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+  "kcal": 206,
+  "carbs": 0,
+  "fiber": 0,
+  "protein": 22.1,
+  "fat": 12.35
+ },
+ "175194": {
+  "desc": "Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+  "kcal": 127,
+  "carbs": 22.8,
+  "fiber": 7.4,
+  "protein": 8.67,
+  "fat": 0.5
+ }
+}

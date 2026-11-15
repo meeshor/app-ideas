@@ -23,7 +23,8 @@ describe('dane startowe', () => {
       const rf = resolveFood(db, f.id)!;
       expect(rf, f.id).toBeTruthy();
       expect(f.source, f.id).toBeTruthy();
-      expect(f.verified, f.id).toBe(false);
+      // zweryfikowane = wartości wprost z USDA (data-src/usda-map.ts, 'same'), z numerem pozycji w źródle
+      if (f.verified) expect(f.source, f.id).toMatch(/^USDA FoodData Central.*#\d+/);
       const m = rf.per100;
       for (const v of [m.kcal, m.carbs, m.protein, m.fat]) expect(v, f.id).toBeGreaterThanOrEqual(0);
       expect(m.carbs + m.protein + m.fat, f.id).toBeLessThanOrEqual(100.5);
@@ -35,6 +36,10 @@ describe('dane startowe', () => {
       expect(rf.defaultPortion, f.id).toBeTruthy();
       expect(rf.portions[rf.defaultPortion!], f.id).toBeGreaterThan(0);
     }
+  });
+  it('około połowy produktów ma wartości zweryfikowane z USDA', () => {
+    const verified = DEFAULT_DATA.foods.filter((f) => f.verified).length;
+    expect(verified).toBeGreaterThanOrEqual(100);
   });
   it('warianty wskazują istniejącego rodzica', () => {
     for (const f of DEFAULT_DATA.foods.filter((x) => x.parentId)) expect(db.foods.has(f.parentId!), f.id).toBe(true);

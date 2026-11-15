@@ -73,7 +73,102 @@ export function tokenize(input: string): Token[] {
   }
   while (tokens.length && tokens[0]!.type === 'sep') tokens.shift();
   while (tokens.length && tokens[tokens.length - 1]!.type === 'sep') tokens.pop();
-  return tokens;
+  return mergeNumerals(tokens);
+}
+
+// Liczebniki złożone („dwadzieścia pięć”, „sto pięćdziesiąt”, „dwustu gramów”) → jeden token liczby.
+// Klucze bez polskich znaków; mianownik i dopełniacz/narzędnik (w tym „dwudziestoma”).
+const n = (value: number, ...forms: string[]) => forms.map((f) => [f, value] as const);
+const HUNDREDS = new Map([
+  ...n(100, 'sto', 'stu'),
+  ...n(200, 'dwiescie', 'dwustu'),
+  ...n(300, 'trzysta', 'trzystu'),
+  ...n(400, 'czterysta', 'czterystu'),
+  ...n(500, 'piecset', 'pieciuset'),
+  ...n(600, 'szescset', 'szesciuset'),
+  ...n(700, 'siedemset', 'siedmiuset'),
+  ...n(800, 'osiemset', 'osmiuset'),
+  ...n(900, 'dziewiecset', 'dziewieciuset'),
+]);
+const TENS = new Map([
+  ...n(20, 'dwadziescia', 'dwudziestu', 'dwudziestoma'),
+  ...n(30, 'trzydziesci', 'trzydziestu', 'trzydziestoma'),
+  ...n(40, 'czterdziesci', 'czterdziestu', 'czterdziestoma'),
+  ...n(50, 'piecdziesiat', 'piecdziesieciu'),
+  ...n(60, 'szescdziesiat', 'szescdziesieciu'),
+  ...n(70, 'siedemdziesiat', 'siedemdziesieciu'),
+  ...n(80, 'osiemdziesiat', 'osiemdziesieciu'),
+  ...n(90, 'dziewiecdziesiat', 'dziewiecdziesieciu'),
+]);
+const TEENS = new Map([
+  ...n(10, 'dziesiec', 'dziesieciu'),
+  ...n(11, 'jedenascie', 'jedenastu'),
+  ...n(12, 'dwanascie', 'dwunastu'),
+  ...n(13, 'trzynascie', 'trzynastu'),
+  ...n(14, 'czternascie', 'czternastu'),
+  ...n(15, 'pietnascie', 'pietnastu'),
+  ...n(16, 'szesnascie', 'szesnastu'),
+  ...n(17, 'siedemnascie', 'siedemnastu'),
+  ...n(18, 'osiemnascie', 'osiemnastu'),
+  ...n(19, 'dziewietnascie', 'dziewietnastu'),
+]);
+const UNITS = new Map([
+  ...n(1, 'jeden', 'jedna', 'jedno', 'jednego', 'jednej'),
+  ...n(2, 'dwa', 'dwie', 'dwoch', 'dwu'),
+  ...n(3, 'trzy', 'trzech'),
+  ...n(4, 'cztery', 'czterech'),
+  ...n(5, 'piec', 'pieciu'),
+  ...n(6, 'szesc', 'szesciu'),
+  ...n(7, 'siedem', 'siedmiu'),
+  ...n(8, 'osiem', 'osmiu'),
+  ...n(9, 'dziewiec', 'dziewieciu'),
+]);
+const THOUSAND = new Set(['tysiac', 'tysiaca', 'tysiace', 'tysiecy']);
+
+/** Łączy kolejne słowa liczebnika złożonego w token liczby. Pojedyncze 1–10 zostają słowami (słownik parsera). */
+export function mergeNumerals(tokens: Token[]): Token[] {
+  const out: Token[] = [];
+  for (let i = 0; i < tokens.length; ) {
+    let j = i;
+    let value = 0;
+    const word = (k: number) => (tokens[k]?.type === 'word' ? tokens[k]!.key : '');
+    if (THOUSAND.has(word(j))) {
+      value += 1000;
+      j++;
+    }
+    const h = HUNDREDS.get(word(j));
+    if (h !== undefined) {
+      value += h;
+      j++;
+    }
+    const teen = TEENS.get(word(j));
+    if (teen !== undefined) {
+      value += teen;
+      j++;
+    } else {
+      const t = TENS.get(word(j));
+      if (t !== undefined) {
+        value += t;
+        j++;
+      }
+      // jedności tylko jako część liczebnika złożonego („dwadzieścia pięć”, „sto dwa”)
+      const u = j > i ? UNITS.get(word(j)) : undefined;
+      if (u !== undefined) {
+        value += u;
+        j++;
+      }
+    }
+    const single = j === i + 1 && word(i) !== '' && TEENS.get(word(i)) === 10;
+    if (j > i && !single) {
+      const raw = tokens.slice(i, j).map((t) => t.raw).join(' ');
+      out.push({ type: 'num', raw, key: String(value), value });
+      i = j;
+    } else {
+      out.push(tokens[i]!);
+      i++;
+    }
+  }
+  return out;
 }
 
 export function tokensText(tokens: readonly Token[]): string {

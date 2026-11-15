@@ -48,6 +48,26 @@ Podsumowania kamieni milowych (sesja autonomiczna). Stan końcowy i uczciwa ocen
 - **PWA**: manifest, ikony, service worker (precache całej aplikacji z bazą), działa offline — sprawdzone w e2e (`context.setOffline`).
 - Zrzuty: [`screenshot-dzis.png`](screenshot-dzis.png), [`screenshot-dzis-ciemny.png`](screenshot-dzis-ciemny.png) (390 px, telefon).
 
+## M5 — Weryfikacja i domknięcie (sesja na Macu, 2026-11-14) ✅
+
+- **Wartości odżywcze zweryfikowane z USDA FoodData Central (SR Legacy)**: powiązania w `data-src/usda-map.ts`,
+  dane w `data-src/usda.json` (`npm run usda -- <katalog CSV>`), `npm run data` stosuje je i pisze raport
+  [`weryfikacja.md`](weryfikacja.md). **120 produktów ma wartości z USDA i `verified: true`** (źródło z numerem pozycji),
+  w tym 18 istotnie poprawionych (np. hummus 170→237 kcal, salami 430→378, makaron pełnoziarnisty 124→149,
+  kukurydza 80→67). 42 polskie produkty, które różnią się od amerykańskich (twaróg-podobne, wędliny, jogurt typu greckiego,
+  margaryna 60%…), zostają z naszymi wartościami i porównaniem w raporcie; 52 nie mają odpowiednika.
+- Edycja wartości zweryfikowanego produktu przez użytkownika zdejmuje `verified` i zapisuje „zmienione przez użytkownika”.
+- **Parser**: liczebniki złożone; „bulka z szynka i salata” bez ogonków (także po częściowej autokorekcie iOS).
+- **Edycja pozycji zapisanego wpisu** („Edytuj pozycje” w karcie wpisu; pusta lista = usunięcie wpisu).
+- **Import ze scaleniem**: wybór „Scal z obecnymi” (wpisy po id, definicje po kluczu, nowsza zmiana wygrywa,
+  ustawienia zostają) albo „Zastąp wszystko”.
+- Poprawka wyświetlania: „150 g ryż biały” zamiast „150 × ryż biały”.
+- **WebKit**: drugi projekt Playwright `webkit-iphone` (iPhone 15); wszystkie e2e zielone poza testem offline,
+  który w Playwright WebKit jest pominięty (ograniczenie narzędzia: przeładowanie offline przez service workera).
+- **Safari na symulatorze iOS 26.5 (iPhone 17)** sprawdzone ręcznie: wpis, podgląd, zapis do IndexedDB, autokorekta
+  polskiej klawiatury, aktualizacja service workera (nowa wersja przy kolejnym wczytaniu) i **praca offline po wyłączeniu
+  serwera**, łącznie z dodaniem wpisu.
+
 ---
 
 # Stan końcowy — uczciwie
@@ -70,13 +90,13 @@ Podsumowania kamieni milowych (sesja autonomiczna). Stan końcowy i uczciwa ocen
 
 ## Czego nie ma / co nie działa albo nie zostało sprawdzone
 
-- **Wartości odżywcze nie są zweryfikowane** z tabelami NIZP-PZH ani USDA (brak dostępu do źródeł w tej sesji): to przybliżenia z pamięci, wszystkie `verified: false`. Jedyna kontrola to test spójności 4/4/9 kcal (±25%), który wyłapał jeden błąd. **To największe ryzyko merytoryczne** — przed realnym użyciem warto przejrzeć wartości choćby 50 najczęstszych produktów.
+- **Wartości odżywcze (stan po M5)**: 120 z 214 produktów sprawdzonych z USDA. Pozostałe ~94 (polskie specyfiki,
+  dania, zupy) to nadal przybliżenia — do sprawdzenia z etykietami albo tabelami NIZP-PZH (brak otwartej wersji
+  do pobrania). Lista w [`weryfikacja.md`](weryfikacja.md).
 - Masy porcji i składy dań („bułka z szynką” = 2 plastry + 5 g masła) to rozsądne domysły do strojenia.
 - **Znane braki parsera** (szczegóły w [`parser.md`](parser.md)): „i sałata” bez polskich znaków nie dokleja się jako dodatek; mianownik po „i” zawsze tworzy nową pozycję; brak liczebników złożonych („dwadzieścia”, „sto”); odmiana z reguł bywa niepełna dla form nieregularnych; „pół X” liczone od porcji domyślnej; „na wodzie”/„z grilla” tylko gdy są w aliasach lub na liście wypełniaczy; zawartość tłuszczu („3,2%”) ignorowana.
-- Nie testowane na fizycznym telefonie ani w Safari/iOS (tylko Chromium z emulacją Pixel 7). Instalacja PWA na ekran główny nie była sprawdzana ręcznie.
-- Edycja wpisu po zapisie: można zmienić posiłek, przeliczyć lub usunąć — ale nie edytować pozycji (trzeba usunąć i dodać ponownie).
+- Safari/iOS sprawdzone na symulatorze (M5), nie na fizycznym telefonie. Instalacja PWA na ekran główny nie była sprawdzana.
 - Brak wykresów historii (jest lista dni i średnia tygodniowa) i brak wyszukiwania kodem kreskowym (poza zakresem MVP).
-- Import JSON **zastępuje** dane (z potwierdzeniem), nie scala.
 - Pakiet 608 kB JS: pierwsze wczytanie na słabym łączu może trwać chwilę; potem offline z cache.
 
 ## Co warto przetestować ręcznie na telefonie

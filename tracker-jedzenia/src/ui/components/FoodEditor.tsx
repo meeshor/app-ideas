@@ -64,7 +64,12 @@ export function FoodEditor({ foodId, initialName = '', onClose }: { foodId?: str
       ...(addon ? { addon } : {}),
     };
     if (!addon) delete data.addon;
-    if (!inherits || JSON.stringify(per100) !== JSON.stringify(resolved?.per100)) data.per100 = per100;
+    const macrosChanged = JSON.stringify(per100) !== JSON.stringify(resolved?.per100);
+    if (!inherits || macrosChanged) data.per100 = per100;
+    if (macrosChanged && existing.verified) {
+      // własne liczby nie są już wartościami ze źródła — „Przywróć domyślne” wraca do zweryfikowanych
+      data = { ...data, verified: false, source: `zmienione przez użytkownika (pierwotnie: ${existing.source ?? 'baza startowa'})` };
+    }
     if (def && portionsObj[def]) data.defaultPortion = def;
     data = refreshForms(data, keep);
     await app.saveOverride({ key: overrideKey('food', existing.id), kind: 'food', id: existing.id, data, isNew: origin === 'user', updatedAt: Date.now() });
@@ -159,7 +164,12 @@ export function FoodEditor({ foodId, initialName = '', onClose }: { foodId?: str
             </button>
           )}
         </div>
-        {existing?.source && <div className="small muted">Źródło: {existing.source}{existing.verified === false ? ' (niezweryfikowane)' : ''}</div>}
+        {existing?.source && (
+          <div className="small muted">
+            Źródło: {existing.source}
+            {existing.verified ? ' ✓ zweryfikowane' : ' (przybliżone, niezweryfikowane)'}
+          </div>
+        )}
         {msg && <div className="notice">{msg}</div>}
         <div className="row">
           <button className="btn primary" onClick={save}>
