@@ -152,4 +152,4 @@ Zegarek ma testowy przycisk **Ręczna (test)**.
 
 1. Pozycja „gotowy” przy rzucie nad głową (ręka uniesiona). Jeśli przedramię jest prawie pionowe, „przód” bierzemy z tarczy zegarka (−z, `OverarmThrowRecognizer.fallbackForward`). Sprawdź, czy rzut w lewo i w prawo daje dobry znak yaw.
 2. Zwód: krótkie kliknięcie haptyczne i napis „Zwód!” na telefonie. Prawdziwy rzut nie powinien być brany za zwód (próg `minPeakRotationRate` 9 rad/s).
-3. Progi rzutu nad głową (`OverarmTuning`) nie mają jeszcze suwaków. Zmienia się je w kodzie albo przez `updateTuning`.
+3. Progi rzutu nad głową (`OverarmTuning`) mają suwaki w ekranie **Strojenie gestu** (sekcja „rzut nad głową”).

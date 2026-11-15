@@ -28,6 +28,15 @@ struct TuningLabView: View {
             } footer: {
                 Text("Zmiany idą na zegarek po 0,3 s. Opis progów: docs/tuning.md.")
             }
+            Section {
+                ForEach(OverarmSliders.all) { spec in
+                    TuningSlider(spec: spec, value: spec.binding(on: $store.gesture.overarm))
+                }
+            } header: {
+                Text("Gest: rzut nad głową (ręczna)")
+            } footer: {
+                Text("Działa w sesji ręcznej (Rzut karny albo „Ręczna (test)” na zegarku).")
+            }
             Section("Gest: spoczynek („gotowy”)") {
                 ForEach(StillnessSliders.all) { spec in
                     TuningSlider(spec: spec, value: spec.binding(on: $store.gesture.flick.stillness))
@@ -190,6 +199,21 @@ enum FlickSliders {
         .init("cooldown", "Przerwa po rzucie", \.cooldown, 0.2...2, "s"),
         .init("lever", "Ramię dźwigni", \.leverArm, 0.2...0.6, "m"),
         .init("jerkUnit", "Jerk = 1 przy", \.jerkForUnit, 10...600, "g/s")
+    ]
+}
+
+@MainActor
+enum OverarmSliders {
+    static let all: [KeyedSlider<OverarmTuning>] = [
+        .init("oStart", "Start zamachu |ω|", \.startRotationRate, 0.5...6, "rad/s"),
+        .init("oPeak", "Rzut: min. szczyt |ω|", \.minPeakRotationRate, 3...25, "rad/s"),
+        .init("oAccel", "Rzut: min. szczyt |a|", \.minPeakAcceleration, 0.5...6, "g"),
+        .init("oDrop", "Puszczenie: spadek do", \.releaseDropRatio, 0.2...0.9, "× szczytu"),
+        .init("oFeint", "Zwód: min. szczyt |ω|", \.feintMinPeakRotationRate, 1...10, "rad/s"),
+        .init("oHold", "Zwód: ręka stoi przez", \.feintHold, 0.05...0.5, "s"),
+        .init("oMax", "Maks. czas zamachu", \.maxActiveDuration, 0.5...3, "s"),
+        .init("oCooldown", "Przerwa po rzucie", \.cooldown, 0.3...3, "s"),
+        .init("oLever", "Ramię dźwigni", \.leverArm, 0.3...0.9, "m")
     ]
 }
 
